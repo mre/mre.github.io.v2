@@ -12,4 +12,6 @@ publish:
 	-git branch -D master
 	cobalt build
 	cobalt import --branch master
+	git checkout master
+	touch .nojekyll
 	git push -u -f origin master
