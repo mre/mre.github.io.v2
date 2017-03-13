@@ -14,4 +14,6 @@ publish:
 	cobalt import --branch master
 	git checkout master
 	touch .nojekyll
+	git commit -am "Github Pages integration"
 	git push -u -f origin master
+	git checkout -
