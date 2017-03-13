@@ -1,0 +1,11 @@
+extends: default.liquid
+
+title: 
+---
+
+  {% for post in posts %}
+  <article>
+    <h3><a href="{{ post.path }}">{{ post.title }}</a></h3>
+    {{ post.content | truncatewords: 25, '...' }}
+    </article>
+  {% endfor %}

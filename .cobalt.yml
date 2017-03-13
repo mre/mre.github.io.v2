@@ -1,0 +1,9 @@
+rss: rss.xml
+name: Matthias Endler
+description: Personal Blog
+source: ./
+dest: build
+posts: blog
+drafts: _drafts
+ignore: ["README.md", ".git", "build", "Makefile", "todo.txt"]
+link: http://matthias-endler.de
