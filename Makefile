@@ -12,12 +12,12 @@ publish:
 	-git branch -D master
 	cobalt build
 	cobalt import --branch master
-	git checkout origin/master
+	git checkout master
 	touch .nojekyll
 	git add .nojekyll
 	git commit -m "Github Pages integration"
 	git push -u -f origin master
-	git checkout -
+	git checkout source
 
 serve:
 	cobalt serve
