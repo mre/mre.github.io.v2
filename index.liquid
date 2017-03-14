@@ -6,6 +6,6 @@ title:
   {% for post in posts %}
   <article>
     <h3><a href="{{ post.path }}">{{ post.title }}</a></h3>
-    {{ post.content | truncatewords: 25, '...' }}
+    {{ post.content | truncatewords: 23, '...' }}
     </article>
   {% endfor %}
