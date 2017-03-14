@@ -18,3 +18,6 @@ publish:
 	git commit -m "Github Pages integration"
 	git push -u -f origin master
 	git checkout -
+
+serve:
+	cobalt serve
