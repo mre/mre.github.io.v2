@@ -27,7 +27,7 @@ script for your grandma. The possibilities are endless.
 ### Coding is fun!
 
 Coding something is more fun than using it. It's even better than playing games.
-Why? Learn how to program a computer and get the best games for free -- your own.
+Why? Learn how to program a computer and get the best games for free &mdash; your own.
 You're in total control. It's your idea, your logic, even your laws of physics.
 It's like building a house but without paying anything for the
 building materials. You can build a mansion for free.
