@@ -4,6 +4,8 @@ title:	    "Overkill: Java as a first programming language"
 date:       12  Feb 2010 00:00:00 +0000
 humandate:  12th of February 2010
 path:       2010/overkill-java-as-a-first-programming-language
+comments:
+  - <a href="https://news.ycombinator.com/item?id=13926407">Hacker News</a>
 ---
 
 I recently talked to a student in my neighborhood about his first programming
@@ -12,7 +14,7 @@ horrible.
 
 A lot of us learned coding in languages like *BASIC* or *Pascal*. There was no
 object orientation, no sophisticated file I/O and almost no
-modularization...and it was great. In *BASIC* you could just write
+modularization... and it was great. In *BASIC* you could just write
 
 ```python
 PRINT "HELLO WORLD"
@@ -37,7 +39,7 @@ easiest task one could think of? Describing the program to a novice programmer
 may sound like this:
 
 > Create a Main class containing a main-method returning void expecting a
-> string array as single argument using the `println` method of the `out` object of
+> string array as a single argument using the `println` method of the `out` object of
 > class `PrintStream` passing your text as single argument.
 
 &mdash; please just don't forget your brackets. This way your first programming hours are guaranteed to
@@ -63,7 +65,7 @@ print("Hello World")
 ```
 
 There's no need to know about object orientation, scopes and function
-arguments at this point. No house-holding or book-keeping. Yes, it's an
+arguments at this point. No householding or book-keeping. Yes, it's an
 interpreted language but that's not a deal breaker for beginners.
 
 If you aren't convinced yet, printing and formatting text output in *Java* is
@@ -96,7 +98,7 @@ public class fileIO {
 ```
 
 I hear you say: "Dude, file I/O is pretty complex. It's just the way it is".
-That's true... _internally_ . But the user should get an easy interface. *Python*
+That's true... _internally_ . But a beginner should get an easy interface. *Python*
 shows how it's done:
 
 ```python
