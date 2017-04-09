@@ -1,8 +1,8 @@
 extends: default.liquid
 
 title:      Launching a URL Shortener in Rust using Rocket
-date:       18 Mar 2017 00:00:00 +0000
-humandate:  18th of March 2017
+date:       09 Apr 2017 00:00:00 +0000
+humandate:  19th of April 2017
 path:       2017/rust-url-shortener
 ---
 
