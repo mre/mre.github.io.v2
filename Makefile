@@ -1,6 +1,7 @@
 .PHONY: build clean css
 
 build: css
+	rm -rf build/
 	cobalt build
 	# Setup symlinks
 	touch .nojekyll
@@ -10,6 +11,7 @@ css:
 
 publish:
 	-git branch -D master
+	rm -rf build/
 	cobalt build
 	cobalt import --branch master
 	git checkout master

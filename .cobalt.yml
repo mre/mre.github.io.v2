@@ -5,5 +5,5 @@ source: ./
 dest: build
 posts: blog
 drafts: _drafts
-ignore: ["README.md", ".git", "build", "Makefile", "todo.txt"]
+ignore: ["README.md", ".git", "build", "Makefile", "todo.txt", "img/raw/"]
 link: http://matthias-endler.de
