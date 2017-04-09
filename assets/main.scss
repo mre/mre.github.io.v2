@@ -174,6 +174,10 @@ code {
     word-wrap: normal
 }
 
+img {
+  max-width: 100%;
+}
+
 /*** media queries ***/
 /* X-Small devices (phones, 480px and up) */
 @media (min-width: 480px) {
