@@ -42,7 +42,7 @@ impressive.
 It's financially attractive for Game Studios to support multiple platforms without much
 effort. `Cargo` and `rustup` make cross compiling easy.
 Modern libraries slowly fill the tooling gaps for large-scale game development.
-Rust's support for the Vulcan 3D graphics API might already be the best of class.
+[Rust's support for the Vulkan 3D graphics API](https://github.com/tomaka/vulkano) might already be the best of class.
 The killer feature though is the unique combination of safety and performance.
 If you ship a game to a million players and they throw money at you, you'll better make sure that it doesn't crash... [right?](http://www.gamingbolt.com/15-buggiest-games-ever-released)
 
