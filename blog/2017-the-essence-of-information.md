@@ -47,10 +47,10 @@ a simple formula for this relationship:
 <img src="/img/posts/2017/equation.svg" alt="Sorting Time = Time for one worker / workers"/>
 
 Well, that is not quite correct. We forgot to consider the [overhead](https://en.wikipedia.org/wiki/Overhead_(computing)): When Mary
-tries to pick up a socket, Stephen might reach for the same.
+tries to pick up a sock, Stephen might reach for the same.
 They both smile and one of them picks another sock.
 In computing, a worker might do the same. Well, not smiling but picking another
-task. When lots of workers share the same resource, these situations occur quite
+task. When lots of workers a resource, these situations occur quite
 frequently. And resolving the situation always takes a little extra time. So we are a
 bit away from our optimal sorting speed because of that.
 
@@ -62,12 +62,12 @@ That's a [deadlock](https://en.wikipedia.org/wiki/Deadlock), and it's one of the
 
 In this case, a simple solution is to put down the sock again and wait for some time until trying to get a new sock.
 Another way out of the dilemma would be, to enforce some kind of "protocol" for sorting. 
-Think of a protocol as an agreement between the workers for how to achieve a common goal.
+Think of a protocol as a silent agreement between the workers on how to achieve a common goal.
 
 So, in our case, each worker might only be responsible for one color of socks.
 Worker one takes the green socks, worker two the gray ones and so on.
 With this simple trick, we can avoid a deadlock, because we work on completely
-separate piles &mdash; or *tasks*, to be more general.
+separate tasks.
 
 But there's still a catch. What if there are only 4 green socks and 4000 gray socks?
 Worker one would get bored fairly quickly. He would sort the two pairs of socks in
@@ -124,8 +124,8 @@ Problems like this have their roots in Computer Science, and they can be found e
 Personally, I don't like the term Computer Science too much. I prefer
 the German term "Informatik", which I would roughly translate as "Information Science".
 Because the real essence of what we're doing here is to find a general way to solve a
-whole *class* of problems. We think of the nature of objects, their properties
-and how to classify them. We don't sort socks, we try to answer the [fundamental questions around information](https://www.youtube.com/watch?v=2Op3QLzMgSY). Maybe now you can understand why I'm so passionate about this subject.
+whole *class* of problems. We think of the nature of objects and their properties.
+We don't sort socks, we try to answer [fundamental questions about information](https://www.youtube.com/watch?v=2Op3QLzMgSY). Maybe now you can understand why I'm so passionate about this subject.
 
 Oh, and here's a similar post about [why I love programming](/2017/why-i-love-programming).
 
