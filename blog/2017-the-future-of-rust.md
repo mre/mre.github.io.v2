@@ -4,6 +4,8 @@ title:      The Future of Rust
 date:       27 Apr 2017 00:00:00 +0000
 humandate:  27th of April 2017
 path:       2017/future-of-rust
+comments:
+  - <a href="https://www.reddit.com/r/rust/comments/67uzpc/the_future_of_rust/">Reddit</a>
 ---
 
 Let me first point out the obvious: yes, the title is a little sensationalist. Also
@@ -12,7 +14,13 @@ all, I'm neither part of the Rust core team, nor a major contributor to the Rust
 ecosystem. To that I answer: why not? It's fun to think about the future of
 systems programming in general and Rust in particular.
 
+<figure>
 <img src="/img/posts/2017/future-of-rust/crab.svg" alt="The crab is the Rust mascot"/>
+  <figcaption>Ferris, the crab, is the inofficial Rust mascot.<br />
+  Illustration provided by <a href="http://www.freepik.com/zooenvato">zooenvato for FreePik.com</a>.
+  </figcaption>
+</figure>
+
 
 You might have heard of the [near-term goals](https://internals.rust-lang.org/t/setting-our-vision-for-the-2017-cycle) that the core team has committed itself to. Faster compile times and a more gentle learning curve come to mind.
 This post is not about that.
