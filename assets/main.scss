@@ -180,7 +180,15 @@ img {
 
 /*** media queries ***/
 /* X-Small devices (phones, 480px and up) */
-@media (min-width: 480px) {
+@media (max-width: 520px) {
+	.wrapper {
+		padding: 0 30px;
+	}
+}
+
+/*** media queries ***/
+/* X-Small devices (phones, 480px and up) */
+@media (min-width: 520px) {
 	/* wrapper stays 480px wide past 480px wide and is kept centered */
 	.wrapper {
 		width: 480px;
