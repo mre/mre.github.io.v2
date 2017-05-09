@@ -8,12 +8,12 @@ path:       2017/the-essence-of-information
 
 People look confused, when I tell them about my passion for Algorithms and Datastructures.
 Most of them understand what a Programmer is doing, but not what Computer Science is good for.
-In even if they do, they think it has no practical relevance.
+And even if they do, they think it has no practical relevance.
 Let me show you with a simple example, that applied Computer Science can be found everywhere.
 
 Imagine a pile of socks that needs to get sorted.
 Not exactly the most exciting pastime.
-You've put off this task for so long, that it will surely take an hour to get done.
+You've put off this task for so long, that it will surely take an hour to be done.
 
 <figure>
   <img src="/img/posts/2017/big_pile.jpg" alt="Pile of socks">
@@ -23,7 +23,7 @@ It's called <a href="https://itunes.apple.com/app/sort-the-socks/id438108346">So
   </figcaption>
 </figure>
 
-Considering your options you decide to get some help.
+Considering your options, you decide to get some help.
 Together with a friend you get to work. You finish in roughly half the time.
 
 A Computer Scientist might call this pile of socks a *resource*.
@@ -50,7 +50,7 @@ Well, that is not quite correct. We forgot to consider the [overhead](https://en
 tries to pick up a sock, Stephen might reach for the same.
 They both smile and one of them picks another sock.
 In computing, a worker might do the same. Well, not smiling but picking another
-task. When lots of workers a resource, these situations occur quite
+task. When lots of workers share resources, these situations occur quite
 frequently. And resolving the situation always takes a little extra time. So we are a
 bit away from our optimal sorting speed because of that.
 
@@ -125,7 +125,7 @@ Personally, I don't like the term Computer Science too much. I prefer
 the German term "Informatik", which I would roughly translate as "Information Science".
 Because the real essence of what we're doing here is to find a general way to solve a
 whole *class* of problems. We think of the nature of objects and their properties.
-We don't sort socks, we try to answer [fundamental questions about information](https://www.youtube.com/watch?v=2Op3QLzMgSY). Maybe now you can understand why I'm so passionate about this subject.
+We don't sort socks, we try to answer the [fundamental questions of information](https://www.youtube.com/watch?v=2Op3QLzMgSY). Maybe now you can understand why I'm so passionate about this subject.
 
 Oh, and here's a similar post about [why I love programming](/2017/why-i-love-programming).
 
