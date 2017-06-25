@@ -240,3 +240,28 @@ img {
     margin-bottom: 80px;
   }
 }
+
+.icon {
+  padding: 10px 0 10px 40px;
+  position: relative;
+}
+.icon:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  display: block;
+  background: transparent url('/img/icons.svg') center center no-repeat;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+}
+.speakerdeck:before {
+  background-image: url('/img/icons.svg#speakerdeck') 
+}
+
+.inline {
+  float: left;
+  margin: 27px 30px 0px 0px;
+  height: 265px;
+}
