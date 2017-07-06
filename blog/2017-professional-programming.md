@@ -81,7 +81,7 @@ For me, I was always leaning more towards elegance.
 That's just a nicer way to say I was a perfectionist.
 I needed to learn the pragmatic part through hard work.
 
-# Mentoring less experienced Programmers
+### Mentoring less experienced Programmers
 
 > The better you become at programming, the less you code.
 
