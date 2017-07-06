@@ -27,6 +27,8 @@ Same for kubernetes (k8s) and localization (l10n)
 
 ## Uppercase and lowercase
 
+## Ship it
+
 ## Foo & Bar
 
 When a programmer quickly needs a placeholder variable name, he sometimes uses
