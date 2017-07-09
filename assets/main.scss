@@ -47,7 +47,7 @@ pre {
     white-space: -pre-wrap;      /* Opera 4-6 */
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
-    padding: 35px;
+    padding: 20px;
 }
 
 pre > code {
@@ -154,8 +154,8 @@ footer {
 }
 
 blockquote {
-  margin: 10px;
-  padding: 10px;
+  margin: 4px 10px;
+  padding: 3px 20px;
   border-left: 4px solid #EDEDEE;
   font-style: italic;
 }
