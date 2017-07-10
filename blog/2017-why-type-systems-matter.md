@@ -1,8 +1,8 @@
 extends: default.liquid
 
 title:      Why Type Systems Matter
-date:       18 Mar 2017 00:00:00 +0000
-humandate:  18th of March 2017
+date:       10 Jul 2017 00:00:00 +0000
+humandate:  10th of July 2017
 path:       2017/why-type-systems-matter
 ---
 
