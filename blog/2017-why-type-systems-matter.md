@@ -4,6 +4,8 @@ title:      Why Type Systems Matter
 date:       10 Jul 2017 00:00:00 +0000
 humandate:  10th of July 2017
 path:       2017/why-type-systems-matter
+comments:
+  - <a href="https://www.reddit.com/r/rust/comments/6mknzp/why_type_systems_matter/">Reddit</a>
 ---
 
 I've written most of my code in dynamically typed languages such as Python or PHP. But ever since dabbling with [Rust](https://www.rust-lang.org), I've developed a passion for static type systems.  
