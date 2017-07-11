@@ -154,7 +154,9 @@ while the program runs.
 sorted([1, "fish"])
 ```
 
-In Python 2, this would result in `[1, 'fish']` (because strings will be compared by length).
+In Python 2, this would result in `[1, 'fish']` (<strike>because strings will be compared by length</strike>)
+
+Edit: Reddit user [jcdyer3 pointed out](https://www.reddit.com/r/rust/comments/6mknzp/why_type_systems_matter/dk2jtcm/) that the reason is that when incomparable types are compared, they sort by their type, so all ints will come before all strings. It's a [CPython implementation detail](https://stackoverflow.com/a/3270689/270334)).
 
 <figure>
 <img src="/img/posts/2017/type-systems/fish.svg" alt="1 < fish according to Python 2"/>
