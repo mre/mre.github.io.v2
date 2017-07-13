@@ -24,6 +24,11 @@ alternatives.
 I'm not talking about the Big Rewrite [tm], I'm talking about making the most
 critical parts more stable from within.
 
+A lot of legacy code is written in C and C++. Simply because they offer total control over a machine and solid performance. Where they don't shine is safety.
+It's very hard to write bug-free code in them, even for professionals.
+Null pointers, use-after-free errors and race-conditions are the result.
+I'm pretty certain that I never wrote a C/C++ program without any of these flaws.
+
 Rust is a perfect fit for that: it's safe and doesn't have a runtime or a
 garbage collector. Therefore it happily integrates with your old stuff.
 You can easily call Rust from C and C from Rust.
@@ -33,4 +38,4 @@ corrode.
 Watch THIS talk to find out more on how to do it.
 
 
-
+https://www.youtube.com/watch?v=AWnza5JX7jQ
