@@ -1,6 +1,6 @@
 extends: default.liquid
 
-title:      Why I love text files
+title:      Why I Love Text Files
 date:       10 Jan 2010 00:00:00 +0000
 humandate:  10th of January 2010
 path:       2010/why-i-love-text-files

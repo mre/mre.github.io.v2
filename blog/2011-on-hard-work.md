@@ -1,6 +1,6 @@
 extends: default.liquid
 
-title:      On hard work
+title:      On Hard Work
 date:       13 Oct 2011 00:00:00 +0000
 humandate:  13th of October 2011
 path:       2011/on-hard-work

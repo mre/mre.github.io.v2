@@ -1,6 +1,6 @@
 extends: default.liquid
 
-title:      Howto sort a vector or a list in CPP using STL
+title:      Howto Sort a Vector or a List in C++ using STL
 date:       27  Jan 2010 00:00:00 +0000
 humandate:  27th of January 2010
 path:       2010/howto-sort-a-vector-or-a-list-in-c-using-stl
