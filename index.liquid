@@ -1,11 +1,15 @@
 extends: default.liquid
 
-title: 
+title: ""
 ---
 
   {% for post in posts %}
   <article>
     <h3><a href="{{ post.path }}">{{ post.title }}</a></h3>
-    {{ post.content | truncatewords: 23, '...' }}
+    {% if post.excerpt %}
+      {{ post.excerpt }}
+    {% else %}
+      {{ post.content | truncatewords: 23, '...' }}
+    {% endif %}
     </article>
   {% endfor %}
