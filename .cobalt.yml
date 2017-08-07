@@ -5,5 +5,14 @@ source: ./
 dest: build
 posts: blog
 drafts: _drafts
-ignore: ["README.md", ".git", "build", "Makefile", "todo.txt", "img/raw/"]
+ignore:
+  - .git/*
+  - build/*
+  - img/raw/*
+  - README.md
+  - Makefile
+  - todo.txt
+  - LICENSE.txt
 link: http://matthias-endler.de
+syntax-highlight:
+  theme: base16-ocean.light
