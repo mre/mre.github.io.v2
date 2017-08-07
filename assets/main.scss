@@ -112,14 +112,11 @@ since it must be aligned with the content */
 }
 
 .logo {
-	height: 160px;
+	height: 150px;
 	width: 171px;
+  margin-bottom: 20px;
 	display: inline-block;
 	background-size: cover;
-	#border-radius: 50%;
-	#-moz-border-radius: 50%;
-	#border: 2px solid $background-color;
-	#box-shadow: 0 0 0 3px $text-color;
 }
 
 /*** tagline ***/
@@ -216,12 +213,6 @@ img {
   .content {
     margin-bottom: 40px;
   }
-
-	.author-container h1,
-	.logo-container,
-	.tagline-container p {
-		#text-align: right;
-	}
 
 	main {
     margin-left: 260px;
