@@ -23,6 +23,8 @@ Between hardware and software.
 Number of letters between the i and the n.
 Same for kubernetes (k8s) and localization (l10n)
 
+## bikeshed
+
 ## Boilerplate
 
 ## Uppercase and lowercase
