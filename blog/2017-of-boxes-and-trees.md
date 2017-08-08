@@ -1,8 +1,8 @@
 extends: default.liquid
 
 title:      Of Boxes and Trees - Smart Pointers in Rust
-date:       12 Jul 2017 00:00:00 +0000
-humandate:  12th of July 2017
+date:       08 Aug 2017 00:00:00 +0000
+humandate:  8th of August 2017
 path:       2017/boxes-and-trees
 ---
 
@@ -56,7 +56,7 @@ error[E0072]: recursive type `Tree` has infinite size
   = help: insert indirection (e.g., a `Box`, `Rc`, or `&`) at some point to make `Tree` representable
 ```
 
-Coming from memory-managed languages, I was confused by this.
+Coming from memory-managed languages (like Python, PHP, or Ruby), I was confused by this.
 The problem is easy to understand, though.
 Computers have a limited amount of memory.
 It's the compiler's job to find out how much memory to allocate for each item.
@@ -74,10 +74,8 @@ Tree { i64, Tree { ... }, Tree { ... } }
 
 Since we don't know how many subtrees our tree will have, there is no way to tell how much memory we need to allocate upfront. We'll only know at runtime!
 
-Rust tells us how to fix that: by inserting an *indirection*  
-(e.g., a `Box`, `Rc`, or `&`).
-
-`Box`, `Rc` and `&` are three different "pointer types" in Rust. They all point to places in memory. So, instead of knowing the total size of our tree structure, we just know the *point* in memory where the tree is located. But that's enough to define the tree structure.
+Rust tells us how to fix that: by inserting an *indirection* like `Box`, `Rc`, or `&`.
+These are different "pointer types" in Rust. They all point to places in memory. So, instead of knowing the total size of our tree structure, we just know the *point* in memory where the tree is located. But that's enough to define the tree structure.
 These pointer types allow us to do that safely and without manual memory management.
 They all offer different guarantees and you should [choose the one that fits your requirements best](/2017/why-type-systems-matter/).
 
@@ -92,9 +90,10 @@ struct Tree<'a> {
 }
 ```
 
-* [`Box`](https://doc.rust-lang.org/std/boxed/struct.Box.html) is a **smart pointer**. It has zero runtime overhead. It owns the data it points to.
-It's smart, because when it goes out of scope it will first drop the data it points to and then itself.
-No manual memory management required.
+The borrow has no overhead, but can be tedious to use here.
+
+* [`Box`](https://doc.rust-lang.org/std/boxed/struct.Box.html) is a **smart pointer** with zero runtime overhead. It owns the data it points to.
+We call it smart, because when it goes out of scope it will first drop the data it points to and then itself. No manual memory management required.
 
 ```rust
 struct Tree {
@@ -114,37 +113,54 @@ struct Tree {
 }
 ```
 
+Choose `Rc` if you need to have multiple owners of the same data in one thread.
+For multi-threading, there's also [`Arc`](https://doc.rust-lang.org/std/sync/struct.Arc.html) (atomic reference count).
+
+### Which type fits best?
+
 All three options are totally valid, depending on your use-case.
 The rule of thumb is to stick with simple borrows as long as sensible.
 
+In this simple case, I chose to use a `Box`, because I did not need any guarantees.
 
-For a more in-depth explanation of these types, I may refer you to [Wrapper Types in Rust: Choosing Your Guarantees](https://manishearth.github.io/blog/2015/05/27/wrapper-types-in-rust-choosing-your-guarantees/).
+### Packing it up
 
-### Smart pointers
+The next problem I faced was, that I could not instantiate a tree structure.
+Rember that the left and right subtree have the type `Box<Tree>`, but at some
+point there would be no left and right.
 
-As usual, the [Rust documentation](https://doc.rust-lang.org/book/second-edition/ch15-00-smart-pointers.html) (commonly referred to as *the book*) provides a succinct definition:
+In the Python example I wrote `None` to signal the end of my datastructure.
+Thanks to Rust's [`Option`](https://doc.rust-lang.org/std/option/) type we could do the same:
 
-> Pointer is a generic programming term for something that refers to a location that stores some other data.
->  
-> Smart pointers are data structures that <strong><u>act like a pointer</u></strong>, but also have <strong><u>additional metadata</u></strong> and capabilities.
+``` rust
+let t = Tree(15.0,
+          Some(Box::new(Tree(12.0,
+                        None,
+                        Box::new(Tree(13.0,
+                                 None,
+                                 None))))),
+          Some(Box::new(Tree(22.0,
+               Some(Box::new(Tree(18.0,
+                    None,
+                    None)),
+               Some(Box::new(Tree(100.0,
+                    None,
+                    None)))))
+```
+
 
 
 ### Why did it work in Python?
 
-Now you might be wondering why our tree implementation worked so flawlessly in Python.
+Now you might be wondering, why our tree implementation worked so flawlessly in Python.
 The reason is that Python dynamically allocates memory for the tree object at runtime.
 Also, it wraps everything inside a [PyObject, which is kind of similar to `Rc` from above](http://pythonextensionpatterns.readthedocs.io/en/latest/refcount.html)
 &mdash; a reference counted smart pointer.
 
 Rust is more explicit here. It gives us more flexibility to express our needs.
 Then again, we need to know about all the possible alternatives to make good use of them.
-
-<figure>
-<img src="/img/posts/2017/boxes-and-trees/treebox.svg" alt="Drawing of a cardboard box containing trees"/>
-  <figcaption>
-  Illustration provided by <a href="http://www.freepik.com/free-vector/green-trees_794232.htm">Freepik.com</a>.
-  </figcaption>
-</figure>
-
-
+If you can, then stay away from smart pointers and stick to simple borrows.  
+If that's not possible, as seen above, choose the least invasive one for your
+use-case. The [Rust documentation](https://doc.rust-lang.org/book/second-edition/ch15-00-smart-pointers.html) is a good starting point here.
+Also read ["Idiomatic tree and graph like structures in Rust"](https://rust-leipzig.github.io/architecture/2016/12/20/idiomatic-trees-in-rust/) for some clever use of allocators.
 
