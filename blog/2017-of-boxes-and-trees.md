@@ -1,13 +1,13 @@
 extends: default.liquid
 
 title:      Of Boxes and Trees - Smart Pointers in Rust
-date:       08 Aug 2017 00:00:00 +0000
-humandate:  8th of August 2017
+date:       12 Aug 2017 00:00:00 +0000
+humandate:  12th of August 2017
 path:       2017/boxes-and-trees
 ---
 
-A few weeks ago, I tried to implement a binary tree datastructure in Rust.
-Each binary tree has a root value, a left and a right subtree.
+Recently, I tried to implement a binary tree data structure in Rust.
+Each binary tree has a root value, a left, and a right subtree.
 I started from this Python implementation, which is quite straightforward.
 
 ```python
@@ -31,16 +31,16 @@ t = Tree(15,
 And the result can be visualized beautifully.  
 (Yes I've drawn that myself.)
 
-<img src="/img/posts/2017/boxes-and-trees/tree.svg" alt="A binary search tree representing our datastructure"/>
+<img src="/img/posts/2017/boxes-and-trees/tree.svg" alt="A binary search tree representing our data structure"/>
 
 Porting that code to Rust turned out to be a little... challenging.
 My first attempt looked quite innocuous.
 
 ```rust
 struct Tree {
-    root: i64,
-    left: Tree,
-    right: Tree,
+  root: i64,
+  left: Tree,
+  right: Tree,
 }
 ```
 
@@ -72,7 +72,7 @@ Tree { i64, Tree { ... }, Tree { ... } }
 // The next expansion won't fit on the page anymore
 ```
 
-Since we don't know how many subtrees our tree will have, there is no way to tell how much memory we need to allocate upfront. We'll only know at runtime!
+Since we don't know how many subtrees our tree will have, there is no way to tell how much memory we need to allocate up front. We'll only know at runtime!
 
 Rust tells us how to fix that: by inserting an *indirection* like `Box`, `Rc`, or `&`.
 These are different "pointer types" in Rust. They all point to places in memory. So, instead of knowing the total size of our tree structure, we just know the *point* in memory where the tree is located. But that's enough to define the tree structure.
@@ -80,75 +80,141 @@ These pointer types allow us to do that safely and without manual memory managem
 They all offer different guarantees and you should [choose the one that fits your requirements best](/2017/why-type-systems-matter/).
 
 * `&` is called a `borrow` in Rust speech. It's the most common of the three. It's a reference to some place in memory, but it does not **own** the data it points to. As such, the lifetime of the borrow depends on its owner.
-Therefore we would need to add lifetime parameters:
+Therefore we would need to add lifetime parameters here. This can make it tedious to use.
 
-```rust
-struct Tree<'a> {
+    ```rust
+    struct Tree<'a> {
     root: i64,
     left: &'a Tree<'a>,
     right: &'a Tree<'a>,
-}
-```
-
-The borrow has no overhead, but can be tedious to use here.
+    }
+    ```
 
 * [`Box`](https://doc.rust-lang.org/std/boxed/struct.Box.html) is a **smart pointer** with zero runtime overhead. It owns the data it points to.
-We call it smart, because when it goes out of scope it will first drop the data it points to and then itself. No manual memory management required.
+We call it smart because when it goes out of scope it will first drop the data it points to and then itself. No manual memory management required.
 
-```rust
-struct Tree {
+    ```rust
+    struct Tree {
     root: i64,
     left: Box<Tree>,
     right: Box<Tree>,
-}
-```
+    }
+    ```
 
-* [`Rc`](https://doc.rust-lang.org/std/rc/struct.Rc.html) is another smart pointer. It's short for "reference-counting". It keeps track of the number of references to a datastructure. As soon as the number of references is down to zero, it cleans up after itself.
+* [`Rc`](https://doc.rust-lang.org/std/rc/struct.Rc.html) is another smart pointer. It's short for "reference-counting". It keeps track of the number of references to a data structure. As soon as the number of references is down to zero, it cleans up after itself.
+Choose `Rc` if you need to have multiple owners of the same data in one thread.
+For multithreading, there's also [`Arc`](https://doc.rust-lang.org/std/sync/struct.Arc.html) (atomic reference count).
 
-```rust
-struct Tree {
+    ```rust
+    struct Tree {
     root: i64,
     left: Rc<Tree>,
     right: Rc<Tree>,
+    }
+    ```
+
+### Putting the tree into a box
+
+All three options are totally valid. Which one you should choose, depends on your use-case.
+A rule of thumb is to keep it simple.
+In my case, I chose to use a `Box`, because I did not need any special guarantees.
+
+### Making subtrees optional
+
+The next problem I faced was, that I could not instantiate a tree structure.
+The left and right subtree have the type `Box<Tree>`, but at some
+point I would need an empty subtree.
+
+In the Python example, I used `None` to signal the end of my data structure.
+Thanks to Rust's [`Option`](https://doc.rust-lang.org/std/option/) type we can do the same:
+
+``` rust
+struct Tree {
+  root: i64,
+  left: Option<Box<Tree>>,
+  right: Option<Box<Tree>>,
 }
 ```
 
-Choose `Rc` if you need to have multiple owners of the same data in one thread.
-For multi-threading, there's also [`Arc`](https://doc.rust-lang.org/std/sync/struct.Arc.html) (atomic reference count).
+After all of this, we can create our first tree:
 
-### Which type fits best?
-
-All three options are totally valid, depending on your use-case.
-The rule of thumb is to stick with simple borrows as long as sensible.
-
-In this simple case, I chose to use a `Box`, because I did not need any guarantees.
-
-### Packing it up
-
-The next problem I faced was, that I could not instantiate a tree structure.
-Rember that the left and right subtree have the type `Box<Tree>`, but at some
-point there would be no left and right.
-
-In the Python example I wrote `None` to signal the end of my datastructure.
-Thanks to Rust's [`Option`](https://doc.rust-lang.org/std/option/) type we could do the same:
-
-``` rust
-let t = Tree(15.0,
-          Some(Box::new(Tree(12.0,
-                        None,
-                        Box::new(Tree(13.0,
-                                 None,
-                                 None))))),
-          Some(Box::new(Tree(22.0,
-               Some(Box::new(Tree(18.0,
-                    None,
-                    None)),
-               Some(Box::new(Tree(100.0,
-                    None,
-                    None)))))
+```rust
+Tree {
+    root: 15,
+    left: Some(Box::new(Tree {
+            root: 12,
+            left: None,
+            right: Some(Box::new(Tree {
+                    root: 13,
+                    left: None,
+                    right: None,
+            })),
+    })),
+    right: Some(Box::new(Tree {
+            root: 22,
+            left: Some(Box::new(Tree {
+                    root: 18,
+                    left: None,
+                    right: None,
+            })),
+            right: Some(Box::new(Tree {
+                    root: 100,
+                    left: None,
+                    right: None,
+            })),
+    })),
+};
 ```
 
+Depending on your point of view, you might say this is verbose or explicit.
+Compared to the Python version, it looked a bit too cluttered.
 
+Can we do better?
+[Chris McDonald](https://github.com/cjm00) helped me to come up with the following representation:
+
+```rust
+Tree::new(15)
+  .left(
+    Tree::new(12)
+      .right(Tree::new(13))
+  )
+  .right(
+    Tree::new(22)
+      .left(Tree::new(18))
+      .right(Tree::new(100))
+  );
+```
+
+To me, this is much easier on the eye.  
+Here's the full tree implementation that makes this possible:
+
+```rust
+#[derive(Default)]
+struct Tree {
+  root: i64,
+  left: Option<Box<Tree>>,
+  right: Option<Box<Tree>>,
+}
+
+impl Tree {
+  fn new(root: i64) -> Tree {
+    Tree {
+      root: root,
+      ..Default::default()
+    }
+  }
+
+  fn left(mut self, leaf: Tree) -> Self {
+    self.left = Some(Box::new(leaf));
+    self
+  }
+
+  fn right(mut self, leaf: Tree) -> Self {
+    self.right = Some(Box::new(leaf));
+    self
+  }
+}
+```
 
 ### Why did it work in Python?
 
@@ -162,5 +228,5 @@ Then again, we need to know about all the possible alternatives to make good use
 If you can, then stay away from smart pointers and stick to simple borrows.  
 If that's not possible, as seen above, choose the least invasive one for your
 use-case. The [Rust documentation](https://doc.rust-lang.org/book/second-edition/ch15-00-smart-pointers.html) is a good starting point here.
-Also read ["Idiomatic tree and graph like structures in Rust"](https://rust-leipzig.github.io/architecture/2016/12/20/idiomatic-trees-in-rust/) for some clever use of allocators.
+Also, read ["Idiomatic tree and graph like structures in Rust"](https://rust-leipzig.github.io/architecture/2016/12/20/idiomatic-trees-in-rust/) for some clever use of allocators.
 
