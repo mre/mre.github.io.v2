@@ -1,12 +1,12 @@
 .PHONY: build clean css
 
-build: css
+build: assets
 	rm -rf build/
 	cobalt build
 	# Setup symlinks
 	touch .nojekyll
 
-css:
+css assets:
 	sass assets/main.scss:assets/main.css --style compressed --no-cache
 
 publish:
