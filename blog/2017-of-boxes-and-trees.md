@@ -216,6 +216,16 @@ impl Tree {
 }
 ```
 
+**Update:** [Danny Grein](https://twitter.com/fungos) mentioned on twitter, that
+we can support the following syntax by implementing [`From<i64> for Tree`](https://play.rust-lang.org/?gist=1454d2bfdacf0c83434a3095b0adcb5d&version=stable):
+
+```rust
+root(15)
+	.left(root(12).right(13))
+	.right(root(22).left(18).right(100));
+```
+
+
 ### Why did it work in Python?
 
 Now you might be wondering, why our tree implementation worked so flawlessly in Python.
