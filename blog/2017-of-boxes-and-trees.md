@@ -13,7 +13,9 @@ I started from this Python implementation, which is quite straightforward.
 ```python
 class Tree:
   def __init__(self, val, left=None, right=None):
-    self.val, self.left, self.right = val, left, right
+    self.val = val
+    self.left = left
+    self.right = right
 ```
 
 This allows us to declare a fancy tree object like this:
@@ -84,9 +86,9 @@ Therefore we would need to add lifetime parameters here. This can make it tediou
 
     ```rust
     struct Tree<'a> {
-    root: i64,
-    left: &'a Tree<'a>,
-    right: &'a Tree<'a>,
+      root: i64,
+      left: &'a Tree<'a>,
+      right: &'a Tree<'a>,
     }
     ```
 
@@ -95,9 +97,9 @@ We call it smart because when it goes out of scope it will first drop the data i
 
     ```rust
     struct Tree {
-    root: i64,
-    left: Box<Tree>,
-    right: Box<Tree>,
+      root: i64,
+      left: Box<Tree>,
+      right: Box<Tree>,
     }
     ```
 
@@ -107,9 +109,9 @@ For multithreading, there's also [`Arc`](https://doc.rust-lang.org/std/sync/stru
 
     ```rust
     struct Tree {
-    root: i64,
-    left: Rc<Tree>,
-    right: Rc<Tree>,
+      root: i64,
+      left: Rc<Tree>,
+      right: Rc<Tree>,
     }
     ```
 
@@ -216,15 +218,14 @@ impl Tree {
 }
 ```
 
-**Update:** [Danny Grein](https://twitter.com/fungos) mentioned on twitter, that
+**Update:** [Danny Grein](https://twitter.com/fungos) mentioned on Twitter, that
 we can support the following syntax by implementing [`From<i64> for Tree`](https://play.rust-lang.org/?gist=1454d2bfdacf0c83434a3095b0adcb5d&version=stable):
 
 ```rust
 root(15)
-	.left(root(12).right(13))
-	.right(root(22).left(18).right(100));
+.left(root(12).right(13))
+.right(root(22).left(18).right(100));
 ```
-
 
 ### Why did it work in Python?
 
