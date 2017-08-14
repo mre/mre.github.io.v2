@@ -225,8 +225,8 @@ we can support the following syntax by implementing [`From<i64> for Tree`](https
 
 ```rust
 root(15)
-.left(root(12).right(13))
-.right(root(22).left(18).right(100));
+  .left(root(12).right(13))
+  .right(root(22).left(18).right(100));
 ```
 
 ### Why did it work in Python?
