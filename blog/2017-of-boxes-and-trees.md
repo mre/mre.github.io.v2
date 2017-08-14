@@ -168,7 +168,7 @@ Tree {
 };
 ```
 
-Depending on your point of view, you might say this is verbose or explicit.
+Depending on your point of view, you might say this is either verbose or explicit.
 Compared to the Python version, it looked a bit too cluttered.
 
 Can we do better?
