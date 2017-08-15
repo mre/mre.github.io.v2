@@ -1,8 +1,8 @@
 extends: default.liquid
 
 title:      Afraid of Makefiles? Don't be!
-date:       12 Aug 2017 00:00:00 +0000
-humandate:  12th of August 2017
+date:       15 Aug 2017 00:00:00 +0000
+humandate:  15th of August 2017
 path:       2017/makefiles
 ---
 
