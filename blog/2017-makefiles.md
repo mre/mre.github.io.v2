@@ -4,6 +4,9 @@ title:      Afraid of Makefiles? Don't be!
 date:       15 Aug 2017 00:00:00 +0000
 humandate:  15th of August 2017
 path:       2017/makefiles
+excerpt:    In the last few years, I've had the pleasure to work with a lot of talented Software Engineers.
+            One thing that struck me is, that many of them did not have any working knowledge of `Makefiles` 
+            and why they are useful. Let's change that!
 ---
 
 <figure>
