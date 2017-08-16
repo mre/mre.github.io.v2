@@ -57,29 +57,29 @@ Some of these steps depend on each other.
 Let's try to express my routine as a `Makefile`.
 
 ```make
-dress: shoes jacket
-  @echo "All done. Let's go outside!"
+dress: trousers shoes jacket
+	@echo "All done. Let's go outside!"
 
 jacket: pullover
-  @echo "Putting on jacket."
+	@echo "Putting on jacket."
 
 pullover: shirt
-  @echo "Putting on pullover."
+	@echo "Putting on pullover."
 
-shirt: trousers
-  @echo "Putting on shirt."
+shirt:
+	@echo "Putting on shirt."
 
 trousers: underpants
-  @echo "Putting on trousers."
+	@echo "Putting on trousers."
 
 underpants:
-  @echo "Putting on underpants."
+	@echo "Putting on underpants."
 
 shoes: socks
-  @echo "Putting on shoes."
+	@echo "Putting on shoes."
 
 socks: pullover
-  @echo "Putting on socks."
+	@echo "Putting on socks."
 ```
 
 If we execute the `Makefile`, we get the following output:
