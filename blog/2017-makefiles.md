@@ -114,6 +114,15 @@ target: [dependencies]
 * The order of the targets does not matter.  
 * Shell commands must be indented with a tab.
 * Add an `@` sign to suppress output of the command that is executed.
+* If `target` isn't a file you want to build, please add `.PHONY <target>` at the end of the build step.
+  Common phony targets are: clean, install, run,...
+
+  ```make
+  install: 
+  	npm install
+  .PHONY install
+  ```
+  Otherwise, if somebody creates an `install` directory, `make` will silently fail, because the build target already exists.
 
 Congratulations! You've learned 90% of what you need to know about `make`.
 
