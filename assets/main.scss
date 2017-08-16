@@ -173,6 +173,16 @@ img {
   }
 }
 
+figure {
+    margin: 0 0 40px 0;
+		padding: 0;
+		text-align: center;
+		font-style: italic;
+    font-size: 0.9em;
+		text-indent: 0;
+}
+
+
 /*** media queries ***/
 /* X-Small devices (phones, 520px and up) */
 @media (min-width: 520px) {
@@ -201,15 +211,6 @@ img {
 
 	main {
     margin-left: 260px;
-	}
-
-	figure {
-		margin: 40px 0;
-		padding: 0;
-		text-align: center;
-		font-style: italic;
-		font-size: smaller;
-		text-indent: 0;
 	}
 
   .highlight {
