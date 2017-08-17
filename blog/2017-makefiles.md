@@ -120,7 +120,7 @@ target: [dependencies]
   ```make
   install: 
   	npm install
-  .PHONY install
+  .PHONY: install
   ```
   Otherwise, if somebody creates an `install` directory, `make` will silently fail, because the build target already exists.
 
