@@ -1,0 +1,38 @@
+
+{% comment %} Support for social platforms (Facebook's OpenGraph, Twitter's Cards,...) {% endcomment %}
+
+{%- if title == "" %}
+    {%- comment %} Assume that we are on a static page {% endcomment %}
+    {%- assign social_title = "Matthias Endler" %}
+    {%- assign social_description = "Personal website of Matthias Endler. A Software Engineer interested in low-level programming and Backend Development. PHP, Python, Go, Rust." %}
+{%- else %}
+    {%- comment %} Assume that we are on an article page {% endcomment %}
+    {%- capture social_title %}{{ title }}{% endcapture %}
+    {%- if excerpt %}
+        {%- capture social_description %}{{ excerpt | strip_html | strip | strip_newlines | truncatewords: 40 }}{% endcapture %}
+    {%- else %}
+        {%- capture social_description %}{{ content | strip_html | strip | strip_newlines | truncatewords: 40 }}{% endcapture %}
+    {%- endif %}
+{%- endif %}
+
+{%- comment %}
+Ugly workaround: Somehow `unless` does not work,
+and if fb_image is not set, it's neither nil nor ""
+{%- endcomment %}
+{%- if social_img %}
+{%- else %}
+    {%- assign social_img = "default.png" %}
+{%- endif %}
+
+    <meta property="og:title" content="{{ social_title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{{ social_description }}" />
+    <meta property="og:url" content="https://matthias-endler.de/{{ path }}" />
+    <meta property="og:image" content="https://matthias-endler.de/img/social/{{ social_img }}" />
+    
+    <meta name="twitter:title" content="{{ social_title }}">
+    <meta name="twitter:description" content="{{ social_description }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@matthiasendler">
+    <meta name="twitter:creator" content="@matthiasendler">
+    <meta name="twitter:image" content="https://matthias-endler.de/img/social/{{ social_img }}">
