@@ -63,21 +63,28 @@
 
             {{ content }}
 
-            {% if comments %}
+            {%- comment %}
+            What follows is an ultra clunky way to iterate over a list of social media links.
+            This would be much easier with an array slice function.
+            {%- endcomment %}
+            {%- if comments %}
               <hr>
               💬 Comments available on
-              {% for comment in comments %}
-                {% if forloop.last == true %}
-                  {% if comments.size > 1 %}
+              {%- for comment in comments %}
+                {%- if forloop.length == forloop.index %}
+                  {%- if forloop.length > 1 %}
                   and
-                  {% endif %}
+                  {%- endif %}
                   {{ comment }}.
-                {% else %}
-                  {{ comment }},
-                {% endif %}
-              {% endfor %}
-
-            {% endif %}
+                {%- else %}
+                  {%- if forloop.first == forloop.index %}
+                  {{ comment }}
+                  {%- else %}
+                  , {{ comment }}
+                  {%- endif %}
+                {%- endif %}
+              {%- endfor %}
+            {%- endif %}
           </div>
           <div class="footer"><span class="highlight">Liked that? <a href="https://twitter.com/matthiasendler">Follow me on Twitter</a> and never miss a post again.</span></div>
         </main>
