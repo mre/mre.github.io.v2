@@ -113,14 +113,6 @@ hr {
   margin: 30px 0px;
 }
 
-/*** footer ***/
-footer {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	height: 20px;
-}
-
 #published-date {
   color: $date-color;
   font-size: 0.8em;
@@ -212,11 +204,6 @@ figure {
 	main {
     margin-left: 260px;
 	}
-
-  .highlight {
-    background-color: #FFFFBB;
-    padding: 10px;
-  }
 
   .footer {
     margin-bottom: 80px;
