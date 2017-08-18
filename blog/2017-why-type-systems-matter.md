@@ -4,7 +4,9 @@ title:      Why Type Systems Matter
 date:       10 Jul 2017 00:00:00 +0000
 humandate:  10th of July 2017
 path:       2017/why-type-systems-matter
+social_img: 2017_why_type_systems_matter.png
 comments:
+  - <a href="https://news.ycombinator.com/item?id=15046896">Hacker News</a>
   - <a href="https://www.reddit.com/r/rust/comments/6mknzp/why_type_systems_matter/">Reddit</a>
 ---
 
