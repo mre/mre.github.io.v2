@@ -12,7 +12,13 @@
 
     {%- include _layouts/social.liquid %}
 
-    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=m2llJQPQq8">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=m2llJQPQq8">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=m2llJQPQq8">
+    <link rel="manifest" href="/manifest.json?v=m2llJQPQq8">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=m2llJQPQq8" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico?v=m2llJQPQq8">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" type="text/css" href="/assets/main.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lora">
@@ -59,12 +65,18 @@
 
             {% if comments %}
               <hr>
-              Some people shared their thoughts here:<br />
-              <ul>
+              💬 Comments available on
               {% for comment in comments %}
-                <li>{{ comment }}</li>
+                {% if forloop.last == true %}
+                  {% if comments.size > 1 %}
+                  and
+                  {% endif %}
+                  {{ comment }}.
+                {% else %}
+                  {{ comment }},
+                {% endif %}
               {% endfor %}
-              </ul>
+
             {% endif %}
           </div>
           <div class="footer"><span class="highlight">Liked that? <a href="https://twitter.com/matthiasendler">Follow me on Twitter</a> and never miss a post again.</span></div>

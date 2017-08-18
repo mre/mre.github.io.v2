@@ -1,14 +1,14 @@
 {
-    "name": "Matthias Endler",
+    "name": "",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png?v=vMOrnYxAmd",
+            "src": "/android-chrome-192x192.png?v=m2llJQPQq8",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png?v=vMOrnYxAmd",
-            "sizes": "512x512",
+            "src": "/android-chrome-384x384.png?v=m2llJQPQq8",
+            "sizes": "384x384",
             "type": "image/png"
         }
     ],
