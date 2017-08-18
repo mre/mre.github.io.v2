@@ -9,6 +9,7 @@ excerpt:    In the last few years, I've had the pleasure to work with a lot of t
             and why they are useful. Let's change that!
 social_img: 2017_makefiles.png
 comments: 
+  - <a href="https://news.ycombinator.com/item?id=15041986">Hacker News</a>
   - <a href="https://www.reddit.com/r/programming/comments/6u2yen/afraid_of_makefiles_dont_be/">Reddit</a>
   - <a href="https://lobste.rs/s/rkxbue/afraid_makefiles_dont_be">Lobsters</a>
 ---
