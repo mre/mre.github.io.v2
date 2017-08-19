@@ -4,6 +4,9 @@ title:      Launching a URL Shortener in Rust using Rocket
 date:       09 Apr 2017 00:00:00 +0000
 humandate:  9th of April 2017
 path:       2017/rust-url-shortener
+comments:
+  - <a href="https://www.reddit.com/r/programming/comments/64li3l/launching_a_url_shortener_in_rust_using_rocket/">Reddit</a> 
+  - <a href="https://twitter.com/matthiasendler/status/851128136624480256">Twitter</a>
 ---
 
 One common Systems Design task in interviews is to sketch the software architecture of a URL shortener (a [bit.ly](https://bit.ly) clone, so to say).
