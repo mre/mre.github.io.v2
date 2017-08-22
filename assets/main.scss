@@ -33,8 +33,19 @@ h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
 
 img { border: 0; }
 
+/* Main CSS */
+
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora Regular'), local('Lora-Regular'), url(https://fonts.gstatic.com/s/lora/v10/rAXKWvABQNHjPUk26ixVvvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+  font-display: swap;
+}
+
 body {
-	font-family: 'Lora', serif;
+	font-family: 'Lora', Georgia, serif;
 	color: $text-color;
 	background-color: $background-color;
 	font-size: 1.2em;
@@ -57,6 +68,8 @@ pre > code {
   font-size: 0.9em;
   color: $code;
 }
+
+
 
 ::-moz-selection {
 	color: $select-text-color;
