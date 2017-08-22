@@ -5,9 +5,11 @@ build: assets
 	cobalt build
 	# Setup symlinks
 	touch .nojekyll
+.PHONY: build
 
 css assets:
 	sass assets/main.scss:assets/main.css --style compressed --no-cache
+.PHONY: css assets
 
 publish:
 	-git branch -D master
@@ -20,6 +22,8 @@ publish:
 	git commit -m "Github Pages integration"
 	git push -u -f origin master
 	git checkout source
+.PHONY: publish
 
-serve:
+serve: assets
 	cobalt serve
+.PHONY: serve
