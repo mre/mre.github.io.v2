@@ -13,6 +13,6 @@ ignore:
   - Makefile
   - todo.txt
   - LICENSE.txt
-link: http://matthias-endler.de
+link: https://matthias-endler.de
 syntax-highlight:
   theme: base16-ocean.light
