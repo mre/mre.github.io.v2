@@ -10,6 +10,18 @@ Clojure, Lisp,..
 Among all the popular functional languages, Haskell is arguably one of the most powerful ones.
 
 
+
+
+Rust programmers are roughly divided into three groups right now:
+
+* You come from a systems programming language like C or C++ and you want more security and high-level abstractions.
+* You come from a dynamically typed language (Ruby, PHP, Python) and you want more low-level control and better performance.
+* You come from a functional language (Clojure, Haskell, Scala) and you want more low-level control and better performance.
+
+
+
+
+
 traditionally known for being good at, e.g. building DSLs, type systems, interpreters, etc.
 
  The state of the Haskell ecosystem is that it is amazing at encouraging people to write libraries, especially libraries to assist in writing haskell code but amazingly bad at encouraging people to write actual programs, especially actual programs useful for something that isn't writing code.
