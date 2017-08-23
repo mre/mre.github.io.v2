@@ -8,7 +8,7 @@ build: assets
 .PHONY: build
 
 css assets:
-	sass assets/main.scss:assets/main.css --style compressed --no-cache
+	sass assets/main.scss:assets/main.css --style compressed --no-cache --sourcemap=none
 .PHONY: css assets
 
 publish:
