@@ -53,30 +53,36 @@
 
             {{ content }}
 
-            <hr>
-            ❤️ <a href="https://twitter.com/matthiasendler">Follow me on Twitter</a> and never miss a post again.<br />
             {%- comment %}
-            What follows is an ultra clunky way to iterate over a list of social media links.
-            This would be much easier with an array slice function.
+            Only posts have a human date.
+            Use that to find out, if we should show comments and a Twitter link at the bottom.
             {%- endcomment %}
-            {%- if comments %}
-              💬 Comments available on
-              {%- for comment in comments %}
-                {%- if forloop.length == forloop.index %}
-                  {%- if forloop.length > 1 %}
-                  and
-                  {%- endif %}
-                  {{ comment }}.
-                {%- else %}
-                  {%- if forloop.first == forloop.index %}
-                  {{ comment }}
+            {%- if humandate %}
+              <hr>
+              ❤️ <a href="https://twitter.com/matthiasendler">Follow me on Twitter</a> and never miss a post again.<br />
+              {%- comment %}
+              What follows is an ultra clunky way to iterate over a list of social media links.
+              This would be much easier with an array slice function.
+              {%- endcomment %}
+              {%- if comments %}
+                💬 Comments available on
+                {%- for comment in comments %}
+                  {%- if forloop.length == forloop.index %}
+                    {%- if forloop.length > 1 %}
+                    and
+                    {%- endif %}
+                    {{ comment }}.
                   {%- else %}
-                  , {{ comment }}
+                    {%- if forloop.first == forloop.index %}
+                    {{ comment }}
+                    {%- else %}
+                    , {{ comment }}
+                    {%- endif %}
                   {%- endif %}
-                {%- endif %}
-              {%- endfor %}
+                {%- endfor %}
+              {%- endif %}
+              <br />
             {%- endif %}
-            <br />
           </div>
         </main>
     </div>
