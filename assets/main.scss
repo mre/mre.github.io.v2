@@ -160,6 +160,23 @@ img {
   max-width: 100%;
 }
 
+.button {
+  margin: 40px auto;
+  padding: 10px;
+  background-color: $anchor-text-color;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+}
+
+.button:hover {
+  background-color: red;
+}
+
+.talk {
+  margin-top: 80px;
+}
+
 /*** media queries ***/
 /* X-Small devices (phones, 520px and below) */
 @media (max-width: 520px) {
