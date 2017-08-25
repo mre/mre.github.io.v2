@@ -1,8 +1,4 @@
-analytics:
-	curl -o assets/analytics.js https://www.google-analytics.com/analytics.js
-.PHONY: analytics
-
-build: assets analytics
+build: assets
 	rm -rf build/
 	cobalt build
 	# Setup symlinks
