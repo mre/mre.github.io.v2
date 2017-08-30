@@ -1,5 +1,7 @@
-build: assets
+clean:
 	rm -rf build/
+
+build: clean assets
 	cobalt build
 	# Setup symlinks
 	touch .nojekyll
@@ -9,9 +11,8 @@ css assets:
 	sass assets/main.scss:assets/main.css --style compressed --no-cache --sourcemap=none
 .PHONY: css assets
 
-publish:
+publish-old: clean
 	-git branch -D master
-	rm -rf build/
 	cobalt build
 	cobalt import --branch master
 	git checkout master
@@ -20,6 +21,17 @@ publish:
 	git commit -m "Github Pages integration"
 	git push -u -f origin master
 	git checkout source
+.PHONY: publish-old
+
+publish: clean build
+	minify -r -o minified/ build
+	cp -Rf minified/* build/.
+	rm -rf minified/
+	rm build/minify.conf
+	touch build/.nojekyll
+	git branch -Dq master
+	git branch master HEAD
+	git filter-branch --subdirectory-filter build -- master
 .PHONY: publish
 
 kill:
