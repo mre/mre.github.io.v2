@@ -1,16 +1,33 @@
-title: A Pragmatic Haskell
+extends: default.liquid
 
-Back at University I worked with Haskell for one semester.
-I wrote a tool which takes geometric input data, such as point clouds, and calculates the convex hull on it.
+title:      A Productive Haskell
+date:       26  Aug 2017 00:00:00 +0000
+humandate:  26th of August 2017
+path:       2017/productive-haskell
+Back in University I worked on a project, which bridged the gap between Java and Haskell.
+It was a tool for teaching students the basics of computational geometry.
+That might sound frightening in the beginning, but it really was not.
+
+My task was to send a bunch of 2D-Points from Java to Haskell, run a function and return the result to Java.
+For example, my Haskell code calculated the [convex hull](https://en.wikipedia.org/wiki/Convex_hull) on the input data.
+
+<img src="/img/posts/2017/haskell-java/convex-hull.svg" alt="Calculating the convex hull on a point cloud"/>
+
+<figure>
+  <img src="/img/posts/2017/haskell-java/convex-hull.jpg" alt="A GUI tool for computational geometry">
+  <figcaption>
+  User Interface of the tool, which used my Haskell code to run geometrical computations.
+  Advisor: <a href="http://www.ai6.uni-bayreuth.de/en/members/fabian-stehn-en.html">Dr. Fabian Stehn</a>, Universit&auml;t Bayreuth
+  </figcaption>
+</figure>
+
+
 
 Don't get me wrong: I really want to *like* Haskell.
 After finishing University I now have limited time to learn new things.
 
 Clojure, Lisp,..
 Among all the popular functional languages, Haskell is arguably one of the most powerful ones.
-
-
-
 
 Rust programmers are roughly divided into three groups right now:
 
