@@ -24,14 +24,15 @@ publish-old: clean
 .PHONY: publish-old
 
 publish: clean build
+	git branch -Dq master
+	cobalt import --branch master
+	sleep 2
+	git checkout master
 	minify -r -o minified/ build
 	cp -Rf minified/* build/.
 	rm -rf minified/
 	rm build/minify.conf
 	touch build/.nojekyll
-	git branch -Dq master
-	git branch master HEAD
-	git filter-branch --subdirectory-filter build -- master
 .PHONY: publish
 
 kill:
