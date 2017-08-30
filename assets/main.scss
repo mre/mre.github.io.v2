@@ -119,9 +119,7 @@ a:hover {
 hr {
   border: none;
   height: 1px;
-  /* Set the hr color */
-  color: #333; /* old IE */
-  background-color: #333; /* Modern Browsers */
+  background-color: #333;
   margin: 30px 0px;
 }
 
@@ -237,10 +235,4 @@ figure {
   .footer {
     margin-bottom: 80px;
   }
-}
-
-.inline {
-  float: left;
-  margin: 27px 30px 0px 0px;
-  height: 265px;
 }
