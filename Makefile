@@ -22,18 +22,19 @@ publish:
 	git checkout source
 .PHONY: publish
 
-serve: assets
+kill:
+	killall -9 cobalt || exit 0
+
+serve: kill assets
 	cobalt serve
 .PHONY: serve
 
-watch:
-	killall -9 cobalt || exit 0
+watch: kill
 	cobalt serve --drafts &
 	fswatch -0 blog _drafts | xargs -0 -n1 sh -c 'cobalt build --drafts'
 .PHONY: watch
 
-watch-interactive:
-	killall -9 cobalt || exit 0
+watch-interactive: kill
 	cobalt serve --drafts &
 	fswatch -0 blog _drafts | xargs -0 -n1 sh -c 'cobalt build --drafts && osascript refresh-firefox.scpt'
 .PHONY: watch-interactive
