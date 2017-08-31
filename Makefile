@@ -11,9 +11,8 @@ css assets:
 	sass assets/main.scss:assets/main.css --style compressed --no-cache --sourcemap=none
 .PHONY: css assets
 
-publish-old: clean
+publish-old: build
 	-git branch -D master
-	cobalt build
 	cobalt import --branch master
 	git checkout master
 	touch .nojekyll
@@ -23,16 +22,17 @@ publish-old: clean
 	git checkout source
 .PHONY: publish-old
 
-publish: clean build
+publish: build
 	git branch -Dq master
 	cobalt import --branch master
-	sleep 2
+	sleep 1
 	git checkout master
-	minify -r -o minified/ build
-	cp -Rf minified/* build/.
+	minify -r -o minified/ .
+	cp -Rf minified/* .
 	rm -rf minified/
-	rm build/minify.conf
-	touch build/.nojekyll
+	rm minify.conf
+	touch .nojekyll
+	#git checkout source
 .PHONY: publish
 
 kill:
