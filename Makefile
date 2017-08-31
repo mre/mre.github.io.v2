@@ -11,17 +11,6 @@ css assets:
 	sass assets/main.scss:assets/main.css --style compressed --no-cache --sourcemap=none
 .PHONY: css assets
 
-publish-old: build
-	-git branch -D master
-	cobalt import --branch master
-	git checkout master
-	touch .nojekyll
-	git add .nojekyll
-	git commit -m "Github Pages integration"
-	git push -u -f origin master
-	git checkout source
-.PHONY: publish-old
-
 publish: build
 	git branch -Dq master
 	cobalt import --branch master
@@ -32,7 +21,11 @@ publish: build
 	rm -rf minified/
 	rm minify.conf
 	touch .nojekyll
-	#git checkout source
+	rm -rf build/
+	git add .
+	git commit -m 'New deploy!'
+	git push -u -f origin master
+	git checkout source
 .PHONY: publish
 
 kill:
