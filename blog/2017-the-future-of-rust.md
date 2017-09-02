@@ -4,6 +4,8 @@ title:      The Future of Rust
 date:       27 Apr 2017 00:00:00 +0000
 humandate:  27th of April 2017
 path:       2017/future-of-rust
+images:
+  - /img/posts/2017/future-of-rust/crab.svg
 comments:
   - <a href="https://www.reddit.com/r/rust/comments/67uzpc/the_future_of_rust/">Reddit</a>
 ---
