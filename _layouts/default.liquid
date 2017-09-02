@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    {% if title != "" %}
-    <title>{{ title | append: " | Matthias Endler" }}</title>
-    {%- else %}
-    <title>{{ "Matthias Endler" }}</title>
-    {%- endif %}
-
-    {%- include _layouts/social.liquid %}
-
+    <style>
+    {% include assets/main.css %}
+    </style>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=m2llJQPQq8">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=m2llJQPQq8">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=m2llJQPQq8">
     <link rel="manifest" href="/manifest.json?v=m2llJQPQq8">
     <link rel="mask-icon" href="/safari-pinned-tab.svg?v=m2llJQPQq8" color="#5bbad5">
     <link rel="shortcut icon" href="/favicon.ico?v=m2llJQPQq8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
 
-    <style>
-    {% include assets/main.css %}
-    </style>
+    {%- include _layouts/social.liquid %}
+
+    {% if title != "" %}
+    <title>{{ title | append: " | Matthias Endler" }}</title>
+    {%- else %}
+    <title>{{ "Matthias Endler" }}</title>
+    {%- endif %}
 
     <meta name="author" content="Matthias Endler">
     <meta name="description" content="Personal website of Matthias Endler, a Software Engineer interested in low-level programming and backend development. PHP, Python, Go, Rust."/>
