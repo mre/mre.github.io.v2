@@ -4,12 +4,6 @@ title:      The Essence of Information
 date:       18 Mar 2017 00:00:00 +0000
 humandate:  18th of March 2017
 path:       2017/the-essence-of-information
-images:
-  - /img/posts/2017/big_pile.jpg
-  - /img/posts/2017/equation.svg
-  - /img/posts/2017/socks_even.svg
-  - /img/posts/2017/socks_uneven.svg
-  - /img/posts/2017/random_pile.jpg
 ---
 
 People look confused, when I tell them about my passion for Algorithms and Datastructures.

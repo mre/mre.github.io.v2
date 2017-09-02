@@ -4,12 +4,6 @@
     <style>
     {% include assets/main.css %}
     </style>
-    {%- if images %}
-      {%- for image in images %}
-      <link rel="preload prefetch" type="image" href="{{ image }}" />
-      {%- endfor %}
-    {%- endif %}
-
     <link rel="dns-prefetch" href="//www.google-analytics.com/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=m2llJQPQq8">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=m2llJQPQq8">
