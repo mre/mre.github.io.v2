@@ -1,190 +1,210 @@
-/* Common variables */
+// Common variables
 
-$text-color: rgba(0,0,0,.8);
-$select-text-color: white;
-$anchor-text-color: #CE534D;
-$background-color: white;
-$select-background-color: black;
+$text-color: rgba(0, 0, 0, .8);
+$select-text-color:#fff;
+$anchor-text-color: #ce534d;
+$background-color: #fff;
+$select-background-color: #000;
 $background-code: #efefef;
 $date-color: #888;
 $code: #111;
+$hr-color: #333;
+$blockquote-color: #ededee;
+$code-color: #f9f9fa;
+$code-border-color: #ededee;
+$button-color: $anchor-text-color;
+$button-hover-color:#f00;
+$button-text: #fff;
 
-/* CSS Mini Reset */
+// CSS Mini Reset
 
-html, body, div, form, fieldset, legend, label, h1
-{
- margin: 0;
- padding: 0;
+html,
+body,
+div,
+form,
+fieldset,
+legend,
+label,
+h1 {
+  margin: 0;
+  padding: 0;
 }
 
-table
-{
- border-collapse: collapse;
- border-spacing: 0;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-th, td
-{
- text-align: left;
- vertical-align: top;
+th,
+td {
+  text-align: left;
+  vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td,
+caption {
+  font-weight: normal;
+}
 
 img {
   border: 0;
   max-width: 100%;
 }
 
-/* Main CSS */
+// Main CSS
 
 h1 {
   font-size: 1.87em;
 }
 
 body {
+  background-color: $background-color;
+  color: $text-color;
   font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.3em;
-  letter-spacing: -.003em;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on;
   font-feature-settings: "liga" on;
-	color: $text-color;
-	background-color: $background-color;
+  font-size: 1.3em;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -.003em;
   line-height: 1.58;
+  text-rendering: optimizeLegibility;
 }
 
 pre {
-    white-space: pre-wrap;
-    padding: 20px;
-    font-size: 0.92em;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: auto; 
-    -moz-font-feature-settings: "liga" off;
-    font-feature-settings: "liga" off;
+  -moz-font-feature-settings: "liga" off;
+  font-feature-settings: "liga" off;
+  font-size: .92em;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+  padding: 20px;
+  white-space: pre-wrap;
 }
 
 ::-moz-selection {
-	color: $select-text-color;
-	background: $select-background-color;
+  background: $select-background-color;
+  color: $select-text-color;
 }
 
 ::selection {
-	color: $select-text-color;
-	background: $select-background-color;
+  background: $select-background-color;
+  color: $select-text-color;
 }
 
-/*** wrapper div for both header and main ***/
+// Wrapper div for header and main
 .wrapper {
-	margin-top: 10%;
+  margin-top: 10%;
 }
 
-/*** anchor tags ***/
+// Anchor tags
 a:link,
 a:visited,
 a:hover,
 a:active {
-	color: $anchor-text-color;
-	text-decoration: none;
+  color: $anchor-text-color;
+  text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
-/*** logo ***/
+// Logo
 .logo-container {
-	text-align: center;
+  text-align: center;
 }
 
 .logo {
-	height: 150px;
-	width: 171px;
+  background-size: cover;
+  display: inline-block;
+  height: 150px;
   margin-bottom: 20px;
-	display: inline-block;
-	background-size: cover;
+  width: 171px;
 }
 
-/*** tagline ***/
 .tagline-container p {
-  font-size: 0.78em;
-	text-align: center;
-	margin: 0 auto 2em auto;
+  font-size: .78em;
+  margin: 0 auto 2em;
   max-width: 220px;
+  text-align: center;
 }
 
 hr {
-  border: none;
+  background-color: $hr-color;
+  border: 0;
   height: 1px;
-  background-color: #333;
-  margin: 30px 0px;
+  margin: 30px 0;
 }
 
-#published-date {
+.published-date {
   color: $date-color;
-  font-size: 0.8em;
+  font-size: .8em;
   margin-bottom: 40px;
 }
 
 .subtitle {
-  margin: 0 0 2em 0;
+  margin: 0 0 2em;
 }
 
 blockquote {
+  border-left: 4px solid $blockquote-color;
+  font-style: italic;
   margin: 4px 10px;
   padding: 3px 20px;
-  border-left: 4px solid #EDEDEE;
-  font-style: italic;
 }
 
 code {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 100%;
-    overflow-x: auto;
-    padding: 0 5px;
-    font-size: 16px;
-    font-family: "Courier New", "Courier", monospace;
-    border: 1px solid #ededee;
-    background-color: #f9f9fa;
-    border-radius: 6px;
-    word-wrap: normal;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: auto; 
-    -moz-font-feature-settings: "liga" off;
-    font-feature-settings: "liga" off;
+  background-color: $code-color;
+  border: 1px solid $code-border-color;
+  border-radius: 6px;
+  display: inline-block;
+  font-family: "Courier New", "Courier", monospace;
+  -moz-font-feature-settings: "liga" off;
+  font-feature-settings: "liga" off;
+  font-size: 16px;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 0 5px;
+  vertical-align: middle;
+  word-wrap: normal;
 }
 
 .button {
+  background-color: $button-color;
+  border-radius: 10px;
+  color: $button-text;
   margin: 40px auto;
   padding: 10px;
-  background-color: $anchor-text-color;
   text-align: center;
-  border-radius: 10px;
-  color: white;
 }
 
 .button:hover {
-  background-color: red;
+  background-color: $button-hover-color;
 }
 
 .talk {
   margin-top: 80px;
 }
 
-/*** media queries ***/
-/* X-Small devices (phones, 520px and below) */
+// Small devices (phones, 520px and below)
 @media (max-width: 520px) {
-	.wrapper {
-		padding: 0 20px;
-	}
+  .wrapper {
+    padding: 0 20px;
+  }
 
   pre {
-      padding: 5px;
-      font-size: 0.85em;
+    font-size: .85em;
+    padding: 5px;
   }
 
   h1 {
@@ -193,44 +213,42 @@ code {
 }
 
 figure {
-    margin: 0 0 40px 0;
-		padding: 0;
-		text-align: center;
-		font-style: italic;
-    font-size: 0.9em;
-		text-indent: 0;
+  font-size: .9em;
+  font-style: italic;
+  margin: 0 0 40px;
+  padding: 0;
+  text-align: center;
+  text-indent: 0;
 }
 
-
-/*** media queries ***/
-/* X-Small devices (phones, 520px and up) */
+// Small devices (tablets, 520px and up)
 @media (min-width: 520px) {
-	/* wrapper stays 480px wide past 480px wide and is kept centered */
-	.wrapper {
-		width: 480px;
-		margin: 10% auto 0 auto;
-	}
+  // wrapper stays 480px wide past 480px wide and is kept centered
+  .wrapper {
+    margin: 10% auto 0;
+    width: 480px;
+  }
 }
 
 @media (min-width: 1024px) {
-	.wrapper {
-		width: 850px;
-	}
+  .wrapper {
+    width: 850px;
+  }
 
-	/* the header column stays left and has a dynamic width with all contents
-	aligned right */
-	header {
-		float: left;
-		width: 210px;
-	}
+  // the header column stays left and has a dynamic width
+  // with all contents aligned right
+  header {
+    float: left;
+    width: 210px;
+  }
 
   .content {
     margin-bottom: 40px;
   }
 
-	main {
+  main {
     margin-left: 260px;
-	}
+  }
 
   .footer {
     margin-bottom: 80px;
