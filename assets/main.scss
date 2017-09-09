@@ -147,7 +147,6 @@ hr {
 .published-date {
   color: $date-color;
   font-size: .8em;
-  margin-bottom: 40px;
 }
 
 .subtitle {
@@ -196,6 +195,49 @@ code {
   margin-top: 80px;
 }
 
+figure {
+  font-size: .9em;
+  font-style: italic;
+  margin: 0 0 40px;
+  padding: 0;
+  text-align: center;
+  text-indent: 0;
+}
+
+.loader {
+  position:relative;
+  padding-bottom: 280px;
+  overflow: hidden;
+}
+
+.loader img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loader img.frozen {
+  animation: 0.2s ease-in-out 0.3s 1 forwards opaque;
+}
+
+.frozen {
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -ms-filter: blur(8px);
+  filter: blur(8px);
+  transform: scale(1.05)
+}
+
+@keyframes opaque {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
 // Small devices (phones, 520px and below)
 @media (max-width: 520px) {
   .wrapper {
@@ -210,26 +252,36 @@ code {
   h1 {
     font-size: 1.6em;
   }
+
+  .loader {
+    padding-bottom: 220px
+  }
 }
 
-figure {
-  font-size: .9em;
-  font-style: italic;
-  margin: 0 0 40px;
-  padding: 0;
-  text-align: center;
-  text-indent: 0;
+@media (max-width: 450px) {
+  .loader {
+    padding-bottom: 170px
+  }
 }
 
-// Small devices (tablets, 520px and up)
+
+// Medium devices (tablets)
 @media (min-width: 520px) {
-  // wrapper stays 480px wide past 480px wide and is kept centered
   .wrapper {
     margin: 10% auto 0;
     width: 480px;
   }
+
+  h1 {
+    font-size: 1.7em;
+  }
+
+  .loader {
+    padding-bottom: 220px
+  }
 }
 
+// Big devices (Laptops)
 @media (min-width: 1024px) {
   .wrapper {
     width: 850px;
@@ -252,5 +304,9 @@ figure {
 
   .footer {
     margin-bottom: 80px;
+  }
+
+  .loader {
+    padding-bottom: 280px
   }
 }
