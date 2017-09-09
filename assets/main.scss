@@ -216,9 +216,6 @@ figure {
   left: 0;
 }
 
-.loader img.frozen {
-  animation: 0.2s ease-in-out 0.3s 1 forwards opaque;
-}
 
 .frozen {
   -webkit-filter: blur(8px);
@@ -226,7 +223,9 @@ figure {
   -o-filter: blur(8px);
   -ms-filter: blur(8px);
   filter: blur(8px);
-  transform: scale(1.05)
+  transform: scale(1.05);
+  animation: 0.2s ease-in-out 0.3s 1 forwards opaque;
+  width: 100%;
 }
 
 @keyframes opaque {
