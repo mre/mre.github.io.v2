@@ -216,6 +216,30 @@ figure {
   left: 0;
 }
 
+.loader object {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+object {
+  position: relative;
+  float: left;
+  display: block;
+  
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  width: 1000px;
+  height: 1000px;
+    content: '';
+    background: #efefef;
+  }
+}
+
+
 .frozen {
   -webkit-filter: blur(10px);
   -moz-filter: blur(10px);
