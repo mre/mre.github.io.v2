@@ -6,7 +6,7 @@ $anchor-text-color: #ce534d;
 $background-color: #fff;
 $select-background-color: #000;
 $background-code: #efefef;
-$date-color: #888;
+$light-color: #888;
 $code: #111;
 $hr-color: #333;
 $blockquote-color: #ededee;
@@ -145,7 +145,7 @@ hr {
 }
 
 .published-date {
-  color: $date-color;
+  color: $light-color;
   font-size: .8em;
 }
 
@@ -216,19 +216,18 @@ figure {
   left: 0;
 }
 
-
 .frozen {
-  -webkit-filter: blur(8px);
-  -moz-filter: blur(8px);
-  -o-filter: blur(8px);
-  -ms-filter: blur(8px);
-  filter: blur(8px);
-  transform: scale(1.05);
-  animation: 0.2s ease-in-out 0.3s 1 forwards opaque;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  transform: scale(1.04);
+  animation: 0.2s ease-in-out 0.3s 1 forwards fade;
   width: 100%;
 }
 
-@keyframes opaque {
+@keyframes fade {
   0% {
     opacity:1;
   }
