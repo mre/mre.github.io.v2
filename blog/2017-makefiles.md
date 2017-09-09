@@ -21,7 +21,7 @@ comments:
   </div
   <figcaption>
   What do clothes have to do with Makefiles? Find out in this post.
-  <a href="http://www.freepik.com/free-photos-vectors/background">Background vector created by Anindyanfitri - Freepik.com</a>
+  <a href="http://www.freepik.com/free-photos-vectors/background">Illustration by Anindyanfitri - Freepik.com</a>
   </figcaption>
 </figure
 
