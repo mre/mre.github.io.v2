@@ -206,17 +206,10 @@ figure {
 
 .loader {
   position:relative;
-  padding-bottom: 280px;
   overflow: hidden;
 }
 
-.loader img {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.loader object {
+.loader img, .loader object {
   position: absolute;
   top: 0;
   left: 0;
@@ -240,7 +233,6 @@ object {
     background: #efefef;
   }
 }
-
 
 .frozen {
   -webkit-filter: blur(10px);
@@ -287,7 +279,6 @@ object {
     padding-bottom: 170px
   }
 }
-
 
 // Medium devices (tablets)
 @media (min-width: 520px) {
