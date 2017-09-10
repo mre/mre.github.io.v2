@@ -207,12 +207,18 @@ figure {
 .loader {
   position:relative;
   overflow: hidden;
+  width: auto;
+}
+
+.loader object {
+  position: absolute;
 }
 
 .loader img, .loader object {
-  position: absolute;
+  display: block;
   top: 0;
   left: 0;
+  width: 100%;
 }
 
 // https://stackoverflow.com/a/29111371/270334
@@ -254,12 +260,6 @@ object {
   }
 }
 
-@media (max-width: 450px) {
-  .loader {
-    padding-bottom: 170px
-  }
-}
-
 // Small devices (phones, 520px and below)
 @media (max-width: 520px) {
   .wrapper {
@@ -275,9 +275,6 @@ object {
     font-size: 1.6em;
   }
 
-  .loader {
-    padding-bottom: 220px
-  }
 }
 
 // Medium devices (tablets)
@@ -289,10 +286,6 @@ object {
 
   h1 {
     font-size: 1.7em;
-  }
-
-  .loader {
-    padding-bottom: 220px
   }
 }
 
@@ -319,9 +312,5 @@ object {
 
   .footer {
     margin-bottom: 80px;
-  }
-
-  .loader {
-    padding-bottom: 280px
   }
 }
