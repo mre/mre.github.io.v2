@@ -1,6 +1,10 @@
 clean:
 	rm -rf build/
 
+lqip:
+	lqip
+.PHONY: lqip
+
 build: clean assets
 	cobalt build
 	# Setup symlinks
