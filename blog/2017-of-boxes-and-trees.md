@@ -35,7 +35,10 @@ t = Tree(15,
 And the result can be visualized beautifully.  
 (Yes I've drawn that myself.)
 
-<img src="/img/posts/2017/boxes-and-trees/tree.svg" alt="A binary search tree representing our data structure"/>
+<div class="loader">
+            <object data="/img/posts/2017/boxes-and-trees/tree.svg">A binary search tree representing our data structure"</object>
+            <img class="frozen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAAAAADI5CmLAAAAO0lEQVR42lXHgQaAQBBF0f7/KwOKTVCT3adxgzw7BzgL1f+m8i3jnB6DHIHfAO2++Qf9Yu3+g8T9+tgHi4yFbZQL7eEAAAAASUVORK5CYII" />
+        </div>
 
 Porting that code to Rust turned out to be a little... challenging.
 My first attempt looked quite innocuous.
