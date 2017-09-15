@@ -15,7 +15,10 @@ ecosystem. To that I answer: why not? It's fun to think about the future of
 systems programming in general and Rust in particular.
 
 <figure>
-<img src="/img/posts/2017/future-of-rust/crab.svg" alt="The crab is the Rust mascot"/>
+<div class="loader">
+            <object data="/img/posts/2017/future-of-rust/crab.svg">The crab is the Rust mascot</object>
+            <img class="frozen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAICAMAAAARDVXAAAAAn1BMVEX////37vG7an3hu8T04eXCSWbimKr//v7WqrS2bH7XpLD89vfANVW7Kkz++Pn9+/zRm6jz5Ofvy9PJb4XUa4TUhpj12N/67/LlprXpzdLOgpTEPl7DNle/LVHFO1zMUnDrtMH24OXVoq+4Umu3Dze7HEL45+v9/f3p5OS1bIC/boG/TGfCUGq8dYbx8fH5+fnt6evw8PDw7+/w7e38/Pzoy0HDAAAAQUlEQVR42mNhQAVAPiMj418QC0j/BPHZGRm/MYAoBJ+DEQxegNV/lGSEAoh+hudKICYj4y0oXx0mDeXf1AeyoXwAZOgJVn+keZgAAAAASUVORK5CYII" />
+        </div>
   <figcaption>Ferris, the crab, is the inofficial Rust mascot.<br />
   Illustration provided by <a href="http://www.freepik.com/zooenvato">zooenvato for FreePik.com</a>.
   </figcaption>

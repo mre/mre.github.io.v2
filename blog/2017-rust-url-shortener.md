@@ -12,7 +12,10 @@ comments:
 One common Systems Design task in interviews is to sketch the software architecture of a URL shortener (a [bit.ly](https://bit.ly) clone, so to say).
 Since I was playing around with Rocket, why not give it a try?
 
-<img src="/img/posts/2017/rocket.svg" alt="A rocket travelling through space"/>
+<div class="loader">
+            <object data="/img/posts/2017/rocket.svg">A rocket travelling through space"</object>
+            <img class="frozen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAKCAMAAABcxfTLAAABO1BMVEX////KysrJyMbHx8fJyL/MybrVzaLKyL7LycLKycXHx8b39/f++Pk1MjJZVEUuLi4zMi6AdjDv1jL43TKomTE/PC8zMjGAZznjsVHqvGX///798vO2l5s2MjJSSy7ZxjH00jDapCXtxStcVC+4ijnUlTrmr0b78+Z9XWCcXVs7OC7OvDHpsyi1Qx7qxCxPRyxFOSpgTi+/jTPYsWo2NDNSTEA3NjMxMS5yaTHTwTLkzzKNgTA9OS44NjDf39+JMyGSMx4xMS81NC87OS5kWzc9OjM5ODVsfWxidmNCQkJMNC5RMis5NTQ5NzQvLy83NjI9RUO52Z6E0dZAT1A4NTWZdmSedmSKblcwMC8+PDc9Pj6TxbqJwq4yMzLSx8DcqY/QnIPPysjOzs7Rz8r4+Pj+/v3Wwa7pzb/98etsScYgAAAAZUlEQVR42mNkYGQEYjD4xc74lZGHERVIMzJ+4gez3oiCSAYNxmfScNmzjAwmcM4lBv1DjAz2jIxfYYZ8BfK9GI/YMh6yB/NfA/khYNY2Bm8g+RDIjwPz/zOAANMcxlQgZwYDHAAACJcVTNx317sAAAAASUVORK5CYII" />
+        </div>
 
 ### Requirements 
 
