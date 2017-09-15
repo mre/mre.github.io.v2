@@ -241,13 +241,13 @@ object {
 }
 
 .frozen {
-  -webkit-filter: blur(10px);
-  -moz-filter: blur(10px);
-  -o-filter: blur(10px);
-  -ms-filter: blur(10px);
-  filter: blur(10px);
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -ms-filter: blur(8px);
+  filter: blur(8px);
   transform: scale(1.04);
-  animation: 0.2s ease-in-out 0.3s 1 forwards fade;
+  animation: 0.2s ease-in 0.4s 1 forwards fade;
   width: 100%;
 }
 
