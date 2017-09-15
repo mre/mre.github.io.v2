@@ -16,14 +16,14 @@ comments:
 
 <figure>
   <div class="loader">
-    <object data="/img/posts/2017/make/clothes.svg" type="image/svg+xml"></object>
-    <img class="frozen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAOCAMAAAAPOFwLAAACJVBMVEX////39/jf3+Da2tvb29zb293Z2drf4OHR3+J/nKW/0dTRz83Jx8PRz87IxsLV1NLx5Mvp4tX58uPq4tTWxKfRwKXXxqjw6+HN5/Pr6+vO5/HuxsXMfXvCd3fVnp25yNDo6Omvwsv4+vv8/f1amKwNXHpBe40SX3x+f32EfXd3cGyFfXfWs2f6ylP5zWf7y1HFpWqQayeVcC6ObC1Bos4imdVivOVff6WuSVDIWVa8WVeMUloVTWqGpLQNSmno7vF/t8cphJ4LW3kbcY2WmJKqnpOWjITyvkj7yUnKnEW8izK1hjBqlIkfl9QfldMjn9q7XFvERUHIZGO7WFdRTV8ZVG+dtsJwr8E1iqMSXnqpnpOsoJa7pYDyvEPBkTa6ijJ6k3k+msMekM8ol9HiWEq8UlPDTky8ODYwTGYpYnhvk6aTtsQtaX7Y087NrWz6x0i6iTLWuIKBnYsgmNVve5jaV0y0ZW1+qLg2Znd5enialI39/f3MqFvsukfwwEe6iTG+jzn07N57knsgl9ShZnGrYGexYmnLZWTIWlkvS2Vqm61IhJv1zXP3y2TktEPNpmDClUR5kHcjk9DFW1h9b4iuWmKCPkearLiLUlectMHF1Nvs8vTD1t6av8y909vl7vH53qL96Ln1zHLXrVXcv4nSsHTo28L66+r++vr03t7w09P45uX//v7Ut4Pr3MHgyaDfy6Xx6Nbizaf48+ry6djk0a317+PGZJKPAAAAu0lEQVR42o3JJVAFUQBG4fM/d3+7iYI2HPrgUHHpWEF7H7Rn3PvQAw3tdaUX3N2+6/d4+dUfWRLoFjw3T8t7/fr2XfkFhPQjH0XSb7lA0q3nccH7ZGPeZ/PxdPKSA3k39y7n5GEzC1mHTAYoy5Cx0w94cI4PYvezVlLSIal6kdK9tHQBDzkLR+2zzAtSh82Ty3pwQkW/JB+kByRBTgOIPPnVIUmN0LOtLj7Y7dhjv+OAVz7e840I/7j4rzsRdiQdQgYtsgAAAABJRU5ErkJggg" />
-  </div
+            <object data="/img/posts/2017/make/clothes.svg" type="image/svg+xml"></object>
+            <img class="frozen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAHCAMAAADgW+cVAAAA5FBMVEX////19fXi5ui9ys/U1NLMzMri39bm4trf2cva0b/c4+XZ4uXiw8LXtLTY3N7a3+LY6O0odZAlbYiVkomTioH1x1f6y1G3kEeYg0UondZlg6a6UFCSUlkqV3Fgh5zS5es3fZUdaYSqnpPBr4/3wkb7yUm9jTayl1NBos+uYma/U1R3SVQNSmk/b4g/fpUdZ4GYoaPmz5/1xVDxwEW/kDfcw5VQocOtYmjBWFiOSE9LV2p3mavr8fTU5Oj4+vv+9ub768PmyI3PqWPs3sXQr3P++fn57Oz46en//v77+fT28OT8+vUi22uyAAAAJklEQVR42mNkQAWM6EAAjS+PxmfQQ+PbIHH+MUPN92Rk/L8NxAAAS2ED5UHP9W4AAAAASUVORK5CYII" />
+        </div>
   <figcaption>
   What do clothes have to do with Makefiles? Find out in this post.
   <a href="http://www.freepik.com/free-photos-vectors/background">Illustration by Anindyanfitri - Freepik.com</a>
   </figcaption>
-</figure
+</figure>
 
 In the last few years, I've had the pleasure to work with a lot of talented Software Engineers.
 One thing that struck me is, that many of them did not have any working knowledge of `Makefiles` 

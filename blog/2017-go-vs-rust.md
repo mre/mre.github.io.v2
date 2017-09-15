@@ -4,11 +4,14 @@ title:      Go vs Rust? Choose Go.
 date:       15  Sep 2017 00:00:00 +0000
 humandate:  15th of September 2017
 path:       2017/go-vs-rust
+excerpt:    "\"Rust or Go, which one should I choose?\" is a question I get quite often. My answer is simple: use Go."
 ---
 
 <figure>
+            <div class="loader">
             <object data="/img/posts/2017/go-vs-rust/hero.svg" type="image/svg+xml"></object>
-
+            <img class="frozen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAKCAMAAABcxfTLAAABOFBMVEX////49/bLycW4tbG1sq7PzMj6+vrX2trMz9D7+/v+/v316du+ta6xsKualZGemJWUjYmcl5LU1tWXn6C/w8S+wsLq28jMxbqZn6KZinNlWVS9pWuRkI6zsKKWm6Gmra2UqK+5vr7//fu6loBjZWLLvIPGzKOummyCdF+ummvFzJ3NvXt6cmaWoaLz8/H14NqzjoV0Z1G10q90xtnLyJCAcV3SyYlpx9mtyrV/aEfCspz927nqu6y9g3N1WkrRv2u7x5Ooll9NQT2pll69x5fUu2COc1nrwI/81Kr9+fe6mnyvl3mvydnE0c6uydm1xtCtyNmwydjiwZ7+7+DWsonSsIqoxdfC1N7I1dq80d3Xz8TXtpTE1t7KzcfKzsiwytrf3Nvd3t63z97T293T1tPT19PJ2OLk4+IAgmFfAAAATklEQVR42o3HsRXDIAwE0INEAomjyQjZn9rezpaeG0r/7leEUj9fUbRuiPt4/EjmuYn/5yY+X97IMuKHu1uSfq44LoWqiEGB/FK2xBa/ARK/CJfrlinZAAAAAElFTkSuQmCC" />
+        </div>
 Gopher designed with <a href="https://gopherize.me">Gopherize.me</a>. Cogwheels designed by <a href='http://www.freepik.com/free-vector/gear-background-with-pieces-in-different-colors_966124.htm'>Freepik</a>.
   </figcaption>
 </figure>
@@ -48,3 +51,4 @@ Rust is already a powerful language and it gets stronger every day.
 It feels much more like a "pragmatic Haskell" to me than a "safer C".
 
 99% of the time, Go is "good enough" and that 1% where it isn't, you'll know.
+And then take a look at Rust, because the two languages complement each other pretty well.
