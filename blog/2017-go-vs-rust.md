@@ -4,6 +4,7 @@ title:      Go vs Rust? Choose Go.
 date:       15  Sep 2017 00:00:00 +0000
 humandate:  15th of September 2017
 path:       2017/go-vs-rust
+social_img: 2017_gopher.png
 excerpt:    "\"Rust or Go, which one should I choose?\" is a question I get quite often. My answer is simple: use Go."
 ---
 
