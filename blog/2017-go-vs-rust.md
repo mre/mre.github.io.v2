@@ -6,6 +6,9 @@ humandate:  15th of September 2017
 path:       2017/go-vs-rust
 social_img: 2017_gopher.png
 excerpt:    "Rust or Go, which one should I choose? This is a question I get quite often. My answer is simple: use Go."
+comments: 
+  - <a href="https://news.ycombinator.com/item?id=15266066">Hacker News</a>
+  - <a href="https://www.reddit.com/r/golang/comments/70iwcd/go_vs_rust_choose_go/">Reddit</a>
 ---
 
 <figure>
