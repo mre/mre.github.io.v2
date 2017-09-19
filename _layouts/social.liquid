@@ -9,9 +9,9 @@
     {%- comment %} Assume that we are on an article page {% endcomment %}
     {%- capture social_title %}{{ title }}{% endcapture %}
     {%- if excerpt %}
-        {%- capture social_description %}{{ excerpt | truncatewords: 40 | strip_html | escape | strip | strip_newlines }}{% endcapture %}
+        {%- capture social_description %}{{ excerpt | truncate: 50 | strip_html | escape | strip | strip_newlines }}{% endcapture %}
     {%- else %}
-        {%- capture social_description %}{{ content | truncatewords: 40 | strip_html | escape | strip | strip_newlines }}{% endcapture %}
+        {%- capture social_description %}{{ content | truncate: 50 | strip_html | escape | strip | strip_newlines }}{% endcapture %}
     {%- endif %}
 {%- endif %}
 
