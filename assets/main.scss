@@ -100,8 +100,15 @@ pre {
 }
 
 // Wrapper div for header and main
-.wrapper {
+body {
   margin-top: 10%;
+}
+
+header {
+  font-size: .78em;
+  margin: 0 auto 2em;
+  max-width: 220px;
+  text-align: center;
 }
 
 // Anchor tags
@@ -117,24 +124,30 @@ a:hover {
   text-decoration: underline;
 }
 
-// Logo
-.logo-container {
+nav {
   text-align: center;
+}
+
+nav ul {
+  display: inline-block;
+  text-align: initial;
+  padding-left: 0px;
+}
+
+nav li:not(:first-child):before {
+  content: " · ";
+}
+
+nav li {
+  list-style:none;
+  display: inline;
 }
 
 .logo {
   background-size: cover;
   display: inline-block;
   height: 150px;
-  margin-bottom: 20px;
   width: 171px;
-}
-
-.tagline-container p {
-  font-size: .78em;
-  margin: 0 auto 2em;
-  max-width: 220px;
-  text-align: center;
 }
 
 hr {
@@ -266,7 +279,7 @@ object {
 
 // Small devices (phones, 520px and below)
 @media (max-width: 520px) {
-  .wrapper {
+  body {
     padding: 0 20px;
   }
 
@@ -283,7 +296,7 @@ object {
 
 // Medium devices (tablets)
 @media (min-width: 520px) {
-  .wrapper {
+  body {
     margin: 10% auto 0;
     width: 480px;
   }
@@ -295,7 +308,7 @@ object {
 
 // Big devices (Laptops)
 @media (min-width: 1024px) {
-  .wrapper {
+  body {
     width: 850px;
   }
 
@@ -306,12 +319,9 @@ object {
     width: 210px;
   }
 
-  .content {
-    margin-bottom: 40px;
-  }
-
   main {
     margin-left: 260px;
+    margin-bottom: 40px;
   }
 
   .footer {
