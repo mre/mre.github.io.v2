@@ -328,3 +328,13 @@ object {
     margin-bottom: 80px;
   }
 }
+
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #FFFFFF;
+  border: 1px solid black;
+  color:black;
+  padding: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
