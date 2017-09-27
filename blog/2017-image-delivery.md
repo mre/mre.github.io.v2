@@ -39,7 +39,7 @@ And there would be no preview.
 
 ### Tiny image thumbnails
 
-So I was wondering, what others are doing.
+So I was wondering, what others were doing.
 I vaguely remembered, that [Facebook uses tiny preview thumbnails in their mobile app](https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/).
 They extract the quantization table from the JPEG header to render the preview. This information 
 is stored on the client, so it doesn't need to be downloaded every time.
@@ -50,15 +50,17 @@ The search continued.
 
 Until my colleague [Tobias Baldauf](http://tobias.is/) introduced me to [LQIP (Low Quality Image Placeholders)](http://www.guypo.com/introducing-lqip-low-quality-image-placeholders/).
 
-Here's the plan:
+Here's the idea:
 
-* Load the page including inlined, low quality image thumbnails
-* Once the page is fully loaded (e.g. at the [`onload` event](https://www.w3schools.com/jsref/event_onload.asp)), lazy load full quality images
+* Load the page including inlined, low quality image thumbnails.
+* Once the page is fully loaded (e.g. when the [`onload` event](https://www.w3schools.com/jsref/event_onload.asp) is fired), lazy load full quality images.
 
 Unfortunately, this technique requires JavaScript.
-Nevertheless I liked the technique, so I started experimenting with different image sizes and formats. My goal was to create the smallest thumbnails using any common image format.
+Nevertheless I liked the idea, so I started experimenting with different image sizes and formats. My goal was to create the smallest thumbnails using any common image format.
 
-Here are 15px thumbnails encoded with different file formats:
+### Benchmark
+
+Here are 15 pixel wide thumbnails encoded in different file formats:
 
 ![Comparison of different image formats when creating thumbnails](/img/posts/2017/image-delivery/thumbnails.jpg)
 
@@ -81,8 +83,10 @@ The gif was converted using an online tool and optimized using [gifsicle](https:
 gifsicle -O3 < img.gif > img_mini.gif
 ```
 
-WebP is the smallest, but it's [not supported by all browsers](http://caniuse.com/#feat=webp).
-Gif was second, but when resizing the image and applying the blur filter, I was not happy with the result.
+### Comparison
+
+WebP is the smallest, but it's [not supported by all browsers](http://caniuse.com/#feat=webp).  
+Gif was second, but when resizing the image and applying the blur filter, I was not happy with the result.  
 In the end I settled for PNG, which provided a nice tradeoff between size and quality.
 I optimized the images even further using [oxipng](https://github.com/shssoichiro/oxipng).
 With that, I kept my budget of around 200-250 bytes per thumbnail.
@@ -117,7 +121,7 @@ which gets a `width: auto` CSS attribute:
 ```
 
 I wrap the SVG into an `object` tag instead of using an `img` element.
-This has the benefit, that I can set a placeholder in case the SVG can't be loaded.
+This has the benefit, that I can show a placeholder in case the SVG can't be loaded.
 I position the `object` at the top left of the `loader` div.
 
 ```css
@@ -158,7 +162,8 @@ object {
 
 The last part is the handling of the thumbnails.
 Like most other sites, I decided to apply a blur filter.
-In way, it looks like the image is *frozen*, so that's what I called the CSS selector.
+In a way, it looks like the image is *frozen*, so that's what I called the CSS selector.
+I also applied a scaling transformation to achieve sharp borders.
 
 ```
 .frozen {
@@ -182,32 +187,19 @@ In way, it looks like the image is *frozen*, so that's what I called the CSS sel
 }
 ```
 
-I use CSS animations instead of JavaScript.
+I use CSS animations instead of JavaScript.  
 The duration of the animation is based on the 95% percentile load time of all users of the page. Although it's just an approximation, this should work for most users.
-
-
 
 ### Result
 
-* No JavaScript.
-* Supports both SVG and JPEG.
-* Standards-compliant and works on all modern browsers.
-* Provides a fallback in case the main image cannot be loaded.
+* No JavaScript needed
+* Supports both SVG and JPEG
+* Standards-compliant and works on all modern browsers
+* Provides a fallback in case the main image cannot be loaded
 * Tiny overhead
-
-
-
-
-Todo:
-* make the animation longer for devices with low bandwidth. There's [no way to check connection speed with CSS](https://css-tricks.com/bandwidth-media-queries/), but
-we could assume that users with smaller screens are using mobile devices. Many of them might be browsing the web on their
-mobile data plans using weaker connections. Therefore, we could use media queries to extend the animation on mobile devices.
-
-* SQIP https://github.com/technopagan/sqip weighs in at 800-1000 bytes.
-
-Using WebP for Chrome using media queries might be an addition for later.
 
 ### Resources
 
 * [Introducing LQIP – Low Quality Image Placeholders](http://www.guypo.com/introducing-lqip-low-quality-image-placeholders/)
 * [How Medium does progressive image loading](https://jmperezperez.com/medium-image-progressive-loading-placeholder/)
+* [SQIP, a new preview technique using pure SVG](https://github.com/technopagan/sqip)
