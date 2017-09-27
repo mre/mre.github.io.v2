@@ -61,13 +61,6 @@
             {%- if humandate %}
               <hr>
               ❤️ <a href="https://twitter.com/matthiasendler">Follow me on Twitter</a> and never miss a post again.<br />
-              <form action="https://tinyletter.com/mre" method="post" target="popupwindow"
-               onsubmit="window.open('https://tinyletter.com/mre', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-               <label for="tlemail">✉️️ Get updates automatically:</label>
-               <input type="email" placeholder="E-Mail address" style="padding: 6px; margin-left:10px;width:140px" name="email" />
-               <input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" />
-               </form>
-         
               {%- comment %}
               What follows is an ultra clunky way to iterate over a list of social media links.
               This would be much easier with an array slice function.
@@ -89,6 +82,12 @@
                   {%- endif %}
                 {%- endfor %}
               {%- endif %}
+              <form action="https://tinyletter.com/mre" method="post" target="popupwindow"
+               onsubmit="window.open('https://tinyletter.com/mre', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+               <label for="tlemail">📦</label>
+               <input type="email" placeholder="E-Mail address" style="padding: 6px; margin-left:10px;width:140px" name="email" />
+               <input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe to newsletter" />
+               </form>
               <br />
             {%- endif %}
         </main>
