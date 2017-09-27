@@ -21,10 +21,9 @@ My website is reasonably fast.
 
 I hope that every page load feels snappy, no matter your device or location.
 That should not come as a surprise. After all, I'm just using plain HTML and CSS.
-JavaScript is avoided if possible.
+JavaScript is avoided whenever possible.
 
-After stripping down the page to its bare minimum, there was one thing left which really annoyed me:
-layout reflow after images got loaded.
+There was one thing left which really annoyed me: layout reflow after images got loaded.
 
 The problem is, that the image dimensions are not known when the text is ready to be displayed.
 As a result, the text will be pushed down on the screen as soon as an image is loaded above.
@@ -188,7 +187,7 @@ I also applied a scaling transformation to achieve sharp borders.
 ```
 
 I use CSS animations instead of JavaScript.  
-The duration of the animation is based on the 95% percentile load time of all users of the page. Although it's just an approximation, this should work for most users.
+The duration of the animation is based on the 95% percentile load time of all visitors of the page. Although it's just an approximation, this should work for most readers.
 
 ### Result
 
