@@ -9,10 +9,10 @@ excerpt:    "My website is reasonably fast. There was one thing left which reall
 ---
 
 <figure>
-            <div class="loader">
-            <object data="/img/posts/2017/image-previews/factory.svg" type="image/svg+xml"></object>
-            <img class="frozen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAMAAADaUYZlAAAA81BMVEX////84ub84eX84OT97vH++PnPsLns8PPl6+7t8fP//v396sO/nK7voq+jb4Devaafr7marbejjJraWnLyzsfv4832r7rjpJLBiXnHrqOltb2gsbulsLHVpqvcPVn808T/69bdusLRtKiipKa0ravz9/n9/v7O1tCqn6bEZnz22cj/7NXr0NXtyLjrwrLwy7vrvKjfuZtuk6eOqrl9na6shpvqeYr98fP72t/ik6Tloa3wvK/2zb/pqKGqd3eyfn94kKKxgJftYHb96+77+/vS1dvoxczoxc3u1cnlvLPbopvTn5rbopzj19bZ0tju3uD7+vrqrSoEAAAANklEQVR42mNhQAVAPiMCfAXxuYGMjwIIPheQwQ2Rfw2RhwMGNL75SSCfB8lAoLwLIyp/D4r9APY4BoRjYiX7AAAAAElFTkSuQmCC" />
-        </div>
+      <div class="loader">
+        <object data="/img/posts/2017/image-previews/factory.svg" type="image/svg+xml"></object>
+        <img class="frozen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAMAAADaUYZlAAAA81BMVEX////84ub84eX84OT97vH++PnPsLns8PPl6+7t8fP//v396sO/nK7voq+jb4Devaafr7marbejjJraWnLyzsfv4832r7rjpJLBiXnHrqOltb2gsbulsLHVpqvcPVn808T/69bdusLRtKiipKa0ravz9/n9/v7O1tCqn6bEZnz22cj/7NXr0NXtyLjrwrLwy7vrvKjfuZtuk6eOqrl9na6shpvqeYr98fP72t/ik6Tloa3wvK/2zb/pqKGqd3eyfn94kKKxgJftYHb96+77+/vS1dvoxczoxc3u1cnlvLPbopvTn5rbopzj19bZ0tju3uD7+vrqrSoEAAAANklEQVR42mNhQAVAPiMCfAXxuYGMjwIIPheQwQ2Rfw2RhwMGNL75SSCfB8lAoLwLIyp/D4r9APY4BoRjYiX7AAAAAElFTkSuQmCC" />
+    </div>
   <figcaption>
   Adapted from <a href="http://www.freepik.com/free-vector/industrial-machine-vector_753558.htm">Freepik</a>
   </figcaption>
@@ -88,15 +88,14 @@ gifsicle -O3 < img.gif > img_mini.gif
 WebP is the smallest, but it's [not supported by all browsers](http://caniuse.com/#feat=webp).  
 Gif was second, but when resizing the image and applying the blur filter, I was not happy with the result.  
 In the end I, settled for PNG, which provided a nice tradeoff between size and quality.
-I optimized the images even further using [oxipng](https://github.com/shssoichiro/oxipng).
-With that, I kept my budget of around 200-250 bytes per thumbnail.
+I optimized the images even further using [oxipng](https://github.com/shssoichiro/oxipng), which support zopfli compression.
+With that, I end up with thumbnails of around 300-400 bytes in size.
 
-I integrated the thumbnail creation into my build toolchain for the blog.
+I integrated the thumbnail creation process into my build toolchain for the blog.
 The actual code to create the images is rather boring.
-If you *really* want to have a look, [I've pushed it to Github](https://github.com/mre/lqip/).
+If you *really* want to have a look, [it's on Github](https://github.com/mre/lqip/).
 
 ### Avoiding JavaScript
-
 
 Here is the skeleton HTML for the image previews:
 
@@ -165,7 +164,7 @@ Like most other sites, I decided to apply a blur filter.
 In a way, it looks like the image is *frozen*, so that's what I called the CSS selector.
 I also applied a scaling transformation to achieve sharp borders.
 
-```
+```css
 .frozen {
   -webkit-filter: blur(8px);
   -moz-filter: blur(8px);
@@ -193,9 +192,8 @@ The duration of the animation is based on the 95% percentile load time of all vi
 ### Result
 
 * No JavaScript needed
-* Supports both SVG and JPEG
-* Standards-compliant and works on all modern browsers
-* Provides a fallback in case the main image cannot be loaded
+* Works on all modern browsers
+* Supports a fallback in case the main image can't be loaded
 * Tiny overhead
 
 ### Resources
