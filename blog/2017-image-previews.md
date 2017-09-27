@@ -5,6 +5,7 @@ date:       18 Sep 2017 00:00:00 +0000
 humandate:  18th of September 2017
 path:       2017/image-previews
 social_img: 2017_image_previews.png
+excerpt:    "My website is reasonably fast. There was one thing left which really annoyed me: layout reflow after images got loaded. The problem is, that the image dimensions are not known when the text is ready to be displayed. As a result, the text will be pushed down on the screen as soon as an image is loaded above. I decided to fix that once and for all."
 ---
 
 <figure>
@@ -35,10 +36,10 @@ Here's what that looks like on a slower connection:
 
 I could fix that, by hardcoding the image width and height, but that would be tedious and error-prone.
 And there would be no preview.
+So I was wondering, what others were doing. 🤔
 
 ### Tiny image thumbnails
 
-So I was wondering, what others were doing.
 I vaguely remembered, that [Facebook uses tiny preview thumbnails in their mobile app](https://code.facebook.com/posts/991252547593574/the-technology-behind-preview-photos/).
 They extract the quantization table from the JPEG header to render the preview. This information 
 is stored on the client, so it doesn't need to be downloaded every time.
