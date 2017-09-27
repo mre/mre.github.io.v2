@@ -3,13 +3,13 @@ extends: default.liquid
 title:      Lightning fast image previews with pure CSS and LQIP
 date:       18 Sep 2017 00:00:00 +0000
 humandate:  18th of September 2017
-path:       2017/image-delivery
-social_img: 2017_image_delivery.png
+path:       2017/image-previews
+social_img: 2017_image_previews.png
 ---
 
 <figure>
             <div class="loader">
-            <object data="/img/posts/2017/image-delivery/factory.svg" type="image/svg+xml"></object>
+            <object data="/img/posts/2017/image-previews/factory.svg" type="image/svg+xml"></object>
             <img class="frozen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAJCAMAAADaUYZlAAAA81BMVEX////84ub84eX84OT97vH++PnPsLns8PPl6+7t8fP//v396sO/nK7voq+jb4Devaafr7marbejjJraWnLyzsfv4832r7rjpJLBiXnHrqOltb2gsbulsLHVpqvcPVn808T/69bdusLRtKiipKa0ravz9/n9/v7O1tCqn6bEZnz22cj/7NXr0NXtyLjrwrLwy7vrvKjfuZtuk6eOqrl9na6shpvqeYr98fP72t/ik6Tloa3wvK/2zb/pqKGqd3eyfn94kKKxgJftYHb96+77+/vS1dvoxczoxc3u1cnlvLPbopvTn5rbopzj19bZ0tju3uD7+vrqrSoEAAAANklEQVR42mNhQAVAPiMCfAXxuYGMjwIIPheQwQ2Rfw2RhwMGNL75SSCfB8lAoLwLIyp/D4r9APY4BoRjYiX7AAAAAElFTkSuQmCC" />
         </div>
   <figcaption>
@@ -20,19 +20,19 @@ social_img: 2017_image_delivery.png
 My website is reasonably fast.  
 
 I hope that every page load feels snappy, no matter your device or location.
-That should not come as a surprise, after all I'm just using plain HTML and CSS.
+That should not come as a surprise. After all, I'm just using plain HTML and CSS.
 JavaScript is avoided if possible.
 
 After stripping down the page to its bare minimum, there was one thing left which really annoyed me:
 layout reflow after images got loaded.
 
 The problem is, that the image dimensions are not known when the text is ready to be displayed.
-As a result, text will be pushed down on the screen as soon as an image is loaded above.
+As a result, the text will be pushed down on the screen as soon as an image is loaded above.
 
 Also, while an image is loading, there is no preview, just blank space.
 Here's what that looks like on a slower connection:
 
-![Illustration of a flash of unstyled content](/img/posts/2017/image-delivery/fout.png)
+![Illustration of a flash of unstyled content](/img/posts/2017/image-previews/fout.png)
 
 I could fix that, by hardcoding the image width and height, but that would be tedious and error-prone.
 And there would be no preview.
@@ -48,21 +48,21 @@ It works for apps, but hardly for websites.
 
 The search continued.
 
-Until my colleague [Tobias Baldauf](http://tobias.is/) introduced me to [LQIP (Low Quality Image Placeholders)](http://www.guypo.com/introducing-lqip-low-quality-image-placeholders/).
+Until my colleague [Tobias Baldauf](http://tobias.is/) introduced me to [LQIP (Low-Quality Image Placeholders)](http://www.guypo.com/introducing-lqip-low-quality-image-placeholders/).
 
 Here's the idea:
 
-* Load the page including inlined, low quality image thumbnails.
+* Load the page including inlined, low-quality image thumbnails.
 * Once the page is fully loaded (e.g. when the [`onload` event](https://www.w3schools.com/jsref/event_onload.asp) is fired), lazy load full quality images.
 
 Unfortunately, this technique requires JavaScript.
-Nevertheless I liked the idea, so I started experimenting with different image sizes and formats. My goal was to create the smallest thumbnails using any common image format.
+Nevertheless, I liked the idea, so I started experimenting with different image sizes and formats. My goal was to create the smallest thumbnails using any common image format.
 
 ### Benchmark
 
 Here are 15 pixel wide thumbnails encoded in different file formats:
 
-![Comparison of different image formats when creating thumbnails](/img/posts/2017/image-delivery/thumbnails.jpg)
+![Comparison of different image formats when creating thumbnails](/img/posts/2017/image-previews/thumbnails.jpg)
 
 I used different tools to create the thumbnails.
 For JPEG and PNG encoding, I used [svgexport](https://github.com/shakiba/svgexport).
@@ -87,7 +87,7 @@ gifsicle -O3 < img.gif > img_mini.gif
 
 WebP is the smallest, but it's [not supported by all browsers](http://caniuse.com/#feat=webp).  
 Gif was second, but when resizing the image and applying the blur filter, I was not happy with the result.  
-In the end I settled for PNG, which provided a nice tradeoff between size and quality.
+In the end I, settled for PNG, which provided a nice tradeoff between size and quality.
 I optimized the images even further using [oxipng](https://github.com/shssoichiro/oxipng).
 With that, I kept my budget of around 200-250 bytes per thumbnail.
 
@@ -109,7 +109,7 @@ Here is the skeleton HTML for the image previews:
 </figure>
 ```
 
-The trick is to wrap both the fullsize image and the preview image into a `loader` div,
+The trick is to wrap both the full-size image and the preview image into a `loader` div,
 which gets a `width: auto` CSS attribute:
 
 ```css
