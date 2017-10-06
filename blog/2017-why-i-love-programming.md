@@ -17,7 +17,7 @@ While the syntax may change, the concepts will not.
 
 This post is split into two parts.
 In the first part, I will talk about the joy of programming.
-The second part will deal with the notion of being a professional programmer.
+The [second part][1] will deal with the notion of [being a professional programmer][1].
 
 If you're not sure yet whether you want to learn how to program, this article is for you.
 
@@ -82,3 +82,4 @@ You choose your own projects; nobody else.
 Don't let anybody tell you, you're not smart enough for this stuff. Ever.  
 Each program is a wonderful journey so join us and code the world around you.
 
+[1]: /2017/professional-programming
