@@ -306,7 +306,7 @@ object {
   }
 }
 
-// Big devices (Laptops)
+// Desktops
 @media (min-width: 1024px) {
   body {
     width: 850px;
@@ -319,12 +319,16 @@ object {
     width: 210px;
   }
 
-  main {
+  main, footer {
     margin-left: 260px;
     margin-bottom: 40px;
   }
 
-  .footer {
-    margin-bottom: 80px;
-  }
+}
+
+footer {
+  border-top: 1px solid black;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  padding-top: 20px;
 }
