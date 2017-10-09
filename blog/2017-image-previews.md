@@ -1,6 +1,6 @@
 extends: default.liquid
 
-title:      Lightning fast image previews with pure CSS and LQIP
+title:      Lightning Fast Image Previews with Pure CSS and LQIP
 date:       18 Sep 2017 00:00:00 +0000
 humandate:  18th of September 2017
 path:       2017/image-previews
