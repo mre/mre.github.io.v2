@@ -79,6 +79,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+article {
+  margin-top: 44px;
+}
+
 pre {
   -moz-font-feature-settings: "liga" off;
   font-feature-settings: "liga" off;
@@ -328,6 +332,7 @@ object {
 
 footer {
   border-top: 1px solid black;
+  margin-bottom: 40px;
 }
 
 footer .links {
