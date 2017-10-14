@@ -328,7 +328,9 @@ object {
 
 footer {
   border-top: 1px solid black;
-  margin-top: 60px;
-  margin-bottom: 40px;
-  padding-top: 20px;
+}
+
+footer .links {
+  list-style:none;
+  display: inline;
 }
