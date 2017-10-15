@@ -1,6 +1,6 @@
 extends: default.liquid
 
-title:      Write Some Rust During Hacktoberfest
+title:      Write Some Rust for Hacktoberfest
 date:       15 Oct 2017 00:00:00 +0000
 humandate:  15th of October 2017
 path:       2017/hacktoberfest
