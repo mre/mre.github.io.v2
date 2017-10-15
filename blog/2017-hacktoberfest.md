@@ -6,6 +6,7 @@ humandate:  15th of October 2017
 path:       2017/hacktoberfest
 excerpt:    "October is the perfect time to contribute to Open Source &mdash; at least according to Github and DigitalOcean. Because that's when they organize Hacktoberfest, a global event where you get a free shirt and lots of street cred for creating pull requests. 
 Let me show you, how *everybody* can contribute code to [Rust](https://www.rust-lang.org/), a safe systems programming language."
+social_img: 2017_hacktoberfest.png
 ---
 
 <figure>
