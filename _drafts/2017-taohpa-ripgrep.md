@@ -1,6 +1,6 @@
 extends: default.liquid
 
-title:      What Makes Rust Fast
+title:      The Architecture of High-Performance Applications - ripgrep
 date:       10 Oct 2017 00:00:00 +0000
 humandate:  10th of October 2017
 path:       2017/what-makes-rust-fast
