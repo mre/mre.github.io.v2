@@ -14,5 +14,5 @@ ignore:
   - todo.txt
   - LICENSE.txt
 link: https://matthias-endler.de
-syntax-highlight:
+syntax_highlight:
   theme: base16-ocean.light
