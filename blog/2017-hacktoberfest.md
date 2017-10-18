@@ -145,9 +145,12 @@ Afterwards, go to the homepage of your fork on Github.
 There should be a button titled *Compare & pull request*.
 Please add a nice description and then submit the pull request.
 
-[Here is an example.](https://github.com/m4b/goblin/pull/55)
-
 Congratulations! You've contributed to the Rust ecosystem. Thank you! 🎉
+
+### Examples
+
+* [m4b/goblin](https://github.com/m4b/goblin/pull/55)
+* [fitzgen/cpp_demangle](https://github.com/fitzgen/cpp_demangle/pull/100)
 
 ### Bonus!
 
