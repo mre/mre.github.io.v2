@@ -10,7 +10,10 @@ social_img: 2017_hacktoberfest.png
 ---
 
 <figure>
-   <object data="/img/posts/2017/hacktoberfest/hacktoberfest.svg" type="image/svg+xml"></object>
+   <div class="loader">
+            <object data="/img/posts/2017/hacktoberfest/hacktoberfest.svg" type="image/svg+xml"></object>
+            <img class="frozen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAECAMAAABmz5W7AAAAbFBMVEXv5snSjILk2bzh1LjhzLPRtJzj07fw5czy4MSUj31nY1fSyrHw5MTqy6/w27CyxZOcuH7Lq5XOr5jRtJ7ewJLrplZqZllmYlamoIzv0Jzv3rng3rze3brp3b/v5cjo27vo0qnYz7Wtp5Lt5McSWm0rAAAAIUlEQVR42mNhQAVAPuN/JkYY+MrCwAOkkPlggSeyED4DAGyNBDQhu7DfAAAAAElFTkSuQmCC" />
+        </div>
   <figcaption>
   Dirndl, Lederhose, Brezn, Beer, Rust.
   <a href="http://www.freepik.com/free-vector/food-and-items-for-the-oktoberfest-festival_911290.htm">Designed by Freepik</a>
