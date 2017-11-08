@@ -7,8 +7,41 @@ Instead of repeating that, I specifcally want to talk about the technical challe
 
 ### Rust for a Hackathon - the good
 
+What is mostly an afterthought in other languages is front end center in Rust: error handling.
+This might sound tedious, but in fact it's not.
 Error handling ❤️
 https://github.com/rust-lang-nursery/error-chain
+
+This is how I parsed my record entries:
+
+```rust
+fn parse_entry_record(fields: &[String]) -> Result<Record> {
+    Ok(Record {
+        level: fields[0].parse::<u64>()?,
+        function_nr: fields[1].parse::<u64>()?,
+        record_type: RecordType::Entry,
+        time_index: fields[3].parse::<f64>().ok(),
+        memory_usage: fields[4].parse::<u64>().ok(),
+        function_name: Some(fields[5].clone()),
+        internal_function: Some(fields[6].parse::<u8>()? == 0),
+        include_filename: Some(fields[7].clone()),
+        filename: Some(fields[8].clone()),
+        line_number: Some(fields[9].parse::<u64>()?),
+        num_params: Some(fields[10].parse::<u64>()?),
+        params: fields[11..].iter().map(|e| get_param_type(e)).collect(),
+    })
+}
+```
+I'd like to highlight two things:
+
+```rust
+    internal_function: Some(fields[6].parse::<u8>()? == 0),
+    params: fields[11..].iter().map(|e| get_param_type(e)).collect(),
+```
+
+In hindsight, I should have used three different types for that.
+This way, I could have avoided all the optional parameters (the ones starting with `Option`)
+
 
 
 I noticed, that I still create a lot of `clone` values, pass by value, owned types during prototyping.
