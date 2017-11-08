@@ -24,7 +24,7 @@ I hope that every page load feels snappy, no matter your device or location.
 That should not come as a surprise. After all, I'm just using plain HTML and CSS.
 JavaScript is avoided whenever possible.
 
-There was one thing left which really annoyed me: layout reflow after images got loaded.
+There was one thing left, which really annoyed me: layout reflow after images got loaded.
 
 The problem is, that the image dimensions are not known when the text is ready to be displayed.
 As a result, the text will be pushed down on the screen as soon as an image is loaded above.
