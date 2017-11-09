@@ -74,7 +74,7 @@ Learning to set the time on my oven won't help me with the dishwasher, which spo
 
 ### Takeaways
 
-**Good industry design is far and between.**
+**Good industrial designs are few and far between.**
 
 A clock on your product will most likely not add any additional value.
 In the best case it might be an annoyance, in the worst case it's harmfully misleading.
