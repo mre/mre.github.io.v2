@@ -24,5 +24,23 @@
             {%- endfor %}
         </li>
         {%- endif %}
+        {%- if translations %}
+        <li>📖 Translated into
+            {%- for translation in translations %}
+                {%- if forloop.length == forloop.index %}
+                {%- if forloop.length > 1 %}
+                and
+                {%- endif %}
+                {{ translation }}.
+                {%- else %}
+                {%- if forloop.first == forloop.index %}
+                {{ translation }}
+                {%- else %}
+                , {{ translation }}
+                {%- endif %}
+                {%- endif %}
+            {%- endfor %}
+        </li>
+        {%- endif %}
     </ul>
 </footer>
