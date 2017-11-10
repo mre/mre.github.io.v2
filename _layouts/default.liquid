@@ -43,14 +43,14 @@
             </nav>
         </header>
         <main role="main">
-            {%- if title != "" %}
-            <h1>{{ title }}</h1>
-            {%- endif %}
             {% if humandate %}
               <div class="published-date">
                 <i>Published on {{ humandate }}</i>
               </div>
             {% endif %}
+            {%- if title != "" %}
+              <h1>{{ title }}</h1>
+            {%- endif %}
             {{ content }}
         </main>
         {%- include _layouts/footer.liquid %}

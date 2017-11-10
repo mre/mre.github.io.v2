@@ -1,15 +1,17 @@
 extends: default.liquid
-
 title: ""
 ---
 
-  {% for post in posts %}
+{% for post in posts %}
   <article>
-    <h3><a href="{{ post.path }}">{{ post.title }}</a></h3>
+    <div class="published-date">
+      <i>{{ post.humandate }}</i>
+    </div>
+    <h2><a href="{{ post.path }}">{{ post.title }}</a></h2>
     {% if post.excerpt %}
       {{ post.excerpt }}
     {% else %}
       {{ post.content | truncatewords: 23, '...' }}
     {% endif %}
-    </article>
-  {% endfor %}
+  </article>
+{% endfor %}
