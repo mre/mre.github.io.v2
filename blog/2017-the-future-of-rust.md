@@ -57,6 +57,8 @@ Modern libraries slowly fill the tooling gaps for large-scale game development.
 The killer feature though is the unique combination of safety and performance.
 If you ship a game to a million players and they throw money at you, you'll better make sure that it doesn't crash... [right?](http://www.gamingbolt.com/15-buggiest-games-ever-released)
 
+That said, the first AAA Rust game might still be far in the future. [Here's Blizzard's standpoint on Rust in 2017](https://www.youtube.com/watch?v=Az5F4lwSljI&feature=youtu.be&t=23m50s).
+
 ### Systems Engineering
 
 Maybe &mdash; eventually &mdash; we will also see formal verification of the Rust core. Projects like [RustBelt](http://plv.mpi-sws.org/rustbelt/) would then open new opportunities in safety-focused industries like the Space industry. Wouldn't it be nice to safely land a Spacecraft on Mars that is controlled by Rust? (Or by one of its spiritual successors.)
