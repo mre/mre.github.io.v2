@@ -13,3 +13,10 @@ No matter what they say: you can do this! We need more people like you in our in
 Focus on building awesome products and resist the temptation to bash on technologies.
 
 As long as you feel productive and happy, don't listen to nay-sayers.
+
+> We always did feel the same
+> We just saw it from a different point
+> Of view
+> Tangled up in blue
+
+- Bob Dylan

@@ -51,6 +51,9 @@
             {%- if title != "" %}
               <h1>{{ title }}</h1>
             {%- endif %}
+            {%- if subtitle != "" %}
+             <i>&mdash; {{ subtitle }}</i>
+            {%- endif %}
             {{ content }}
         </main>
         {%- include _layouts/footer.liquid %}
