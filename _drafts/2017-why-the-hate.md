@@ -1,11 +1,15 @@
 # Why the hate?
 
+You're not a worse programmer for using PHP.
 
-How does Node.js make you feel?
-How about SVN? PHP? Perl? Visual Basic?
+It's okay to use MongoDB.  
+Node.js, SVN, Perl and Visual Basic are fine, too.
 
-Now take a deep breath and ask yourself when was the last time you used any of those technologies.
-Chances are: a long time ago or maybe never.
+In our industry, many engineers have an incredible hubris.  
+They look down on hobbyists, self-taught programmers and people that come out of code bootcamps.
+And by doing that, they create a toxic environment; it's unbearable.
 
-Software Engineers have an incredible hubris, it's unbearable.
-Toxic environment.
+No matter what they say: you can do this! We need more people like you in our industry.
+Focus on building awesome products and resist the temptation to bash on technologies.
+
+As long as you feel productive and happy, don't listen to nay-sayers.

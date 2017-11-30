@@ -1,0 +1,17 @@
+Handling iterators over results
+
+* return on first error
+* filter errors and only collect OK
+
+    BufReader::new(input)
+        .lines()
+        .map(|line| parse(line))
+        .collect()
+
+http://xion.io/post/code/rust-iter-patterns.html
+This will discard errors.
+
+* Split iterator into Oks and Errors
+* return default values in case of error
+* collect errors and discard OK
+* same for option type
