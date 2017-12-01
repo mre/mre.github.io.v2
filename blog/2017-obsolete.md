@@ -10,8 +10,8 @@ path:       2017/obsolete
 <figure>
         <object data="/img/posts/2017/obsolete/dinosaur.svg" type="image/svg+xml"></object>
   <figcaption>
-  The Stegosaurus was around 150 million years ago.<br />
-  Paleontologists once thought Stegosaurus had a <a href="https://en.wikipedia.org/wiki/Stegosaurus#.22Second_brain.22">brain in its butt</a>.
+  The Stegosaurus had better days 150 million years ago.<br />
+  Paleontologists once thought he had a <a href="https://en.wikipedia.org/wiki/Stegosaurus#.22Second_brain.22">brain in its butt</a>.
   </figcaption>
 </figure>
 
