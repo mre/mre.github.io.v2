@@ -7,7 +7,9 @@ title: ""
     <div class="published-date">
       <i>{{ post.humandate }}</i>
     </div>
-    <h2><a href="{{ post.path }}">{{ post.title }}</a></h2>
+    <a href="{{ post.path }}">
+      <h2>{{ post.title }}</h2>
+    </a>
     {% if post.excerpt %}
       {{ post.excerpt }}
     {% else %}
