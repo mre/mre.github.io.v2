@@ -43,18 +43,22 @@
             </nav>
         </header>
         <main role="main">
-            {% if humandate %}
-              <div class="published-date">
-                <i>Published on {{ humandate }}</i>
-              </div>
-            {% endif %}
-            {%- if title != "" %}
-              <h1>{{ title }}</h1>
-            {%- endif %}
-            {%- if subtitle != "" %}
-             <i>&mdash; {{ subtitle }}</i>
-            {%- endif %}
-            {{ content }}
+          <div class="container" data-infinite-scroll='{ "path": ".pagination__next", "responseType": "document" ,"hideNavXX": ".post-navigation", "append": ".post", "history": false }'>
+            <article class="post">
+              {% if humandate %}
+                <div class="published-date">
+                  <i>Published on {{ humandate }}</i>
+                </div>
+              {% endif %}
+              {%- if title != "" %}
+                <h1>{{ title }}</h1>
+              {%- endif %}
+              {%- if subtitle != "" %}
+              <i>&mdash; {{ subtitle }}</i>
+              {%- endif %}
+              {{ content }}
+            </article>
+          </div>
         </main>
         {%- include _layouts/footer.liquid %}
         {%- include _layouts/analytics.liquid %}

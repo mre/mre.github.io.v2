@@ -2,7 +2,7 @@
     <ul class="links">
         {% if title != "" %}
         <li class="post-navigation">
-            <a href="/{{previous.path}}"><code>&larr; Previous post</code></a>
+            <a class="pagination__next" href="/{{previous.path}}"><code>&larr; Previous post</code></a>
             <a href="/"><code>&#8962; Home</code></a>
             <a href="/{{next.path}}"><code>Next post &rarr;</code></a>
         </li>
