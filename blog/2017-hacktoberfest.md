@@ -150,10 +150,12 @@ Please add a nice description and then submit the pull request.
 
 Congratulations! You've contributed to the Rust ecosystem. Thank you! 🎉
 
-### Examples
+### Trophy case
 
 * [m4b/goblin](https://github.com/m4b/goblin/pull/55)
 * [fitzgen/cpp_demangle](https://github.com/fitzgen/cpp_demangle/pull/100)
+* [fdehau/tui-rs](https://github.com/fdehau/tui-rs/pull/19)
+* [christophertrml/rs-natural](https://github.com/christophertrml/rs-natural/pull/15)
 
 ### Bonus!
 
