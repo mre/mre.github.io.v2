@@ -7,6 +7,8 @@ lqip:
 
 build: clean assets
 	cobalt build
+	# Open external links in separate tab
+	find build -type f -name "*.html" | xargs sed -i '' 's/<a href="http/<a target="_blank" href="http/g'
 	# Setup symlinks
 	touch .nojekyll
 .PHONY: build
