@@ -31,11 +31,16 @@ There was no such project on Github, where most modern static analysis tools wer
 
 Without thinking too much about it, I opened up my editor and wrote down a few tools I found through my initial research. After that, I pushed the list to Github.  
 
+I called the project [Awesome Static Analysis](https://github.com/mre/awesome-static-analysis/).
+
 Fast forward two years, and the list has grown quite a bit.
 So far, it has 75 contributors, 277 forks and received over 2000 stars. (Thanks for all the support!)
 
-Around 1000 unique visitors find the list every week. Not much by any means, but I feel obliged to keep it up-to-date,
+Around 1000 unique visitors find the list every week. Not much by any means, but I feel obliged to keep it up-to-date
 because has become an important source of information for many people.
+
+It now lists around 300 tools for static analysis. Everything from Ada to TypeScript is on that list.
+What I find particularly motivating is, that now the authors themselves create pull requests to add their tools!
 
 There was one problem though: The list of pull requests got longer and longer, as I was busy doing other things.
 
