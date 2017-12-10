@@ -20,7 +20,7 @@ social_img: 2017_obsolete.png
   </figcaption>
 </figure>
 
-In December 2015 I was looking for static analysis tools to integrate into trivago's CI process.
+In December 2015 I was looking for static analysis tools to integrate into [trivago](https://www.trivago.com)'s CI process.
 The idea was to detect typical programming mistakes automatically.
 That's quite a common thing and there are lots of helpful tools out there which fit the bill.
 
@@ -37,9 +37,9 @@ Fast forward two years, and the list has grown quite a bit.
 So far, it has 75 contributors, 277 forks and received over 2000 stars. (Thanks for all the support!)
 
 Around 1000 unique visitors find the list every week. Not much by any means, but I feel obliged to keep it up-to-date
-because has become an important source of information for many people.
+because it has become an important source of information for many people.
 
-It now lists around 300 tools for static analysis. Everything from Ada to TypeScript is on that list.
+It now lists around 300 tools for static analysis. Everything from Ada to TypeScript is on there.
 What I find particularly motivating is, that now the authors themselves create pull requests to add their tools!
 
 There was one problem though: The list of pull requests got longer and longer, as I was busy doing other things.
@@ -48,10 +48,10 @@ There was one problem though: The list of pull requests got longer and longer, a
 
 ### Adding contributors
 
-I always try to give admin rights to regular contributors. My colleague and friend [Andy Grunwald](https://github.com/andygrunwald) as well as [Ouroboros Chrysopoeia](https://github.com/impredicative) are both valuable collaborators. They help me weed out new PRs whenever they find the time.
+I always try to make team members out of regular contributors. My friend and colleague [Andy Grunwald](https://github.com/andygrunwald) as well as [Ouroboros Chrysopoeia](https://github.com/impredicative) are both valuable collaborators. They help me weed out new PRs whenever they find the time.
 
-But let's face it: checking the pull requests is boring, manual work.
-What needs to be checked can be summarized like this:
+But let's face it: checking the pull requests is a boring, manual task.
+What needs to be checked for each new tool can be summarized like this:
 
 * Formatting rules are satisfied
 * Project URL is reachable
@@ -108,8 +108,8 @@ pub fn main() {
 }
 ```
 
-So, this would allow me to just write the actual analysis code,
-which makes for a pretty boring read. It checks for the things mentioned above and could be written in any language.
+This allowed me to focus on the actual analysis code,
+which makes for a pretty boring read. It mechanically checks for the things mentioned above and could be written in any language.
 If you want to have a look (or even contribute!), [check out the repo](https://github.com/mre/awesome-static-analysis-ci).
 
 ### Talking to Github
@@ -175,8 +175,8 @@ This fixed the build and I could finally move on.
 
 I needed a place to host the bot.
 
-Preferably for free, as it was an Open Source project.
-Also, the service would have to run binaries.
+Preferably for free, as it was a non-profit Open Source project.
+Also, the provider would have to run binaries.
 
 For quite some time, I was following a product named [zeit](https://zeit.co/).
 It runs any Docker container using an intuitive command line interface called `now`.
@@ -203,7 +203,7 @@ ENTRYPOINT ["./check"]
 CMD ["--help"]
 ```
 
-The first part would build a static binary, the second part would run it in a container at startup.
+The first part would build a static binary, the second part would run it at container startup.
 Well, that didn't work, because `zeit` [does not support multi-stage builds yet](https://github.com/zeit/now-cli/issues/962).
 
 The workaround was to split up the Dockerfile into two and [connect them both with a Makefile](https://github.com/mre/awesome-static-analysis-ci/blob/master/Makefile). Makefiles are pretty powerful, [you know](/2017/makefiles/)?
