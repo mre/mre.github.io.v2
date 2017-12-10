@@ -108,8 +108,8 @@ pub fn main() {
 }
 ```
 
-So, this would allow me to just write the actual analysis code!
-The actual analysis code is pretty boring. It checks for the things mentioned above and could be written in any language.
+So, this would allow me to just write the actual analysis code,
+which makes for a pretty boring read. It checks for the things mentioned above and could be written in any language.
 If you want to have a look (or even contribute!), [check out the repo](https://github.com/mre/awesome-static-analysis-ci).
 
 ### Talking to Github
@@ -117,9 +117,8 @@ If you want to have a look (or even contribute!), [check out the repo](https://g
 After the analysis code was done, I had a bot, running locally, waiting for incoming pull requests.
 
 But how could I talk to Github?  
-After some research, I found out, that I should use the [Status API](https://developer.github.com/v3/repos/statuses/).
-
-I would send a `POST` request to `/repos/mre/awesome-static-analysis/statuses/:sha`  
+I found out, that I should use the [Status API](https://developer.github.com/v3/repos/statuses/)
+and send a `POST` request to `/repos/mre/awesome-static-analysis/statuses/:sha`  
 (`:sha` is the commit ID that points to the `HEAD` of the pull request):
 
 ```
@@ -129,7 +128,7 @@ I would send a `POST` request to `/repos/mre/awesome-static-analysis/statuses/:s
 }
 ```
 
-I could have used one of the existing Rust Github clients, but I decided to write a simple function to send the status code.
+I could have used one of the existing Rust Github clients, but I decided to write a simple function to update the pull request status code.
 
 
 ```rust
