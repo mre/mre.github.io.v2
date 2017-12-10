@@ -9,6 +9,7 @@ excerpt:    In December 2015 I was looking for static analysis tools to integrat
             The idea was to detect typical programming mistakes automatically. That's quite a common thing 
             and there are lots of helpful tools out there which fit the bill.
             So I looked for a list of tools...
+social_img: 2017_obsolete.png
 ---
 
 <figure>
