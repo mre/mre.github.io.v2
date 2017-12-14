@@ -7,10 +7,11 @@ path:       2017/rust-for-rubyists
 draft: true
 ---
 
-Recently I read [a nice article on idiomatic Ruby](https://medium.com/the-renaissance-developer/idiomatic-ruby-1b5fa1445098) and I realized, that a lot of the patterns mentioned would also be considered idiomatic Rust.
+Recently I read [a nice article on idiomatic Ruby](https://medium.com/the-renaissance-developer/idiomatic-ruby-1b5fa1445098) and I realized, that a lot of the patterns mentioned would also be considered idiomatic Rust.  
 
 And I thought: "Hey, why not write an article about comparing both languages?".
 I don't want to imply that any of the languages is superiour. Quite the contrary: they're best friends.
+
 
 ### Map
 
@@ -84,6 +85,15 @@ Since [Rust 1.21](https://blog.rust-lang.org/2017/10/12/Rust-1.21.html), this is
     .for_each(|lang| println!("Hello {lang}!", lang = lang));
 ```
 https://play.rust-lang.org/?gist=549d38bc43549fd5444c731d2bc3a47b&version=stable
+
+Although, more commonly one would write that as a normal for-loop in Rust:
+
+```rust
+for lang in ["Ruby", "Rust", "Python", "Cobol"].iter() {
+    println!("Hello {lang}!", lang = lang);
+}
+```
+https://play.rust-lang.org/?gist=a7691b56b1dfd1fb19aa00a91b39589d&version=stable
 
 
 ### Select and filter
