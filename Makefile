@@ -1,9 +1,6 @@
-clean:
-	rm -rf build/
-
-lqip:
-	lqip
-.PHONY: lqip
+serve: kill assets
+	cobalt serve
+.PHONY: serve
 
 build: clean assets
 	cobalt build
@@ -12,6 +9,13 @@ build: clean assets
 	# Setup symlinks
 	touch .nojekyll
 .PHONY: build
+
+clean:
+	rm -rf build/
+
+lqip:
+	lqip
+.PHONY: lqip
 
 css assets:
 	sass assets/main.scss:assets/main.css --style compressed --no-cache --sourcemap=none
@@ -36,10 +40,6 @@ publish: build
 
 kill:
 	killall -9 cobalt || exit 0
-
-serve: kill assets
-	cobalt serve
-.PHONY: serve
 
 watch: kill
 	cobalt serve --drafts &
