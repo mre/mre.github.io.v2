@@ -68,7 +68,7 @@ let user_ids = users.iter().map(id);
 ```
 </a>
 
-I'm cheating a little bit here, because I omit a critical piece &mdash; creating a closure to extract the field from each item.
+I'm cheating a little bit here because I omit a critical piece &mdash; creating a closure to extract the field from each item.
 It looks like this:
 
 <a class="example" href="https://play.rust-lang.org/?gist=131027a481d4691821315ad308d26dc9&version=stable">
@@ -185,7 +185,7 @@ let even_numbers = vec![1, 2, 3, 4, 5].into_iter().filter(even);
 ```
 </a>
 
-In a real-world scenario, you would probably use crates like [`num`](https://github.com/rust-num/num) for numerical mathematics:
+In a real-world scenario, you would probably use a third-party package (crate) like [`num`](https://github.com/rust-num/num) for numerical mathematics:
 
 <a class="example" href="https://play.rust-lang.org/?gist=e4bbbf60b7b1cbbedfb363672731bf53&version=stable">
 <div class="rust icon"></div>
@@ -202,12 +202,12 @@ fn main() {
 ```
 </a>
 
-In general, it's quite common to use third-party packages (i.e. *crates*) in Rust for functionality that is not in the standard lib.
+In general, it's quite common to use crates in Rust for functionality that is not in the standard lib.
 Part of the reason why this is so well accepted is, that [cargo](https://github.com/rust-lang/cargo) is such a rad package manager.
-(Maybe because it was built by no other than [Yehuda Katz](http://yehudakatz.com/about/) of Ruby fame)
+(Maybe because it was built by no other than [Yehuda Katz](http://yehudakatz.com/about/) of Ruby fame. 😉)
 
 As mentioned before, Rust does not have `nil`. However, there is still the concept of operations that can fail.
-The type is called [`Result`](https://doc.rust-lang.org/std/result/).
+The canonical type to express that is called [`Result`](https://doc.rust-lang.org/std/result/).
 
 Let's say you want to convert a vector of strings to integers.
 
@@ -233,7 +233,7 @@ That looks nice, but maybe the output is a little unexpected. `numbers` will als
 ```
 </a>
 
-Sometimes you're just interested in the successful results.
+Sometimes you're just interested in the successful operations.
 An easy way to filter out the errors is by using [`filter_map`](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.filter_map):
 
 <a class="example" href="https://play.rust-lang.org/?gist=afdc823ec2e165ac0a03948fb323d305&version=stable">
@@ -250,10 +250,10 @@ let numbers: Vec<_> = maybe_numbers
 
 I changed two things here:
 
-* Instead of `map` I'm now using `filter_map`
+* Instead of `map`, I'm now using `filter_map`.
 * Since `filter_map` expects a predicate to filter on, I convert the `Result` return value of `parse` into a boolean by calling `ok()` on it.
 
-The result is as simple as
+The return value contains all successfully converted strings:
 
 <a class="example" href="https://play.rust-lang.org/?gist=afdc823ec2e165ac0a03948fb323d305&version=stable">
 <div class="rust icon"></div>
@@ -277,7 +277,7 @@ The `filter_map` is similar to the `select` method in Ruby:
 ### Random numbers
 
 
-Next up, the article describes how to get a random number from an array:
+Here's how to get a random number from an array in Ruby:
 
 <a class="example" href="https://play.rust-lang.org/?gist=a66785b44094bacb78fa8dd822bfeab5&version=stable">
 <div class="ruby icon"></div>
@@ -294,19 +294,18 @@ Compare that to Rust:
 <div class="rust icon"></div>
 
 ```rust
-    let mut rng = thread_rng();
-    rng.choose(&[1, 2, 3, 4, 5])
-}
+let mut rng = thread_rng();
+rng.choose(&[1, 2, 3, 4, 5])
 ```
 </a>
 
-For the code to work, you need the `rand` crate. See the link to the code snippet for a running example.
+For the code to work, you need the `rand` crate. Click on the snippet for a running example.
 
 There are some differences to Ruby. Namely, we need to be more explicit about what random number generator
 we want *exactly*. We decide for a [lazily-initialized thread-local random number generator, seeded by the system](https://doc.rust-lang.org/rand/rand/fn.thread_rng.html).
 In this case, I'm using a [slice](https://doc.rust-lang.org/std/slice/) instead of a vector. The main difference is, that the slice has a fixed size while the vector does not.
 
-Within the standard library, we don't have a `sample` or `choose` method on the slice itself. 
+Within the standard library, Rust doesn't have a `sample` or `choose` method on the slice itself. 
 That's a design decision: the core of the language is kept small to allow evolving the language in the future.
 
 This doesn't mean that you cannot have a nicer implementation today.
@@ -347,7 +346,7 @@ With that, we get to a solution that rivals Ruby's elegance.
 
 ### Implicit returns and expressions
 
-In Ruby, you can do implicit returns.
+Ruby methods automatically return the result of the last statement.
 
 <a class="example" href="https://gist.github.com/LeandroTk/9ede60f0898979f8f74d2869ed014c0c#file-return_2-rb">
 <div class="ruby icon"></div>
@@ -359,7 +358,7 @@ end
 ```
 </a>
 
-Same for Rust:
+Same for Rust. Note the missing semicolon.
 
 <a class="example" href="https://play.rust-lang.org/?gist=c7130debb2f712269380bd04819069ff&version=stable">
 <div class="rust icon"></div>
@@ -371,7 +370,7 @@ fn get_user_ids(users: &[User]) -> Vec<u64> {
 ```
 </a>
 
-But in Rust, this is just the beginning, because everything (most things) is an expression.
+But in Rust, this is just the beginning, because everything is an expression.
 This block splits a string into characters, removes the `h`, and returns the result as a `HashSet`.
 This `HashSet` will be assigned to `x`.
 
@@ -388,6 +387,8 @@ let x: HashSet<_> = {
 ```
 </a>
 
+Same works for conditions:
+
 <a class="example" href="https://play.rust-lang.org/?gist=cec96176079e8812ff62ad84a432ac9d&version=stable">
 <div class="rust icon"></div>
 
@@ -397,7 +398,7 @@ let x = if 1 > 0 { "absolutely!" } else { "no seriously" };
 </a>
 
 
-Although, you would usually use a `match` statement for that.
+Although, you would usually use a [`match`](https://doc.rust-lang.org/1.2.0/book/match.html) statement for that.
 
 <a class="example" href="https://play.rust-lang.org/?gist=1f0e909fbac9632c057c49a1f981db6a&version=stable">
 <div class="rust icon"></div>
@@ -459,7 +460,7 @@ let (one, two, three) = [1, 2, 3].iter().collect();
 ```
 </a>
 
-With nightly Rust, you can now do this, though:
+But with nightly Rust, you can now do this:
 
 <a class="example" href="https://play.rust-lang.org/?gist=11b02c318ec35456b8247c3161cb341b&version=nightly">
 <div class="rust icon"></div>
@@ -485,7 +486,8 @@ match x {
 ```
 </a>
 
-> This prints `no` since the if condition applies to the whole pattern `4 | 5 | 6`, not only to the last value 6 (from [the book](https://doc.rust-lang.org/book/second-edition/ch18-03-pattern-syntax.html))
+> This prints `no` since the if condition applies to the whole pattern `4 | 5 | 6`, not only to the last value 6  
+> &mdash; from [The Book](https://doc.rust-lang.org/book/second-edition/ch18-03-pattern-syntax.html)
 
 ### String interpolation
 
@@ -519,7 +521,7 @@ println!("{language} is also a beautiful programming language", language="Rust")
 ```
 </a>
 
-The major difference is, that Rust is more leaning towards the C-style `printf` family of function.
+The major difference is, that Rust is more leaning towards the C-style `printf` family of functions here.
 
 ### That’s it!
 
@@ -529,9 +531,8 @@ Therefore I left them out.
 
 Ruby comes with syntactic sugar for many common usage patterns, which allows for very elegant code.
 Low-level programming and raw performance are no primary goals of the language.
-If you do need that, Rust might be a good fit, because it provides fine-grained hardware control.
-If in doubt, it favors explicitness over ergonomics. Rust eschews magic.
 
-Many of the code samples from above look similar in both languages. Where they're not, usually Rust errs on the side of explicitness.
+If you do need that, Rust might be a good fit, because it provides fine-grained hardware control with comparable ergonomics.
+If in doubt, Rust favors explicitness, though. Rust eschews magic.
 
 Did I wet your appetite for idiomatic Rust? Have a look at [this Github project](https://github.com/mre/idiomatic-rust). I'd be thankful for contributions.
