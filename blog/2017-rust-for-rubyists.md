@@ -82,7 +82,7 @@ let id = |u: &User| u.id;
 
 That's some more legwork course, but it's a nice trick and if you access the `id` more than once, it might pay off to define that closure.
 
-Probably the most idiomatic way to do that in Rust, though, is to use so-called [Universal Function Call Syntax](https://doc.rust-lang.org/book/first-edition/ufcs.html).<sup><a href="#fn1" id="ref1">1</a></sup>
+Probably the most idiomatic way to do that in Rust, though, is to use so-called [Universal Function Call Syntax](https://doc.rust-lang.org/book/first-edition/ufcs.html).<sup><a href="#fn1" id="ref1">1</a></sup> No need for cheating here.
 
 <a class="example" href="https://play.rust-lang.org/?gist=51069ee76e5d534621ccd6633474b630&version=stable">
 <div class="rust icon"></div>
@@ -93,7 +93,13 @@ let user_ids = users.iter().map(User::id);
 
 </a>
 
-Also note, that `map()` returns another iterator and not a collection.
+
+Here is the main difference<sup><a href="#fn2" id="ref2">2</a></sup>:
+
+* In Ruby, higher-order functions take [blocks or procs](http://awaxman11.github.io/blog/2013/08/05/what-is-the-difference-between-a-block/) as an argument and the language provides a convenient shortcut for method invocation (`&:id` is a shortcut for `{|o| o.id()}`).
+* In Rust, higher-order functions take **functions** as an argument. Therefore `users.iter().map(Users::id)` is more or less equivalent to `users.iter().map(|u| u.id())`.
+
+Also note, that `map()` in Rust returns another iterator and not a collection.
 If you want a collection, you would have to run [`collect()`](https://doc.rust-lang.org/std/iter/trait.Iterator.html#examples-23) on that, as we'll see later.
 
 ### Each
@@ -354,7 +360,6 @@ With that, we get to a solution that rivals Ruby's elegance.
 ```
 </a>
 
-
 ### Implicit returns and expressions
 
 Ruby methods automatically return the result of the last statement.
@@ -408,16 +413,24 @@ let x = if 1 > 0 { "absolutely!" } else { "no seriously" };
 ```
 </a>
 
+Since a [`match`](https://doc.rust-lang.org/1.2.0/book/match.html) statement is also an expression, you can assign the result to a variable, too!
 
-Although, you would usually use a [`match`](https://doc.rust-lang.org/1.2.0/book/match.html) statement for that.
-
-<a class="example" href="https://play.rust-lang.org/?gist=1f0e909fbac9632c057c49a1f981db6a&version=stable">
+<a class="example" href="https://play.rust-lang.org/?gist=a6b32fae6257787432cf607f5772693e&version=stable">
 <div class="rust icon"></div>
 
 ```rust
-let x = match 1 > 0 {
-    true => "absolutely!",
-    false => "no seriously",
+enum Unit {
+    Meter,
+    Yard,
+    Angstroem,
+    Lightyear,
+}
+
+let length_in_meters = match unit {
+    Unit::Meter => 1.0,
+    Unit::Yard => 0.91,
+    Unit::Angstroem => 0.0000000001,
+    Unit::Lightyear => 9.461e+15,
 };
 ```
 </a>
@@ -502,6 +515,8 @@ match x {
 
 ### String interpolation
 
+Ruby has [extensive string interpolation support](http://www.rubyguides.com/2012/01/ruby-string-formatting/).
+
 <a class="example" href="https://gist.github.com/LeandroTk/5125cab5e74d26460124c786ac5df534#file-interpolation-rb">
 <div class="ruby icon"></div>
 
@@ -532,7 +547,7 @@ println!("{language} is also a beautiful programming language", language="Rust")
 ```
 </a>
 
-The major difference is, that Rust is more leaning towards the C-style `printf` family of functions here.
+Rust's `println!()` syntax is even more extensive than Ruby's. [Check the docs](https://doc.rust-lang.org/std/fmt/) if you're curious about what else you can do.
 
 ### That’s it!
 
@@ -551,4 +566,5 @@ Did I wet your appetite for idiomatic Rust? Have a look at [this Github project]
 
 ### Footnotes
 
-<sup id="fn1">1. Thanks to <a href="https://twitter.com/Argorak">Florian Gilcher</a> for the hint.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>
+<sup id="fn1">1. Thanks to <a href="https://twitter.com/Argorak">Florian Gilcher</a> for the hint.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>  
+<sup id="fn2">2. Thanks to <a href="https://www.reddit.com/user/masklinn">masklin</a> for the extensive feedback.<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>
