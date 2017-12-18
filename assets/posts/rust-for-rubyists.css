@@ -28,7 +28,8 @@
 
 @media (max-width: 520px) {
     .icon {
-        float: right;
+      margin: 0;
+      float: right;
     }
 }
 
