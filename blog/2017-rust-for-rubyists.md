@@ -82,6 +82,17 @@ let id = |u: &User| u.id;
 
 That's some more legwork course, but it's a nice trick and if you access the `id` more than once, it might pay off to define that closure.
 
+Probably the most idiomatic way to do that in Rust, though, is to use so-called [Universal Function Call Syntax](https://doc.rust-lang.org/book/first-edition/ufcs.html).<sup><a href="#fn1" id="ref1">1</a></sup>
+
+<a class="example" href="https://play.rust-lang.org/?gist=51069ee76e5d534621ccd6633474b630&version=stable">
+<div class="rust icon"></div>
+
+```rust
+let user_ids = users.iter().map(User::id);
+```
+
+</a>
+
 Also note, that `map()` returns another iterator and not a collection.
 If you want a collection, you would have to run [`collect()`](https://doc.rust-lang.org/std/iter/trait.Iterator.html#examples-23) on that, as we'll see later.
 
@@ -536,3 +547,8 @@ If you do need that, Rust might be a good fit, because it provides fine-grained 
 If in doubt, Rust favors explicitness, though. Rust eschews magic.
 
 Did I wet your appetite for idiomatic Rust? Have a look at [this Github project](https://github.com/mre/idiomatic-rust). I'd be thankful for contributions.
+
+
+### Footnotes
+
+<sup id="fn1">1. Thanks to <a href="https://twitter.com/Argorak">Florian Gilcher</a> for the hint.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>
