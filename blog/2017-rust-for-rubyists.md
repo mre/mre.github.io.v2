@@ -564,7 +564,7 @@ If in doubt, Rust favors explicitness, though. Rust eschews magic.
 Did I wet your appetite for idiomatic Rust? Have a look at [this Github project](https://github.com/mre/idiomatic-rust). I'd be thankful for contributions.
 
 
-### Footnotes
+### Errata
 
 <sup id="fn1">1. Thanks to <a href="https://twitter.com/Argorak">Florian Gilcher</a> for the hint.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>  
-<sup id="fn2">2. Thanks to <a href="https://www.reddit.com/user/masklinn">masklin</a> for the extensive feedback.<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>
+<sup id="fn2">2. Thanks to <a href="https://www.reddit.com/user/masklinn">masklin</a> for pointing out multiple inaccuracies.<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>
