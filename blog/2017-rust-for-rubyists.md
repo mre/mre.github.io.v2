@@ -14,7 +14,7 @@ What follows is a side-by-side comparison of idiomatic code in both languages.
 
 The Ruby code samples are from the [original article](https://medium.com/the-renaissance-developer/idiomatic-ruby-1b5fa1445098).
 
-### Map
+### Map and Higher-Order Functions
 
 The first example is a pretty common iteration over elements of a container using `map`.
 
@@ -58,31 +58,21 @@ user_ids = users.map(&:id)
 
 </a>
 
-Something similar can be done in Rust:
+In Ruby, higher-order functions (like `map`) take [blocks or procs](http://awaxman11.github.io/blog/2013/08/05/what-is-the-difference-between-a-block/) as an argument and the language provides a convenient shortcut for method invocation &mdash; `&:id` is the same as `{|o| o.id()}`.
 
-<a class="example" href="https://play.rust-lang.org/?gist=131027a481d4691821315ad308d26dc9&version=stable">
-<div class="rust icon"></div>
-
-```rust
-let user_ids = users.iter().map(id);
-```
-</a>
-
-I'm cheating a little bit here because I omit a critical piece &mdash; creating a closure to extract the field from each item.
-It looks like this:
+Something similar could be done in Rust:
 
 <a class="example" href="https://play.rust-lang.org/?gist=131027a481d4691821315ad308d26dc9&version=stable">
 <div class="rust icon"></div>
 
 ```rust
 let id = |u: &User| u.id;
+let user_ids = users.iter().map(id);
 ```
 
 </a>
 
-That's some more legwork course, but it's a nice trick and if you access the `id` more than once, it might pay off to define that closure.
-
-Probably the most idiomatic way to do that in Rust, though, is to use so-called [Universal Function Call Syntax](https://doc.rust-lang.org/book/first-edition/ufcs.html).<sup><a href="#fn1" id="ref1">1</a></sup> No need for cheating here.
+This is probably not the most idiomatic way to do it, though. What you will see more often is the use of [Universal Function Call Syntax](https://doc.rust-lang.org/book/first-edition/ufcs.html) in this case:<sup><a href="#fn1" id="ref1">1</a></sup>
 
 <a class="example" href="https://play.rust-lang.org/?gist=51069ee76e5d534621ccd6633474b630&version=stable">
 <div class="rust icon"></div>
@@ -94,15 +84,13 @@ let user_ids = users.iter().map(User::id);
 </a>
 
 
-Here is the main difference<sup><a href="#fn2" id="ref2">2</a></sup>:
 
-* In Ruby, higher-order functions take [blocks or procs](http://awaxman11.github.io/blog/2013/08/05/what-is-the-difference-between-a-block/) as an argument and the language provides a convenient shortcut for method invocation (`&:id` is a shortcut for `{|o| o.id()}`).
-* In Rust, higher-order functions take **functions** as an argument. Therefore `users.iter().map(Users::id)` is more or less equivalent to `users.iter().map(|u| u.id())`.
+In Rust, higher-order functions take **functions** as an argument. Therefore `users.iter().map(Users::id)` is more or less equivalent to `users.iter().map(|u| u.id())`.<sup><a href="#fn2" id="ref2">2</a></sup>
 
-Also note, that `map()` in Rust returns another iterator and not a collection.
+Also, `map()` in Rust returns another iterator and not a collection.
 If you want a collection, you would have to run [`collect()`](https://doc.rust-lang.org/std/iter/trait.Iterator.html#examples-23) on that, as we'll see later.
 
-### Each
+### Iteration with Each
 
 Speaking of iteration, one pattern that I see a lot in Ruby code is this:
 
@@ -188,7 +176,7 @@ let even_numbers: Vec<i64> = vec![1, 2, 3, 4, 5]
 Some hints:
 
 * I'm using the type hint `Vec<i64>` here because, without it, Rust does not know what collection I want to build when calling `collect`.
-* `vec!` is a macro, which creates a preallocated vector at compile time.
+* `vec!` is a macro for creating a vector.
 * Instead of `iter`, I use `into_iter`. This way, I take ownership of the elements in the vector. With `iter()` I would get a `Vec<&i64>` instead.
 
 In Rust, there is no `even` method on numbers, but that doesn't keep us from defining one!
@@ -251,7 +239,7 @@ That looks nice, but maybe the output is a little unexpected. `numbers` will als
 </a>
 
 Sometimes you're just interested in the successful operations.
-An easy way to filter out the errors is by using [`filter_map`](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.filter_map):
+An easy way to filter out the errors is to use [`filter_map`](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.filter_map):
 
 <a class="example" href="https://play.rust-lang.org/?gist=afdc823ec2e165ac0a03948fb323d305&version=stable">
 <div class="rust icon"></div>
@@ -350,7 +338,7 @@ impl<T> Choose<T> for [T] {
 </a>
 
 This boilerplate could be put into a crate to make it reusable for others.
-With that, we get to a solution that rivals Ruby's elegance.
+With that, we arrive at a solution that rivals Ruby's elegance.
 
 <a class="example" href="https://play.rust-lang.org/?gist=a66785b44094bacb78fa8dd822bfeab5&version=stable">
 <div class="rust icon"></div>
@@ -386,8 +374,8 @@ fn get_user_ids(users: &[User]) -> Vec<u64> {
 ```
 </a>
 
-But in Rust, this is just the beginning, because everything is an expression.
-This block splits a string into characters, removes the `h`, and returns the result as a `HashSet`.
+But in Rust, this is just the beginning, because *everything* is an expression.
+The following block splits a string into characters, removes the `h`, and returns the result as a `HashSet`.
 This `HashSet` will be assigned to `x`.
 
 <a class="example" href="https://play.rust-lang.org/?gist=9ad54a58d3e5f1c06e795b5f7dca451e&version=stable">
@@ -510,8 +498,10 @@ match x {
 ```
 </a>
 
-> This prints `no` since the if condition applies to the whole pattern `4 | 5 | 6`, not only to the last value 6  
-> &mdash; from [The Book](https://doc.rust-lang.org/book/second-edition/ch18-03-pattern-syntax.html)
+To quote *[The Book](https://doc.rust-lang.org/book/second-edition/ch18-03-pattern-syntax.html)*:
+
+> This prints `no` since the if condition applies to the whole pattern `4 | 5 | 6`, not only to the last value 6.
+
 
 ### String interpolation
 
@@ -537,7 +527,7 @@ format!("{} is also a beautiful programming language", programming_language);
 ```
 </a>
 
-Named arguments are also possible, but much less common:
+Named arguments are also possible, albeit much less common:
 
 <a class="example" href="https://play.rust-lang.org/?gist=6920e723137e44c4befe3398721fafa1&version=stable">
 <div class="rust icon"></div>
@@ -551,20 +541,16 @@ Rust's `println!()` syntax is even more extensive than Ruby's. [Check the docs](
 
 ### That’s it!
 
-The rest of the examples of the [original article]( https://medium.com/the-renaissance-developer/idiomatic-ruby-1b5fa1445098 
-) are quite Ruby-specific in my opinion.
-Therefore I left them out. 
-
 Ruby comes with syntactic sugar for many common usage patterns, which allows for very elegant code.
 Low-level programming and raw performance are no primary goals of the language.
 
 If you do need that, Rust might be a good fit, because it provides fine-grained hardware control with comparable ergonomics.
-If in doubt, Rust favors explicitness, though. Rust eschews magic.
+If in doubt, Rust favors explicitness, though; it eschews magic.
 
 Did I wet your appetite for idiomatic Rust? Have a look at [this Github project](https://github.com/mre/idiomatic-rust). I'd be thankful for contributions.
 
 
-### Errata
+### Footnotes
 
 <sup id="fn1">1. Thanks to <a href="https://twitter.com/Argorak">Florian Gilcher</a> for the hint.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>  
 <sup id="fn2">2. Thanks to <a href="https://www.reddit.com/user/masklinn">masklin</a> for pointing out multiple inaccuracies.<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>
