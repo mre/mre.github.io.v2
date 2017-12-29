@@ -553,5 +553,5 @@ Did I wet your appetite for idiomatic Rust? Have a look at [this Github project]
 ### Footnotes
 
 <sup id="fn1">1. Thanks to <a href="https://twitter.com/Argorak">Florian Gilcher</a> for the hint.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>  
-<sup id="fn2">2. Thanks to <a href="https://www.reddit.com/user/masklinn">masklin</a> for pointing out multiple inaccuracies.<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>
-<sup id="fn3">3. In the first version, I sait that `ok()` would convert a `Result` into a `boolean`, which was wrong. Thanks to <a href="https://news.ycombinator.com/item?id=16003080">isaacg</a> for the correction.<a href="#ref3" title="Jump back to footnote 3 in the text.">↩</a></sup>
+<sup id="fn2">2. Thanks to <a href="https://www.reddit.com/user/masklinn">masklin</a> for pointing out multiple inaccuracies.<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>  
+<sup id="fn3">3. In the first version, I sait that `ok()` would convert a `Result` into a `boolean`, which was wrong. Thanks to <a href="https://news.ycombinator.com/item?id=16003080">isaacg</a> for the correction.<a href="#ref3" title="Jump back to footnote 3 in the text.">↩</a></sup>  
