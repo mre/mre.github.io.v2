@@ -256,7 +256,7 @@ let numbers: Vec<_> = maybe_numbers
 I changed two things here:
 
 * Instead of `map`, I'm now using `filter_map`.
-* Since `filter_map` expects a predicate to filter on, I convert the `Result` return value of `parse` into a boolean by calling `ok()` on it.
+* `parse` returns a `Result`, but `filter_map` expects an `Option`. We can convert a `Result` into an `Option` by calling `ok()` on it<sup><a href="#fn3" id="ref3">3</a></sup>.
 
 The return value contains all successfully converted strings:
 
@@ -554,3 +554,4 @@ Did I wet your appetite for idiomatic Rust? Have a look at [this Github project]
 
 <sup id="fn1">1. Thanks to <a href="https://twitter.com/Argorak">Florian Gilcher</a> for the hint.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>  
 <sup id="fn2">2. Thanks to <a href="https://www.reddit.com/user/masklinn">masklin</a> for pointing out multiple inaccuracies.<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>
+<sup id="fn3">3. In the first version, I sait that `ok()` would convert a `Result` into a `boolean`, which was wrong. Thanks to <a href="https://news.ycombinator.com/item?id=16003080">isaacg</a> for the correction.<a href="#ref3" title="Jump back to footnote 3 in the text.">↩</a></sup>
