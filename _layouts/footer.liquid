@@ -2,11 +2,12 @@
     <ul class="links">
         {% if title != "" %}
         <li class="post-navigation">
-            {% if previous.path != "/" %}
-            <a href="/{{ previous.path }}"><code>&larr; {{ previous.title }}</code></a>
+            {% if previous %}
+            <a href="/{{previous.path}}"><code>&larr; Previous post</code></a>
             {%- endif %}
-            {% if next.path != "/" %}
-            <a href="/{{ next.path }}"><code>{{ next.title }} &rarr;</code></a>
+            <a href="/"><code>&#8962; Home</code></a>
+            {% if next %}
+            <a href="/{{next.path}}"><code>Next post &rarr;</code></a>
             {%- endif %}
         </li>
         {%- endif %}
