@@ -1,9 +1,14 @@
 extends: default.liquid
 
 title:      Are you a Programmer?
+subtitle: ""
 date:       20 Oct 2011 00:00:00 +0000
 humandate:  20th of October 2011
 path:       2011/are-you-a-programmer
+social_img: null
+comments: null
+translations: null
+css: null
 ---
 
 My geography teacher once told the story of her first lecture at University.

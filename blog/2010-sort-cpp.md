@@ -1,9 +1,14 @@
 extends: default.liquid
 
 title:      Howto Sort a Vector or a List in C++ using STL
+subtitle: ""
 date:       27  Jan 2010 00:00:00 +0000
 humandate:  27th of January 2010
 path:       2010/howto-sort-a-vector-or-a-list-in-c-using-stl
+social_img: null
+comments: null
+translations: null
+css: null
 ---
 
 A little code snippet that people need very often.

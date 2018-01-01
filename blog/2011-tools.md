@@ -1,9 +1,14 @@
 extends: default.liquid
 
 title:      Tools
+subtitle: ""
 date:       30 Oct 2011 00:00:00 +0000
 humandate:  30th of October 2011
 path:       2011/tools
+social_img: null
+comments: null
+translations: null
+css: null
 ---
 
 As long as I can think, Computer Science has been infected by religious flamewars.

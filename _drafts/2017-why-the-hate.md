@@ -1,3 +1,10 @@
+subtitle: ""
+humandate: null
+social_img: null
+comments: null
+translations: null
+css: null
+---
 # Why the hate?
 
 You're not a worse programmer for using PHP.

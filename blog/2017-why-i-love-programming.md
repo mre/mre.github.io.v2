@@ -1,11 +1,15 @@
 extends: default.liquid
 
 title:      Why I Love Programming
+subtitle: ""
 date:       15 Mar 2017 00:00:00 +0000
 humandate:  15th of March 2017
 path:       2017/why-i-love-programming
 comments:
   - <a href="https://www.reddit.com/r/programming/comments/5zpqvw/why_i_love_programming/">Reddit</a>
+social_img: null
+translations: null
+css: null
 
 ---
 

@@ -1,9 +1,14 @@
 extends: default.liquid
 
 title:      Functional Programming for Mathematical Computing
+subtitle: ""
 date:       2 Jan 2018 00:00:00 +0000
 humandate:  2nd of Jan 2018
 path:       2018/functional-mathematics
+comments: null
+translations: null
+social_img: null
+css: null
 ---
 
 Programming languages help us describe general solutions for problems; the result just happens to be executable by machines. Every programming language comes with a different set of strengths and weaknesses, one reason being that its syntax and semantics heavily influence the range of problems which can easily be tackled with it.

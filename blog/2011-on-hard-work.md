@@ -1,9 +1,14 @@
 extends: default.liquid
 
 title:      On Hard Work
+subtitle: ""
 date:       13 Oct 2011 00:00:00 +0000
 humandate:  13th of October 2011
 path:       2011/on-hard-work
+social_img: null
+comments: null
+translations: null
+css: null
 ---
 
 Great people get shaped by their achievements

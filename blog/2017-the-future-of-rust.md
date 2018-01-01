@@ -1,11 +1,15 @@
 extends: default.liquid
 
 title:      The Future of Rust
+subtitle: ""
 date:       27 Apr 2017 00:00:00 +0000
 humandate:  27th of April 2017
 path:       2017/future-of-rust
 comments:
   - <a href="https://www.reddit.com/r/rust/comments/67uzpc/the_future_of_rust/">Reddit</a>
+social_img: null
+translations: null
+css: null
 ---
 
 Let me first point out the obvious: yes, the title is a little sensationalist. Also
