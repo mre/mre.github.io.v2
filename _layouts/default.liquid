@@ -18,7 +18,11 @@
     {%- include _layouts/social.liquid %}
 
     {% if title != "" %}
-    <title>{{ title | append: " | Matthias Endler" }}</title>
+      {% if subtitle != "" %}
+        <title>{{ title | append: " - " | append: subtitle | append: " | Matthias Endler" }}</title>
+      {% else %}
+        <title>{{ title | append: " | Matthias Endler" }}</title>
+      {% endif %}
     {%- else %}
     <title>{{ "Matthias Endler" }}</title>
     {%- endif %}
