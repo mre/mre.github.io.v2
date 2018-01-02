@@ -1,6 +1,6 @@
 <footer>
     <ul class="links">
-        {% if title != "" %}
+        {% if is_post %}
         <li class="post-navigation">
             {% if previous %}
             <a href="/{{previous.path}}"><code>&larr; Previous post</code></a>
