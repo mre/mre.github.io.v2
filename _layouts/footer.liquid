@@ -2,9 +2,12 @@
     <ul class="links">
         {% if title != "" %}
         <li class="post-navigation">
-            <a href="/{{previous.path}}"><code>&larr; Previous post</code></a>
-            <a href="/"><code>&#8962; Home</code></a>
-            <a href="/{{next.path}}"><code>Next post &rarr;</code></a>
+            {% if previous.path != "/" %}
+            <a href="/{{ previous.path }}"><code>&larr; {{ previous.title }}</code></a>
+            {%- endif %}
+            {% if next.path != "/" %}
+            <a href="/{{ next.path }}"><code>{{ next.title }} &rarr;</code></a>
+            {%- endif %}
         </li>
         {%- endif %}
         <li>❤️ <a href="https://twitter.com/matthiasendler">Follow me on Twitter</a> and never miss a post again.</li>
