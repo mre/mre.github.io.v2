@@ -17,7 +17,7 @@
         What follows is an ultra clunky way to iterate over a list of social media links.
         This would be much easier with an array slice function.
         {%- endcomment %}
-        {%- if comments %}
+        {%- if comments != nil %}
         <li>💬 Comments available on
             {%- for comment in comments %}
                 {%- if forloop.length == forloop.index %}
@@ -35,7 +35,7 @@
             {%- endfor %}
         </li>
         {%- endif %}
-        {%- if translations %}
+        {%- if translations != nil %}
         <li>📖 Translated into
             {%- for translation in translations %}
                 {%- if forloop.length == forloop.index %}
