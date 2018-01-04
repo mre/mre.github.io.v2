@@ -5,3 +5,12 @@ Space is a scary place
 * https://www.google.de/search?client=firefox-b-ab&dcr=0&biw=1175&bih=839&tbm=isch&sa=1&ei=7EQpWom3GoTQwALO9bGwCg&q=the+pillars+of+creation&oq=the+pillars+of+&gs_l=psy-ab.3.0.0l3j0i30k1l7.8625.11312.0.12103.17.14.1.1.1.0.189.1325.2j8.10.0....0...1c.1.64.psy-ab..5.12.1338...0i67k1j0i10i67k1.0.u2ekcvs05QI
   Pillars of creation huge size
   * hostile environment
+
+======
+
+Zero-Cost Abstractions in Rust
+
+* Examples
+  * Enums
+Use https://rust.godbolt.org/
+* Link from Go-vs-Rust article
