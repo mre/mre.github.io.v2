@@ -6,6 +6,10 @@ date:       17 Dec 2017 00:00:00 +0000
 humandate:  17th of Dezember 2017
 path:       2017/rust-for-rubyists
 css:        assets/posts/rust-for-rubyists.css
+
+comments:
+  - <a href="https://www.reddit.com/r/programming/comments/7kefgh/rust_for_rubyists/">Reddit</a>
+  - <a href="https://news.ycombinator.com/item?id=15986838#16003994">Hacker News</a>
 ---
 
 Recently I came across a delightful article on idiomatic Ruby.
