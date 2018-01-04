@@ -1,16 +1,15 @@
-extends: default.liquid
-
-title:      Tools
-subtitle: ""
-date:       30 Oct 2011 00:00:00 +0000
-humandate:  30th of October 2011
-path:       2011/tools
-social_img: null
-comments: null
-translations: null
-css: null
+permalink: /2011/tools
+title: Tools
+published_date: "2011-10-30 00:00:00 +0000"
+layout: default.liquid
+data:
+  social_img: ~
+  humandate: 30th of October 2011
+  comments: ~
+  subtitle: ""
+  css: ~
+  translations: ~
 ---
-
 As long as I can think, Computer Science has been infected by religious flamewars.
 Having arguments about technical topics can be healthy but flamewars are not. I'm sick of it.
 I'm fed up by people telling me that their work environment is oh-so better,

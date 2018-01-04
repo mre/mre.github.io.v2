@@ -1,17 +1,17 @@
 
 {% comment %} Support for social platforms (Facebook's OpenGraph, Twitter's Cards,...) {% endcomment %}
 
-{%- if title == "" %}
+{% if page.title == "" %}
     {%- comment %} Assume that we are on a static page {% endcomment %}
     {%- assign social_title = "Matthias Endler" %}
     {%- assign social_description = "Personal website of Matthias Endler. A Software Engineer interested in low-level programming and Backend Development. PHP, Python, Go, Rust." %}
 {%- else %}
     {%- comment %} Assume that we are on an article page {% endcomment %}
-    {%- capture social_title %}{{ title }}{% endcapture %}
-    {%- if excerpt %}
-        {%- capture social_description %}{{ excerpt | truncate: 50 | strip_html | escape | strip | strip_newlines }}{% endcapture %}
+    {%- capture social_title %}{{ page.title }}{% endcapture %}
+    {% if page.excerpt %}
+        {%- capture social_description %}{{ page.excerpt | truncate: 50 | strip_html | escape | strip | strip_newlines }}{% endcapture %}
     {%- else %}
-        {%- capture social_description %}{{ content | truncate: 50 | strip_html | escape | strip | strip_newlines }}{% endcapture %}
+        {%- capture social_description %}{{ page.content | truncate: 50 | strip_html | escape | strip | strip_newlines }}{% endcapture %}
     {%- endif %}
 {%- endif %}
 
@@ -19,7 +19,8 @@
 Ugly workaround: Somehow `unless` does not work,
 and if fb_image is not set, it's neither nil nor ""
 {%- endcomment %}
-{%- if social_img %}
+{% if page.data.social_img %}
+    {%- assign social_img = page.data.social_img %}
 {%- else %}
     {%- assign social_img = "default.png" %}
 {%- endif %}
@@ -27,7 +28,7 @@ and if fb_image is not set, it's neither nil nor ""
 <meta property="og:title" content="{{ social_title }}" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="{{ social_description }}" />
-<meta property="og:url" content="https://matthias-endler.de/{{ path }}" />
+<meta property="og:url" content="https://matthias-endler.de/{{ page.permalink }}" />
 <meta property="og:image" content="https://matthias-endler.de/img/social/{{ social_img }}" />
 
 <meta name="twitter:title" content="{{ social_title }}">

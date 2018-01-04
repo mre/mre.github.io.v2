@@ -1,16 +1,15 @@
-extends: default.liquid
-
-title:      The Essence of Information
-subtitle: ""
-date:       18 Mar 2017 00:00:00 +0000
-humandate:  18th of March 2017
-path:       2017/the-essence-of-information
-social_img: null
-comments: null
-translations: null
-css: null
+permalink: "/2017/the-essence-of-information"
+title: The Essence of Information
+published_date: "2017-03-18 00:00:00 +0000"
+layout: default.liquid
+data:
+  subtitle: ""
+  social_img: ~
+  css: ~
+  comments: ~
+  translations: ~
+  humandate: 18th of March 2017
 ---
-
 People look confused, when I tell them about my passion for Algorithms and Datastructures.
 Most of them understand what a Programmer is doing, but not what Computer Science is good for.
 And even if they do, they think it has no practical relevance.

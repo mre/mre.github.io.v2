@@ -1,9 +1,10 @@
-subtitle: ""
-humandate: null
-social_img: null
-comments: null
-translations: null
-css: null
+data:
+  translations: ~
+  humandate: ~
+  social_img: ~
+  css: ~
+  subtitle: ""
+  comments: ~
 ---
 ```rust
 fn main() {

@@ -1,17 +1,16 @@
-extends: default.liquid
-
-title:      Why I Love Text Files
-subtitle: ""
-date:       10 Jan 2010 00:00:00 +0000
-humandate:  10th of January 2010
-path:       2010/why-i-love-text-files
-comments:
-  - <a href="https://news.ycombinator.com/item?id=1801401">Hacker News</a>
-social_img: null
-translations: null
-css: null
+permalink: "/2010/why-i-love-text-files"
+title: Why I Love Text Files
+published_date: "2010-01-10 00:00:00 +0000"
+layout: default.liquid
+data:
+  humandate: 10th of January 2010
+  translations: ~
+  css: ~
+  social_img: ~
+  subtitle: ""
+  comments:
+    - "<a href=\"https://news.ycombinator.com/item?id=1801401\">Hacker News</a>"
 ---
-
 Text files are the single most important way we can communicate with computers. It's no coincidence that they are also the most important way to communicate with other human beings. What we can achieve with text files is invaluable: Write it once and refer to it whenever you want to get the message across in the future. Write a program (it's just text), save it and let the machine execute it whenever you like. Write another text file which contains the rules for the execution of your program and the computer runs your program exactly as you specified (`cron` files do that on Unix).
 
 Text files can be structured in any way you can possibly imagine. Some flavours are [JSON][3], [Markdown][4] and [SVG][5]. It's all just text. There exist literally a billion of programs and algorithms to access, modify and distribute text files. You can write them with *Emacs*, print them on a terminal, pipe them through *sed* and send them via email to a friend who publishes them on the web. Because text files are so important we have good support for them on any computing system. On Unix everything is a file and *HTML* is just structured text. It's a simple and powerful tool to make a contribution to society that outlasts our lifes. 

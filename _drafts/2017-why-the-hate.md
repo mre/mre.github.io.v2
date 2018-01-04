@@ -1,9 +1,10 @@
-subtitle: ""
-humandate: null
-social_img: null
-comments: null
-translations: null
-css: null
+data:
+  humandate: ~
+  translations: ~
+  subtitle: ""
+  social_img: ~
+  css: ~
+  comments: ~
 ---
 # Why the hate?
 

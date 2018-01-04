@@ -1,20 +1,16 @@
-extends: default.liquid
-
-title:      Making Myself Obsolete
-subtitle:   Writing a Linter for Linting Linters
-date:       10 Dec 2017 00:00:00 +0000
-humandate:  10th of December 2017
-path:       2017/obsolete
-excerpt:    In December 2015 I was looking for static analysis tools to integrate into trivago's CI process.
-            The idea was to detect typical programming mistakes automatically. That's quite a common thing 
-            and there are lots of helpful tools out there which fit the bill.
-            So I looked for a list of tools...
-social_img: 2017_obsolete.png
-comments: null
-translations: null
-css: null
+permalink: /2017/obsolete
+title: Making Myself Obsolete
+excerpt: "In December 2015 I was looking for static analysis tools to integrate into trivago's CI process. The idea was to detect typical programming mistakes automatically. That's quite a common thing and there are lots of helpful tools out there which fit the bill. So I looked for a list of tools..."
+published_date: "2017-12-10 00:00:00 +0000"
+layout: default.liquid
+data:
+  humandate: 10th of December 2017
+  css: ~
+  translations: ~
+  social_img: 2017_obsolete.png
+  comments: ~
+  subtitle: Writing a Linter for Linting Linters
 ---
-
 <figure>
         <object data="/img/posts/2017/obsolete/dinosaur.svg" type="image/svg+xml"></object>
   <figcaption>

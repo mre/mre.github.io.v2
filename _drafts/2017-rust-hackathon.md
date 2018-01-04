@@ -1,9 +1,10 @@
-subtitle: ""
-humandate: null
-social_img: null
-comments: null
-translations: null
-css: null
+data:
+  comments: ~
+  humandate: ~
+  css: ~
+  social_img: ~
+  translations: ~
+  subtitle: ""
 ---
 # A Hackathon with Rust
 

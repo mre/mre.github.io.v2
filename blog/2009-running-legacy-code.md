@@ -1,16 +1,15 @@
-extends: default.liquid
-
-title:      Running Legacy Code
-subtitle: ""
-date:       08  Nov 2009 00:00:00 +0000
-humandate:  8th of November 2009
-path:       2009/running-legacy-code
-social_img: null
-comments: null
-translations: null
-css: null
+permalink: "/2009/running-legacy-code"
+title: Running Legacy Code
+published_date: "2009-11-08 00:00:00 +0000"
+layout: default.liquid
+data:
+  translations: ~
+  css: ~
+  social_img: ~
+  comments: ~
+  humandate: 8th of November 2009
+  subtitle: ""
 ---
-
 This short article deals with a serious problem in software development: bit rot.
 When switching to a new platform (for instance from Windows XP to Windows Vista/7) the programmers need to make sure that old bits of code run flawlessly. There are several ways to achieve this goal that will be discussed during the next paragraphs:
 

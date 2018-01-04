@@ -1,18 +1,16 @@
-extends: default.liquid
-
-title:      Learn Some Rust During Hacktoberfest
-subtitle: ""
-date:       15 Oct 2017 00:00:00 +0000
-humandate:  15th of October 2017
-path:       2017/hacktoberfest
-excerpt:    "October is the perfect time to contribute to Open Source &mdash; at least according to Github and DigitalOcean. Because that's when they organize Hacktoberfest, a global event where you get a free shirt and lots of street cred for creating pull requests. 
-Let me show you, how *everybody* can contribute code to [Rust](https://www.rust-lang.org/), a safe systems programming language."
-social_img: 2017_hacktoberfest.png
-comments: null
-translations: null
-css: null
+permalink: /2017/hacktoberfest
+title: Learn Some Rust During Hacktoberfest
+excerpt: "October is the perfect time to contribute to Open Source &mdash; at least according to Github and DigitalOcean. Because that's when they organize Hacktoberfest, a global event where you get a free shirt and lots of street cred for creating pull requests. Let me show you, how *everybody* can contribute code to [Rust](https://www.rust-lang.org/), a safe systems programming language."
+published_date: "2017-10-15 00:00:00 +0000"
+layout: default.liquid
+data:
+  comments: ~
+  translations: ~
+  subtitle: ""
+  humandate: 15th of October 2017
+  social_img: 2017_hacktoberfest.png
+  css: ~
 ---
-
 <figure>
    <div class="loader">
             <object data="/img/posts/2017/hacktoberfest/hacktoberfest.svg" type="image/svg+xml"></object>

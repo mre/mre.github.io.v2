@@ -1,16 +1,15 @@
-extends: default.liquid
-
-title:      Are you a Programmer?
-subtitle: ""
-date:       20 Oct 2011 00:00:00 +0000
-humandate:  20th of October 2011
-path:       2011/are-you-a-programmer
-social_img: null
-comments: null
-translations: null
-css: null
+permalink: "/2011/are-you-a-programmer"
+title: "Are you a Programmer?"
+published_date: "2011-10-20 00:00:00 +0000"
+layout: default.liquid
+data:
+  translations: ~
+  comments: ~
+  humandate: 20th of October 2011
+  css: ~
+  subtitle: ""
+  social_img: ~
 ---
-
 My geography teacher once told the story of her first lecture at University.
 As an introduction, her professor asked the class to draw
 a map of Germany without any help and as accurate as possible. To her surprise she was not

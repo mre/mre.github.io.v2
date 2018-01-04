@@ -1,16 +1,15 @@
-extends: default.liquid
-
-title:      Rust for Rubyists
-subtitle:   Idiomatic Patterns in Rust and Ruby
-date:       17 Dec 2017 00:00:00 +0000
-humandate:  17th of Dezember 2017
-path:       2017/rust-for-rubyists
-css:        assets/posts/rust-for-rubyists.css
-comments: null
-translations: null
-social_img: null
+permalink: "/2017/rust-for-rubyists"
+title: Rust for Rubyists
+published_date: "2017-12-17 00:00:00 +0000"
+layout: default.liquid
+data:
+  comments: ~
+  social_img: ~
+  subtitle: Idiomatic Patterns in Rust and Ruby
+  translations: ~
+  humandate: 17th of Dezember 2017
+  css: "assets/posts/rust-for-rubyists.css"
 ---
-
 Recently I came across a delightful article on idiomatic Ruby.
 I'm not a good Ruby developer by any means, but I realized, that a lot of the patterns are also quite common in Rust.
 What follows is a side-by-side comparison of idiomatic code in both languages.

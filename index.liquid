@@ -1,19 +1,19 @@
-extends: default.liquid
 title: ""
-subtitle: ""
-humandate: null
-social_img: null
-comments: null
-translations: null
-css: null
+layout: default.liquid
+data:
+  translations: ~
+  social_img: ~
+  subtitle: ""
+  comments: ~
+  humandate: ~
+  css: ~
 ---
-
-{% for post in posts %}
+{% for post in collections.posts.pages %}
   <article>
     <div class="published-date">
-      <i>{{ post.humandate }}</i>
+      <i>{{ post.data.humandate }}</i>
     </div>
-    <a href="{{ post.path }}">
+    <a href="{{ post.permalink }}">
       <h2>{{ post.title }}</h2>
     </a>
     {% if post.excerpt %}
