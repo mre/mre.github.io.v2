@@ -128,6 +128,6 @@ I merely picked Java, because lots of programmers can read it.
 
 The comparison is more between a functional and an imperative approach for numerical and symbolical programming; and for that, I prefer a functional approach every day. It removes clutter and yields elegant solutions. It provides convenient methods to work on a high level of abstraction and speak in mathematical terms and still, these strengths are disregarded by many programmers.
 
-Abraham Maslow’s observation in his book The Psychology of Science (Maslow, 1966) seems fitting:
+Abraham H. Maslow’s observation in his 1966 book [The Psychology of Science](https://www.goodreads.com/book/show/1510050.The_Psychology_of_Science) seems fitting:
 
 > “I suppose it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail.”

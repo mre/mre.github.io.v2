@@ -88,7 +88,7 @@ gifsicle -O3 < img.gif > img_mini.gif
 WebP is the smallest, but it's [not supported by all browsers](http://caniuse.com/#feat=webp).  
 Gif was second, but when resizing the image and applying the blur filter, I was not happy with the result.  
 In the end I, settled for PNG, which provided a nice tradeoff between size and quality.
-I optimized the images even further using [oxipng](https://github.com/shssoichiro/oxipng), which support zopfli compression.
+I optimized the images even further using [oxipng](https://github.com/shssoichiro/oxipng), which supports zopfli compression.
 With that, I end up with thumbnails of around 300-400 bytes in size.
 
 I integrated the thumbnail creation process into my build toolchain for the blog.
