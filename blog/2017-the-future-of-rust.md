@@ -1,13 +1,16 @@
-extends: default.liquid
-
-title:      The Future of Rust
-date:       27 Apr 2017 00:00:00 +0000
-humandate:  27th of April 2017
-path:       2017/future-of-rust
-comments:
-  - <a href="https://www.reddit.com/r/rust/comments/67uzpc/the_future_of_rust/">Reddit</a>
+permalink: "/2017/future-of-rust"
+title: The Future of Rust
+published_date: "2017-04-27 00:00:00 +0000"
+layout: default.liquid
+data:
+  humandate: 27th of April 2017
+  subtitle: ""
+  social_img: ~
+  translations: ~
+  comments:
+    - "<a href=\"https://www.reddit.com/r/rust/comments/67uzpc/the_future_of_rust/\">Reddit</a>"
+  css: ~
 ---
-
 Let me first point out the obvious: yes, the title is a little sensationalist. Also
 you might be asking why I should be entitled to talk about the future of Rust. After
 all, I'm neither part of the Rust core team, nor a major contributor to the Rust

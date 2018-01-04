@@ -1,3 +1,11 @@
+data:
+  humandate: ~
+  translations: ~
+  subtitle: ""
+  social_img: ~
+  css: ~
+  comments: ~
+---
 # Why the hate?
 
 You're not a worse programmer for using PHP.

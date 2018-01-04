@@ -1,12 +1,15 @@
-extends: default.liquid
-
-title:      Modern Day Annoyances - Digital Clocks
-date:       7  Nov 2017 00:00:00 +0000
-humandate:  7th of November 2017
-path:       2017/digital-clocks
-social_img: 2017_digital_clocks.png
+permalink: "/2017/digital-clocks"
+title: "Modern Day Annoyances - Digital Clocks"
+published_date: "2017-11-07 00:00:00 +0000"
+layout: default.liquid
+data:
+  social_img: 2017_digital_clocks.png
+  css: ~
+  comments: ~
+  subtitle: ""
+  humandate: 7th of November 2017
+  translations: ~
 ---
-
 This morning I woke up to the beeping noise of our oven's alarm clock.
 The reason was that I tried to correct the oven's local time the day before &mdash; and I pushed the wrong buttons.
 As a result I didn't set the correct time, instead, I set a cooking timer... and that's what woke me up today.

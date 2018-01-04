@@ -1,11 +1,15 @@
-extends: default.liquid
-
-title:      Being a Professional Programmer
-date:       18 May 2017 00:00:00 +0000
-humandate:  18th of May 2017
-path:       2017/professional-programming
+permalink: "/2017/professional-programming"
+title: Being a Professional Programmer
+published_date: "2017-05-18 00:00:00 +0000"
+layout: default.liquid
+data:
+  humandate: 18th of May 2017
+  social_img: ~
+  css: ~
+  translations: ~
+  comments: ~
+  subtitle: ""
 ---
-
 When I was around 12, I set myself the goal to become a professional programmer.  
 I can tell, because at this time I made the conscious decision to use my right hand to control the mouse &mdash; even though I'm left-handed.  
 

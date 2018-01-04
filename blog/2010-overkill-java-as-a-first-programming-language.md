@@ -1,13 +1,16 @@
-extends: default.liquid
-
-title:	    "Overkill: Java as a First Programming Language"
-date:       12  Feb 2010 00:00:00 +0000
-humandate:  12th of February 2010
-path:       2010/overkill-java-as-a-first-programming-language
-comments:
-  - <a href="https://news.ycombinator.com/item?id=13926407">Hacker News</a>
+permalink: "/2010/overkill-java-as-a-first-programming-language"
+title: "Overkill: Java as a First Programming Language"
+published_date: "2010-02-12 00:00:00 +0000"
+layout: default.liquid
+data:
+  translations: ~
+  subtitle: ""
+  social_img: ~
+  css: ~
+  humandate: 12th of February 2010
+  comments:
+    - "<a href=\"https://news.ycombinator.com/item?id=13926407\">Hacker News</a>"
 ---
-
 I recently talked to a student in my neighborhood about his first programming
 experiences. They started learning *Java* at school and it soon turned out to be
 horrible.

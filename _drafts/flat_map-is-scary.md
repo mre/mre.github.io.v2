@@ -1,3 +1,11 @@
+data:
+  translations: ~
+  humandate: ~
+  social_img: ~
+  css: ~
+  subtitle: ""
+  comments: ~
+---
 ```rust
 fn main() {
     let meta = vec!["bla=blub,x=y", "foo=bar"];

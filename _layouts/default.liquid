@@ -15,13 +15,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
 
-    {%- include _layouts/social.liquid %}
+    {% include "social.liquid" %}
 
-    {% if title != "" %}
-      {% if subtitle != "" %}
-        <title>{{ title | append: " - " | append: subtitle | append: " | Matthias Endler" }}</title>
+    {% if page.title != "" %}
+      {% if page.data.subtitle != "" %}
+        <title>{{ page.title | append: " - " | append: page.data.subtitle  | append: " | Matthias Endler" }}</title>
       {% else %}
-        <title>{{ title | append: " | Matthias Endler" }}</title>
+        <title>{{ page.title | append: " | Matthias Endler" }}</title>
       {% endif %}
     {%- else %}
     <title>{{ "Matthias Endler" }}</title>
@@ -30,15 +30,15 @@
     <meta name="author" content="Matthias Endler">
     <meta name="description" content="Personal website of Matthias Endler, a Software Engineer interested in low-level programming and backend development. PHP, Python, Go, Rust."/>
 
-    {%- if css %}
-    <link rel="stylesheet" type="text/css" href="/{{ css }}">
+    {% if page.data.css %}
+    <link rel="stylesheet" type="text/css" href="/{{ page.data.css }}">
     {%- endif %}
-    {%- include _layouts/mixpanel.liquid %}
+    {% include "mixpanel.liquid" %}
   </head>
   <body>
         <header>
             <a class="logo" href="/">
-              {%- include _layouts/logo.liquid %}
+              {% include "logo.liquid" %}
             </a>
             <p>
               Backend Engineer at trivago. Likes just-in-time compilers and hot chocolate. <a href="/about">About me.</a>
@@ -52,20 +52,20 @@
             </nav>
         </header>
         <main role="main">
-            {% if humandate %}
+            {% if page.data.humandate %}
               <div class="published-date">
-                <i>Published on {{ humandate }}</i>
+                <i>Published on {{ page.data.humandate }}</i>
               </div>
             {% endif %}
-            {%- if title != "" %}
-              <h1>{{ title }}</h1>
+            {% if page.title != "" %}
+              <h1>{{ page.title }}</h1>
             {%- endif %}
-            {%- if subtitle != "" %}
-             <i>&mdash; {{ subtitle }}</i>
+            {% if page.data.subtitle != "" %}
+             <i>&mdash; {{ page.data.subtitle }}</i>
             {%- endif %}
-            {{ content }}
+            {{ page.content }}
         </main>
-        {%- include _layouts/footer.liquid %}
-        {%- include _layouts/analytics.liquid %}
+        {% include "footer.liquid" %}
+        {% include "analytics.liquid" %}
   </body>
 </html>

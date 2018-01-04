@@ -1,0 +1,38 @@
+source: "./"
+destination: build
+include_drafts: false
+default:
+  excerpt_separator: "\n\n"
+  is_draft: false
+pages:
+  default: {}
+posts:
+  title: ~
+  description: ~
+  dir: blog
+  drafts_dir: _drafts
+  order: Desc
+  rss: rss.xml
+  jsonfeed: ~
+  default: {}
+site:
+  title: Matthias Endler
+  description: Personal Blog
+  base_url: "https://matthias-endler.de"
+  data: ~
+template_extensions:
+  - md
+  - liquid
+ignore:
+  - ".git/*"
+  - "build/*"
+  - "img/raw/*"
+  - README.md
+  - Makefile
+  - todo.txt
+  - LICENSE.txt
+syntax_highlight:
+  theme: "base16-ocean.light"
+assets:
+  sass:
+    style: Nested

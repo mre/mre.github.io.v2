@@ -1,3 +1,11 @@
+data:
+  css: ~
+  social_img: ~
+  subtitle: ""
+  humandate: ~
+  translations: ~
+  comments: ~
+---
 All too often we use terminology without knowing the origin.
 I find it fascinating to read about the etymology of computer terms. Here are some of my
 highlights.

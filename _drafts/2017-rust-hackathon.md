@@ -1,3 +1,11 @@
+data:
+  comments: ~
+  humandate: ~
+  css: ~
+  social_img: ~
+  translations: ~
+  subtitle: ""
+---
 # A Hackathon with Rust
 
 At trivago's recent Hackathon I wanted to try something completely new.

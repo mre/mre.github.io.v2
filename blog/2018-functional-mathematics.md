@@ -1,11 +1,15 @@
-extends: default.liquid
-
-title:      Functional Programming for Mathematical Computing
-date:       2 Jan 2018 00:00:00 +0000
-humandate:  2nd of Jan 2018
-path:       2018/functional-mathematics
+permalink: "/2018/functional-mathematics"
+title: Functional Programming for Mathematical Computing
+published_date: "2018-01-02 00:00:00 +0000"
+layout: default.liquid
+data:
+  humandate: 2nd of Jan 2018
+  subtitle: ""
+  css: ~
+  translations: ~
+  comments: ~
+  social_img: ~
 ---
-
 Programming languages help us describe general solutions for problems; the result just happens to be executable by machines. Every programming language comes with a different set of strengths and weaknesses, one reason being that its syntax and semantics heavily influence the range of problems which can easily be tackled with it.
 
 **tl;dr:** *I think that functional programming is better suited for mathematical computations than the more common imperative approach.*

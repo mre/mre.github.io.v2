@@ -1,17 +1,16 @@
-extends: default.liquid
-
-title:      Making Myself Obsolete
-subtitle:   Writing a Linter for Linting Linters
-date:       10 Dec 2017 00:00:00 +0000
-humandate:  10th of December 2017
-path:       2017/obsolete
-excerpt:    In December 2015 I was looking for static analysis tools to integrate into trivago's CI process.
-            The idea was to detect typical programming mistakes automatically. That's quite a common thing 
-            and there are lots of helpful tools out there which fit the bill.
-            So I looked for a list of tools...
-social_img: 2017_obsolete.png
+permalink: /2017/obsolete
+title: Making Myself Obsolete
+excerpt: "In December 2015 I was looking for static analysis tools to integrate into trivago's CI process. The idea was to detect typical programming mistakes automatically. That's quite a common thing and there are lots of helpful tools out there which fit the bill. So I looked for a list of tools..."
+published_date: "2017-12-10 00:00:00 +0000"
+layout: default.liquid
+data:
+  humandate: 10th of December 2017
+  css: ~
+  translations: ~
+  social_img: 2017_obsolete.png
+  comments: ~
+  subtitle: Writing a Linter for Linting Linters
 ---
-
 <figure>
         <object data="/img/posts/2017/obsolete/dinosaur.svg" type="image/svg+xml"></object>
   <figcaption>
@@ -68,6 +67,7 @@ What sounds pretty meta, is actually pretty straightforward.
 
 With every pull request, we trigger our bot, which checks the above rules and responds with a result.
 
+<<<<<<< 465365d8d32ff1155577d8e92471433f5c08dccf
 The first step was to read the [Github documentation about building a CI server](https://developer.github.com/v3/guides/building-a-ci-server/).
 
 Just for fun, I wanted to create the bot in [Rust](https://www.rust-lang.org/).
@@ -265,3 +265,6 @@ It feels like [Amazon Lambda](https://aws.amazon.com/lambda/details/) on steroid
 
 If you look at the [code](https://github.com/mre/awesome-static-analysis-ci/blob/master/src/main.rs) and the [commits](https://github.com/mre/awesome-static-analysis-ci/commits/master) for my little bot, you can see all my little missteps, until I got everything just right. Turns out, parsing human-readable text is tedious.  
 Therefore I was thinking about turning the list of analysis tools into a structured format like `YAML`. This would greatly simplify the parsing and have the added benefit of having a machine-readable list of tools that can be used for other projects.
+=======
+Github documentation: https://developer.github.com/v3/guides/building-a-ci-server/
+>>>>>>> fix: Make dummy variables available

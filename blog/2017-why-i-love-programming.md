@@ -1,14 +1,16 @@
-extends: default.liquid
-
-title:      Why I Love Programming
-date:       15 Mar 2017 00:00:00 +0000
-humandate:  15th of March 2017
-path:       2017/why-i-love-programming
-comments:
-  - <a href="https://www.reddit.com/r/programming/comments/5zpqvw/why_i_love_programming/">Reddit</a>
-
+permalink: "/2017/why-i-love-programming"
+title: Why I Love Programming
+published_date: "2017-03-15 00:00:00 +0000"
+layout: default.liquid
+data:
+  comments:
+    - "<a href=\"https://www.reddit.com/r/programming/comments/5zpqvw/why_i_love_programming/\">Reddit</a>"
+  social_img: ~
+  subtitle: ""
+  humandate: 15th of March 2017
+  css: ~
+  translations: ~
 ---
-
 Programming has many faces. It is the science of structured thinking.
 It is the art of eloquent expression.
 It teaches you to be humble when you look at other peoples' fascinating work. 

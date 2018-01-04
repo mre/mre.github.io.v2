@@ -1,12 +1,13 @@
 <footer>
     <ul class="links">
-        {% if title != "" %}
+        {% if page.collection == "posts" %}
         <li class="post-navigation">
-            {% if previous.path != "/" %}
-            <a href="/{{ previous.path }}"><code>&larr; {{ previous.title }}</code></a>
+            {% if page.previous %}
+            <a href="/{{ page.previous.permalink }}"><code>&larr; Previous post</code></a>
             {%- endif %}
-            {% if next.path != "/" %}
-            <a href="/{{ next.path }}"><code>{{ next.title }} &rarr;</code></a>
+            <a href="/"><code>&#8962; Home</code></a>
+            {% if page.next %}
+            <a href="/{{ page.next.permalink }}"><code>Next post &rarr;</code></a>
             {%- endif %}
         </li>
         {%- endif %}
@@ -16,9 +17,9 @@
         What follows is an ultra clunky way to iterate over a list of social media links.
         This would be much easier with an array slice function.
         {%- endcomment %}
-        {%- if comments %}
+        {%- if page.data.comments %}
         <li>💬 Comments available on
-            {%- for comment in comments %}
+            {% for comment in page.data.comments %}
                 {%- if forloop.length == forloop.index %}
                 {%- if forloop.length > 1 %}
                 and
@@ -34,9 +35,9 @@
             {%- endfor %}
         </li>
         {%- endif %}
-        {%- if translations %}
+        {%- if page.data.translations %}
         <li>📖 Translated into
-            {%- for translation in translations %}
+            {% for translation in page.data.translations %}
                 {%- if forloop.length == forloop.index %}
                 {%- if forloop.length > 1 %}
                 and

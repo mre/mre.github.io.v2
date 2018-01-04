@@ -1,13 +1,16 @@
-extends: default.liquid
-
-title:      Of Boxes and Trees - Smart Pointers in Rust
-date:       12 Aug 2017 00:00:00 +0000
-humandate:  12th of August 2017
-path:       2017/boxes-and-trees
-comments:
-   - <a href="https://www.reddit.com/r/rust/comments/6tkyz3/of_boxes_and_trees_smart_pointers_in_rust/">Reddit</a>
+permalink: "/2017/boxes-and-trees"
+title: "Of Boxes and Trees - Smart Pointers in Rust"
+published_date: "2017-08-12 00:00:00 +0000"
+layout: default.liquid
+data:
+  css: ~
+  social_img: ~
+  humandate: 12th of August 2017
+  subtitle: ""
+  comments:
+    - "<a href=\"https://www.reddit.com/r/rust/comments/6tkyz3/of_boxes_and_trees_smart_pointers_in_rust/\">Reddit</a>"
+  translations: ~
 ---
-
 Recently, I tried to implement a binary tree data structure in Rust.
 Each binary tree has a root value, a left, and a right subtree.
 I started from this Python implementation, which is quite straightforward.
