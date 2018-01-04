@@ -1,10 +1,14 @@
 extends: default.liquid
 
 title:      Modern Day Annoyances - Digital Clocks
+subtitle: ""
 date:       7  Nov 2017 00:00:00 +0000
 humandate:  7th of November 2017
 path:       2017/digital-clocks
 social_img: 2017_digital_clocks.png
+comments: null
+translations: null
+css: null
 ---
 
 This morning I woke up to the beeping noise of our oven's alarm clock.

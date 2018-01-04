@@ -1,9 +1,14 @@
 extends: default.liquid
 
 title:      Running Legacy Code
+subtitle: ""
 date:       08  Nov 2009 00:00:00 +0000
 humandate:  8th of November 2009
 path:       2009/running-legacy-code
+social_img: null
+comments: null
+translations: null
+css: null
 ---
 
 This short article deals with a serious problem in software development: bit rot.

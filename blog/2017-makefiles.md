@@ -1,6 +1,7 @@
 extends: default.liquid
 
 title:      Afraid of Makefiles? Don't be!
+subtitle: ""
 date:       15 Aug 2017 00:00:00 +0000
 humandate:  15th of August 2017
 path:       2017/makefiles
@@ -12,6 +13,8 @@ comments:
   - <a href="https://news.ycombinator.com/item?id=15041986">Hacker News</a>
   - <a href="https://www.reddit.com/r/programming/comments/6u2yen/afraid_of_makefiles_dont_be/">Reddit</a>
   - <a href="https://lobste.rs/s/rkxbue/afraid_makefiles_dont_be">Lobsters</a>
+translations: null
+css: null
 ---
 
 <figure>

@@ -1,9 +1,16 @@
 extends: default.liquid
 
 title:      A Productive Haskell
+subtitle: ""
 date:       26  Aug 2017 00:00:00 +0000
 humandate:  26th of August 2017
 path:       2017/productive-haskell
+social_img: null
+comments: null
+translations: null
+css: null
+---
+
 Back in University I worked on a project, which bridged the gap between Java and Haskell.
 It was a tool for teaching students the basics of computational geometry.
 That might sound frightening in the beginning, but it really was not.

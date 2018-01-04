@@ -6,6 +6,9 @@ date:       17 Dec 2017 00:00:00 +0000
 humandate:  17th of Dezember 2017
 path:       2017/rust-for-rubyists
 css:        assets/posts/rust-for-rubyists.css
+comments: null
+translations: null
+social_img: null
 ---
 
 Recently I came across a delightful article on idiomatic Ruby.

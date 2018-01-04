@@ -1,11 +1,15 @@
 extends: default.liquid
 
 title:	    "Overkill: Java as a First Programming Language"
+subtitle: ""
 date:       12  Feb 2010 00:00:00 +0000
 humandate:  12th of February 2010
 path:       2010/overkill-java-as-a-first-programming-language
 comments:
   - <a href="https://news.ycombinator.com/item?id=13926407">Hacker News</a>
+social_img: null
+translations: null
+css: null
 ---
 
 I recently talked to a student in my neighborhood about his first programming

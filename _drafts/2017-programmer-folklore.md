@@ -1,3 +1,10 @@
+subtitle: ""
+humandate: null
+social_img: null
+comments: null
+translations: null
+css: null
+---
 All too often we use terminology without knowing the origin.
 I find it fascinating to read about the etymology of computer terms. Here are some of my
 highlights.

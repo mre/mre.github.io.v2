@@ -1,11 +1,15 @@
 extends: default.liquid
 
 title:      Of Boxes and Trees - Smart Pointers in Rust
+subtitle: ""
 date:       12 Aug 2017 00:00:00 +0000
 humandate:  12th of August 2017
 path:       2017/boxes-and-trees
 comments:
    - <a href="https://www.reddit.com/r/rust/comments/6tkyz3/of_boxes_and_trees_smart_pointers_in_rust/">Reddit</a>
+social_img: null
+translations: null
+css: null
 ---
 
 Recently, I tried to implement a binary tree data structure in Rust.

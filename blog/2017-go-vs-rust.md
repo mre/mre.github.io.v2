@@ -1,6 +1,7 @@
 extends: default.liquid
 
 title:      Go vs Rust? Choose Go.
+subtitle: ""
 date:       15  Sep 2017 00:00:00 +0000
 humandate:  15th of September 2017
 path:       2017/go-vs-rust
@@ -9,6 +10,8 @@ excerpt:    "Rust or Go, which one should I choose? This is a question I get qui
 comments: 
   - <a href="https://news.ycombinator.com/item?id=15266066">Hacker News</a>
   - <a href="https://www.reddit.com/r/golang/comments/70iwcd/go_vs_rust_choose_go/">Reddit</a>
+translations: null
+css: null
 ---
 
 <figure>

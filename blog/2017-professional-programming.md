@@ -1,9 +1,14 @@
 extends: default.liquid
 
 title:      Being a Professional Programmer
+subtitle: ""
 date:       18 May 2017 00:00:00 +0000
 humandate:  18th of May 2017
 path:       2017/professional-programming
+social_img: null
+comments: null
+translations: null
+css: null
 ---
 
 When I was around 12, I set myself the goal to become a professional programmer.  

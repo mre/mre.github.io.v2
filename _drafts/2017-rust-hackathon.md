@@ -1,3 +1,10 @@
+subtitle: ""
+humandate: null
+social_img: null
+comments: null
+translations: null
+css: null
+---
 # A Hackathon with Rust
 
 At trivago's recent Hackathon I wanted to try something completely new.

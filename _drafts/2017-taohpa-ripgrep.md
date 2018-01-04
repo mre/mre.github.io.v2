@@ -1,9 +1,14 @@
 extends: default.liquid
 
 title:      The Architecture of High-Performance Applications - ripgrep
+subtitle: ""
 date:       10 Oct 2017 00:00:00 +0000
 humandate:  10th of October 2017
 path:       2017/what-makes-rust-fast
+social_img: null
+comments: null
+translations: null
+css: null
 ---
 
 tl;dr: Rust is a safe systems-programming language. But besides its guaranteed safety, it also rivals C/C++ in speed for some datasets.
