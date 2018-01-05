@@ -10,6 +10,8 @@ Space is a scary place
 
 Zero-Cost Abstractions in Rust
 
+What exactly are zero-cost abstractions?
+
 * Examples
   * Enums
 Use https://rust.godbolt.org/
