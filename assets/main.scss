@@ -345,16 +345,22 @@ object {
 
 }
 
-.post-navigation {
-  margin-bottom: 10px;
-}
-
 footer {
-  border-top: 1px solid black;
   margin-bottom: 40px;
 }
 
-footer .links {
+.links {
   list-style:none;
   display: inline;
+}
+
+.field {
+  padding: 10px;
+  font-size: 0.8em;
+}
+
+.submit {
+  border: none;
+  padding: 12px;
+  background-color: #eee;
 }

@@ -1,0 +1,42 @@
+<ul class="links">
+    {%- comment %}
+    What follows is an ultra clunky way to iterate over a list of social media links.
+    This would be much easier with an array slice function.
+    {%- endcomment %}
+    {%- if comments %}
+    <li>💬 Comments available on
+        {%- for comment in comments %}
+            {%- if forloop.length == forloop.index %}
+            {%- if forloop.length > 1 %}
+            and
+            {%- endif %}
+            {{ comment }}.
+            {%- else %}
+            {%- if forloop.first == forloop.index %}
+            {{ comment }}
+            {%- else %}
+            , {{ comment }}
+            {%- endif %}
+            {%- endif %}
+        {%- endfor %}
+    </li>
+    {%- endif %}
+    {%- if translations %}
+    <li>📖 Translated into
+        {%- for translation in translations %}
+            {%- if forloop.length == forloop.index %}
+            {%- if forloop.length > 1 %}
+            and
+            {%- endif %}
+            {{ translation }}.
+            {%- else %}
+            {%- if forloop.first == forloop.index %}
+            {{ translation }}
+            {%- else %}
+            , {{ translation }}
+            {%- endif %}
+            {%- endif %}
+        {%- endfor %}
+    </li>
+    {%- endif %}
+</ul>
