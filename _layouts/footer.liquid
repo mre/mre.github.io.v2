@@ -1,3 +1,4 @@
+{% if is_post %}
 <footer>
     {%- include _layouts/subscribe.liquid %}
     <h3>Continue reading</h3>
@@ -7,3 +8,4 @@
         {% endfor %}
     </ul>
 </footer>
+{% endif %}
