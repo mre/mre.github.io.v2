@@ -551,7 +551,7 @@ Low-level programming and raw performance are no primary goals of the language.
 If you do need that, Rust might be a good fit, because it provides fine-grained hardware control with comparable ergonomics.
 If in doubt, Rust favors explicitness, though; it eschews magic.
 
-Did I wet your appetite for idiomatic Rust? Have a look at [this Github project](https://github.com/mre/idiomatic-rust). I'd be thankful for contributions.
+Did I whet your appetite for idiomatic Rust? Have a look at [this Github project](https://github.com/mre/idiomatic-rust). I'd be thankful for contributions.
 
 
 ### Footnotes
