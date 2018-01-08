@@ -3,7 +3,7 @@ extends: default.liquid
 title:      Rust for Rubyists
 subtitle:   Idiomatic Patterns in Rust and Ruby
 date:       17 Dec 2017 00:00:00 +0000
-humandate:  17th of Dezember 2017
+humandate:  17th of December 2017
 path:       2017/rust-for-rubyists
 css:        assets/posts/rust-for-rubyists.css
 

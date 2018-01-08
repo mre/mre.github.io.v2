@@ -2,7 +2,7 @@ extends: default.liquid
 
 title:      Functional Programming for Mathematical Computing
 date:       2 Jan 2018 00:00:00 +0000
-humandate:  2nd of Jan 2018
+humandate:  2nd of January 2018
 path:       2018/functional-mathematics
 ---
 
