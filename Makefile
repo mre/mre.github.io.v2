@@ -1,5 +1,5 @@
 serve: kill assets
-	cobalt serve
+	cobalt serve --drafts
 .PHONY: serve
 
 build: clean assets
