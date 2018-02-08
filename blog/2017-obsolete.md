@@ -16,7 +16,7 @@ social_img: 2017_obsolete.png
         <object data="/img/posts/2017/obsolete/dinosaur.svg" type="image/svg+xml"></object>
   <figcaption>
   The Stegosaurus had better days 150 million years ago.<br />
-  Paleontologists once thought he had a <a href="https://en.wikipedia.org/wiki/Stegosaurus#.22Second_brain.22">brain in its butt</a>.
+  Paleontologists once thought it had a <a href="https://en.wikipedia.org/wiki/Stegosaurus#.22Second_brain.22">brain in its butt</a>.
   </figcaption>
 </figure>
 
