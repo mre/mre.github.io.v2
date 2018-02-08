@@ -26,7 +26,7 @@ A URL shortener has two main responsibilities:
 
 Let's call our service `rust.ly` (*Hint, hint:* the domain is still available at the time of writing...).
 
-First we create a new Rust project:
+First, we create a new Rust project:
 
 ```rust
 cargo new --bin rustly
@@ -41,10 +41,10 @@ rocket_codegen = "0.2.4"
 ```
 
 Warning: Most likely you need to get the very newest Rocket version.
-Otherwise you might get some entertaining error messages. Check out the newest
+Otherwise, you might get some entertaining error messages. Check out the newest
 version from [crates.io](https://crates.io/crates/rocket).
 
-Since Rocket requires cutting edge Rust features, we need to use a recent nightly
+Since Rocket requires cutting-edge Rust features, we need to use a recent nightly
 build. [Rustup](http://rustup.rs/) provides a simple way to switch between stable and nightly.
 
 ```Rust
@@ -91,9 +91,9 @@ We defined the two *routes* for our service. Both routes will respond to a `GET`
 This is done by adding an *attribute* named `get` to a function.
 The attribute can take additional arguments.
 In our case, we define an `id` variable for the `lookup` endpoint and a `url` variable for the `shorten` endpoint. 
-Both variables are unicode string slices. Since Rust has awesome unicode support, we respond with a nice emoji just to show off. 🕶
+Both variables are Unicode string slices. Since Rust has awesome Unicode support, we respond with a nice emoji just to show off. 🕶
 
-Lastly we need a main function which launches Rocket and mounts our two routes. This way, they become publicly available.
+Lastly, we need a main function which launches Rocket and mounts our two routes. This way, they become publicly available.
 If you want to know even more about the in-depth details, I may refer you to the [official Rocket documentation](https://rocket.rs/guide).
 
 Let's check if we're on the right track by running the application.
@@ -132,7 +132,7 @@ So far so good.
 ### Data storage and lookup
 
 We need to keep the shortened URLs over many requests... but how?
-In a production scenario we could use some NoSQL data store like Redis for that.
+In a production scenario, we could use some NoSQL data store like Redis for that.
 Since the goal is to play with Rocket and learn some Rust, we will simply use an
 in-memory store.
 
@@ -171,9 +171,9 @@ impl Repository {
 }
 ```
 
-Witihin this module we first import the `HashMap` implementation from the standard library.
+Within this module we first import the `HashMap` implementation from the standard library.
 We also include `shortener::Shortener;`, which will help us to shorten the URLs in the next step. Don't worry too much about that for now.
-By convention we implement a `new()` method to create a new Repository struct with an empty `HashMap` and a new `Shortener`. Additionally we have two methods, `store` and `lookup`. 
+By convention, we implement a `new()` method to create a new Repository struct with an empty `HashMap` and a new `Shortener`. Additionally, we have two methods, `store` and `lookup`. 
 
 `store` takes a URL and writes it to our in-memory HashMap storage. It uses our yet to be defined shortener to create a unique id. It returns the shortened ID for the entry.
 `lookup` gets a given ID from the storage and returns it as an `Option`. If the ID is found, the return value will be `Some(url)`, if there is no match it will return `None`. 
@@ -193,7 +193,7 @@ trait Cache {
 }
 ```
 
-This way we get a clear interface and we can easily switch to a different implementation (e.g. a `RedisCache`). Also we could have a `MockRepository` to simplify testing. Same for `Shortener`.
+This way we get a clear interface, and we can easily switch to a different implementation (e.g. a `RedisCache`). Also, we could have a `MockRepository` to simplify testing. Same for `Shortener`.
 
 You might also want to use the `Into` trait to support both, `&str` and `String` as a parameter of `store`:
 
@@ -211,7 +211,7 @@ For now, let's keep it simple.
 ### Actually shortening URLs
 
 Let's implement the URL shortener itself.
-You might be surpised how much was written about URL shortening [all over the web](https://blog.codinghorror.com/url-shortening-hashes-in-practice/).
+You might be surprised how much was written about URL shortening [all over the web](https://blog.codinghorror.com/url-shortening-hashes-in-practice/).
 One common way is to create [short urls using base 62 conversion](http://stackoverflow.com/questions/742013/how-to-code-a-url-shortener).
 
 After looking around some more, I found this sweet crate called [harsh](https://github.com/archer884/harsh), which perfectly fits the bill.  
@@ -258,7 +258,7 @@ impl Shortener {
 ```
 
 With `use harsh::{Harsh, HarshBuilder};` we bring the required structs into scope. Then we define our own `Shortener` struct, which wraps `Harsh`. It has two fields: `id` stores the next id for shortening. (Since there are no negative ids, we use an [unsigned integer](https://en.wikipedia.org/wiki/Integer_(computer_science)#Value_and_representation) for that.) The other field is the `generator` itself, for which we use `Harsh`. 
-Using the `HarshBuilder` you can actually do a lot of fancy stuff, like setting a custom alphabet for the ids. For more info, check out the [official docs](https://github.com/archer884/harsh/).
+Using the `HarshBuilder` you can do a lot of fancy stuff, like setting a custom alphabet for the ids. For more info, check out the [official docs](https://github.com/archer884/harsh/).
 With `next_id` we retrieve a new `String` id for our URLs.
 
 As you can see, we don't pass the URL to `next_id`. That means we actually don't shorten anything. We merely create a short, unique ID. That's because most hashing algorithms produce fairly [long URLs](https://blog.codinghorror.com/url-shortening-hashes-in-practice/) and having short URLs is the whole idea.
@@ -355,13 +355,13 @@ fn main() {
 ```
 
 As you can see we're using a [std::sync::RwLock](https://doc.rust-lang.org/std/sync/struct.RwLock.html) here, to protect our repository from shared mutable access. This type of lock allows any number of readers or at most one writer at the same time.
-It makes our code a bit harder to read, because whenever we want to access our repository, we need to call the [read](https://doc.rust-lang.org/std/sync/struct.RwLock.html#method.read) and [write](https://doc.rust-lang.org/std/sync/struct.RwLock.html#method.write) methods first.
+It makes our code a bit harder to read because whenever we want to access our repository, we need to call the [read](https://doc.rust-lang.org/std/sync/struct.RwLock.html#method.read) and [write](https://doc.rust-lang.org/std/sync/struct.RwLock.html#method.write) methods first.
 
 In our `lookup` method, you can see that we are returning a [Result](https://doc.rust-lang.org/std/result/enum.Result.html) type now. It has two cases: if we find an id in our repository, we return `Ok(Redirect::permanent(url))`, which will take care of the redirect. If we can't find the id, we return an `Error`.
 
 
 In our `shorten` method, we switched from a `get` to a `post` request.
-The advantage is, that we don't need to deal with URL encoding. We simply create a struct `Url` and derive [FromForm](https://rocket.rs/guide/requests/#data) for it, which will handle the deserialization for us. Fancy!
+The advantage is, that we don't need to deal with URL encoding. We just create a struct `Url` and derive [FromForm](https://rocket.rs/guide/requests/#data) for it, which will handle the deserialization for us. Fancy!
 
 We're done. Let's fire up the service again and try it out!
 
@@ -375,14 +375,14 @@ In a new window, we can now store our first URL:
 curl --data "url=https://www.matthias-endler.de" http://localhost:8000/
 ```
 
-We get some ID back, that we can use to retrieve the URL again. In my case, this was `gY`.
+We get some ID back that we can use to retrieve the URL again. In my case, this was `gY`.
 Go to your browser and request it: [http://localhost:8000/gY](http://localhost:8000/gY)
 You should be redirected to my homepage.
 
 
 ### Summary
 
-Rocket provides awesome documentation and a great community.
+Rocket provides fantastic documentation and a great community.
 It really feels like an idiomatic Rustlang web framework.  
 
 I hope you had some fun while playing with Rocket.  

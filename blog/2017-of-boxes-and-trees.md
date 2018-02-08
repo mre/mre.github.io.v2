@@ -98,7 +98,7 @@ Therefore we would need to add lifetime parameters here. This can make it tediou
     ```
 
 * [`Box`](https://doc.rust-lang.org/std/boxed/struct.Box.html) is a **smart pointer** with zero runtime overhead. It owns the data it points to.
-We call it smart because when it goes out of scope it will first drop the data it points to and then itself. No manual memory management required.
+We call it smart because when it goes out of scope, it will first drop the data it points to and then itself. No manual memory management required.
 
     ```rust
     struct Tree {
@@ -128,7 +128,7 @@ In my case, I chose to use a `Box`, because I did not need any special guarantee
 
 ### Making subtrees optional
 
-The next problem I faced was, that I could not instantiate a tree structure.
+The next problem I faced was that I could not instantiate a tree structure.
 The left and right subtree have the type `Box<Tree>`, but at some
 point I would need an empty subtree.
 
@@ -244,5 +244,5 @@ Then again, we need to know about all the possible alternatives to make good use
 If you can, then stay away from smart pointers and stick to simple borrows.  
 If that's not possible, as seen above, choose the least invasive one for your
 use-case. The [Rust documentation](https://doc.rust-lang.org/book/second-edition/ch15-00-smart-pointers.html) is a good starting point here.
-Also, read ["Idiomatic tree and graph like structures in Rust"](https://rust-leipzig.github.io/architecture/2016/12/20/idiomatic-trees-in-rust/) for some clever use of allocators.
+Also, read ["Idiomatic tree and graph-like structures in Rust"](https://rust-leipzig.github.io/architecture/2016/12/20/idiomatic-trees-in-rust/) for some clever use of allocators.
 

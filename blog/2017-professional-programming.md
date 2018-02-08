@@ -9,7 +9,7 @@ path:       2017/professional-programming
 When I was around 12, I set myself the goal to become a professional programmer.  
 I can tell, because at this time I made the conscious decision to use my right hand to control the mouse &mdash; even though I'm left-handed.  
 
-My reasoning was, that if I ever had to help out a colleague with a computer problem I sure did not want to move over her mouse to the other side before getting started.  That would be awkward. 
+My reasoning was, that if I ever had to help out a colleague with a computer problem I sure did not want to move her mouse to the other side before getting started.  That would be awkward. 
 (Of course I did not foresee the advent of the wireless mouse... As a matter of fact, I still use the right hand out of habit.)
 
 One thing I always wanted to know is how a typical workday of a programmer looked like.
@@ -28,7 +28,7 @@ Programming in your free time is like throwing a party without having to clean u
 If you get bored you're free to move on.
 Not so in professional programming, where you're expected to get the job done.
 
-Every application requires constant bug fixing, refactoring and sometimes even monkey patching. Maintaining code is no amusement park. Especially if it's not your own.
+Every application requires constant bug fixing, refactoring and sometimes even monkey patching. Maintaining code is no amusement park; especially if it's not your own.
 
 ### Being a Junior Developer
 
@@ -36,10 +36,9 @@ Fresh out of school you might think you're a pretty kick-ass programmer. Let me 
 You wouldn't guess what talented people can do with these blinking machines.
 You'll have tons of things to learn in the first few years.
 
-Professional software development is a very slow process. Writing readable, well-tested, well-documented code is a substantial effort. You will need patience; lots of it. Both with yourself and with others.
+Professional software development is a lengthy process. Writing readable, well-tested, well-documented code is a substantial effort. You will need patience, lots of it. Both, with yourself and with others.
 
-As a junior, you only think in black and white. You look at some code
-and it's all wrong. Who in their right mind created this horrible monstrosity?!
+As a junior, you only think in black and white. You look at some code, and it's all wrong. Who in their right mind created this horrible monstrosity?!
 As you become more experienced, you'll see the shades of grey.
 
 Eventually, you'll understand that those neckbeards were not slower than you, but
@@ -60,7 +59,7 @@ whole point. You should not narrow down your scope too much.
 The right skills never become obsolete.
 
 From time to time it happens, that due to some new company policy your beautiful creation will become obsolete.
-As depressing as it sounds: it's a normal part of the software business.
+As depressing as it sounds: it's a regular part of the software business.
 You need to adapt.
 One advice I can give you is not to take it too seriously.
 Drop the project, keep the wisdom.
@@ -92,7 +91,7 @@ attention. You will spend your time in Meetings, discussing project goals with
 business people.
 One might say, you take the role of a mediator. Others might call you a manager.
 
-Once you know the ins and outs of the business, you are an important asset for
+Once you know the ins and outs of the business, you are an essential asset for
 the company. You might get asked to become a manager, or at least managing projects will slowly feel like a natural extension of your responsibilities.
 But beware! This slow and gradual process is dangerous.
 Moving back to being a full-time programmer is not easy. 
@@ -100,12 +99,12 @@ During the time you were busy with project management, others were busy improvin
 coding skills.
 You can try to keep up-to-date in your free time but that's hard.
 
-I've seen awesome developers become great managers. At some point in your career
+I've seen excellent developers become great managers. At some point in your career
 it's a decision you need to make for yourself.
 
 However you decide, it pays off to invest some time into learning how to
-communicate. Empathy plays a big role in that.
-Developing software as a team is so complex that a lot of time is spent on aligning goals and communicating problems. In fact, communication is what you get paid for. This includes documentation, tests and the code itself.
+communicate. Empathy plays a prominent role in that.
+Developing software as a team is so complicated that a lot of time is spent on aligning goals and communicating problems. In fact, communication is what you get paid for. This includes documentation, tests and the code itself.
 
 Talk to others, listen to their problems. Read books about Software Project
 Management, even though you don't want to be a manager yourself. It will help

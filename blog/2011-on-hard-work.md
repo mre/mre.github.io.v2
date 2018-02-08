@@ -41,7 +41,7 @@ computer with an Internet connection. We live in a time where a single
 person can accomplish miracles without hard physical labor.
 A time where billions of people can grow a business from their desk, get famous in minutes,
 publish books in seconds and have instant access to large amounts of
-data. The most powerful development over the last 100
+data. The most potent development over the last 100
 years has been the reduction of communication costs. Transferring a bit of
 information to the other end of the world is virtually free and takes
 fractions of a second. While proper education was a privilege of a lucky few
@@ -62,7 +62,7 @@ definition of *hard work*.)
 
 No matter what they tell you, achieving anything sustainable means hustling. It means making
 sacrifices. It means pushing through.
-It means selling something even though it isn't perfect. Your elegant project might turn into an ugly groundhog in
+It means selling something even though it isn't perfect. Your beautiful project might turn into an ugly groundhog in
 the end. Put makeup on it and get it out the door.
 
 On a report about [Quake's 3D-Engine](http://www.bluesnews.com/abrash/chap70.shtml), developer Michael Abrash says:

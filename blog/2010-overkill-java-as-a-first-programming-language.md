@@ -9,10 +9,10 @@ comments:
 ---
 
 I recently talked to a student in my neighborhood about his first programming
-experiences. They started learning *Java* at school and it soon turned out to be
+experiences. They started learning *Java* at school, and it soon turned out to be
 horrible.
 
-A lot of us learned coding in languages like *BASIC* or *Pascal*. There was no
+A lot of us learned to code in languages like *BASIC* or *Pascal*. There was no
 object orientation, no sophisticated file I/O and almost no
 modularization... and it was great. In *BASIC* you could just write
 
@@ -23,7 +23,7 @@ PRINT "HELLO WORLD"
 and you were done. This was actually a running program solving a basic and
 reoccurring problem: Output some text on a screen.
 
-If you wanted to do the same thing in *Java* you simply write:
+If you wanted to do the same thing in *Java* you just write:
 
 ```java
 public class Main { 
@@ -40,7 +40,7 @@ may sound like this:
 
 > Create a Main class containing a main-method returning void expecting a
 > string array as a single argument using the `println` method of the `out` object of
-> class `PrintStream` passing your text as single argument.
+> class `PrintStream` passing your text as a single argument.
 
 &mdash; please just don't forget your brackets. This way your first programming hours are guaranteed to
 be great fun.
@@ -48,9 +48,9 @@ be great fun.
 OK. So what are the alternatives? I admit that nobody wants to write *BASIC*
 anymore because of its lack of a sophisticated standard library for graphics
 (*Java* doesn't have one either) and its weak scalability. The language has to
-be simple and clean. It should be fast enough for numerical tasks but not as
+be clean and straightforward. It should be fast enough for numerical tasks but not as
 wordy as the rigid C-type bracket languages (sorry C++ guys). It should have a
-smooth learning-curve and provide direct feedback (compiled languages often
+smooth learning curve and provide direct feedback (compiled languages often
 suck at that point). It should encourage clean code and reward best practices.
 One language that provides all that is _*Python*_.
 
@@ -66,10 +66,10 @@ print("Hello World")
 
 There's no need to know about object orientation, scopes and function
 arguments at this point. No householding or book-keeping. Yes, it's an
-interpreted language but that's not a deal breaker for beginners.
+interpreted language, but that's not a deal breaker for beginners.
 
 If you aren't convinced yet, printing and formatting text output in *Java* is
-relatively easy for an advanced programmer but the really ugly stuff begins
+relatively easy for an advanced programmer but the gruesome stuff begins
 with file input:
 
 ```java
@@ -108,14 +108,13 @@ print(text);
 ```
 
 The code goes hand in hand with the natural understanding of how the process
-works: "The computer opens a file, reads it and prints it". Even a five year
-old kid can understand that. Nobody would start to explain: "Before you can
+works: "The computer opens a file, reads it and prints it". Even a five-year-old kid can understand that. Nobody would start to explain: "Before you can
 read a file you need a BufferedReader that works on a FileReader..." even if
-this is exactly how it works _internally_. You want to explain the big picture
+this is precisely how it works _internally_. You want to explain the big picture
 at first. The elementary principles of teaching a computer how to do useful
-stuff. Otherwise you will start frustrating beginners and fool them into
+stuff. Otherwise, you will start frustrating beginners and fool them into
 thinking that they are not bright enough for programming. Programming is fun
-and starting with it is the most important step. So don't spoil that
+and starting with it is the most crucial step. So don't spoil that
 experience with layers of unneeded abstraction.
 
 

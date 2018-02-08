@@ -22,22 +22,22 @@ social_img: 2017_obsolete.png
 
 In December 2015 I was looking for static analysis tools to integrate into [trivago](https://www.trivago.com)'s CI process.
 The idea was to detect typical programming mistakes automatically.
-That's quite a common thing and there are lots of helpful tools out there which fit the bill.
+That's quite a common thing, and there are lots of helpful tools out there which fit the bill.
 
 So I looked for a list of tools...
 
 To my surprise, [the only list I found was on Wikipedia](https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis) &mdash; and it was outdated.
 There was no such project on Github, where most modern static analysis tools were hosted.
 
-Without thinking too much about it, I opened up my editor and wrote down a few tools I found through my initial research. After that, I pushed the list to Github.  
+Without overthinking it, I opened up my editor and wrote down a few tools I found through my initial research. After that, I pushed the list to Github.  
 
 I called the project [Awesome Static Analysis](https://github.com/mre/awesome-static-analysis/).
 
-Fast forward two years, and the list has grown quite a bit.
-So far, it has 75 contributors, 277 forks and received over 2000 stars. (Thanks for all the support!)
+Fast forward two years and the list has grown quite a bit.
+So far, it had 75 contributors, 277 forks and received over 2000 stars. (Thanks for all the support!)
 
 Around 1000 unique visitors find the list every week. Not much by any means, but I feel obliged to keep it up-to-date
-because it has become an important source of information for many people.
+because it has become an essential source of information for many people.
 
 It now lists around 300 tools for static analysis. Everything from Ada to TypeScript is on there.
 What I find particularly motivating is, that now the authors themselves create pull requests to add their tools!
@@ -50,7 +50,7 @@ There was one problem though: The list of pull requests got longer and longer, a
 
 I always try to make team members out of regular contributors. My friend and colleague [Andy Grunwald](https://github.com/andygrunwald) as well as [Ouroboros Chrysopoeia](https://github.com/impredicative) are both valuable collaborators. They help me weed out new PRs whenever they find the time.
 
-But let's face it: checking the pull requests is a boring, manual task.
+But let's face it: checking the pull requests is a dull, manual task.
 What needs to be checked for each new tool can be summarized like this:
 
 * Formatting rules are satisfied
@@ -169,7 +169,7 @@ So inside my `Cargo.toml`, I locked the version of afterparty to the version of 
 afterparty = { git = "https://github.com/ms705/afterparty" }
 ```
 
-This fixed the build and I could finally move on.
+This fixed the build, and I could finally move on.
 
 ### Deployment
 
@@ -260,8 +260,8 @@ Now, whenever a new pull request is coming in, you see that little bot getting a
 
 ### Outcome and future plans
 
-I am very happy with my choice of tools: afterparty saved me from a lot of manual work, while zeit made deployment really easy.  
+I am very pleased with my choice of tools: afterparty saved me from a lot of manual work, while zeit made deployment really easy.  
 It feels like [Amazon Lambda](https://aws.amazon.com/lambda/details/) on steroids.
 
-If you look at the [code](https://github.com/mre/awesome-static-analysis-ci/blob/master/src/main.rs) and the [commits](https://github.com/mre/awesome-static-analysis-ci/commits/master) for my little bot, you can see all my little missteps, until I got everything just right. Turns out, parsing human-readable text is tedious.  
+If you look at the [code](https://github.com/mre/awesome-static-analysis-ci/blob/master/src/main.rs) and the [commits](https://github.com/mre/awesome-static-analysis-ci/commits/master) for my bot, you can see all my little missteps, until I got everything just right. Turns out, parsing human-readable text is tedious.  
 Therefore I was thinking about turning the list of analysis tools into a structured format like `YAML`. This would greatly simplify the parsing and have the added benefit of having a machine-readable list of tools that can be used for other projects.

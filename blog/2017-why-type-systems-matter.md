@@ -15,7 +15,7 @@ It began to feel very natural to me; like a totally new way to express myself.
 
 ### Types are here to help
 
-With types, you communicate your guarantees and expectations. Both, to the machine and to other developers. Types express intent.
+With types, you communicate your guarantees and expectations. Both, to the machine and other developers. Types express intent.
 
 As a programmer, you've probably gained some *intuition* about types.
 
@@ -30,7 +30,7 @@ It gets a little more tricky if the type gets *inferred* from some other locatio
 sentence = x
 ```
 
-Is `sentence` still a string? Uhm... we don't know. It depends on the type of `x`. Maybe `x` is a number and so `sentence` is also a number? Maybe `x `used to be a string but during refactoring it is now a byte array? Fun times had by all. 🎉
+Is `sentence` still a string? Uhm... we don't know. It depends on the type of `x`. Maybe `x` is a number, and so `sentence` is also a number? Maybe `x `used to be a string but during refactoring it is now a byte array? Fun times had by all. 🎉
 
 What about this one?
 
@@ -55,14 +55,14 @@ How can we fix that?
 
 We can safely assume that a file size is always a number.
 To be more precise, it must be a positive, natural number.
-There can be no negative file size and our smallest block of memory is one byte
+There can be no negative file size, and our smallest block of memory is one byte
 (on all but the most [obscure systems](https://en.wikipedia.org/wiki/4-bit)).
 And since we're dealing with a discrete machine here, we know it can only be
-a filesize the machine can handle.
+a filesize the computer can handle.
 If we only could express all of this in a precise way...?  
 
 This is where type systems enter the stage.  
-In Rust you could define a `File` type with a field named `size`.
+In Rust, you could define a `File` type with a field named `size`.
 
 ```rust
 struct File {
@@ -100,7 +100,7 @@ def filter_files(files):
 ```
 
 What does `0` represent?
-We can't say. We are lacking the context!
+We can't say. We lack the context!
 
 The story gets a little clearer once we define an [enum](https://docs.python.org/3/library/enum.html) type like this:
 

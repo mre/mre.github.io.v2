@@ -47,7 +47,7 @@ Except that these digital clocks can be quite annoying:
 That's why I constantly need to look after those clocks.
 
 Let me tell you a secret:
-When I'm not warming stuff in the oven, I don't want it to tell me the local time. I want the oven to be *off*.
+When I'm not warming stuff in the oven, I don't want it to tell me the local time. I want the stove to be *off*.
 
 ### Why I have trouble setting the clock on our oven
 
@@ -67,10 +67,9 @@ To add some functionality to a device you have two options:
 Option 1 might dilute your beautiful design, while option 2 might mean frustration for your users.
 Neither option is appealing.
 
-Basically, our oven *maps* multiple functions to the same button.
-
+Our oven *maps* multiple functions to the same button.
 But the most annoying thing is, that each device has *a different mapping*.
-Learning to set the time on my oven won't help me with the dishwasher, which sports a totally different interface!
+Learning to set the time on my oven won't help me with the dishwasher, which sports an entirely different interface!
 
 ### Takeaways
 
@@ -79,9 +78,9 @@ Learning to set the time on my oven won't help me with the dishwasher, which spo
 A clock on your product will most likely not add any additional value.
 In the best case it might be an annoyance, in the worst case it's harmfully misleading.
 
-When given the choice, I prefer home appliances without clocks.
+When given a choice, I prefer home appliances without clocks.
 Looking at today's market, that's harder than it sounds.
-Arguably, a device with a clock is cheaper than one without. Simply because the ones with timers get produced more often.
+Arguably, a device with a clock is cheaper than one without; just because the ones with timers get produced more often.
 
 Now I can understand why [it took Steve Jobs two weeks to decide on a washing machine](http://amzn.to/2AqQFZz):
 

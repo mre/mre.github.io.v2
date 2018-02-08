@@ -20,7 +20,7 @@ The Ruby code samples are from the [original article](https://medium.com/the-ren
 
 ### Map and Higher-Order Functions
 
-The first example is a pretty common iteration over elements of a container using `map`.
+The first example is a pretty basic iteration over elements of a container using `map`.
 
 <a class="example" href="https://gist.github.com/LeandroTk/64ca7d6f5279e08589e21d799544e878#file-map-rb">
 <div class="ruby icon"></div>
@@ -30,7 +30,7 @@ user_ids = users.map { |user| user.id }
 ```
 </a>
 
-The `map` concept is also pretty common in Rust.
+The `map` concept is also pretty standard in Rust.
 Compared to Ruby, we need to be a little more explicit here:
 If `users` is a vector of `User` objects, we first need to create an iterator from it:
 
@@ -212,7 +212,7 @@ fn main() {
 </a>
 
 In general, it's quite common to use crates in Rust for functionality that is not in the standard lib.
-Part of the reason why this is so well accepted is, that [cargo](https://github.com/rust-lang/cargo) is such a rad package manager.
+Part of the reason why this is so well accepted is that [cargo](https://github.com/rust-lang/cargo) is such a rad package manager.
 (Maybe because it was built by no other than [Yehuda Katz](http://yehudakatz.com/about/) of Ruby fame. 😉)
 
 As mentioned before, Rust does not have `nil`. However, there is still the concept of operations that can fail.
@@ -312,7 +312,7 @@ For the code to work, you need the `rand` crate. Click on the snippet for a runn
 
 There are some differences to Ruby. Namely, we need to be more explicit about what random number generator
 we want *exactly*. We decide for a [lazily-initialized thread-local random number generator, seeded by the system](https://doc.rust-lang.org/rand/rand/fn.thread_rng.html).
-In this case, I'm using a [slice](https://doc.rust-lang.org/std/slice/) instead of a vector. The main difference is, that the slice has a fixed size while the vector does not.
+In this case, I'm using a [slice](https://doc.rust-lang.org/std/slice/) instead of a vector. The main difference is that the slice has a fixed size while the vector does not.
 
 Within the standard library, Rust doesn't have a `sample` or `choose` method on the slice itself. 
 That's a design decision: the core of the language is kept small to allow evolving the language in the future.

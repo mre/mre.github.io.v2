@@ -20,7 +20,7 @@ One reason for its popularity in this area is that it offers some built-in domai
 
 ### Imperative vs functional style
 
-Built-in keywords can help expand the expressiveness of a language into a specific problem space, but this approach is severly limited. It’s not feasible to extend the language core *ad infinitum*; it would just be harder to maintain and take longer to learn. Therfore, most languages provide other ways of abstraction – like *functions*, *subroutines*, *classes* and *objects* – to split a routine into smaller, more manageable parts. These mechanisms might help to control the complexity of a program, but especially when dealing with mathematical problems, one has to be careful not to obfuscate the solution with boilerplate code.
+Built-in keywords can help expand the expressiveness of a language into a specific problem space, but this approach is severly limited. It’s not feasible to extend the language core *ad infinitum*; it would just be harder to maintain and take longer to learn. Therefore, most languages provide other ways of abstraction – like *functions*, *subroutines*, *classes* and *objects* – to split a routine into smaller, more manageable parts. These mechanisms might help to control the complexity of a program, but especially when dealing with mathematical problems, one has to be careful not to obfuscate the solution with boilerplate code.
 
 #### Specimen I - Factorial
 
@@ -119,7 +119,7 @@ For a proper textual representation of Vectors, the toString() Method would also
 
 ### Creating new abstractions
 
-If functions and types are not sufficient to write straightforward programs, Haskell also offers simple constructs to create new operators and keywords which extend the language core itself. This makes domain-specific-languages feasible and enable the developer to work more directly on the actual problem instead of working arround peculiarities of the programming language itself (such as memory management or array iteration). Haskell embraces this concept, Java has no such functionality.
+If functions and types are not sufficient to write straightforward programs, Haskell also offers simple constructs to create new operators and keywords which extend the language core itself. This makes domain-specific-languages feasible and enables the developer to work more directly on the actual problem instead of working around peculiarities of the programming language itself (such as memory management or array iteration). Haskell embraces this concept; Java has no such functionality.
 
 ### Conclusion
 

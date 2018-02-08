@@ -51,7 +51,7 @@ impressive.
 
 [Games](https://www.reddit.com/r/rust_gamedev/comments/4qlftu/look_our_game_writen_entirely_in_rust/d4tz4r3/) are another area where Rust might shine. 
 It's financially attractive for Game Studios to support multiple platforms without much
-effort. `Cargo` and `rustup` make cross compiling easy.
+effort. `Cargo` and `rustup` make cross-compiling easy.
 Modern libraries slowly fill the tooling gaps for large-scale game development.
 [Rust's support for the Vulkan 3D graphics API](https://github.com/tomaka/vulkano) might already be the best of class.
 The killer feature though is the unique combination of safety and performance.
@@ -71,12 +71,12 @@ In all cases, Rust might be a good fit. Right now the biggest barrier to entry
 is probably the huge amount of legacy code. Many industries maintain large codebases in Cobol,
 C or Fortran that are not easily rewritten.
 
-Fortunately Rust has been proven to work very nicely with other languages. 
+Fortunately, Rust has been proven to work very nicely with other languages. 
 Partly because of strong C-compatibility and partly because there is no Runtime or Garbage Collector.
-A common pattern is to optimize some core part of an application in Rust that has hard safety/performance
+A typical pattern is to optimize some core part of an application in Rust that has hard safety/performance
 requirements, while leaving the rest untouched.
 I think this symbiosis will only become stronger in the long run.
-There are even ambitious projects like [Corrode](https://fosdem.org/2017/schedule/event/mozilla_translation_from_c_to_rust/) which attempt to automatically translate C code to Rust.
+There are even ambitious projects like [Corrode](https://fosdem.org/2017/schedule/event/mozilla_translation_from_c_to_rust/) which attempt to translate C code to Rust automatically.
 
 
 ### Summary

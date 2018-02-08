@@ -56,7 +56,7 @@ Here's the idea:
 * Once the page is fully loaded (e.g. when the [`onload` event](https://www.w3schools.com/jsref/event_onload.asp) is fired), lazy load full quality images.
 
 Unfortunately, this technique requires JavaScript.
-Nevertheless, I liked the idea, so I started experimenting with different image sizes and formats. My goal was to create the smallest thumbnails using any common image format.
+Nevertheless, I liked the idea, so I started experimenting with different image sizes and formats. My goal was to create the smallest thumbnails using any standard image format.
 
 ### Benchmark
 
@@ -87,7 +87,7 @@ gifsicle -O3 < img.gif > img_mini.gif
 
 WebP is the smallest, but it's [not supported by all browsers](http://caniuse.com/#feat=webp).  
 Gif was second, but when resizing the image and applying the blur filter, I was not happy with the result.  
-In the end I, settled for PNG, which provided a nice tradeoff between size and quality.
+In the end, I settled for PNG, which provided an excellent tradeoff between size and quality.
 I optimized the images even further using [oxipng](https://github.com/shssoichiro/oxipng), which supports zopfli compression.
 With that, I end up with thumbnails of around 300-400 bytes in size.
 

@@ -37,7 +37,7 @@ building materials. You can build a mansion for free.
 
 ### Sharing is fun, too!
 
-To get new inspiration for your own projects, read the programs of others.
+To get new inspiration for your next project, read the programs of others.
 This will give you an idea of how they think and how they solve problems.
 Many great programmers share their best code with you.
 You can do the same and share your project - or just the prettiest parts of it - with other programmers.
@@ -66,20 +66,20 @@ I'm baffled when I realize that these circuits can actually "understand" and int
 
 Talking to other programmers and watching them work is a fascinating inspiration. 
 The very system you are using to read this text relies on their work.
-Even if you're far apart you can study their work on Open Source projects online.
+Even if you're far apart, you can study their work on Open Source projects online.
 But if you get a chance, watch them giving talks at conferences and meet them at local user groups.
 Becoming part of a community is gratifying.
 To exchange ideas and to collaborate on projects helps you push your boundaries and learn something new every day.
 
 ### Have fun, forget the rest
 
-The machine is totally agnostic to your skin color. It doesn't matter if you're a twelve-year-old girl or a lecturer at University.
+The machine is agnostic to your skin color. It doesn't matter if you're a twelve-year-old girl or a lecturer at University.
 If you keep making the same mistake for ten hours straight, your computer won't scream at you. It won't punish you. It will happily await your commands. Also, the hurdles of entry are pretty low. An old computer is enough; even pen and paper and a book will suffice to work on cool programming ideas.
 
 ### Get started!
 
 You choose your own projects; nobody else.
-Don't let anybody tell you, you're not smart enough for this stuff. Ever.  
+Don't let anybody tell you that you're not smart enough for this stuff. Ever.  
 Each program is a wonderful journey so join us and code the world around you.
 
 [1]: /2017/professional-programming

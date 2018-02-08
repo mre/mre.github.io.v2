@@ -128,7 +128,7 @@ warning: this expression borrows a reference that is immediately dereferenced by
     = help: for further information visit https://rust-lang-nursery.github.io/rust-clippy/v0.0.165/index.html#needless_borrow
 ```
 
-Simply try some of the suggestions and see if the project still compiles and the tests still pass.
+Just try some of the suggestions and see if the project still compiles and the tests still pass.
 Check out the links to the documentation in the help section to learn more.
 Start small to make your changes easier to review.
 
@@ -146,7 +146,7 @@ git push --set-upstream origin codestyle
 
 Afterwards, go to the homepage of your fork on Github.
 There should be a button titled *Compare & pull request*.
-Please add a nice description and then submit the pull request.
+Please add a meaningful description and then submit the pull request.
 
 Congratulations! You've contributed to the Rust ecosystem. Thank you! 🎉
 

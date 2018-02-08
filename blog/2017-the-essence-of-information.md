@@ -6,14 +6,14 @@ humandate:  18th of March 2017
 path:       2017/the-essence-of-information
 ---
 
-People look confused, when I tell them about my passion for Algorithms and Datastructures.
+People look confused when I tell them about my passion for algorithms and data-structures.
 Most of them understand what a Programmer is doing, but not what Computer Science is good for.
 And even if they do, they think it has no practical relevance.
 Let me show you with a simple example, that applied Computer Science can be found everywhere.
 
-Imagine a pile of socks that needs to get sorted.
+Imagine a pile of socks that need to get sorted.
 Not exactly the most exciting pastime.
-You've put off this task for so long, that it will surely take an hour to be done.
+You've put off this task for so long, that it will inevitably take an hour to be done.
 
 <figure>
   <img src="/img/posts/2017/big_pile.jpg" alt="Pile of socks">
@@ -31,7 +31,7 @@ You and your friend get bluntly degraded to *workers*.
 Both of you can work on the problem at the same time &mdash; or *in parallel*.
 This is the gist of [Parallel Computing](https://en.wikipedia.org/wiki/Parallel_computing).
 
-Now, there are some properties that make sock-sorting a good fit for doing in parallel.
+Now, some properties make sock-sorting a good fit for doing in parallel.
 
 * The work can be nicely split up. It takes about the same time for every worker to find a pair of socks.
 * Finding a different pair is a completely separate task that can happen at the same time.
@@ -69,7 +69,7 @@ Worker one takes the green socks, worker two the gray ones and so on.
 With this simple trick, we can avoid a deadlock, because we work on completely
 separate tasks.
 
-But there's still a catch. What if there are only 4 green socks and 4000 gray socks?
+But there's still a catch. What if there are only four green socks and 4000 gray socks?
 Worker one would get bored fairly quickly. He would sort the two pairs of socks in
 no time and then watch worker two sort the rest.
 That's not really team spirit, is it?
@@ -95,7 +95,7 @@ What can we do?
 
 Most of the time it helps to think of other ways to split up work.
 For example, we could have *two* workers sort the big gray pile together. One
-sorts the large socks, the other one sorts the small ones. We run into another problem, though: Who decides what "large" and "small" means in this case?
+sorts the large socks; the other one sorts the small ones. We run into another problem, though: Who decides what "large" and "small" means in this case?
 
 So, instead of thinking too hard about a smarter approach, we decide to be
 pragmatic here. Everyone just grabs an equally sized pile of socks &mdash; no
@@ -125,7 +125,7 @@ Personally, I don't like the term Computer Science too much. I prefer
 the German term "Informatik", which I would roughly translate as "Information Science".
 Because the real essence of what we're doing here is to find a general way to solve a
 whole *class* of problems. We think of the nature of objects and their properties.
-We don't sort socks, we try to answer the [fundamental questions of information](https://www.youtube.com/watch?v=2Op3QLzMgSY). Maybe now you can understand why I'm so passionate about this subject.
+We don't sort socks; we try to answer the [fundamental questions of information](https://www.youtube.com/watch?v=2Op3QLzMgSY). Maybe now you can understand why I'm so passionate about this subject.
 
 Oh, and here's a related post about [why I love programming](/2017/why-i-love-programming).
 
