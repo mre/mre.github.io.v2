@@ -160,6 +160,7 @@ func Test_analyze(t *testing.T) {
 ```
 
 We changed `analyze("test.txt")` to `doSomething(strings.NewReader("This is a test string"))`.
+(Of course, we should also write a separate test for `analyze()`, but the focus is on decoupling the datasource-agnostic part here.)
 
 ### Result
 
@@ -168,3 +169,14 @@ By slightly refactoring our code, we gained the following advantages:
 * *Simple testability*: No mocks or temporary files.
 * *Separation of concerns*: Each function does exactly one thing.
 * *Easier code re-use*: The `doSomething()` function will work with any `io.Reader` and can be called from other places. We can even move it to its own library if we want.
+
+On Reddit, user [soapysops](https://www.reddit.com/user/soapysops) made an [important remark](https://www.reddit.com/r/golang/comments/86f4gw/refactoring_go_code_to_avoid_file_io_in_unit_tests/dw4l2bq/):  
+> In general, I prefer to not accept a file name in an API. A file name doesn't give users enough control. It doesn't let you use an unusual encoding, special file permissions, or a bytes.Buffer instead of an actual file, for example. Accepting a file name adds a huge dependency to the code: the file system, along with all of its associated OS specific stuff.
+>
+> So I probably would have eliminated the file name based API and only exposed one based on io.Reader. That way, you have complete code coverage, fast tests, and far fewer edge cases to worry about.
+
+I totally agree with that sentiment.  
+
+The refactoring above is just the first step towards better architecture. There is definitely a lot more you can do.
+
+Also, often times you can't simply change the user-facing API easily, because the API might be public and might already have users. In these cases, small, incremental steps are a step in the right direction.
