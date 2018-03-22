@@ -1,6 +1,7 @@
 extends: default.liquid
 
-title:      "How to Avoid file I/O in Golang Unit Tests Without Mocking"
+title:      "Refactoring Go Code to Avoid File I/O in Unit Tests"
+subtitle:   Without Mocking or Temporary Files
 date:       22 Mar 2018 00:00:00 +0000
 humandate:  22nd of March 2018
 path:       2018/go-io-testing
