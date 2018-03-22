@@ -5,10 +5,20 @@ subtitle:   Without Mocking or Temporary Files
 date:       22 Mar 2018 00:00:00 +0000
 humandate:  22nd of March 2018
 path:       2018/go-io-testing
+social_img: 2018-go-io-testing.png
 ---
 
 At work today, I refactored some simple Go code to make it more testable.
 The idea was to avoid file handling in unit tests without mocking or using temporary files by separating data input/output and data manipulation.
+
+<figure>
+	<div class="loader">
+            <object data="/img/posts/2018/go-io-testing/gopher.svg">A gopher reading a long computer printout</object>
+            <img class="frozen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAFCAMAAACtk0YeAAAAb1BMVEW/476+47294ry90LrDu7u6wLS947y94r3Q3c/K28rPy8rd1NrVv8m017O84bvC4MHKxsbFs7vVyNC62ri63rm737q537jg39/Qz83s7Oy83rvA5L+94b3H2sbG2sbN28zC2cHJ28i9ybi40LLA5MB2FprZAAAANElEQVR42jXHtQGAQABFsfdxX4D9t6PC3U7SRYiPkHTCI8V/rY3Dnsx88G9kdN9bkLNC/gJaSwktEGNpZwAAAABJRU5ErkJggg" />
+        </div> 
+  <figcaption>Illustration by <a href="https://github.com/marcusolsson/gophers/">Marcus Olsson</a> (CC BY-NC-SA 4.0)</figcaption>
+
+</figure>
 
 I was surprised that I couldn't find a simple explanation on sites like StackOverflow,
 which is why I wrote down some notes myself so that others can refer to it in the future.
