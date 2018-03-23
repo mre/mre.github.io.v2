@@ -6,6 +6,8 @@ date:       22 Mar 2018 00:00:00 +0000
 humandate:  22nd of March 2018
 path:       2018/go-io-testing
 social_img: 2018-go-io-testing.png
+comments:
+   - <a href="https://www.reddit.com/r/golang/comments/86f4gw/refactoring_go_code_to_avoid_file_io_in_unit_tests/">Reddit</a>
 ---
 
 At work today, I refactored some simple Go code to make it more testable.
@@ -176,7 +178,6 @@ On Reddit, user [soapysops](https://www.reddit.com/user/soapysops) made an [impo
 > So I probably would have eliminated the file name based API and only exposed one based on io.Reader. That way, you have complete code coverage, fast tests, and far fewer edge cases to worry about.
 
 I totally agree with that sentiment.  
-
+But often times you can't simply change the user-facing API easily, because the API might be public and might already have users. 
 The refactoring above is just the first step towards better architecture. There is definitely a lot more you can do.
-
-Also, often times you can't simply change the user-facing API easily, because the API might be public and might already have users. In these cases, small, incremental steps are a step in the right direction.
+If that got you interested, also check out [justforfunc #29: dependency injection in a code review](https://youtu.be/ifBUfIb7kdo), which talks about the same topic.
