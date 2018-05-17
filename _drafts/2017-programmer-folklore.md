@@ -2,6 +2,12 @@ All too often we use terminology without knowing the origin.
 I find it fascinating to read about the etymology of computer terms. Here are some of my
 highlights.
 
+
+## Radio Button
+
+https://twitter.com/themattcoady/status/988819505534009344
+
+
 ## Bug
 
 One of the most well-known ones. It's actually not from a bug that Grace Hopper
