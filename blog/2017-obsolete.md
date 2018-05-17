@@ -20,7 +20,7 @@ social_img: 2017_obsolete.png
   </figcaption>
 </figure>
 
-In December 2015 I was looking for static analysis tools to integrate into [trivago](https://www.trivago.com)'s CI process.
+In December 2015 I was looking for static analysis tools to integrate into [trivago](https://tech.trivago.com/)'s CI process.
 The idea was to detect typical programming mistakes automatically.
 That's quite a common thing, and there are lots of helpful tools out there which fit the bill.
 
@@ -34,7 +34,8 @@ Without overthinking it, I opened up my editor and wrote down a few tools I foun
 I called the project [Awesome Static Analysis](https://github.com/mre/awesome-static-analysis/).
 
 Fast forward two years and the list has grown quite a bit.
-So far, it had 75 contributors, 277 forks and received over 2000 stars. (Thanks for all the support!)
+So far, it has 75 contributors, 277 forks and received over 2000 stars. (Thanks for all the support!)
+(Update May 2018: 91 contributors, 363 forks, over 3000 stars)
 
 Around 1000 unique visitors find the list every week. Not much by any means, but I feel obliged to keep it up-to-date
 because it has become an essential source of information for many people.
@@ -265,3 +266,10 @@ It feels like [Amazon Lambda](https://aws.amazon.com/lambda/details/) on steroid
 
 If you look at the [code](https://github.com/mre/awesome-static-analysis-ci/blob/master/src/main.rs) and the [commits](https://github.com/mre/awesome-static-analysis-ci/commits/master) for my bot, you can see all my little missteps, until I got everything just right. Turns out, parsing human-readable text is tedious.  
 Therefore I was thinking about turning the list of analysis tools into a structured format like `YAML`. This would greatly simplify the parsing and have the added benefit of having a machine-readable list of tools that can be used for other projects.
+
+### Update May 2018
+
+While attending the [WeAreDevelopers conference in Vienna](http://wearedevelopers.com/) (can recommend that), I moved the CI pipeline from [zeit.co](http://zeit.co/) to [Travis CI](http://travis-ci.org/).
+The reason was, that I wanted the linting code next to the project, which greatly simplified things.
+First and foremost I don't need the web request handling code anymore, because travis takes care of that.
+If you like, you can compare the [old](https://github.com/mre/awesome-static-analysis-ci/blob/master/src/main.rs) and the [new](https://github.com/mre/awesome-static-analysis/blob/master/ci/src/lib.rs) version.
