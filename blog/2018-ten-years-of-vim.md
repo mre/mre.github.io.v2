@@ -1,8 +1,8 @@
 extends: default.liquid
 
 title:      "Ten Years of Vim"
-date:       19 May 2018 00:00:00 +0000
-humandate:  19th of May 2018
+date:       20 May 2018 00:00:00 +0000
+humandate:  20th of May 2018
 path:       2018/ten-years-of-Vim
 css:        assets/posts/ten-years-of-vim.css
 excerpt:    "When I opened Vim by accident for the first time, I thought it was broken. My keystrokes changed the screen in unpredictable ways, and I wanted to undo things and quit. Needless to say, it was an unpleasant experience. There was something about it though, that kept me coming back and it became my main editor. Fast forward ten years (!) and I still use Vim. Why is that?"
