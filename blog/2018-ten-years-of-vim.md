@@ -87,7 +87,7 @@ My current Vim setup is pretty minimalistic. I don't use plugins anymore, mostly
 
 Here are three concrete examples of how my workflow changed over the years:
 
-1. In the beginning I used a lot of "number powered movements". That is, if you have a command like `b`, which goes back one word in the text, you can also say `5b` to go back five words. Nowadays I mostly use `/` to move to a matching word because it's quicker.
+1. In the beginning, I used a lot of "number powered movements". That is, if you have a command like `b`, which goes back one word in the text, you can also say `5b` to go back five words. Nowadays I mostly use `/` to move to a matching word because it's quicker.
 
 2. I don't use arrow keys to move around in text anymore but forced myself to use `h`, `j`, `k`, `l`. Many people say that this is faster. After trying this for a few years, I don't think that is true (at least for me). I now just stick to it out of habit.
 
