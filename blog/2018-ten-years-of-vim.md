@@ -54,7 +54,7 @@ Then just take the first character of every word. Try it!
 If anything goes wrong, you can always hit `ESC` and type `u` for undo.
 
 **Actions**: delete, find, change, back, insert, append,...  
-**Objects**: word, sentence, parentheses, (html) tag,...  
+**Objects**: word, sentence, parentheses, (html) tag,... (see `:help text-objects`)
 
 Inserting text is just another editing action, which can be triggered with `i`. 
 That's why, by default, you are in *edit* mode, where all those commands work. 
