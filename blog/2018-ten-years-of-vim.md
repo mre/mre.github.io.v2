@@ -100,7 +100,7 @@ As every other Vim user will tell you, we're all still learning.
 
 Here are a few things I wish I could do better:
 
-* **Jumping around in longer texts**: I know the basics, like searching (`/`), jumping to a matching bracket (`%`) or jumping to specific lines (for line 10, type `10g`), but I still could use [symbols](https://en.wikipedia.org/wiki/Symbol_(programming)) more often for navigation.
+* **Jumping around in longer texts**: I know the basics, like searching (`/`), jumping to a matching bracket (`%`) or jumping to specific lines (for line 10, type `10G`), but I still could use [symbols](https://en.wikipedia.org/wiki/Symbol_(programming)) more often for navigation.
 * **Using visual mode for moving text around**: Sometimes it can be quite complicated to type the right combination of letters to cut (delete) the text I want to move around. That's where visual mode (`v`) shines. It highlights the selected text. I should use it more often.
 * **Multiple registers for copy and paste**: Right now I only use one register (like a pastebin) for copying text, but Vim supports multiple registers. That's cool if you want to move around more than one thing at the same time. [Let's use more of those!](http://Vim.wikia.com/wiki/Copy,_cut_and_paste)
 * **Tabs**: I know [how tabs work](http://Vim.wikia.com/wiki/Using_tab_pages), but all the typing feels clunky. That's why I never extensively used them. Instead, I mostly use multiple terminal tabs or an IDE with Vim bindings for bigger projects.
