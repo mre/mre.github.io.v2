@@ -49,15 +49,15 @@ The Vim commands are not cryptic, you already know them.
 * To <u>d</u>elete <u>a</u> <u>w</u>ord, type `daw`.
 * To <u>c</u>hange <u>a</u> <u>s</u>entence, type `cas`.
 
-More often than not, you can *guess* the correct command by thinking of an action you want to execute and an object to execute it on.
+More often than not, you can *guess* the correct command by thinking of an operation you want to execute and an object to execute it on.
 Then just take the first character of every word. Try it!
 If anything goes wrong, you can always hit `ESC` and type `u` for undo.
 
-**Actions**: delete, find, change, back, insert, append,...  
+**Operations**: delete, find, change, back, insert, append,...  
 **Objects**: word, sentence, parentheses, (html) tag,... (see `:help text-objects`)
 
-Inserting text is just another editing action, which can be triggered with `i`. 
-That's why, by default, you are in *edit* mode, where all those commands work. 
+Inserting text is just another editing operation, which can be triggered with `i`. 
+That's why, by default, you are in [normal mode](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes) &mdash; also called command mode &mdash; where all those operations work. 
 
 Once you know this, Vim makes a lot more sense, and that's when you start to be productive.
 
