@@ -7,6 +7,12 @@ path:       2018/ten-years-of-Vim
 css:        assets/posts/ten-years-of-vim.css
 excerpt:    "When I opened Vim by accident for the first time, I thought it was broken. My keystrokes changed the screen in unpredictable ways, and I wanted to undo things and quit. Needless to say, it was an unpleasant experience. There was something about it though, that kept me coming back and it became my main editor. Fast forward ten years (!) and I still use Vim. Why is that?"
 social_img: 2018-ten-years-of-vim.png
+comments:
+  - <a href="https://news.ycombinator.com/item?id=17115008">Hacker News</a>
+  - <a href="https://twitter.com/matthiasendler/status/998145882179751936">Twitter</a>
+  - <a href="https://lobste.rs/s/xoploc/ten_years_vim">Lobsters</a>
+  - <a href="https://www.reddit.com/r/programming/comments/8ksxqn/ten_years_of_vim/">/r/programming on Reddit</a>
+  - <a href="https://www.reddit.com/r/vim/comments/8ksxgz/ten_years_of_vim/">/r/vim on Reddit</a>
 ---
 
 <div class="vim">
