@@ -6,7 +6,7 @@ It's okay to use MongoDB.
 Node.js, SVN, Perl and Visual Basic are fine, too.
 
 In our industry, many engineers have an incredible hubris.  
-They look down on hobbyists, self-taught programmers and people that come out of code bootcamps.
+They look down on hobbyists and people that come out of code bootcamps.
 And by doing that, they create a toxic environment; it's unbearable.
 
 No matter what they say: you can do this! We need more people like you in our industry.
