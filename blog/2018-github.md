@@ -81,4 +81,4 @@ Would this be enough to pay the bills? Probably. Would it be enough to grow? Pro
 I don't think the acquisition will kill the culture. Microsoft is a strong partner and [Nat Friedman](https://natfriedman.github.io/hello/) is one of us.
 On the other side, I'm not as enthusiastic as I used to be.
 There's room for competitors now and I'm beginning to wonder what will be the next Github.
-That said, I will keep the Octocat on my office wall, in the hope that the excitement will come back.
+That said, I will keep the Octocat on my office wall, in the hope that the excitement comes back.
