@@ -5,6 +5,9 @@ date:       9 June 2018 00:00:00 +0000
 humandate:  9th of June 2018
 path:       2018/github
 social_img: 2018_github.jpg
+excerpt:    "So I'm in a bit of a sentimental mood lately. Github got acquired by Microsoft.
+While I think the acquisition was well-deserved, I still wish it didn't happen.
+Let me explain."
 ---
 
 ![Photo of my office with Github's octocat on the wall over my couch](/img/posts/2018/github/octocat.jpg)
