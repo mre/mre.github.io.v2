@@ -4,6 +4,7 @@ title:      "That Octocat on the Wall"
 date:       9 June 2018 00:00:00 +0000
 humandate:  9th of June 2018
 path:       2018/github
+social_img: 2018_github.jpg
 ---
 
 ![Photo of my office with Github's octocat on the wall over my couch](/img/posts/2018/github/octocat.jpg)
