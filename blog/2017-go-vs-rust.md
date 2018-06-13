@@ -51,7 +51,7 @@ You need to invest a serious amount of time to see any benefit.
 Rust is already a powerful language and it gets stronger every day.
 It feels much more like a *pragmatic Haskell* to me than a *safer C*.
 
-Don't get me wrong: I love Rust, and it helped me become a better programmer. It is certainly a nice language to learn. The big question is, if it is the right choice for your next major project.
+Don't get me wrong: [I love Rust](https://www.youtube.com/channel/UCZ_EWaQZCZuGGfnuqUoHujw), and it helped me become a better programmer. It is certainly a nice language to learn. The big question is, if it is the right choice for your next major project.
 
 Here's the thing: if you choose Rust, usually you need the guarantees, that the language provides:
 
