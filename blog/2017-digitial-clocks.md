@@ -51,7 +51,7 @@ When I'm not warming stuff in the oven, I don't want it to tell me the local tim
 
 ### Why I have trouble setting the clock on our oven
 
-[Our oven](http://aegelectrolux.co.za/cooking/ovens/dc4013001m-%C3%B0-multifunction-double-oven.html) has three buttons related to time: plus, minus and a clock symbol.
+Our oven has three buttons related to time: plus, minus and a clock symbol.
 To set the time, you push the clock symbol. An arrow appears and the display changes to 00:00. You press time again and another arrow appears.
 Pressing it two more times shows a blinking clock symbol. Then you can use the + and - buttons to adjust the time. After that, you wait to confirm.
 Easy!
