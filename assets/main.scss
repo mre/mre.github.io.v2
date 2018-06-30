@@ -58,10 +58,6 @@ img {
   max-width: 100%;
 }
 
-video {
-  max-width: 100%;
-}
-
 // Main CSS
 
 h1 {
@@ -168,20 +164,9 @@ nav li {
   width: 171px;
 }
 
-hr {
-  background-color: $hr-color;
-  border: 0;
-  height: 1px;
-  margin: 30px 0;
-}
-
 .published-date {
   color: $light-color;
   font-size: .8em;
-}
-
-.subtitle {
-  margin: 0 0 2em;
 }
 
 blockquote {
