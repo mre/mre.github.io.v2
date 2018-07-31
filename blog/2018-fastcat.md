@@ -100,7 +100,7 @@ rubycat myfile | pv -r > /dev/null
 ```
 
 Wow... we didn't really try hard, and we're already approaching the speed of a
-tool that has gets optimized [since
+tool that gets optimized [since
 1971](https://en.wikipedia.org/wiki/Cat_(Unix)). 🎉
 
 But before we celebrate too much, let's see if we can go even faster.
