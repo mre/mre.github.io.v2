@@ -57,9 +57,9 @@ cat(ARGV)
 This program goes through each file and prints its contents line by line.
 Easy peasy! But wait, how fast is this tool?
 
-So I quickly created a random 2GB file for the benchmark.
+I quickly created a random 2GB file for the benchmark.
 
-I'll compare the speed of our naive implementation with the system one
+Let's compare the speed of our naive implementation with the system one
 using the awesome [pv](http://www.ivarch.com/programs/pv.shtml) (Pipe Viewer) tool.
 All tests are averaged over five runs on a warm cache (file in memory).
 
@@ -69,20 +69,19 @@ All tests are averaged over five runs on a warm cache (file in memory).
 [196MiB/s]
 ```
 
-Not bad, I guess?
-How does it compare with my system's cat?
+Not bad, I guess? How does it compare with my system's cat?
 
 ```
 cat myfile | pv -r > /dev/null
 [1.90GiB/s]
 ```
 
-Uh oh, GNU cat is **ten times faster** than our little Ruby cat. 🐌
+Uh oh, [GNU cat](http://git.savannah.gnu.org/gitweb/?p=coreutils.git;a=blob;f=src/cat.c;h=3c319511c767f65d2e420b3bff8fa6197ddbb37b;hb=HEAD) is **ten times faster** than our little Ruby cat. 🐌
 
 ## Making our `cat` a little faster
 
 Here's a Rust version with a few tricks up its sleeve
-(you could do the same things with Ruby, by the way. 😉):
+(you could do the same things in Ruby, by the way. 😉):
 
 ```rust
 use std::env;
@@ -123,8 +122,9 @@ cat_rust myfile | pv -r > /dev/null
 [1.21GiB/s]
 ```
 
-Our Rust is as fast as GNU cat and only 40% slower than BSD cat.
-Time to celebrate, right?
+Our Rust version is close to the speed of GNU cat. Time to celebrate, right? 🎉
+ 
+
 Hum... we didn't really try hard, and we're already approaching the speed
 of a tool that has been around [since
 1971](https://en.wikipedia.org/wiki/Cat_(Unix)).
@@ -195,7 +195,7 @@ pub fn splice(fd_in: RawFd, off_in: Option<&mut libc::loff_t>,
 ```
 
 See those `target_os` flags? That's Rusts way of saying "I can only compile that
-for Linux and Android (a Linux flavor).
+for Linux and Android" (a Linux flavor).
 [It seems
 like](https://stackoverflow.com/questions/12230316/do-other-operating-systems-implement-the-linux-system-call-splice?lq=1)
 OpenBSD also has some sort of splice implementation called
@@ -215,17 +215,17 @@ implementation as a fallback.
 
 ### Using splice from Rust
 
-I haven't implemented the Linux bindings myself. Instead, I just use a library called
+I haven't implemented the Linux bindings myself. Instead, I just used a library called
 [nix](https://github.com/nix-rust/nix), which provides Rust friendly bindings to *nix APIs.
 
-There is one caveat:
+There is one caveat, though:
 We cannot really copy the file directly to standard out, because splice
 requires one file descriptor to be a pipe.
 The way around that is to create a pipe, which consists of a reader and a
 writer (`rd` and `wr`).
 We pipe the file into the writer, and then we read from the pipe and push the data to stdout.
 
-You can see that I use a relatively big buffer of 16384 bytes (2^14) to improve performance.
+You can see that I use a relatively big buffer of 16384 bytes (2<sup>14</sup>) to improve performance.
 
 ```rust
 extern crate nix;
@@ -283,12 +283,10 @@ fcat myfile | pv -r > /dev/null
 
 Holy guacamole. That's **over three times as fast as system cat**.
 
-### Why on earth would I want that?
+### Nice, but why on earth would I want that?
 
-I have no idea.
-Probably you don't, because your bottleneck is somewhere else.
-
-That said, many people use `cat` for piping data into another process, e.g.
+I have no idea. Probably you don't, because your bottleneck is somewhere else.
+That said, many people use `cat` for piping data into other process like
 
 ```sh
 # Count all lines in C files
@@ -298,18 +296,19 @@ cat *.c | wc -l
 or
 
 ```sh
-cat kitty.txt | grep "dog"
+cat kittens.txt | grep "dog"
 ```
 
 
-In this case, if you notice that `cat` is the bottleneck try `fcat`.
+In this case, if you notice that `cat` is the bottleneck try `fcat` (but first
+try to avoid `cat` altogether).
 
 With some more work, `fcat` could also be used to directly route packets from one
 network card to another, [similar to netcat](http://nc110.sourceforge.net/). 
 
 # Lessons learned
 
-* The closer we get to the bare metal, the more our hard-won abstractions fall
+* The closer we get to bare metal, the more our hard-won abstractions fall
   apart and we are back to low level systems programming.
 * Apart from a fast cat, there's also a use-case for a slow cat: old computers.
   For that purpose, there's... well.. [slowcat](https://grox.net/software/mine/slowcat/).
