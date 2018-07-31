@@ -163,9 +163,14 @@ interface. [Here's the same thing in Rust](https://github.com/nix-rust/nix/blob/
 
 ```rust
 #[cfg(any(target_os = "linux", target_os = "android"))]
-pub fn splice(fd_in: RawFd, off_in: Option<&mut libc::loff_t>,
-              fd_out: RawFd, off_out: Option<&mut libc::loff_t>,
-              len: usize, flags: SpliceFFlags) -> Result<usize>
+pub fn splice(
+    fd_in: RawFd,
+    off_in: Option<&mut libc::loff_t>,
+    fd_out: RawFd,
+    off_out: Option<&mut libc::loff_t>,
+    len: usize,
+    flags: SpliceFFlags,
+) -> Result<usize>
 ```
 
 Now I didn't implement the Linux bindings myself. Instead, I just used a library called
@@ -191,6 +196,8 @@ use std::os::unix::io::AsRawFd;
 use nix::fcntl::{splice, SpliceFFlags};
 use nix::unistd::pipe;
 
+const BUF_SIZE: usize = 16384;
+
 fn main() {
     for path in env::args().skip(1) {
         let input = File::open(&path).expect(&format!("fcat: {}: No such file or directory", path));
@@ -204,7 +211,7 @@ fn main() {
                 None,
                 wr,
                 None,
-                16384,
+                BUF_SIZE,
                 SpliceFFlags::empty(),
             ).unwrap();
 
@@ -219,7 +226,7 @@ fn main() {
                 None,
                 stdout.as_raw_fd(),
                 None,
-                16384,
+                BUF_SIZE,
                 SpliceFFlags::empty(),
             ).unwrap();
         }
@@ -238,7 +245,7 @@ Holy guacamole. That's **over three times as fast as system cat**.
 
 ### Operating System support
 
-* **Linux and Android are fully supported.** See those `target_os` flags in the
+* **Linux** and **Android** are fully supported. See those `target_os` flags in the
   code above? That's
   Rusts way of saying "I can only compile that for Linux and Android" (a Linux
   flavor).
