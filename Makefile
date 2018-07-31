@@ -18,7 +18,7 @@ lqip:
 .PHONY: lqip
 
 css assets:
-	sass assets/main.scss:assets/main.css --style compressed --no-cache --sourcemap=none
+	sass assets/main.scss assets/main.css --style compressed --no-source-map
 .PHONY: css assets
 
 publish: build
