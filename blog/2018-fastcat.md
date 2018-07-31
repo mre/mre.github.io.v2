@@ -156,8 +156,10 @@ terminal icon by useiconic.com from the Noun Project.
   </figcaption>
 </figure>
 
+### Using splice from Rust
+
 I have to say I'm not a C programmer and I prefer Rust because it offers a safer
-interface. Here's the same thing in Rust:
+interface. [Here's the same thing in Rust](https://github.com/nix-rust/nix/blob/ebf75050f2f2726808308f76253f27c97aa6db15/src/fcntl.rs#L320-L329):
 
 ```rust
 #[cfg(any(target_os = "linux", target_os = "android"))]
@@ -166,35 +168,7 @@ pub fn splice(fd_in: RawFd, off_in: Option<&mut libc::loff_t>,
               len: usize, flags: SpliceFFlags) -> Result<usize>
 ```
 
-
-### Operating System support
-
-* **Linux and Android are fully supported.** See those `target_os` flags in the
-  code above? That's
-  Rusts way of saying "I can only compile that for Linux and Android" (a Linux
-  flavor).
-* **[OpenBSD](https://stackoverflow.com/questions/12230316/do-other-operating-systems-implement-the-linux-system-call-splice?lq=1)**
-  also has some sort of splice implementation called
-  [`sosplice`](http://man.openbsd.org/sosplice). I haven't tested that, though.
-* On **macOS**, the closest thing to splice is its bigger brother,
-  [sendfile](https://www.unix.com/man-page/osx/2/sendfile/), which can send a
-  file to a socket within the Kernel. Unfortunately, it does not support sending
-  from file to file.<sup><a href="#fn2" id="ref2">2</a></sup> There's also
-  [`copyfile`](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man3/copyfile.3.html),
-  which has a similar interface, but unfortunately, it is not zero-copy. (I
-  thought so in the beginning, but [I was
-  wrong](https://github.com/rust-lang/libc/pull/886).)
-* Other Operating Systems like **Windows** don't provide zero-copy file transfer
-  (I might be wrong).
-  
-Nevertheless, in a production-grade
-implementation, the splice support could be activated on systems that support
-it, while using a generic implementation as a fallback.
-
-
-### Using splice from Rust
-
-I haven't implemented the Linux bindings myself. Instead, I just used a library called
+Now I didn't implement the Linux bindings myself. Instead, I just used a library called
 [nix](https://github.com/nix-rust/nix), which provides Rust friendly bindings to *nix APIs.
 
 There is one caveat, though:
@@ -262,10 +236,34 @@ fcat myfile | pv -r > /dev/null
 
 Holy guacamole. That's **over three times as fast as system cat**.
 
+### Operating System support
+
+* **Linux and Android are fully supported.** See those `target_os` flags in the
+  code above? That's
+  Rusts way of saying "I can only compile that for Linux and Android" (a Linux
+  flavor).
+* **[OpenBSD](https://stackoverflow.com/questions/12230316/do-other-operating-systems-implement-the-linux-system-call-splice?lq=1)**
+  also has some sort of splice implementation called
+  [`sosplice`](http://man.openbsd.org/sosplice). I haven't tested that, though.
+* On **macOS**, the closest thing to splice is its bigger brother,
+  [sendfile](https://www.unix.com/man-page/osx/2/sendfile/), which can send a
+  file to a socket within the Kernel. Unfortunately, it does not support sending
+  from file to file.<sup><a href="#fn2" id="ref2">2</a></sup> There's also
+  [`copyfile`](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man3/copyfile.3.html),
+  which has a similar interface, but unfortunately, it is not zero-copy. (I
+  thought so in the beginning, but [I was
+  wrong](https://github.com/rust-lang/libc/pull/886).)
+* Other Operating Systems like **Windows** don't provide zero-copy file transfer
+  (I might be wrong).
+  
+Nevertheless, in a production-grade
+implementation, the splice support could be activated on systems that support
+it, while using a generic implementation as a fallback.
+
 ### Nice, but why on earth would I want that?
 
 I have no idea. Probably you don't, because your bottleneck is somewhere else.
-That said, many people use `cat` for piping data into other process like
+That said, many people use `cat` for piping data into another process like
 
 ```sh
 # Count all lines in C files
@@ -278,17 +276,16 @@ or
 cat kittens.txt | grep "dog"
 ```
 
-
 In this case, if you notice that `cat` is the bottleneck try `fcat` (but first
 try to avoid `cat` altogether).
 
 With some more work, `fcat` could also be used to directly route packets from one
 network card to another, [similar to netcat](http://nc110.sourceforge.net/). 
 
-# Lessons learned
+### Lessons learned
 
 * The closer we get to bare metal, the more our hard-won abstractions fall
-  apart and we are back to low level systems programming.
+  apart, and we are back to low-level systems programming.
 * Apart from a fast cat, there's also a use-case for a slow cat: old computers.
   For that purpose, there's... well.. [slowcat](https://grox.net/software/mine/slowcat/).
   
