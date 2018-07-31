@@ -84,9 +84,9 @@ Turns out line buffering hurts performance in the end<sup><a href="#fn1" id="ref
 #!/usr/bin/env ruby
 
 def cat(args)
-  args.each{|arg|
+  args.each do |arg|
     IO.copy_stream(arg, STDOUT)
-  }
+  end
 end
 
 cat(ARGV)
