@@ -35,15 +35,17 @@ cat myfile
 
 ### Implementing cat
 
-Here's a simple `cat` in Ruby:
+Here's a naive `cat` in Ruby:
 
 ```ruby
 #!/usr/bin/env ruby
 
 def cat(args)
   args.each{|arg|
-    IO.copy_stream(arg, STDOUT)
-  }
+        IO.foreach(arg){|line|
+            puts line
+        }
+    }
 end
 
 cat(ARGV)
@@ -52,7 +54,7 @@ cat(ARGV)
 This program goes through each file and prints its contents line by line.
 Easy peasy! But wait, how fast is this tool?
 
-I quickly created a random 2GB file for the benchmark.
+I quickly created a random 2 GB file for the benchmark.
 
 Let's compare the speed of our naive implementation with the system one
 using the awesome [pv](http://www.ivarch.com/programs/pv.shtml) (Pipe Viewer) tool.
@@ -73,58 +75,33 @@ cat myfile | pv -r > /dev/null
 
 Uh oh, [GNU cat](http://git.savannah.gnu.org/gitweb/?p=coreutils.git;a=blob;f=src/cat.c;h=3c319511c767f65d2e420b3bff8fa6197ddbb37b;hb=HEAD) is **ten times faster** than our little Ruby cat. 🐌
 
-## Making our `cat` a little faster
+## Making our Ruby cat a little faster
 
-Here's a Rust version with a few tricks up its sleeve
-(you could do the same things in Ruby, by the way. 😉):
+Our naive Ruby code can be tweaked a bit.
+Turns out line buffering hurts performance in the end<sup><a href="#fn1" id="ref1">1</a></sup>:
 
-```rust
-use std::env;
-use std::fs::File;
-use std::io::{self, BufReader, Read, Write};
+```ruby
+#!/usr/bin/env ruby
 
-pub const BUFFER_CAPACITY: usize = 64 * 1024;
+def cat(args)
+  args.each{|arg|
+    IO.copy_stream(arg, STDOUT)
+  }
+end
 
-fn main() -> Result<(), io::Error> {
-    for path in env::args().skip(1) {
-        let stdout = io::stdout();
-        let mut locked = stdout.lock();
-        let mut buffer = [0u8; BUFFER_CAPACITY];
-
-        let input = File::open(path)?;
-        let mut buffered = BufReader::new(input);
-
-        loop {
-            let bytes_read = buffered.read(&mut buffer)?;
-            if bytes_read == 0 {
-                    break;
-            }
-            locked.write_all(&buffer)?;
-        }
-    }
-    Ok(())
-}
+cat(ARGV)
 ```
 
-* Since our application is I/O-bound and single-threaded, we lock standard out
-  so that we don't waste precious time to acquire a Mutex.
-* We use a buffer to read 64kb from the input file at once.
-
-Let's see how far these tricks get us:
-
 ```
-cat_rust myfile | pv -r > /dev/null
-[1.21GiB/s]
+rubycat myfile | pv -r > /dev/null
+[1.81GiB/s]
 ```
 
-Our Rust version is close to the speed of GNU cat. Time to celebrate, right? 🎉
- 
+Wow... we didn't really try hard, and we're already approaching the speed of a
+tool that has gets optimized [since
+1971](https://en.wikipedia.org/wiki/Cat_(Unix)). 🎉
 
-Hum... we didn't really try hard, and we're already approaching the speed
-of a tool that has been around [since
-1971](https://en.wikipedia.org/wiki/Cat_(Unix)).
-
-Can we go faster?
+But before we celebrate too much, let's see if we can go even faster.
 
 ### Splice
 
@@ -189,23 +166,30 @@ pub fn splice(fd_in: RawFd, off_in: Option<&mut libc::loff_t>,
               len: usize, flags: SpliceFFlags) -> Result<usize>
 ```
 
-See those `target_os` flags? That's Rusts way of saying "I can only compile that
-for Linux and Android" (a Linux flavor).
-[It seems
-like](https://stackoverflow.com/questions/12230316/do-other-operating-systems-implement-the-linux-system-call-splice?lq=1)
-OpenBSD also has some sort of splice implementation called
-[`sosplice`](http://man.openbsd.org/sosplice). I haven't tested that, though. On
-mac OS, the closest thing to splice (and its bigger brother,
-[sendfile](https://linux.die.net/man/2/sendfile)) is called [`copyfile`](
-https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man3/copyfile.3.html).
-It has a similar interface, but unfortunately, it is not zero-copy. (I thought so
-in the beginning, but [I was
-wrong](https://github.com/rust-lang/libc/pull/886).)
 
-Other Operating Systems don't provide zero-copy file transfer it seems (though I
-hope I'm wrong). Nevertheless, in a production-grade implementation, the splice
-support could be activated on systems that support it, while using a generic
-implementation as a fallback.
+### Operating System support
+
+* **Linux and Android are fully supported.** See those `target_os` flags in the
+  code above? That's
+  Rusts way of saying "I can only compile that for Linux and Android" (a Linux
+  flavor).
+* **[OpenBSD](https://stackoverflow.com/questions/12230316/do-other-operating-systems-implement-the-linux-system-call-splice?lq=1)**
+  also has some sort of splice implementation called
+  [`sosplice`](http://man.openbsd.org/sosplice). I haven't tested that, though.
+* On **macOS**, the closest thing to splice is its bigger brother,
+  [sendfile](https://www.unix.com/man-page/osx/2/sendfile/), which can send a
+  file to a socket within the Kernel. Unfortunately, it does not support sending
+  from file to file.<sup><a href="#fn2" id="ref2">2</a></sup> There's also
+  [`copyfile`](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man3/copyfile.3.html),
+  which has a similar interface, but unfortunately, it is not zero-copy. (I
+  thought so in the beginning, but [I was
+  wrong](https://github.com/rust-lang/libc/pull/886).)
+* Other Operating Systems like **Windows** don't provide zero-copy file transfer
+  (I might be wrong).
+  
+Nevertheless, in a production-grade
+implementation, the splice support could be activated on systems that support
+it, while using a generic implementation as a fallback.
 
 
 ### Using splice from Rust
@@ -315,3 +299,7 @@ Contributions welcome!
 **Thanks** to [Olaf Gladis](https://twitter.com/hwmrocker) for helping me run the benchmarks on his Linux machine and to [Patrick Pokatilo](https://github.com/SHyx0rmZ) and [Simon Brüggen](https://github.com/m3t0r) for reviewing drafts of the article.
 
 
+### Footnotes
+
+<sup id="fn1">1. Thanks to reader <a href="https://www.reddit.com/r/rust/comments/93fbrj/fascat_a_faster_cat_implementation_using_splice/e3d2chn/">Freeky</a> for making this code more idiomatic.<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>  
+<sup id="fn2">2. Thanks to reader <a href="https://www.reddit.com/r/rust/comments/93fbrj/fascat_a_faster_cat_implementation_using_splice/e3cu3rk/">masklinn</a> for the hint.<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>  
