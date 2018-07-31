@@ -5,6 +5,8 @@ date:       31 Jul 2018 00:00:00 +0000
 humandate:  31st of July 2018
 path:       2018/fastcat
 social_img: 2018_fastcat.png
+comments: 
+  - <a href="https://www.reddit.com/r/rust/comments/93fbrj/fascat_a_faster_cat_implementation_using_splice/">Reddit</a>
 excerpt:    Lots of people asked me to write another piece about the internals of well-known
             Unix commands. Well, actually, nobody asked me, but it makes for a good
             intro. I'm sure you’ve read the previous parts about [`yes`](/2017/yes) and
