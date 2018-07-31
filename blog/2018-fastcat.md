@@ -42,15 +42,10 @@ Here's a simple `cat` in Ruby:
 
 def cat(args)
   args.each{|arg|
-        unless File.exists?(arg)
-            puts "#{arg}: No such file or directory"
-            next
-        end
-        IO.foreach(arg){|line|
-            puts line
-        }
-    }
+    IO.copy_stream(arg, STDOUT)
+  }
 end
+
 cat(ARGV)
 ```
 
