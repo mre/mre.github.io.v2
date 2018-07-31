@@ -245,10 +245,7 @@ Holy guacamole. That's **over three times as fast as system cat**.
 
 ### Operating System support
 
-* **Linux** and **Android** are fully supported. See those `target_os` flags in the
-  code above? That's
-  Rusts way of saying "I can only compile that for Linux and Android" (a Linux
-  flavor).
+* **Linux** and **Android** are fully supported.
 * **[OpenBSD](https://stackoverflow.com/questions/12230316/do-other-operating-systems-implement-the-linux-system-call-splice?lq=1)**
   also has some sort of splice implementation called
   [`sosplice`](http://man.openbsd.org/sosplice). I haven't tested that, though.
