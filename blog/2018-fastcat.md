@@ -257,8 +257,8 @@ Holy guacamole. That's **over three times as fast as system cat**.
   which has a similar interface, but unfortunately, it is not zero-copy. (I
   thought so in the beginning, but [I was
   wrong](https://github.com/rust-lang/libc/pull/886).)
-* Other Operating Systems like **Windows** don't provide zero-copy file transfer
-  (I might be wrong).
+* **Windows** doesn't provide zero-copy file-to-file transfer
+  (only file-to-socket transfer using the [TransmitFile API](https://docs.microsoft.com/en-us/windows/desktop/api/mswsock/nf-mswsock-transmitfile)).
   
 Nevertheless, in a production-grade
 implementation, the splice support could be activated on systems that support
