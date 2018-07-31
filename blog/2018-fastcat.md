@@ -41,11 +41,11 @@ Here's a naive `cat` in Ruby:
 #!/usr/bin/env ruby
 
 def cat(args)
-  args.each{|arg|
-        IO.foreach(arg){|line|
-            puts line
-        }
-    }
+  args.each do |arg|
+    IO.foreach(arg) do |line|
+      puts line
+    end
+  end
 end
 
 cat(ARGV)
