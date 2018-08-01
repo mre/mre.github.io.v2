@@ -282,8 +282,8 @@ or
 cat kittens.txt | grep "dog"
 ```
 
-In this case, if you notice that `cat` is the bottleneck try `fcat` (but first
-try to avoid `cat` altogether).
+In this case, if you notice that `cat` is the bottleneck try `fcat` (but first,
+[try to avoid `cat` altogether](http://porkmail.org/era/unix/award.html)).
 
 With some more work, `fcat` could also be used to directly route packets from one
 network card to another, [similar to netcat](http://nc110.sourceforge.net/). 
