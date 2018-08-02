@@ -12,7 +12,7 @@ comments:
 excerpt:    Lots of people asked me to write another piece about the internals of well-known
             Unix commands. Well, actually, nobody asked me, but it makes for a good
             intro. I'm sure you’ve read the previous parts about [`yes`](/2017/yes) and
-            [`ls`](/2018/ls/) &mdash; they are awesome.
+            [`ls`](/2018/ls/) &mdash; they are epic.
 
             Anyway, today we talk about `cat`, which is used to concatenate files - or, more
             commonly, abused to print a file's contents to the screen.
@@ -23,7 +23,7 @@ excerpt:    Lots of people asked me to write another piece about the internals o
 Lots of people asked me to write another piece about the internals of well-known
 Unix commands. Well, actually, nobody asked me, but it makes for a good
 intro. I'm sure you’ve read the previous parts about [`yes`](/2017/yes) and
-[`ls`](/2018/ls/) &mdash; they are awesome.
+[`ls`](/2018/ls/) &mdash; they are epic.
 
 Anyway, today we talk about `cat`, which is used to concatenate files - or, more
 commonly, abused to print a file's contents to the screen.
