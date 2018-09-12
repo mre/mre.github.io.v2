@@ -133,6 +133,17 @@ It might seem a little alien at first, but it will become second-nature after a 
 
 This was just a quick example, of course. I suggest, you browse some code on [Rosetta Code](http://rosettacode.org/) to get a better feeling for both languages.
 
+### Case study: Finding duplicate words in text files
+
+If you're more like a visual type, here is a video where I write a simple
+concurrent program in Go and Rust to compare both languages:
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/B5xYBrxVSiE"
+        webkitallowfullscreen mozallowfullscreen allowfullscreen>
+    </iframe>
+</div>
+
 ### Some things I prefer in Go
 
 * Fast compile times
