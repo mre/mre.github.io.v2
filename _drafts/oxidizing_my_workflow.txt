@@ -1,0 +1,19 @@
+I noticed that I've been gradually moving over from GNU coreutils to Unix tools written in Rust.
+
+
+Teo de Raadt said there are no unix tools
+
+why its so cool
+compare with standard tools
+
+exa
+bat
+fcat
+rg
+fd
+tree
+
+ion?
+own shell: rush
+
+fzf honorable mention
