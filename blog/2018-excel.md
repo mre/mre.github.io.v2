@@ -1,6 +1,6 @@
 extends: default.liquid
 
-title:      "The Power of Excel Macros"
+title:      "The Unreasonable Effectiveness of Excel Macros"
 date:       5 Nov 2018 00:00:00 +0000
 humandate:  5th of November 2018
 path:       2018/excel
