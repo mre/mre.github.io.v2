@@ -1,4 +1,4 @@
-serve: kill assets
+run: kill assets
 	cobalt serve --drafts
 .PHONY: serve
 
@@ -21,7 +21,7 @@ css assets:
 	sass assets/main.scss assets/main.css --style compressed --no-source-map
 .PHONY: css assets
 
-publish: build
+deploy: build
 	git branch -Dq master
 	cobalt import --branch master
 	sleep 1
