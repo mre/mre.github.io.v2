@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+    ﻿html,body,div,form,fieldset,legend,label,h1{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}th,td{text-align:left;vertical-align:top}h1,h2,h3,h4,h5,h6,th,td,caption{font-weight:normal}img{border:0;max-width:100%}h1{font-size:1.87em}h2{font-size:1.2em;margin-bottom:10px;margin-top:0}h3{margin-top:50px}body{background-color:#fff;color:rgba(0,0,0,.8);font-family:medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;-moz-font-feature-settings:"liga" on;font-feature-settings:"liga" on;font-size:1.25em;-moz-osx-font-smoothing:grayscale;font-style:normal;font-weight:400;letter-spacing:-0.003em;line-height:1.58;text-rendering:optimizeLegibility}article{margin-top:44px}pre{-moz-font-feature-settings:"liga" off;font-feature-settings:"liga" off;font-size:.92em;-moz-osx-font-smoothing:auto;-webkit-font-smoothing:subpixel-antialiased;padding:20px;overflow:auto}::-moz-selection{background:#000;color:#fff}::selection{background:#000;color:#fff}body{margin-top:8%}header{font-size:.78em;margin:0 auto 2em;max-width:220px;text-align:center}a:link,a:visited,a:hover,a:active{color:#af403c;text-decoration:none}a:hover{text-decoration:underline}nav{text-align:center}nav ul{display:inline-block;text-align:initial;padding-left:0}nav li:not(:first-child):before{content:" · "}nav li{list-style:none;display:inline}.logo{background-size:cover;display:inline-block;height:150px;width:171px}.published-date{color:#888;font-size:.8em}blockquote{border-left:4px solid #ededee;font-style:italic;margin:4px 10px;padding:3px 20px}code{background-color:#f9f9fa;border:1px solid #ededee;border-radius:6px;display:inline-block;font-family:"Courier New","Courier",monospace;-moz-font-feature-settings:"liga" off;font-feature-settings:"liga" off;font-size:16px;-moz-osx-font-smoothing:auto;-webkit-font-smoothing:subpixel-antialiased;max-width:100%;overflow-x:auto;padding:0 5px;vertical-align:middle;word-wrap:normal;box-shadow:0 1px 1px rgba(0,0,0,.125)}.button{background-color:#af403c;border-radius:10px;color:#fff;margin:40px auto;padding:10px;text-align:center}.button:hover{background-color:red}.talk{margin-top:80px}.video-container{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden;margin-bottom:40px}.video-container iframe,.video-container object,.video-container embed{position:absolute;top:0;left:0;width:100%;height:100%}figure{font-size:.9em;font-style:italic;margin:0 0 40px;padding:0;text-align:center;text-indent:0}figcaption{margin-top:10px}.loader{position:relative;overflow:hidden;width:auto}.loader object{position:absolute}.loader img,.loader object{display:block;top:0;left:0;width:100%}object{position:relative;float:left;display:block}object::after{position:absolute;top:0;left:0;display:block;width:1000px;height:1000px;content:"";background:#efefef}.frozen{-webkit-filter:blur(8px);-moz-filter:blur(8px);-o-filter:blur(8px);-ms-filter:blur(8px);filter:blur(8px);transform:scale(1.04);animation:.2s ease-in .4s 1 forwards fade;width:100%}@keyframes fade{0%{opacity:1}100%{opacity:0}}@media(max-width: 520px){body{padding:0 20px}pre{font-size:.85em;padding:5px}h1{font-size:1.6em}}@media(min-width: 520px){body{margin:10% auto 0;margin-top:120px;width:480px}h1{font-size:1.6em}}@media(min-width: 1024px){body{width:850px}header{float:left;width:210px}main,footer{margin-left:260px;margin-bottom:40px}}footer{margin-bottom:40px}.links{list-style:none;display:inline}.field{padding:10px;font-size:.8em}.email{width:300px}.submit{border:none;padding:12px;background-color:#eee}
+
+    </style>
+    <link rel="dns-prefetch" href="//www.google-analytics.com/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=m2llJQPQq8">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=m2llJQPQq8">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=m2llJQPQq8">
+    <link rel="manifest" href='data:application/manifest+json,
+    { "short_name": "Endler",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png?v=m2llJQPQq8",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png?v=m2llJQPQq8",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+    }' />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=m2llJQPQq8" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico?v=m2llJQPQq8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+
+<meta property="og:title" content="Learn Some Rust During Hacktoberfest" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="October is the perfect time to contribute to Op..." />
+<meta property="og:url" content="https://matthias-endler.de/2017/hacktoberfest" />
+<meta property="og:image" content="https://matthias-endler.de/img/social/2017_hacktoberfest.png" />
+
+<meta name="twitter:title" content="Learn Some Rust During Hacktoberfest">
+<meta name="twitter:description" content="October is the perfect time to contribute to Op...">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@matthiasendler">
+<meta name="twitter:creator" content="@matthiasendler">
+<meta name="twitter:image" content="https://matthias-endler.de/img/social/2017_hacktoberfest.png">
+
+    
+      
+        <title>Learn Some Rust During Hacktoberfest | Matthias Endler</title>
+      
+
+    <meta name="author" content="Matthias Endler">
+    <meta name="description" content="Personal website of Matthias Endler, a Software Engineer interested in low-level programming and backend development. PHP, Python, Go, Rust."/>
+  </head>
+  <body>
+        <header>
+            <a class="logo" href="/"><img alt="Home" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3OTAuMjMgNjkyLjYxIj48Y2lyY2xlIGN4PSI0MTMuMjQiIGN5PSIyMjcuNyIgcj0iMjE5LjY4IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMTYuMDMiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCIvPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjYTE2MjAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCI+PHBhdGggZmlsbD0iIzMzMWYwMCIgc3Ryb2tlLXdpZHRoPSIxLjk3IiBkPSJNNDgzLjc1IDI2NS43NGwtNjcuMDcgNDAuMTQtNzQuMjMtMzkuNTMgMTQxLjMtLjZ6IiBzdHlsZT0ibGluZS1oZWlnaHQ6MTI1JSIvPjxwYXRoIGZpbGw9IiNlZmJhMDAiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTQ4Ni42NSAyNjUuOTJsLTcwLjIgMzQuMDItNzYuOS0zMy45IDE0Ny4xLS4xMnoiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2OC42NCAyLjkxNCkgc2NhbGUoLjY1Nzk1KSIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIj48ZWxsaXBzZSBjeD0iLTYwOC43NSIgY3k9Ii0xNjMuMTQiIHRyYW5zZm9ybT0ibWF0cml4KDEuMjQ4OTcgLS4xMTM3IC4xMDcgMS4xNzUxNyAxMDk1Ljg3IDQ2Ni43KSIgcng9IjI1LjI1IiByeT0iMjgiLz48ZWxsaXBzZSBjeD0iMzMxLjM2IiBjeT0iMzQ3Ljk5IiBmaWxsPSIjZmZmIiB0cmFuc2Zvcm09Im1hdHJpeCguNTIyMTMgMCAwIC41NDc0NSAxNTguNzU3IDEzNi40MzIpIiByeD0iMTUuMTUiIHJ5PSIxNy4wNCIvPjwvZz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNjguNjQgMi45MTQpIHNjYWxlKC42NTc5NSkiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCI+PGVsbGlwc2UgY3g9Ii02MDguNzUiIGN5PSItMTYzLjE0IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjI0ODk3IC0uMTEzNyAuMTA3IDEuMTc1MTcgMTIwMy4yIDQ2Ny42NDYpIiByeD0iMjUuMjUiIHJ5PSIyOCIvPjxlbGxpcHNlIGN4PSIzMzEuMzYiIGN5PSIzNDcuOTkiIGZpbGw9IiNmZmYiIHRyYW5zZm9ybT0ibWF0cml4KC41MjIxMyAwIDAgLjU0NzQ1IDI2NS4zNTggMTM2Ljk5MykiIHJ4PSIxNS4xNSIgcnk9IjE3LjA0Ii8+PC9nPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjMDAwIj48cGF0aCBkPSJNMzY2LjQgMTAwLjY0YzE4LjU0LTExLjA1IDM2LjU0LTIyLjU3IDQ2Ljk0LTQwLjczIDEuMzUgMTIuMy0uMSAyOC41LTEwLjg2IDQzLjUiLz48cGF0aCBkPSJNMzg5LjQ0IDEwMC42NGMxOC41NC0xMS4wNSAzNi41NC0yMi41NyA0Ni45NC00MC43MyAxLjM1IDEyLjMtLjEgMjguNS0xMC44NiA0My41Ii8+PHBhdGggZD0iTTQxMi40OCAxMDAuNjRDNDMxLjAyIDg5LjYgNDQ5IDc4LjA3IDQ1OS40MiA1OS45YzEuMzUgMTIuMy0uMSAyOC40NC0xMC44NiA0My40NiIvPjwvZz48cGF0aCBkPSJNNDA5LjI0IDg3LjA1Yy04MS44NS4yNy0xNTYuNDQgMTA0LjQzLTE4MC40OCAyMTYuNDZhMTk5LjYgMTk5LjYgMCAwIDAgNTEuODMgNzMuMWM3LjktMTU3LjkgNDQuNy0yNjYuOSAxMTIuNS0yMDcuOCAxMC4xIDguOSAxNS4yIDEyLjkgMjAuMSAxMi42IDQuOS4zIDEwLTMuOCAyMC4xLTEyLjYgNjcuNy01OS4xIDEwNC42IDUwIDExMi41IDIwNy44YTE5OS42IDE5OS42IDAgMCAwIDUxLjgtNzIuOWMtMjQtMTEyLTk4LjYtMjE2LjMtMTgwLjUtMjE2LjUtMS4zOCAwLTIuNy4xLTQgLjEtMS4zOCAwLTIuNy0uMS00LS4xeiIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0iIzk1OTU5NSIgZD0iTTEzMS4zIDY5Mi42aDExLjRsLTIwLjkyLTEzOC4zSDEwOS41TDg4LjYgNjkyLjZIMTAwbDUuODgtNDUuOGgxOS4zNnptLTI0LjItNTQuOTZsOC40Ni02NC4zIDguNDcgNjQuM3ptODIuMDUtODMuMzRIMTQ4djEwLjczaDE0Ljg3VjY5Mi42aDExLjRWNTY1LjA0aDE0Ljg4eiIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSU7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonRXZlciBBZnRlciwgTm9ybWFsJzt0ZXh0LWFsaWduOnN0YXJ0IiBmb250LWZhbWlseT0iRXZlciBBZnRlciIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCIvPjxwYXRoIGZpbGw9IiM5NTk1OTUiIGQ9Ik0yMjguNjUgNTU0LjNIMTg3LjV2MTAuNzNoMTQuODdWNjkyLjZoMTEuNFY1NjUuMDRoMTQuODh6bTQ0LjkgMHY2MS4zOEgyNDUuMlY1NTQuM2gtMTEuNDJ2MTM4LjNoMTEuNHYtNjYuMzhoMjguMzZ2NjYuNGgxMS4yM1Y1NTQuM3ptMzcuOCAxMzguM2gtMTEuNFY1NTQuM2gxMS40em01Ny42NSAwaDExLjRsLTIwLjkyLTEzOC4zSDM0Ny4ybC0yMC45IDEzOC4zaDExLjRsNS44Ny00NS44aDE5LjM2em0tMjQuMjItNTQuOTZsOC40Ny02NC4zIDguNDcgNjQuM3oiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0V2ZXIgQWZ0ZXIsIE5vcm1hbCc7dGV4dC1hbGlnbjpzdGFydCIgZm9udC1mYW1pbHk9IkV2ZXIgQWZ0ZXIiIGxldHRlci1zcGFjaW5nPSIwIiB3b3JkLXNwYWNpbmc9IjAiLz48cGF0aCBkPSJNNTE3LjI2IDU2NS4wM1Y1NTQuM2gtMzEuNjR2MTM4LjNoMzEuNjR2LTEwLjdoLTIwLjIzdi01NS43aDE4Ljg1di0xMC41NGgtMTguODVWNTY1em0xMS4yNC0xMC43M3YxMzguM2gxMS4zNVY1NTQuM0g1MjguNXptMzkuNzYgMHY1MS44N2wtLjEtLjE3djIwLjc1bC4xLjE3djY1LjdoMTEuMjRWNTU0LjNoLTExLjI0em00MC4yNCAwaC0xMy44djEzOC4zaDEzLjgzcTIyLjMgMCAyOS41Ny0yMi40NiA0LjE1LTEzLjMyIDQuMTUtNDYuNjh0LTQuMTUtNDYuNjdxLTcuMjYtMjIuNS0yOS41Ni0yMi41em0tMS4yIDEyNy42aC0xLjJWNTY1LjAyaDEuMnExNS43MyAwIDIwLjU3IDE4LjUgMy4xIDExLjA2IDMuMSAzOS45MyAwIDI4Ljg3LTMuMSAzOS45My00Ljg0IDE4LjUtMjAuNTcgMTguNXptNjAuMjQgMFY1NTQuM2gtMTEuNHYxMzguM2gzMS42MnYtMTAuN3ptNjIuMS0xMTYuODdWNTU0LjNINjk4djEzOC4zaDMxLjYzdi0xMC43SDcwOS40di01NS43aDE4Ljg1di0xMC41NEg3MDkuNFY1NjV6bTYwLjUgMTI3LjU3cS0xNC4xNy0zNy0yMC43NC03Mi4yNSAxNC4xNy0xMC4zNyAxNC4xNy0zMy44OCAwLTMyLjE2LTI3LjQ4LTMyLjE2aC0xNS4zdjEzOC4zaDExLjR2LTY1cTIuMi0uNSA2LjktMiA3IDMzLjQgMTguMyA2Ny4xem0tMzcuODYtNzguNDd2LTQ5LjFoMi42cTEwLjU0IDAgMTQuNyA1Ljg4IDMuMjcgNC43IDMuMjcgMTUuNiAwIDE1LjgtOC4xMiAyMy40LTUuMiA0LjktMTAuMiA0LjktMS4zOCAwLTIuMjUtLjV6IiBzdHlsZT0ibGluZS1oZWlnaHQ6MTI1JTstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidFdmVyIEFmdGVyLCBOb3JtYWwnO3RleHQtYWxpZ246c3RhcnQiIGZvbnQtZmFtaWx5PSJFdmVyIEFmdGVyIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEwIiBkPSJNNTM1LjA2IDU1NS43MmwzOCAxMzUuNTQiLz48cGF0aCBmaWxsPSIjOTU5NTk1IiBkPSJNLjEgNTU0LjZ2MTM4aDExLjM4VjU3NS42NWM2LjYgMTIuNyAxMy43OCAyNS45IDE5LjY3IDM2Ljc4bDUuNyAxMCAuMDItLjAydi4xbDUuNzItMTBjNi41LTEyIDEzLjUtMjUuMiAxOS43LTM2Ljh2MTE2LjloMTEuMnYtMTM4SDYyLjNDNTUgNTY4IDQ3LjUgNTgyIDQwLjggNTk0LjRsLTQgNy40NWMtOS4xLTE3LjA1LTE3LjMtMzIuMDctMjUuNC00Ny4yM3oiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0V2ZXIgQWZ0ZXIsIE5vcm1hbCc7dGV4dC1hbGlnbjpzdGFydCIgZm9udC1zaXplPSIxNzIuNTIiIGZvbnQtZmFtaWx5PSJFdmVyIEFmdGVyIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0iIzk1OTU5NSIgZD0iTTM5OC44NCA2OTEuNjZjLTMuNzItMS4zMy04Ljk2LTUtMTEuNzYtOC4yLTEuNC0xLjYtMi41LTMuMjUtMi41NC0zLjYgNC4yMy02LjA1IDQuNDItNi4zMiA1LjMtNy40NSAzLjMgMy40IDYuNyA2LjggMTAuOSA5LjEgNC45OCAxLjggMTEuMjQgMi4xIDE1LjMyLS4zIDUuNTItMy4zIDguNjItOC44IDkuNjctMTcuMyAxLjQ2LTExLjctMi42NS0yMi41LTEzLjI1LTM0LjgtMi45LTMuNC03LjEzLTguMy05LjM4LTEwLjktNC44Ni01LjYtMTAtMTMuNC0xMS43Ny0xOC41LTQuMy0xMi41LTMuODctMjEuMy0uNjYtMzAuMiAyLjEyLTUuODMgNC45LTkuNiA5LjA4LTEyLjIgOC4yNi01LjE0IDE5LjI4LTQuMjQgMjcuMzYgMi4yNS45LjY4IDEuNyAxLjQ0IDIuNSAyLjU3LS40Ljc3LTMuNyA4Ljc3LTQuMyA4Ljc3LS44LS42Ni0uOC0uNi0xLjYtMS4zLS43LS43LTIuNy0yLjEtNC40LTMuMTQtNC40LTIuMS04LjUtMy4xLTEyLjktLjctNi4xIDMuNDQtOS4yIDExLjctNy45IDIxLjQgMS4xIDguMzQgNC41IDE0IDE3LjkgMjkuNSAxMy4wOCAxNS4yIDE2Ljk1IDIyLjMgMTguOSAzNC42My45IDUuNy45IDEwLjA0IDAgMTYuNi0xLjY1IDEyLjMzLTcuMiAyMC41LTE2LjIgMjMuOTYtMy4zIDEuMy0xNi40NSAxLjMtMjAuMDMuMDR6Ii8+PC9zdmc+" />
+            </a>
+            <p>
+              Backend Engineer at trivago. Likes just-in-time compilers and hot chocolate. <a href="/about">About me.</a>
+            </p>
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a target="_blank" rel="noopener" href="https://twitter.com/matthiasendler">Twitter</a></li>
+                <li><a target="_blank" rel="noopener" href="https://feedly.com/i/subscription/feed/https://matthias-endler.de/rss.xml">RSS</a></li>
+              </ul>
+            </nav>
+        </header>
+        <main role="main">
+            
+              <div class="published-date">
+                <i>Published on 15th of October 2017</i>
+              </div>
+            
+              <h1>Learn Some Rust During Hacktoberfest</h1>
+            <figure>
+   <div class="loader">
+            <object data="/img/posts/2017/hacktoberfest/hacktoberfest.svg" type="image/svg+xml"></object>
+            <img class="frozen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAECAMAAABmz5W7AAAAbFBMVEXv5snSjILk2bzh1LjhzLPRtJzj07fw5czy4MSUj31nY1fSyrHw5MTqy6/w27CyxZOcuH7Lq5XOr5jRtJ7ewJLrplZqZllmYlamoIzv0Jzv3rng3rze3brp3b/v5cjo27vo0qnYz7Wtp5Lt5McSWm0rAAAAIUlEQVR42mNhQAVAPuN/JkYY+MrCwAOkkPlggSeyED4DAGyNBDQhu7DfAAAAAElFTkSuQmCC" />
+        </div>
+  <figcaption>
+  Dirndl, Lederhose, Brezn, Beer, Rust.
+  <a target="_blank" rel="noopener" href="http://www.freepik.com/free-vector/food-and-items-for-the-oktoberfest-festival_911290.htm">Designed by Freepik</a>
+  </figcaption>
+</figure
+<p>October is the perfect time to contribute to Open Source — at least according to Github and DigitalOcean.
+Because that's when they organize Hacktoberfest, a global event where you <strong>get a free shirt and lots of street cred</strong> for creating pull requests. Read the official announcement <a target="_blank" rel="noopener" href="https://hacktoberfest.digitalocean.com/">here</a>.</p>
+<p>Some people think they cannot contribute anything of value. Either because they lack the programming skills or because they don't know where to start.</p>
+<p>This guide is trying to change that!</p>
+<p>Let me show you, how <em>everybody</em> can contribute code to <a target="_blank" rel="noopener" href="https://www.rust-lang.org/">Rust</a>, a safe systems programming language.
+I was inspired to write this by a <a target="_blank" rel="noopener" href="https://twitter.com/llogiq/status/915288482314178560">tweet from llogiq</a>.</p>
+<h3>1. Find a great Rust project to work on</h3>
+<p>We all want our work to be appreciated.<br />
+Therefore I suggest to start contributing to medium-sized projects, because they gained some momentum but are still driven by a small number of maintainers, so help is always welcome. By contrast, tiny projects are mostly useful to the original author only, while large projects can be intimidating at first and have stricter guidelines.</p>
+<p>For now, let's look at repositories with 5-100 stars, which were updated within this year.
+Github supports <a target="_blank" rel="noopener" href="https://help.github.com/articles/understanding-the-search-syntax/">advanced search options based on Lucene syntax</a>.</p>
+<pre style="background-color:#eff1f5">
+<span style="background-color:#eff1f5;color:#4f5b66;">language:Rust stars:5..100 pushed:&gt;2017-01-01
+</span></pre>
+<p><a target="_blank" rel="noopener" href="https://github.com/search?q=language%3ARust+stars%3A5..100+pushed%3A%3E2017-01-01">Here</a>'s a list of projects, which match this filter.</p>
+<h3>2. Install the Rust toolchain</h3>
+<p>To start contributing, we need a working Rust compiler and the cargo package manager.
+Fortunately, the installation should be straightforward.
+I recommend <a target="_blank" rel="noopener" href="https://rustup.rs/">rustup</a> for that.</p>
+<p>Run the following command in your terminal, then follow the onscreen instructions.</p>
+<pre style="background-color:#eff1f5">
+<span style="background-color:#eff1f5;color:#4f5b66;">curl https://sh.rustup.rs -sSf | sh
+</span></pre>
+<p>If you're unsure, just accept the defaults.
+After the installation is done, we also need to get the nightly version of the compiler for later.</p>
+<pre style="background-color:#eff1f5">
+<span style="background-color:#eff1f5;color:#4f5b66;">rustup install nightly
+</span></pre>
+<p>Questions so far? Find more detailed installation instructions <a target="_blank" rel="noopener" href="http://asquera.de/blog/2017-03-03/setting-up-a-rust-devenv/">here</a>.</p>
+<h3>3. Fork the project and clone it to your computer</h3>
+<p>First, click on the little <em>fork</em> button on the top right of the Github project page. Then clone your fork to your computer.</p>
+<pre style="background-color:#eff1f5">
+<span style="background-color:#eff1f5;color:#4f5b66;">git clone git@github.com:yourusername/project.git
+</span></pre>
+<p>For more detailed instructions, go <a target="_blank" rel="noopener" href="https://guides.github.com/activities/forking/">here</a>.</p>
+<h3>4. Does it build?</h3>
+<p>Before we start modifying the codebase, we should make sure that it is in a workable state.
+The following commands should work right away from inside the project folder.</p>
+<pre style="background-color:#eff1f5">
+<span style="background-color:#eff1f5;color:#4f5b66;">cargo build
+</span><span style="background-color:#eff1f5;color:#4f5b66;">cargo test
+</span></pre>
+<p>If not, you might want to consult the <code>README</code> for further instructions. (But feel free to choose another project.)</p>
+<h3>5. The magic sauce</h3>
+<p>Here's the trick: we use a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Lint_(software)">linter</a> called <a target="_blank" rel="noopener" href="https://github.com/rust-lang-nursery/rust-clippy">clippy</a> to show us improvement areas in any Rust codebase.</p>
+<p>To get clippy, install it like so:</p>
+<pre style="background-color:#eff1f5">
+<span style="background-color:#eff1f5;color:#4f5b66;">cargo +nightly install clippy
+</span></pre>
+<p>Afterwards, run it from the project root as often as you like.</p>
+<pre style="background-color:#eff1f5">
+<span style="background-color:#eff1f5;color:#4f5b66;">rustup run nightly cargo clippy
+</span></pre>
+<p>This should give you actionable information on how to improve the codebase.</p>
+<p>Here's some sample output:</p>
+<pre style="background-color:#eff1f5">
+<span style="background-color:#eff1f5;color:#4f5b66;">warning</span><span style="background-color:#eff1f5;color:#4f5b66;">:</span><span style="background-color:#eff1f5;color:#4f5b66;"> useless </span><span style="background-color:#eff1f5;color:#b48ead;">use</span><span style="background-color:#eff1f5;color:#4f5b66;"> of `format</span><span style="background-color:#eff1f5;color:#4f5b66;">!</span><span style="background-color:#eff1f5;color:#4f5b66;">`
+</span><span style="background-color:#eff1f5;color:#4f5b66;">   </span><span style="background-color:#eff1f5;color:#4f5b66;">-</span><span style="background-color:#eff1f5;color:#4f5b66;">-&gt;</span><span style="background-color:#eff1f5;color:#4f5b66;"> src</span><span style="background-color:#eff1f5;color:#4f5b66;">/</span><span style="background-color:#eff1f5;color:#4f5b66;">mach</span><span style="background-color:#eff1f5;color:#4f5b66;">/</span><span style="background-color:#eff1f5;color:#4f5b66;">header.rs</span><span style="background-color:#eff1f5;color:#4f5b66;">:</span><span style="background-color:#eff1f5;color:#d08770;">420</span><span style="background-color:#eff1f5;color:#4f5b66;">:</span><span style="background-color:#eff1f5;color:#d08770;">49</span><span style="background-color:#eff1f5;color:#4f5b66;">
+</span><span style="background-color:#eff1f5;color:#4f5b66;">    </span><span style="background-color:#eff1f5;color:#4f5b66;">|</span><span style="background-color:#eff1f5;color:#4f5b66;">
+</span><span style="background-color:#eff1f5;color:#d08770;">420</span><span style="background-color:#eff1f5;color:#4f5b66;"> </span><span style="background-color:#eff1f5;color:#4f5b66;">|</span><span style="background-color:#eff1f5;color:#4f5b66;">             </span><span style="background-color:#eff1f5;color:#b48ead;">let</span><span style="background-color:#eff1f5;color:#4f5b66;"> error </span><span style="background-color:#eff1f5;color:#4f5b66;">=</span><span style="background-color:#eff1f5;color:#4f5b66;"> </span><span style="background-color:#eff1f5;color:#4f5b66;">error::</span><span style="background-color:#eff1f5;color:#4f5b66;">Error::</span><span style="background-color:#eff1f5;color:#4f5b66;">Malformed</span><span style="background-color:#eff1f5;color:#4f5b66;">(</span><span style="background-color:#eff1f5;color:#4f5b66;">format!</span><span style="background-color:#eff1f5;color:#4f5b66;">(</span><span style="background-color:#eff1f5;color:#4f5b66;">&quot;</span><span style="background-color:#eff1f5;color:#a3be8c;">bytes size is smaller than an Mach-o header</span><span style="background-color:#eff1f5;color:#4f5b66;">&quot;</span><span style="background-color:#eff1f5;color:#4f5b66;">)</span><span style="background-color:#eff1f5;color:#4f5b66;">)</span><span style="background-color:#eff1f5;color:#4f5b66;">;</span><span style="background-color:#eff1f5;color:#4f5b66;">
+</span><span style="background-color:#eff1f5;color:#4f5b66;">    </span><span style="background-color:#eff1f5;color:#4f5b66;">|</span><span style="background-color:#eff1f5;color:#4f5b66;">                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span><span style="background-color:#eff1f5;color:#4f5b66;">
+</span><span style="background-color:#eff1f5;color:#4f5b66;">    </span><span style="background-color:#eff1f5;color:#4f5b66;">|</span><span style="background-color:#eff1f5;color:#4f5b66;">
+</span><span style="background-color:#eff1f5;color:#4f5b66;">    </span><span style="background-color:#eff1f5;color:#4f5b66;">=</span><span style="background-color:#eff1f5;color:#4f5b66;"> note</span><span style="background-color:#eff1f5;color:#4f5b66;">:</span><span style="background-color:#eff1f5;color:#4f5b66;"> </span><span style="background-color:#eff1f5;color:#a7adba;">#[warn(useless_format)]</span><span style="background-color:#eff1f5;color:#4f5b66;"> on by default
+</span><span style="background-color:#eff1f5;color:#4f5b66;">    </span><span style="background-color:#eff1f5;color:#4f5b66;">=</span><span style="background-color:#eff1f5;color:#4f5b66;"> help</span><span style="background-color:#eff1f5;color:#4f5b66;">:</span><span style="background-color:#eff1f5;color:#4f5b66;"> </span><span style="background-color:#eff1f5;color:#b48ead;">for</span><span style="background-color:#eff1f5;color:#4f5b66;"> further information visit https</span><span style="background-color:#eff1f5;color:#4f5b66;">:</span><span style="background-color:#eff1f5;color:#a7adba;">//</span><span style="background-color:#eff1f5;color:#a7adba;">rust-lang-nursery.github.io/rust-clippy/v0.0.165/index.html#useless_format
+</span><span style="background-color:#eff1f5;color:#4f5b66;">
+</span><span style="background-color:#eff1f5;color:#4f5b66;">warning</span><span style="background-color:#eff1f5;color:#4f5b66;">:</span><span style="background-color:#eff1f5;color:#4f5b66;"> this expression borrows a reference that is immediately dereferenced by the compiler
+</span><span style="background-color:#eff1f5;color:#4f5b66;">   </span><span style="background-color:#eff1f5;color:#4f5b66;">-</span><span style="background-color:#eff1f5;color:#4f5b66;">-&gt;</span><span style="background-color:#eff1f5;color:#4f5b66;"> src</span><span style="background-color:#eff1f5;color:#4f5b66;">/</span><span style="background-color:#eff1f5;color:#4f5b66;">mach</span><span style="background-color:#eff1f5;color:#4f5b66;">/</span><span style="background-color:#eff1f5;color:#4f5b66;">header.rs</span><span style="background-color:#eff1f5;color:#4f5b66;">:</span><span style="background-color:#eff1f5;color:#d08770;">423</span><span style="background-color:#eff1f5;color:#4f5b66;">:</span><span style="background-color:#eff1f5;color:#d08770;">36</span><span style="background-color:#eff1f5;color:#4f5b66;">
+</span><span style="background-color:#eff1f5;color:#4f5b66;">    </span><span style="background-color:#eff1f5;color:#4f5b66;">|</span><span style="background-color:#eff1f5;color:#4f5b66;">
+</span><span style="background-color:#eff1f5;color:#d08770;">423</span><span style="background-color:#eff1f5;color:#4f5b66;"> </span><span style="background-color:#eff1f5;color:#4f5b66;">|</span><span style="background-color:#eff1f5;color:#4f5b66;">             </span><span style="background-color:#eff1f5;color:#b48ead;">let</span><span style="background-color:#eff1f5;color:#4f5b66;"> magic </span><span style="background-color:#eff1f5;color:#4f5b66;">=</span><span style="background-color:#eff1f5;color:#4f5b66;"> </span><span style="background-color:#eff1f5;color:#4f5b66;">mach::</span><span style="background-color:#eff1f5;color:#4f5b66;">peek</span><span style="background-color:#eff1f5;color:#4f5b66;">(</span><span style="background-color:#eff1f5;color:#4f5b66;">&amp;</span><span style="background-color:#eff1f5;color:#4f5b66;">bytes</span><span style="background-color:#eff1f5;color:#4f5b66;">,</span><span style="background-color:#eff1f5;color:#4f5b66;"> </span><span style="background-color:#eff1f5;color:#d08770;">0</span><span style="background-color:#eff1f5;color:#4f5b66;">)</span><span style="background-color:#eff1f5;color:#4f5b66;">?</span><span style="background-color:#eff1f5;color:#4f5b66;">;</span><span style="background-color:#eff1f5;color:#4f5b66;">
+</span><span style="background-color:#eff1f5;color:#4f5b66;">    </span><span style="background-color:#eff1f5;color:#4f5b66;">|</span><span style="background-color:#eff1f5;color:#4f5b66;">                                    ^^^^^^ </span><span style="background-color:#eff1f5;color:#bf616a;">help</span><span style="background-color:#eff1f5;color:#4f5b66;">:</span><span style="background-color:#eff1f5;color:#4f5b66;"> change this to: `bytes`
+</span><span style="background-color:#eff1f5;color:#4f5b66;">    </span><span style="background-color:#eff1f5;color:#4f5b66;">|</span><span style="background-color:#eff1f5;color:#4f5b66;">
+</span><span style="background-color:#eff1f5;color:#4f5b66;">    </span><span style="background-color:#eff1f5;color:#4f5b66;">=</span><span style="background-color:#eff1f5;color:#4f5b66;"> help</span><span style="background-color:#eff1f5;color:#4f5b66;">:</span><span style="background-color:#eff1f5;color:#4f5b66;"> </span><span style="background-color:#eff1f5;color:#b48ead;">for</span><span style="background-color:#eff1f5;color:#4f5b66;"> further information visit https</span><span style="background-color:#eff1f5;color:#4f5b66;">:</span><span style="background-color:#eff1f5;color:#a7adba;">//</span><span style="background-color:#eff1f5;color:#a7adba;">rust-lang-nursery.github.io/rust-clippy/v0.0.165/index.html#needless_borrow
+</span></pre>
+<p>Just try some of the suggestions and see if the project still compiles and the tests still pass.
+Check out the links to the documentation in the help section to learn more.
+Start small to make your changes easier to review.</p>
+<h3>6. Creating a Pull Request</h3>
+<p>If you're happy with your changes, now is the time to publish them!
+It's best to create a new branch for your changes and then push it to your fork.</p>
+<pre style="background-color:#eff1f5">
+<span style="background-color:#eff1f5;color:#4f5b66;">git checkout -b codestyle
+</span><span style="background-color:#eff1f5;color:#4f5b66;">git commit -am &quot;Minor codestyle fixes&quot;
+</span><span style="background-color:#eff1f5;color:#4f5b66;">git push --set-upstream origin codestyle
+</span></pre>
+<p>Afterwards, go to the homepage of your fork on Github.
+There should be a button titled <em>Compare &amp; pull request</em>.
+Please add a meaningful description and then submit the pull request.</p>
+<p>Congratulations! You've contributed to the Rust ecosystem. Thank you! 🎉</p>
+<h3>Trophy case</h3>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/m4b/goblin/pull/55">m4b/goblin</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fitzgen/cpp_demangle/pull/100">fitzgen/cpp_demangle</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fdehau/tui-rs/pull/19">fdehau/tui-rs</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/christophertrml/rs-natural/pull/15">christophertrml/rs-natural</a></li>
+</ul>
+<h3>Bonus!</h3>
+<p>If all of the manual fixing and checking sounds too dull, you can automate step number 5 using <a target="_blank" rel="noopener" href="https://github.com/killercup/rustfix"><code>rustfix</code></a> by Pascal Hertleif (<a target="_blank" rel="noopener" href="https://github.com/killercup/">@killercup</a>):</p>
+<pre style="background-color:#eff1f5">
+<span style="background-color:#eff1f5;color:#4f5b66;">rustfix --yolo &amp;&amp; cargo check
+</span></pre><ul class="links">
+</ul>
+        </main>
+<footer><form style="border:1px solid #ccc;padding:30px;text-align:center;" action="https://tinyletter.com/mre" method="post" target="popupwindow" 
+onsubmit="window.open('https://tinyletter.com/mre', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+    <p><label for="tlemail">Subscribe to newsletter <i style="color: #aaa">(one mail per month)</i></label></p>
+    <p>
+        <input class="field email" type="email" name="email" id="tlemail" placeholder="E-Mail Address"/>
+        <input type="hidden" value="1" name="embed"/><input class="field submit" type="submit" value="Subscribe" />
+    </p>
+    <p>
+    💡 I also <a target="_blank" rel="noopener" href="https://twitter.com/matthiasendler">tweet</a> new articles and have an <a target="_blank" rel="noopener" href="https://feedly.com/i/subscription/feed/https://matthias-endler.de/rss.xml">RSS feed</a>.
+    </p>
+</form>
+    <h3>Continue reading</h3>
+    <ul>
+        
+        
+            <li><a href="/2018/cargo-inspect">cargo-inspect</a></li>
+        
+        
+        
+            <li><a href="/2018/excel">The Unreasonable Effectiveness of Excel Macros</a></li>
+        
+        
+        
+            <li><a href="/2018/keyboard">Switching from a German to a US Keyboard Layout - Is It Worth It?</a></li>
+        
+        
+        
+            <li><a href="/2018/fastcat">fastcat - A Faster `cat` Implementation Using Splice</a></li>
+        
+        
+        
+            <li><a href="/2018/github">That Octocat on the Wall</a></li>
+        
+        
+    </ul>
+</footer>
+
+<script type="text/javascript">
+if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
+    window.ga=window.ga||function(){(ga.q = ga.q || []).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-693428-1', 'auto');
+    ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+  </body>
+</html>

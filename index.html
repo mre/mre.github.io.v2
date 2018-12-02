@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+    ﻿html,body,div,form,fieldset,legend,label,h1{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}th,td{text-align:left;vertical-align:top}h1,h2,h3,h4,h5,h6,th,td,caption{font-weight:normal}img{border:0;max-width:100%}h1{font-size:1.87em}h2{font-size:1.2em;margin-bottom:10px;margin-top:0}h3{margin-top:50px}body{background-color:#fff;color:rgba(0,0,0,.8);font-family:medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;-moz-font-feature-settings:"liga" on;font-feature-settings:"liga" on;font-size:1.25em;-moz-osx-font-smoothing:grayscale;font-style:normal;font-weight:400;letter-spacing:-0.003em;line-height:1.58;text-rendering:optimizeLegibility}article{margin-top:44px}pre{-moz-font-feature-settings:"liga" off;font-feature-settings:"liga" off;font-size:.92em;-moz-osx-font-smoothing:auto;-webkit-font-smoothing:subpixel-antialiased;padding:20px;overflow:auto}::-moz-selection{background:#000;color:#fff}::selection{background:#000;color:#fff}body{margin-top:8%}header{font-size:.78em;margin:0 auto 2em;max-width:220px;text-align:center}a:link,a:visited,a:hover,a:active{color:#af403c;text-decoration:none}a:hover{text-decoration:underline}nav{text-align:center}nav ul{display:inline-block;text-align:initial;padding-left:0}nav li:not(:first-child):before{content:" · "}nav li{list-style:none;display:inline}.logo{background-size:cover;display:inline-block;height:150px;width:171px}.published-date{color:#888;font-size:.8em}blockquote{border-left:4px solid #ededee;font-style:italic;margin:4px 10px;padding:3px 20px}code{background-color:#f9f9fa;border:1px solid #ededee;border-radius:6px;display:inline-block;font-family:"Courier New","Courier",monospace;-moz-font-feature-settings:"liga" off;font-feature-settings:"liga" off;font-size:16px;-moz-osx-font-smoothing:auto;-webkit-font-smoothing:subpixel-antialiased;max-width:100%;overflow-x:auto;padding:0 5px;vertical-align:middle;word-wrap:normal;box-shadow:0 1px 1px rgba(0,0,0,.125)}.button{background-color:#af403c;border-radius:10px;color:#fff;margin:40px auto;padding:10px;text-align:center}.button:hover{background-color:red}.talk{margin-top:80px}.video-container{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden;margin-bottom:40px}.video-container iframe,.video-container object,.video-container embed{position:absolute;top:0;left:0;width:100%;height:100%}figure{font-size:.9em;font-style:italic;margin:0 0 40px;padding:0;text-align:center;text-indent:0}figcaption{margin-top:10px}.loader{position:relative;overflow:hidden;width:auto}.loader object{position:absolute}.loader img,.loader object{display:block;top:0;left:0;width:100%}object{position:relative;float:left;display:block}object::after{position:absolute;top:0;left:0;display:block;width:1000px;height:1000px;content:"";background:#efefef}.frozen{-webkit-filter:blur(8px);-moz-filter:blur(8px);-o-filter:blur(8px);-ms-filter:blur(8px);filter:blur(8px);transform:scale(1.04);animation:.2s ease-in .4s 1 forwards fade;width:100%}@keyframes fade{0%{opacity:1}100%{opacity:0}}@media(max-width: 520px){body{padding:0 20px}pre{font-size:.85em;padding:5px}h1{font-size:1.6em}}@media(min-width: 520px){body{margin:10% auto 0;margin-top:120px;width:480px}h1{font-size:1.6em}}@media(min-width: 1024px){body{width:850px}header{float:left;width:210px}main,footer{margin-left:260px;margin-bottom:40px}}footer{margin-bottom:40px}.links{list-style:none;display:inline}.field{padding:10px;font-size:.8em}.email{width:300px}.submit{border:none;padding:12px;background-color:#eee}
+
+    </style>
+    <link rel="dns-prefetch" href="//www.google-analytics.com/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=m2llJQPQq8">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=m2llJQPQq8">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=m2llJQPQq8">
+    <link rel="manifest" href='data:application/manifest+json,
+    { "short_name": "Endler",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png?v=m2llJQPQq8",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png?v=m2llJQPQq8",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+    }' />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=m2llJQPQq8" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico?v=m2llJQPQq8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+
+<meta property="og:title" content="Matthias Endler" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Personal website of Matthias Endler. A Software Engineer interested in low-level programming and Backend Development. PHP, Python, Go, Rust." />
+<meta property="og:url" content="https://matthias-endler.de/index.html" />
+<meta property="og:image" content="https://matthias-endler.de/img/social/default.png" />
+
+<meta name="twitter:title" content="Matthias Endler">
+<meta name="twitter:description" content="Personal website of Matthias Endler. A Software Engineer interested in low-level programming and Backend Development. PHP, Python, Go, Rust.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@matthiasendler">
+<meta name="twitter:creator" content="@matthiasendler">
+<meta name="twitter:image" content="https://matthias-endler.de/img/social/default.png">
+
+    
+    <title>Matthias Endler</title>
+
+    <meta name="author" content="Matthias Endler">
+    <meta name="description" content="Personal website of Matthias Endler, a Software Engineer interested in low-level programming and backend development. PHP, Python, Go, Rust."/>
+  </head>
+  <body>
+        <header>
+            <a class="logo" href="/"><img alt="Home" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3OTAuMjMgNjkyLjYxIj48Y2lyY2xlIGN4PSI0MTMuMjQiIGN5PSIyMjcuNyIgcj0iMjE5LjY4IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMTYuMDMiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCIvPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjYTE2MjAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCI+PHBhdGggZmlsbD0iIzMzMWYwMCIgc3Ryb2tlLXdpZHRoPSIxLjk3IiBkPSJNNDgzLjc1IDI2NS43NGwtNjcuMDcgNDAuMTQtNzQuMjMtMzkuNTMgMTQxLjMtLjZ6IiBzdHlsZT0ibGluZS1oZWlnaHQ6MTI1JSIvPjxwYXRoIGZpbGw9IiNlZmJhMDAiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTQ4Ni42NSAyNjUuOTJsLTcwLjIgMzQuMDItNzYuOS0zMy45IDE0Ny4xLS4xMnoiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2OC42NCAyLjkxNCkgc2NhbGUoLjY1Nzk1KSIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIj48ZWxsaXBzZSBjeD0iLTYwOC43NSIgY3k9Ii0xNjMuMTQiIHRyYW5zZm9ybT0ibWF0cml4KDEuMjQ4OTcgLS4xMTM3IC4xMDcgMS4xNzUxNyAxMDk1Ljg3IDQ2Ni43KSIgcng9IjI1LjI1IiByeT0iMjgiLz48ZWxsaXBzZSBjeD0iMzMxLjM2IiBjeT0iMzQ3Ljk5IiBmaWxsPSIjZmZmIiB0cmFuc2Zvcm09Im1hdHJpeCguNTIyMTMgMCAwIC41NDc0NSAxNTguNzU3IDEzNi40MzIpIiByeD0iMTUuMTUiIHJ5PSIxNy4wNCIvPjwvZz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNjguNjQgMi45MTQpIHNjYWxlKC42NTc5NSkiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCI+PGVsbGlwc2UgY3g9Ii02MDguNzUiIGN5PSItMTYzLjE0IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjI0ODk3IC0uMTEzNyAuMTA3IDEuMTc1MTcgMTIwMy4yIDQ2Ny42NDYpIiByeD0iMjUuMjUiIHJ5PSIyOCIvPjxlbGxpcHNlIGN4PSIzMzEuMzYiIGN5PSIzNDcuOTkiIGZpbGw9IiNmZmYiIHRyYW5zZm9ybT0ibWF0cml4KC41MjIxMyAwIDAgLjU0NzQ1IDI2NS4zNTggMTM2Ljk5MykiIHJ4PSIxNS4xNSIgcnk9IjE3LjA0Ii8+PC9nPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjMDAwIj48cGF0aCBkPSJNMzY2LjQgMTAwLjY0YzE4LjU0LTExLjA1IDM2LjU0LTIyLjU3IDQ2Ljk0LTQwLjczIDEuMzUgMTIuMy0uMSAyOC41LTEwLjg2IDQzLjUiLz48cGF0aCBkPSJNMzg5LjQ0IDEwMC42NGMxOC41NC0xMS4wNSAzNi41NC0yMi41NyA0Ni45NC00MC43MyAxLjM1IDEyLjMtLjEgMjguNS0xMC44NiA0My41Ii8+PHBhdGggZD0iTTQxMi40OCAxMDAuNjRDNDMxLjAyIDg5LjYgNDQ5IDc4LjA3IDQ1OS40MiA1OS45YzEuMzUgMTIuMy0uMSAyOC40NC0xMC44NiA0My40NiIvPjwvZz48cGF0aCBkPSJNNDA5LjI0IDg3LjA1Yy04MS44NS4yNy0xNTYuNDQgMTA0LjQzLTE4MC40OCAyMTYuNDZhMTk5LjYgMTk5LjYgMCAwIDAgNTEuODMgNzMuMWM3LjktMTU3LjkgNDQuNy0yNjYuOSAxMTIuNS0yMDcuOCAxMC4xIDguOSAxNS4yIDEyLjkgMjAuMSAxMi42IDQuOS4zIDEwLTMuOCAyMC4xLTEyLjYgNjcuNy01OS4xIDEwNC42IDUwIDExMi41IDIwNy44YTE5OS42IDE5OS42IDAgMCAwIDUxLjgtNzIuOWMtMjQtMTEyLTk4LjYtMjE2LjMtMTgwLjUtMjE2LjUtMS4zOCAwLTIuNy4xLTQgLjEtMS4zOCAwLTIuNy0uMS00LS4xeiIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0iIzk1OTU5NSIgZD0iTTEzMS4zIDY5Mi42aDExLjRsLTIwLjkyLTEzOC4zSDEwOS41TDg4LjYgNjkyLjZIMTAwbDUuODgtNDUuOGgxOS4zNnptLTI0LjItNTQuOTZsOC40Ni02NC4zIDguNDcgNjQuM3ptODIuMDUtODMuMzRIMTQ4djEwLjczaDE0Ljg3VjY5Mi42aDExLjRWNTY1LjA0aDE0Ljg4eiIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSU7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonRXZlciBBZnRlciwgTm9ybWFsJzt0ZXh0LWFsaWduOnN0YXJ0IiBmb250LWZhbWlseT0iRXZlciBBZnRlciIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCIvPjxwYXRoIGZpbGw9IiM5NTk1OTUiIGQ9Ik0yMjguNjUgNTU0LjNIMTg3LjV2MTAuNzNoMTQuODdWNjkyLjZoMTEuNFY1NjUuMDRoMTQuODh6bTQ0LjkgMHY2MS4zOEgyNDUuMlY1NTQuM2gtMTEuNDJ2MTM4LjNoMTEuNHYtNjYuMzhoMjguMzZ2NjYuNGgxMS4yM1Y1NTQuM3ptMzcuOCAxMzguM2gtMTEuNFY1NTQuM2gxMS40em01Ny42NSAwaDExLjRsLTIwLjkyLTEzOC4zSDM0Ny4ybC0yMC45IDEzOC4zaDExLjRsNS44Ny00NS44aDE5LjM2em0tMjQuMjItNTQuOTZsOC40Ny02NC4zIDguNDcgNjQuM3oiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0V2ZXIgQWZ0ZXIsIE5vcm1hbCc7dGV4dC1hbGlnbjpzdGFydCIgZm9udC1mYW1pbHk9IkV2ZXIgQWZ0ZXIiIGxldHRlci1zcGFjaW5nPSIwIiB3b3JkLXNwYWNpbmc9IjAiLz48cGF0aCBkPSJNNTE3LjI2IDU2NS4wM1Y1NTQuM2gtMzEuNjR2MTM4LjNoMzEuNjR2LTEwLjdoLTIwLjIzdi01NS43aDE4Ljg1di0xMC41NGgtMTguODVWNTY1em0xMS4yNC0xMC43M3YxMzguM2gxMS4zNVY1NTQuM0g1MjguNXptMzkuNzYgMHY1MS44N2wtLjEtLjE3djIwLjc1bC4xLjE3djY1LjdoMTEuMjRWNTU0LjNoLTExLjI0em00MC4yNCAwaC0xMy44djEzOC4zaDEzLjgzcTIyLjMgMCAyOS41Ny0yMi40NiA0LjE1LTEzLjMyIDQuMTUtNDYuNjh0LTQuMTUtNDYuNjdxLTcuMjYtMjIuNS0yOS41Ni0yMi41em0tMS4yIDEyNy42aC0xLjJWNTY1LjAyaDEuMnExNS43MyAwIDIwLjU3IDE4LjUgMy4xIDExLjA2IDMuMSAzOS45MyAwIDI4Ljg3LTMuMSAzOS45My00Ljg0IDE4LjUtMjAuNTcgMTguNXptNjAuMjQgMFY1NTQuM2gtMTEuNHYxMzguM2gzMS42MnYtMTAuN3ptNjIuMS0xMTYuODdWNTU0LjNINjk4djEzOC4zaDMxLjYzdi0xMC43SDcwOS40di01NS43aDE4Ljg1di0xMC41NEg3MDkuNFY1NjV6bTYwLjUgMTI3LjU3cS0xNC4xNy0zNy0yMC43NC03Mi4yNSAxNC4xNy0xMC4zNyAxNC4xNy0zMy44OCAwLTMyLjE2LTI3LjQ4LTMyLjE2aC0xNS4zdjEzOC4zaDExLjR2LTY1cTIuMi0uNSA2LjktMiA3IDMzLjQgMTguMyA2Ny4xem0tMzcuODYtNzguNDd2LTQ5LjFoMi42cTEwLjU0IDAgMTQuNyA1Ljg4IDMuMjcgNC43IDMuMjcgMTUuNiAwIDE1LjgtOC4xMiAyMy40LTUuMiA0LjktMTAuMiA0LjktMS4zOCAwLTIuMjUtLjV6IiBzdHlsZT0ibGluZS1oZWlnaHQ6MTI1JTstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidFdmVyIEFmdGVyLCBOb3JtYWwnO3RleHQtYWxpZ246c3RhcnQiIGZvbnQtZmFtaWx5PSJFdmVyIEFmdGVyIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEwIiBkPSJNNTM1LjA2IDU1NS43MmwzOCAxMzUuNTQiLz48cGF0aCBmaWxsPSIjOTU5NTk1IiBkPSJNLjEgNTU0LjZ2MTM4aDExLjM4VjU3NS42NWM2LjYgMTIuNyAxMy43OCAyNS45IDE5LjY3IDM2Ljc4bDUuNyAxMCAuMDItLjAydi4xbDUuNzItMTBjNi41LTEyIDEzLjUtMjUuMiAxOS43LTM2Ljh2MTE2LjloMTEuMnYtMTM4SDYyLjNDNTUgNTY4IDQ3LjUgNTgyIDQwLjggNTk0LjRsLTQgNy40NWMtOS4xLTE3LjA1LTE3LjMtMzIuMDctMjUuNC00Ny4yM3oiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0V2ZXIgQWZ0ZXIsIE5vcm1hbCc7dGV4dC1hbGlnbjpzdGFydCIgZm9udC1zaXplPSIxNzIuNTIiIGZvbnQtZmFtaWx5PSJFdmVyIEFmdGVyIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0iIzk1OTU5NSIgZD0iTTM5OC44NCA2OTEuNjZjLTMuNzItMS4zMy04Ljk2LTUtMTEuNzYtOC4yLTEuNC0xLjYtMi41LTMuMjUtMi41NC0zLjYgNC4yMy02LjA1IDQuNDItNi4zMiA1LjMtNy40NSAzLjMgMy40IDYuNyA2LjggMTAuOSA5LjEgNC45OCAxLjggMTEuMjQgMi4xIDE1LjMyLS4zIDUuNTItMy4zIDguNjItOC44IDkuNjctMTcuMyAxLjQ2LTExLjctMi42NS0yMi41LTEzLjI1LTM0LjgtMi45LTMuNC03LjEzLTguMy05LjM4LTEwLjktNC44Ni01LjYtMTAtMTMuNC0xMS43Ny0xOC41LTQuMy0xMi41LTMuODctMjEuMy0uNjYtMzAuMiAyLjEyLTUuODMgNC45LTkuNiA5LjA4LTEyLjIgOC4yNi01LjE0IDE5LjI4LTQuMjQgMjcuMzYgMi4yNS45LjY4IDEuNyAxLjQ0IDIuNSAyLjU3LS40Ljc3LTMuNyA4Ljc3LTQuMyA4Ljc3LS44LS42Ni0uOC0uNi0xLjYtMS4zLS43LS43LTIuNy0yLjEtNC40LTMuMTQtNC40LTIuMS04LjUtMy4xLTEyLjktLjctNi4xIDMuNDQtOS4yIDExLjctNy45IDIxLjQgMS4xIDguMzQgNC41IDE0IDE3LjkgMjkuNSAxMy4wOCAxNS4yIDE2Ljk1IDIyLjMgMTguOSAzNC42My45IDUuNy45IDEwLjA0IDAgMTYuNi0xLjY1IDEyLjMzLTcuMiAyMC41LTE2LjIgMjMuOTYtMy4zIDEuMy0xNi40NSAxLjMtMjAuMDMuMDR6Ii8+PC9zdmc+" />
+            </a>
+            <p>
+              Backend Engineer at trivago. Likes just-in-time compilers and hot chocolate. <a href="/about">About me.</a>
+            </p>
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a target="_blank" rel="noopener" href="https://twitter.com/matthiasendler">Twitter</a></li>
+                <li><a target="_blank" rel="noopener" href="https://feedly.com/i/subscription/feed/https://matthias-endler.de/rss.xml">RSS</a></li>
+              </ul>
+            </nav>
+        </header>
+        <main role="main">
+            
+            
+  <article>
+    <div class="published-date">
+      <i>2nd of December 2018</i>
+    </div>
+    <a href="2018/cargo-inspect">
+      <h2>cargo-inspect</h2>
+    </a>
+    
+      <p>Rust allows for a lot of syntactic sugar, that makes it a pleasure to write. It is sometimes hard, however, to look behind the curtain and see what the compiler is really doing with our code.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>5th of November 2018</i>
+    </div>
+    <a href="2018/excel">
+      <h2>The Unreasonable Effectiveness of Excel Macros</h2>
+    </a>
+    
+      <p>I never was a big fan of internships, partially because all the exciting
+companies were far away from my little village in Bavaria and partially because
+I was too shy to apply.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>2nd of September 2018</i>
+    </div>
+    <a href="2018/keyboard">
+      <h2>Switching from a German to a US Keyboard Layout - Is It Worth It?</h2>
+    </a>
+    
+      <p>For the first three decades of my life, I've used a German keyboard layout.
+A few months ago, I switched to a US layout.
+This post summarizes my thoughts around the topic.
+I was looking for a similar article before jumping the gun, but I couldn't find one — so I'll try to fill this gap.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>31st of July 2018</i>
+    </div>
+    <a href="2018/fastcat">
+      <h2>fastcat - A Faster `cat` Implementation Using Splice</h2>
+    </a>
+    
+      <p>Lots of people asked me to write another piece about the internals of well-known Unix commands. Well, actually, nobody asked me, but it makes for a good intro. I'm sure you’ve read the previous parts about <a href="/2017/yes"><code>yes</code></a> and <a href="/2018/ls/"><code>ls</code></a> — they are epic.
+Anyway, today we talk about <code>cat</code>, which is used to concatenate files - or, more commonly, abused to print a file's contents to the screen.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>9th of June 2018</i>
+    </div>
+    <a href="2018/github">
+      <h2>That Octocat on the Wall</h2>
+    </a>
+    
+      <p>So I'm in a bit of a sentimental mood lately. Github got acquired by Microsoft. While I think the acquisition was well-deserved, I still wish it didn't happen. Let me explain.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>20th of May 2018</i>
+    </div>
+    <a href="2018/ten-years-of-Vim">
+      <h2>Ten Years of Vim</h2>
+    </a>
+    
+      <p>When I opened Vim by accident for the first time, I thought it was broken. My keystrokes changed the screen in unpredictable ways, and I wanted to undo things and quit. Needless to say, it was an unpleasant experience. There was something about it though, that kept me coming back and it became my main editor. Fast forward ten years (!) and I still use Vim. Why is that?</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>22nd of March 2018</i>
+    </div>
+    <a href="2018/go-io-testing">
+      <h2>Refactoring Go Code to Avoid File I/O in Unit Tests</h2>
+    </a>
+    
+      <p>At work today, I refactored some simple Go code to make it more testable.
+The idea was to avoid file handling in unit tests without mocking or using temporary files by separating data input/output and data manipulation.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>9th of March 2018</i>
+    </div>
+    <a href="2018/ls">
+      <h2>A Tiny `ls` Clone Written in Rust</h2>
+    </a>
+    
+      <p>In my series of <a href="/2017/yes/">useless Unix tools rewritten in Rust</a>, today I'm going to be covering one of my all-time favorites: <code>ls</code>.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>9th of January 2018</i>
+    </div>
+    <a href="2018/rust-2018">
+      <h2>Rust in 2018: Streamline Collaboration and Empower Intermediate Users</h2>
+    </a>
+    
+      <p>I wrote about the <a href="/2017/future-of-rust/">future of Rust</a> before and it seems like nobody stops me from doing it again! Quite the contrary: this time the Rust core team even <a target="_blank" rel="noopener" href="https://blog.rust-lang.org/2018/01/03/new-years-rust-a-call-for-community-blogposts.html">asked for it</a>.
+I'm a bit late to the party, but here are my 2 cents about the priorities for Rust in 2018.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>2nd of January 2018</i>
+    </div>
+    <a href="2018/functional-mathematics">
+      <h2>Functional Programming for Mathematical Computing</h2>
+    </a>
+    
+      <p>Programming languages help us describe general solutions for problems; the result just happens to be executable by machines. Every programming language comes with a different set of strengths and weaknesses, one reason being that its syntax and semantics heavily influence the range of problems which can easily be tackled with it.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>17th of December 2017</i>
+    </div>
+    <a href="2017/rust-for-rubyists">
+      <h2>Rust for Rubyists</h2>
+    </a>
+    
+      <p>Recently I came across a delightful article on idiomatic Ruby.
+I'm not a good Ruby developer by any means, but I realized, that a lot of the patterns are also quite common in Rust.
+What follows is a side-by-side comparison of idiomatic code in both languages.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>10th of December 2017</i>
+    </div>
+    <a href="2017/obsolete">
+      <h2>Making Myself Obsolete</h2>
+    </a>
+    
+      <p>In December 2015 I was looking for static analysis tools to integrate into trivago's CI process. The idea was to detect typical programming mistakes automatically. That's quite a common thing and there are lots of helpful tools out there which fit the bill. So I looked for a list of tools...</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>7th of November 2017</i>
+    </div>
+    <a href="2017/digital-clocks">
+      <h2>Modern Day Annoyances - Digital Clocks</h2>
+    </a>
+    
+      <p>This morning I woke up to the beeping noise of our oven's alarm clock.
+The reason was that I tried to correct the oven's local time the day before — and I pushed the wrong buttons.
+As a result I didn't set the correct time, instead, I set a cooking timer... and that's what woke me up today.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>15th of October 2017</i>
+    </div>
+    <a href="2017/hacktoberfest">
+      <h2>Learn Some Rust During Hacktoberfest</h2>
+    </a>
+    
+      <p>October is the perfect time to contribute to Open Source — at least according to Github and DigitalOcean. Because that's when they organize Hacktoberfest, a global event where you get a free shirt and lots of street cred for creating pull requests. Let me show you, how <em>everybody</em> can contribute code to <a target="_blank" rel="noopener" href="https://www.rust-lang.org/">Rust</a>, a safe systems programming language.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>10th of October 2017</i>
+    </div>
+    <a href="2017/yes">
+      <h2>A Little Story About the `yes` Unix Command</h2>
+    </a>
+    
+      <p>What's the simplest Unix command you know?<br />
+There's <code>echo</code>, which prints a string to stdout and <code>true</code>, which always terminates with an exit code of 0.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>18th of September 2017</i>
+    </div>
+    <a href="2017/image-previews">
+      <h2>Lightning Fast Image Previews with Pure CSS and LQIP</h2>
+    </a>
+    
+      <p>My website is reasonably fast. There was one thing left which really annoyed me: layout reflow after images got loaded. The problem is, that the image dimensions are not known when the text is ready to be displayed. As a result, the text will be pushed down on the screen as soon as an image is loaded above. I decided to fix that once and for all.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>15th of September 2017</i>
+    </div>
+    <a href="2017/go-vs-rust">
+      <h2>Go vs Rust? Choose Go.</h2>
+    </a>
+    
+      <p>Rust or Go, which one should I choose? is a question I get quite often. Both languages seem to be competing for the same user base and they both seem to be <em>systems programming</em> languages, so there must be a clear winner, right?
+It's not so easy. Both languages have a different scope. Golang shines for writing microservices and for typical &quot;DevOps&quot; tasks, but it is not a systems programming language. Rust is stronger for tasks where concurrency, safety and/or performance are important; but it has a steeper learning curve than Go.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>15th of August 2017</i>
+    </div>
+    <a href="2017/makefiles">
+      <h2>Afraid of Makefiles? Don't be!</h2>
+    </a>
+    
+      <p>In the last few years, I've had the pleasure to work with a lot of talented Software Engineers. One thing that struck me is, that many of them did not have any working knowledge of <code>Makefiles</code> and why they are useful. Let's change that!</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>12th of August 2017</i>
+    </div>
+    <a href="2017/boxes-and-trees">
+      <h2>Of Boxes and Trees - Smart Pointers in Rust</h2>
+    </a>
+    
+      <p>Recently, I tried to implement a binary tree data structure in Rust.
+Each binary tree has a root value, a left, and a right subtree.
+I started from this Python implementation, which is quite straightforward.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>10th of July 2017</i>
+    </div>
+    <a href="2017/why-type-systems-matter">
+      <h2>Why Type Systems Matter</h2>
+    </a>
+    
+      <p>I've written most of my code in dynamically typed languages such as Python or PHP. But ever since dabbling with <a target="_blank" rel="noopener" href="https://www.rust-lang.org">Rust</a>, I've developed a passion for static type systems.<br />
+It began to feel very natural to me; like a totally new way to express myself.  </p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>18th of May 2017</i>
+    </div>
+    <a href="2017/professional-programming">
+      <h2>Being a Professional Programmer</h2>
+    </a>
+    
+      <p>When I was around 12, I set myself the goal to become a professional programmer.<br />
+I can tell, because at this time I made the conscious decision to use my right hand to control the mouse — even though I'm left-handed.  </p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>27th of April 2017</i>
+    </div>
+    <a href="2017/future-of-rust">
+      <h2>The Future of Rust</h2>
+    </a>
+    
+      <p>Let me first point out the obvious: yes, the title is a little sensationalist. Also
+you might be asking why I should be entitled to talk about the future of Rust. After
+all, I'm neither part of the Rust core team, nor a major contributor to the Rust
+ecosystem. To that I answer: why not? It's fun to think about the future of
+systems programming in general and Rust in particular.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>9th of April 2017</i>
+    </div>
+    <a href="2017/rust-url-shortener">
+      <h2>Launching a URL Shortener in Rust using Rocket</h2>
+    </a>
+    
+      <p>One common Systems Design task in interviews is to sketch the software architecture of a URL shortener (a <a target="_blank" rel="noopener" href="https://bit.ly">bit.ly</a> clone, so to say).
+Since I was playing around with Rocket, why not give it a try?</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>18th of March 2017</i>
+    </div>
+    <a href="2017/the-essence-of-information">
+      <h2>The Essence of Information</h2>
+    </a>
+    
+      <p>People look confused when I tell them about my passion for algorithms and data-structures.
+Most of them understand what a Programmer is doing, but not what Computer Science is good for.
+And even if they do, they think it has no practical relevance.
+Let me show you with a simple example, that applied Computer Science can be found everywhere.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>15th of March 2017</i>
+    </div>
+    <a href="2017/why-i-love-programming">
+      <h2>Why I Love Programming</h2>
+    </a>
+    
+      <p>Programming has many faces. It is the science of structured thinking.
+It is the art of eloquent expression.
+It teaches you to be humble when you look at other peoples' fascinating work.
+Most of all, it teaches you a lot about yourself.<br />
+While the syntax may change, the concepts will not.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>30th of October 2011</i>
+    </div>
+    <a href="2011/tools">
+      <h2>Tools</h2>
+    </a>
+    
+      <p>For as long as I can think, religious flamewars have infected computer science.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>20th of October 2011</i>
+    </div>
+    <a href="2011/are-you-a-programmer">
+      <h2>Are you a Programmer?</h2>
+    </a>
+    
+      <p>My geography teacher once told the story of her first lecture at University.
+As an introduction, her professor asked the class to draw
+a map of Germany without any help and as accurate as possible. To her surprise, she was not
+able to fill the map with much detail. Even the shape of the country was a bit vague.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>13th of October 2011</i>
+    </div>
+    <a href="2011/on-hard-work">
+      <h2>On Hard Work</h2>
+    </a>
+    
+      <p>Great people get shaped by their achievements</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>12th of February 2010</i>
+    </div>
+    <a href="2010/overkill-java-as-a-first-programming-language">
+      <h2>Overkill: Java as a First Programming Language</h2>
+    </a>
+    
+      <p>I recently talked to a student in my neighborhood about his first programming
+experiences. They started learning <em>Java</em> at school, and it soon turned out to be
+horrible.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>27th of January 2010</i>
+    </div>
+    <a href="2010/howto-sort-a-vector-or-a-list-in-c-using-stl">
+      <h2>Howto Sort a Vector or a List in C++ using STL</h2>
+    </a>
+    
+      <p>A little code snippet that people need very often.</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>10th of January 2010</i>
+    </div>
+    <a href="2010/why-i-love-text-files">
+      <h2>Why I Love Text Files</h2>
+    </a>
+    
+      <p>Text files are the single most important way we can communicate with computers. It's no coincidence that they are also the most vital way to interact with other human beings. What we can achieve with text files is invaluable: Write it once and refer to it whenever you want to get the message across in the future. Write a program (it's just text), save it and let the machine execute it whenever you like. Write another text file which contains the rules for the execution of your program and the computer runs your application exactly as you specified (<code>cron</code> files do that on Unix).</p>
+
+    
+  </article>
+
+  <article>
+    <div class="published-date">
+      <i>8th of November 2009</i>
+    </div>
+    <a href="2009/running-legacy-code">
+      <h2>Running Legacy Code</h2>
+    </a>
+    
+      <p>This short article deals with a severe problem in software development: bit rot.
+When switching to a new platform (for instance from Windows XP to Windows Vista/7), the programmers need to make sure that old bits of code run flawlessly. There are several ways to achieve this goal that will be discussed in the next paragraphs:</p>
+
+    
+  </article>
+
+<ul class="links">
+</ul>
+        </main>
+<script type="text/javascript">
+if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
+    window.ga=window.ga||function(){(ga.q = ga.q || []).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-693428-1', 'auto');
+    ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+  </body>
+</html>
