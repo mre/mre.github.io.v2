@@ -1,26 +1,28 @@
-run: kill assets
+.PHONY: run serve
+run serve: kill assets
 	cobalt serve --drafts
-.PHONY: serve
 
+.PHONY: build
 build: clean assets
 	cobalt build
 	# Open external links in separate tab
 	find build -type f -name "*.html" | xargs sed -i '' 's/<a href="http/<a target="_blank" rel="noopener" href="http/g'
 	# Setup symlinks
 	touch .nojekyll
-.PHONY: build
 
+.PHONY: clean
 clean:
 	rm -rf build/
 
+.PHONY: lqip
 lqip:
 	lqip
-.PHONY: lqip
 
+.PHONY: css assets
 css assets:
 	sass assets/main.scss assets/main.css --style compressed --no-source-map
-.PHONY: css assets
 
+.PHONY: deploy
 deploy: build
 	git branch -Dq master
 	cobalt import --branch master
@@ -36,17 +38,17 @@ deploy: build
 	git commit -m 'New deploy!'
 	git push -u -f origin master
 	git checkout source
-.PHONY: publish
 
+.PHONY: kill
 kill:
 	killall -9 cobalt || exit 0
 
+.PHONY: watch
 watch: kill
 	cobalt serve --drafts &
 	fswatch -0 blog _drafts | xargs -0 -n1 sh -c 'cobalt build --drafts'
-.PHONY: watch
 
+.PHONY: watch-interactive
 watch-interactive: kill
 	cobalt serve --drafts &
 	fswatch -0 blog _drafts | xargs -0 -n1 sh -c 'cobalt build --drafts && osascript refresh-firefox.scpt'
-.PHONY: watch-interactive
