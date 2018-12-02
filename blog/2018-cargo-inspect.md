@@ -36,13 +36,13 @@ rustc +nightly -Zunpretty=hir example.rs
 ```
 
 `HIR` stands for high-level intermediate representation. This is basically an [abstract syntax tree (AST)](https://en.wikipedia.org/wiki/Abstract_syntax_tree) more suited for use by the compiler. It replaces syntactic sugar with basic building blocks that are easier to handle by the following compile steps.
-To find out more, read this [detailed writeup by Nico Matsakis](https://github.com/rust-lang/rfcs/blob/master/text/1191-hir.md).
+To find out more, read this [detailed write-up by Nico Matsakis](https://github.com/rust-lang/rfcs/blob/master/text/1191-hir.md).
 
 ![Rustc compilation diagram. HIR is the first step.](/img/posts/2018/cargo-inspect/hir.svg)
 
 Anyway, the output looked surprisingly readable (see below). With some syntax highlighting and formatting, this could be quite a handy tool.
 
-I tried to use [`rustfmt`](https://github.com/rust-lang-nursery/rustfmt) on it and it worked unreasonably well.
+I tried to use [`rustfmt`](https://github.com/rust-lang-nursery/rustfmt) on it, and it worked unreasonably well.
 Motivated by this quick win, I wrapped it up in a cargo subcommand and called it [`cargo-inspect`](https://github.com/mre/cargo-inspect).
 
 Let's try cargo-inspect on some real code!
@@ -145,4 +145,4 @@ Namely, I wish there were options to:
 * [Show the original code above the desugared code.](https://github.com/mre/cargo-inspect/issues/5)
 * ...and [much more](https://github.com/mre/cargo-inspect/issues).
 
-Also, if you find a particularly interesting example code snippet, don't be shy to contribute it to the examples folder.
+Also, if you find a particularly exciting code example, don't be shy to contribute it to the examples folder.
