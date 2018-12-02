@@ -22,8 +22,8 @@ lqip:
 css assets:
 	sass assets/main.scss assets/main.css --style compressed --no-source-map
 
-.PHONY: deploy
-deploy: build
+.PHONY: publish deploy
+publish deploy: build
 	git branch -Dq master
 	cobalt import --branch master
 	sleep 1
