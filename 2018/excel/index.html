@@ -1,86 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <style>
-    ﻿html,body,div,form,fieldset,legend,label,h1{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}th,td{text-align:left;vertical-align:top}h1,h2,h3,h4,h5,h6,th,td,caption{font-weight:normal}img{border:0;max-width:100%}h1{font-size:1.87em}h2{font-size:1.2em;margin-bottom:10px;margin-top:0}h3{margin-top:50px}body{background-color:#fff;color:rgba(0,0,0,.8);font-family:medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;-moz-font-feature-settings:"liga" on;font-feature-settings:"liga" on;font-size:1.25em;-moz-osx-font-smoothing:grayscale;font-style:normal;font-weight:400;letter-spacing:-0.003em;line-height:1.58;text-rendering:optimizeLegibility}article{margin-top:44px}pre{-moz-font-feature-settings:"liga" off;font-feature-settings:"liga" off;font-size:.92em;-moz-osx-font-smoothing:auto;-webkit-font-smoothing:subpixel-antialiased;padding:20px;overflow:auto}::-moz-selection{background:#000;color:#fff}::selection{background:#000;color:#fff}body{margin-top:8%}header{font-size:.78em;margin:0 auto 2em;max-width:220px;text-align:center}a:link,a:visited,a:hover,a:active{color:#af403c;text-decoration:none}a:hover{text-decoration:underline}nav{text-align:center}nav ul{display:inline-block;text-align:initial;padding-left:0}nav li:not(:first-child):before{content:" · "}nav li{list-style:none;display:inline}.logo{background-size:cover;display:inline-block;height:150px;width:171px}.published-date{color:#888;font-size:.8em}blockquote{border-left:4px solid #ededee;font-style:italic;margin:4px 10px;padding:3px 20px}code{background-color:#f9f9fa;border:1px solid #ededee;border-radius:6px;display:inline-block;font-family:"Courier New","Courier",monospace;-moz-font-feature-settings:"liga" off;font-feature-settings:"liga" off;font-size:16px;-moz-osx-font-smoothing:auto;-webkit-font-smoothing:subpixel-antialiased;max-width:100%;overflow-x:auto;padding:0 5px;vertical-align:middle;word-wrap:normal;box-shadow:0 1px 1px rgba(0,0,0,.125)}.button{background-color:#af403c;border-radius:10px;color:#fff;margin:40px auto;padding:10px;text-align:center}.button:hover{background-color:red}.talk{margin-top:80px}.video-container{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden;margin-bottom:40px}.video-container iframe,.video-container object,.video-container embed{position:absolute;top:0;left:0;width:100%;height:100%}figure{font-size:.9em;font-style:italic;margin:0 0 40px;padding:0;text-align:center;text-indent:0}figcaption{margin-top:10px}.loader{position:relative;overflow:hidden;width:auto}.loader object{position:absolute}.loader img,.loader object{display:block;top:0;left:0;width:100%}object{position:relative;float:left;display:block}object::after{position:absolute;top:0;left:0;display:block;width:1000px;height:1000px;content:"";background:#efefef}.frozen{-webkit-filter:blur(8px);-moz-filter:blur(8px);-o-filter:blur(8px);-ms-filter:blur(8px);filter:blur(8px);transform:scale(1.04);animation:.2s ease-in .4s 1 forwards fade;width:100%}@keyframes fade{0%{opacity:1}100%{opacity:0}}@media(max-width: 520px){body{padding:0 20px}pre{font-size:.85em;padding:5px}h1{font-size:1.6em}}@media(min-width: 520px){body{margin:10% auto 0;margin-top:120px;width:480px}h1{font-size:1.6em}}@media(min-width: 1024px){body{width:850px}header{float:left;width:210px}main,footer{margin-left:260px;margin-bottom:40px}}footer{margin-bottom:40px}.links{list-style:none;display:inline}.field{padding:10px;font-size:.8em}.email{width:300px}.submit{border:none;padding:12px;background-color:#eee}
-
-    </style>
-    <link rel="dns-prefetch" href="//www.google-analytics.com/" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=m2llJQPQq8">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=m2llJQPQq8">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=m2llJQPQq8">
-    <link rel="manifest" href='data:application/manifest+json,
-    { "short_name": "Endler",
-    "icons": [
-        {
-            "src": "/android-chrome-192x192.png?v=m2llJQPQq8",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/android-chrome-512x512.png?v=m2llJQPQq8",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ]
-    }' />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=m2llJQPQq8" color="#5bbad5">
-    <link rel="shortcut icon" href="/favicon.ico?v=m2llJQPQq8">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
-
-
-<meta property="og:title" content="The Unreasonable Effectiveness of Excel Macros" />
-<meta property="og:type" content="website" />
-<meta property="og:description" content="I never was a big fan of internships, partia..." />
-<meta property="og:url" content="https://matthias-endler.de/2018/excel" />
-<meta property="og:image" content="https://matthias-endler.de/img/social/default.png" />
-
-<meta name="twitter:title" content="The Unreasonable Effectiveness of Excel Macros">
-<meta name="twitter:description" content="I never was a big fan of internships, partia...">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@matthiasendler">
-<meta name="twitter:creator" content="@matthiasendler">
-<meta name="twitter:image" content="https://matthias-endler.de/img/social/default.png">
-
-    
-      
-        <title>The Unreasonable Effectiveness of Excel Macros | Matthias Endler</title>
-      
-
-    <meta name="author" content="Matthias Endler">
-    <meta name="description" content="Personal website of Matthias Endler, a Software Engineer interested in low-level programming and backend development. PHP, Python, Go, Rust."/>
-  </head>
-  <body>
-        <header>
-            <a class="logo" href="/"><img alt="Home" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3OTAuMjMgNjkyLjYxIj48Y2lyY2xlIGN4PSI0MTMuMjQiIGN5PSIyMjcuNyIgcj0iMjE5LjY4IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMTYuMDMiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCIvPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjYTE2MjAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCI+PHBhdGggZmlsbD0iIzMzMWYwMCIgc3Ryb2tlLXdpZHRoPSIxLjk3IiBkPSJNNDgzLjc1IDI2NS43NGwtNjcuMDcgNDAuMTQtNzQuMjMtMzkuNTMgMTQxLjMtLjZ6IiBzdHlsZT0ibGluZS1oZWlnaHQ6MTI1JSIvPjxwYXRoIGZpbGw9IiNlZmJhMDAiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTQ4Ni42NSAyNjUuOTJsLTcwLjIgMzQuMDItNzYuOS0zMy45IDE0Ny4xLS4xMnoiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2OC42NCAyLjkxNCkgc2NhbGUoLjY1Nzk1KSIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIj48ZWxsaXBzZSBjeD0iLTYwOC43NSIgY3k9Ii0xNjMuMTQiIHRyYW5zZm9ybT0ibWF0cml4KDEuMjQ4OTcgLS4xMTM3IC4xMDcgMS4xNzUxNyAxMDk1Ljg3IDQ2Ni43KSIgcng9IjI1LjI1IiByeT0iMjgiLz48ZWxsaXBzZSBjeD0iMzMxLjM2IiBjeT0iMzQ3Ljk5IiBmaWxsPSIjZmZmIiB0cmFuc2Zvcm09Im1hdHJpeCguNTIyMTMgMCAwIC41NDc0NSAxNTguNzU3IDEzNi40MzIpIiByeD0iMTUuMTUiIHJ5PSIxNy4wNCIvPjwvZz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNjguNjQgMi45MTQpIHNjYWxlKC42NTc5NSkiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCI+PGVsbGlwc2UgY3g9Ii02MDguNzUiIGN5PSItMTYzLjE0IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjI0ODk3IC0uMTEzNyAuMTA3IDEuMTc1MTcgMTIwMy4yIDQ2Ny42NDYpIiByeD0iMjUuMjUiIHJ5PSIyOCIvPjxlbGxpcHNlIGN4PSIzMzEuMzYiIGN5PSIzNDcuOTkiIGZpbGw9IiNmZmYiIHRyYW5zZm9ybT0ibWF0cml4KC41MjIxMyAwIDAgLjU0NzQ1IDI2NS4zNTggMTM2Ljk5MykiIHJ4PSIxNS4xNSIgcnk9IjE3LjA0Ii8+PC9nPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjMDAwIj48cGF0aCBkPSJNMzY2LjQgMTAwLjY0YzE4LjU0LTExLjA1IDM2LjU0LTIyLjU3IDQ2Ljk0LTQwLjczIDEuMzUgMTIuMy0uMSAyOC41LTEwLjg2IDQzLjUiLz48cGF0aCBkPSJNMzg5LjQ0IDEwMC42NGMxOC41NC0xMS4wNSAzNi41NC0yMi41NyA0Ni45NC00MC43MyAxLjM1IDEyLjMtLjEgMjguNS0xMC44NiA0My41Ii8+PHBhdGggZD0iTTQxMi40OCAxMDAuNjRDNDMxLjAyIDg5LjYgNDQ5IDc4LjA3IDQ1OS40MiA1OS45YzEuMzUgMTIuMy0uMSAyOC40NC0xMC44NiA0My40NiIvPjwvZz48cGF0aCBkPSJNNDA5LjI0IDg3LjA1Yy04MS44NS4yNy0xNTYuNDQgMTA0LjQzLTE4MC40OCAyMTYuNDZhMTk5LjYgMTk5LjYgMCAwIDAgNTEuODMgNzMuMWM3LjktMTU3LjkgNDQuNy0yNjYuOSAxMTIuNS0yMDcuOCAxMC4xIDguOSAxNS4yIDEyLjkgMjAuMSAxMi42IDQuOS4zIDEwLTMuOCAyMC4xLTEyLjYgNjcuNy01OS4xIDEwNC42IDUwIDExMi41IDIwNy44YTE5OS42IDE5OS42IDAgMCAwIDUxLjgtNzIuOWMtMjQtMTEyLTk4LjYtMjE2LjMtMTgwLjUtMjE2LjUtMS4zOCAwLTIuNy4xLTQgLjEtMS4zOCAwLTIuNy0uMS00LS4xeiIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0iIzk1OTU5NSIgZD0iTTEzMS4zIDY5Mi42aDExLjRsLTIwLjkyLTEzOC4zSDEwOS41TDg4LjYgNjkyLjZIMTAwbDUuODgtNDUuOGgxOS4zNnptLTI0LjItNTQuOTZsOC40Ni02NC4zIDguNDcgNjQuM3ptODIuMDUtODMuMzRIMTQ4djEwLjczaDE0Ljg3VjY5Mi42aDExLjRWNTY1LjA0aDE0Ljg4eiIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSU7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonRXZlciBBZnRlciwgTm9ybWFsJzt0ZXh0LWFsaWduOnN0YXJ0IiBmb250LWZhbWlseT0iRXZlciBBZnRlciIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCIvPjxwYXRoIGZpbGw9IiM5NTk1OTUiIGQ9Ik0yMjguNjUgNTU0LjNIMTg3LjV2MTAuNzNoMTQuODdWNjkyLjZoMTEuNFY1NjUuMDRoMTQuODh6bTQ0LjkgMHY2MS4zOEgyNDUuMlY1NTQuM2gtMTEuNDJ2MTM4LjNoMTEuNHYtNjYuMzhoMjguMzZ2NjYuNGgxMS4yM1Y1NTQuM3ptMzcuOCAxMzguM2gtMTEuNFY1NTQuM2gxMS40em01Ny42NSAwaDExLjRsLTIwLjkyLTEzOC4zSDM0Ny4ybC0yMC45IDEzOC4zaDExLjRsNS44Ny00NS44aDE5LjM2em0tMjQuMjItNTQuOTZsOC40Ny02NC4zIDguNDcgNjQuM3oiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0V2ZXIgQWZ0ZXIsIE5vcm1hbCc7dGV4dC1hbGlnbjpzdGFydCIgZm9udC1mYW1pbHk9IkV2ZXIgQWZ0ZXIiIGxldHRlci1zcGFjaW5nPSIwIiB3b3JkLXNwYWNpbmc9IjAiLz48cGF0aCBkPSJNNTE3LjI2IDU2NS4wM1Y1NTQuM2gtMzEuNjR2MTM4LjNoMzEuNjR2LTEwLjdoLTIwLjIzdi01NS43aDE4Ljg1di0xMC41NGgtMTguODVWNTY1em0xMS4yNC0xMC43M3YxMzguM2gxMS4zNVY1NTQuM0g1MjguNXptMzkuNzYgMHY1MS44N2wtLjEtLjE3djIwLjc1bC4xLjE3djY1LjdoMTEuMjRWNTU0LjNoLTExLjI0em00MC4yNCAwaC0xMy44djEzOC4zaDEzLjgzcTIyLjMgMCAyOS41Ny0yMi40NiA0LjE1LTEzLjMyIDQuMTUtNDYuNjh0LTQuMTUtNDYuNjdxLTcuMjYtMjIuNS0yOS41Ni0yMi41em0tMS4yIDEyNy42aC0xLjJWNTY1LjAyaDEuMnExNS43MyAwIDIwLjU3IDE4LjUgMy4xIDExLjA2IDMuMSAzOS45MyAwIDI4Ljg3LTMuMSAzOS45My00Ljg0IDE4LjUtMjAuNTcgMTguNXptNjAuMjQgMFY1NTQuM2gtMTEuNHYxMzguM2gzMS42MnYtMTAuN3ptNjIuMS0xMTYuODdWNTU0LjNINjk4djEzOC4zaDMxLjYzdi0xMC43SDcwOS40di01NS43aDE4Ljg1di0xMC41NEg3MDkuNFY1NjV6bTYwLjUgMTI3LjU3cS0xNC4xNy0zNy0yMC43NC03Mi4yNSAxNC4xNy0xMC4zNyAxNC4xNy0zMy44OCAwLTMyLjE2LTI3LjQ4LTMyLjE2aC0xNS4zdjEzOC4zaDExLjR2LTY1cTIuMi0uNSA2LjktMiA3IDMzLjQgMTguMyA2Ny4xem0tMzcuODYtNzguNDd2LTQ5LjFoMi42cTEwLjU0IDAgMTQuNyA1Ljg4IDMuMjcgNC43IDMuMjcgMTUuNiAwIDE1LjgtOC4xMiAyMy40LTUuMiA0LjktMTAuMiA0LjktMS4zOCAwLTIuMjUtLjV6IiBzdHlsZT0ibGluZS1oZWlnaHQ6MTI1JTstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidFdmVyIEFmdGVyLCBOb3JtYWwnO3RleHQtYWxpZ246c3RhcnQiIGZvbnQtZmFtaWx5PSJFdmVyIEFmdGVyIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEwIiBkPSJNNTM1LjA2IDU1NS43MmwzOCAxMzUuNTQiLz48cGF0aCBmaWxsPSIjOTU5NTk1IiBkPSJNLjEgNTU0LjZ2MTM4aDExLjM4VjU3NS42NWM2LjYgMTIuNyAxMy43OCAyNS45IDE5LjY3IDM2Ljc4bDUuNyAxMCAuMDItLjAydi4xbDUuNzItMTBjNi41LTEyIDEzLjUtMjUuMiAxOS43LTM2Ljh2MTE2LjloMTEuMnYtMTM4SDYyLjNDNTUgNTY4IDQ3LjUgNTgyIDQwLjggNTk0LjRsLTQgNy40NWMtOS4xLTE3LjA1LTE3LjMtMzIuMDctMjUuNC00Ny4yM3oiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0V2ZXIgQWZ0ZXIsIE5vcm1hbCc7dGV4dC1hbGlnbjpzdGFydCIgZm9udC1zaXplPSIxNzIuNTIiIGZvbnQtZmFtaWx5PSJFdmVyIEFmdGVyIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0iIzk1OTU5NSIgZD0iTTM5OC44NCA2OTEuNjZjLTMuNzItMS4zMy04Ljk2LTUtMTEuNzYtOC4yLTEuNC0xLjYtMi41LTMuMjUtMi41NC0zLjYgNC4yMy02LjA1IDQuNDItNi4zMiA1LjMtNy40NSAzLjMgMy40IDYuNyA2LjggMTAuOSA5LjEgNC45OCAxLjggMTEuMjQgMi4xIDE1LjMyLS4zIDUuNTItMy4zIDguNjItOC44IDkuNjctMTcuMyAxLjQ2LTExLjctMi42NS0yMi41LTEzLjI1LTM0LjgtMi45LTMuNC03LjEzLTguMy05LjM4LTEwLjktNC44Ni01LjYtMTAtMTMuNC0xMS43Ny0xOC41LTQuMy0xMi41LTMuODctMjEuMy0uNjYtMzAuMiAyLjEyLTUuODMgNC45LTkuNiA5LjA4LTEyLjIgOC4yNi01LjE0IDE5LjI4LTQuMjQgMjcuMzYgMi4yNS45LjY4IDEuNyAxLjQ0IDIuNSAyLjU3LS40Ljc3LTMuNyA4Ljc3LTQuMyA4Ljc3LS44LS42Ni0uOC0uNi0xLjYtMS4zLS43LS43LTIuNy0yLjEtNC40LTMuMTQtNC40LTIuMS04LjUtMy4xLTEyLjktLjctNi4xIDMuNDQtOS4yIDExLjctNy45IDIxLjQgMS4xIDguMzQgNC41IDE0IDE3LjkgMjkuNSAxMy4wOCAxNS4yIDE2Ljk1IDIyLjMgMTguOSAzNC42My45IDUuNy45IDEwLjA0IDAgMTYuNi0xLjY1IDEyLjMzLTcuMiAyMC41LTE2LjIgMjMuOTYtMy4zIDEuMy0xNi40NSAxLjMtMjAuMDMuMDR6Ii8+PC9zdmc+" />
-            </a>
-            <p>
-              Backend Engineer at trivago. Likes just-in-time compilers and hot chocolate. <a href="/about">About me.</a>
-            </p>
-            <nav>
-              <ul>
-                <li><a href="/">Home</a></li>
-                <li><a target="_blank" rel="noopener" href="https://twitter.com/matthiasendler">Twitter</a></li>
-                <li><a target="_blank" rel="noopener" href="https://feedly.com/i/subscription/feed/https://matthias-endler.de/rss.xml">RSS</a></li>
-              </ul>
-            </nav>
-        </header>
-        <main role="main">
-            
-              <div class="published-date">
-                <i>Published on 5th of November 2018</i>
-              </div>
-            
-              <h1>The Unreasonable Effectiveness of Excel Macros</h1>
-            <p>I never was a big fan of internships, partially because all the exciting
+<!doctype html><html lang=en><style>﻿html,body,div,form,fieldset,legend,label,h1{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}th,td{text-align:left;vertical-align:top}h1,h2,h3,h4,h5,h6,th,td,caption{font-weight:400}img{border:0;max-width:100%}h1{font-size:1.87em}h2{font-size:1.2em;margin-bottom:10px;margin-top:0}h3{margin-top:50px}body{background-color:#fff;color:rgba(0,0,0,.8);font-family:medium-content-serif-font,Georgia,Cambria,times new roman,Times,serif;-moz-font-feature-settings:"liga" on;font-feature-settings:"liga" on;font-size:1.25em;-moz-osx-font-smoothing:grayscale;font-style:normal;font-weight:400;letter-spacing:-.003em;line-height:1.58;text-rendering:optimizeLegibility}article{margin-top:44px}pre{-moz-font-feature-settings:"liga" off;font-feature-settings:"liga" off;font-size:.92em;-moz-osx-font-smoothing:auto;-webkit-font-smoothing:subpixel-antialiased;padding:20px;overflow:auto}::-moz-selection{background:#000;color:#fff}::selection{background:#000;color:#fff}body{margin-top:8%}header{font-size:.78em;margin:0 auto 2em;max-width:220px;text-align:center}a:link,a:visited,a:hover,a:active{color:#af403c;text-decoration:none}a:hover{text-decoration:underline}nav{text-align:center}nav ul{display:inline-block;text-align:initial;padding-left:0}nav li:not(:first-child):before{content:" · "}nav li{list-style:none;display:inline}.logo{background-size:cover;display:inline-block;height:150px;width:171px}.published-date{color:#888;font-size:.8em}blockquote{border-left:4px solid #ededee;font-style:italic;margin:4px 10px;padding:3px 20px}code{background-color:#f9f9fa;border:1px solid #ededee;border-radius:6px;display:inline-block;font-family:courier new,courier,monospace;-moz-font-feature-settings:"liga" off;font-feature-settings:"liga" off;font-size:16px;-moz-osx-font-smoothing:auto;-webkit-font-smoothing:subpixel-antialiased;max-width:100%;overflow-x:auto;padding:0 5px;vertical-align:middle;word-wrap:normal;box-shadow:0 1px 1px rgba(0,0,0,.125)}.button{background-color:#af403c;border-radius:10px;color:#fff;margin:40px auto;padding:10px;text-align:center}.button:hover{background-color:red}.talk{margin-top:80px}.video-container{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden;margin-bottom:40px}.video-container iframe,.video-container object,.video-container embed{position:absolute;top:0;left:0;width:100%;height:100%}figure{font-size:.9em;font-style:italic;margin:0 0 40px;padding:0;text-align:center;text-indent:0}figcaption{margin-top:10px}.loader{position:relative;overflow:hidden;width:auto}.loader object{position:absolute}.loader img,.loader object{display:block;top:0;left:0;width:100%}object{position:relative;float:left;display:block}object::after{position:absolute;top:0;left:0;display:block;width:1e3px;height:1e3px;content:"";background:#efefef}.frozen{-webkit-filter:blur(8px);-moz-filter:blur(8px);-o-filter:blur(8px);-ms-filter:blur(8px);filter:blur(8px);transform:scale(1.04);animation:.2s ease-in .4s 1 forwards fade;width:100%}@keyframes fade{0%{opacity:1}100%{opacity:0}}@media(max-width:520px){body{padding:0 20px}pre{font-size:.85em;padding:5px}h1{font-size:1.6em}}@media(min-width:520px){body{margin:10% auto 0;margin-top:120px;width:480px}h1{font-size:1.6em}}@media(min-width:1024px){body{width:850px}header{float:left;width:210px}main,footer{margin-left:260px;margin-bottom:40px}}footer{margin-bottom:40px}.links{list-style:none;display:inline}.field{padding:10px;font-size:.8em}.email{width:300px}.submit{border:0;padding:12px;background-color:#eee}</style><link rel=dns-prefetch href=//www.google-analytics.com/><link rel=apple-touch-icon sizes=180x180 href="/apple-touch-icon.png?v=m2llJQPQq8"><link rel=icon type=image/png sizes=32x32 href="/favicon-32x32.png?v=m2llJQPQq8"><link rel=icon type=image/png sizes=16x16 href="/favicon-16x16.png?v=m2llJQPQq8"><link rel=manifest href="data:application/manifest+json;base64,eyJzaG9ydF9uYW1lIjoiRW5kbGVyIiwiaWNvbnMiOlt7InNyYyI6Ii9hbmRyb2lkLWNocm9tZS0xOTJ4MTkyLnBuZz92PW0ybGxKUVBRcTgiLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmc/dj1tMmxsSlFQUXE4Iiwic2l6ZXMiOiI1MTJ4NTEyIiwidHlwZSI6ImltYWdlL3BuZyJ9XX0="><link rel=mask-icon href="/safari-pinned-tab.svg?v=m2llJQPQq8" color=#5bbad5><link rel="shortcut icon" href="/favicon.ico?v=m2llJQPQq8"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=theme-color content=#ffffff><meta property=og:title content="The Unreasonable Effectiveness of Excel Macros"><meta property=og:type content=website><meta property=og:description content="I never was a big fan of internships, partia..."><meta property=og:url content=https://matthias-endler.de/2018/excel><meta property=og:image content=https://matthias-endler.de/img/social/default.png><meta name=twitter:title content="The Unreasonable Effectiveness of Excel Macros"><meta name=twitter:description content="I never was a big fan of internships, partia..."><meta name=twitter:card content=summary_large_image><meta name=twitter:site content=@matthiasendler><meta name=twitter:creator content=@matthiasendler><meta name=twitter:image content=https://matthias-endler.de/img/social/default.png><title>The Unreasonable Effectiveness of Excel Macros | Matthias Endler</title><meta name=author content="Matthias Endler"><meta name=description content="Personal website of Matthias Endler, a Software Engineer interested in low-level programming and backend development. PHP, Python, Go, Rust."><header><a class=logo href=/><img alt=Home src=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3OTAuMjMgNjkyLjYxIj48Y2lyY2xlIGN4PSI0MTMuMjQiIGN5PSIyMjcuNyIgcj0iMjE5LjY4IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMTYuMDMiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCIvPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjYTE2MjAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCI+PHBhdGggZmlsbD0iIzMzMWYwMCIgc3Ryb2tlLXdpZHRoPSIxLjk3IiBkPSJNNDgzLjc1IDI2NS43NGwtNjcuMDcgNDAuMTQtNzQuMjMtMzkuNTMgMTQxLjMtLjZ6IiBzdHlsZT0ibGluZS1oZWlnaHQ6MTI1JSIvPjxwYXRoIGZpbGw9IiNlZmJhMDAiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTQ4Ni42NSAyNjUuOTJsLTcwLjIgMzQuMDItNzYuOS0zMy45IDE0Ny4xLS4xMnoiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2OC42NCAyLjkxNCkgc2NhbGUoLjY1Nzk1KSIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIj48ZWxsaXBzZSBjeD0iLTYwOC43NSIgY3k9Ii0xNjMuMTQiIHRyYW5zZm9ybT0ibWF0cml4KDEuMjQ4OTcgLS4xMTM3IC4xMDcgMS4xNzUxNyAxMDk1Ljg3IDQ2Ni43KSIgcng9IjI1LjI1IiByeT0iMjgiLz48ZWxsaXBzZSBjeD0iMzMxLjM2IiBjeT0iMzQ3Ljk5IiBmaWxsPSIjZmZmIiB0cmFuc2Zvcm09Im1hdHJpeCguNTIyMTMgMCAwIC41NDc0NSAxNTguNzU3IDEzNi40MzIpIiByeD0iMTUuMTUiIHJ5PSIxNy4wNCIvPjwvZz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNjguNjQgMi45MTQpIHNjYWxlKC42NTc5NSkiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCI+PGVsbGlwc2UgY3g9Ii02MDguNzUiIGN5PSItMTYzLjE0IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjI0ODk3IC0uMTEzNyAuMTA3IDEuMTc1MTcgMTIwMy4yIDQ2Ny42NDYpIiByeD0iMjUuMjUiIHJ5PSIyOCIvPjxlbGxpcHNlIGN4PSIzMzEuMzYiIGN5PSIzNDcuOTkiIGZpbGw9IiNmZmYiIHRyYW5zZm9ybT0ibWF0cml4KC41MjIxMyAwIDAgLjU0NzQ1IDI2NS4zNTggMTM2Ljk5MykiIHJ4PSIxNS4xNSIgcnk9IjE3LjA0Ii8+PC9nPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjMDAwIj48cGF0aCBkPSJNMzY2LjQgMTAwLjY0YzE4LjU0LTExLjA1IDM2LjU0LTIyLjU3IDQ2Ljk0LTQwLjczIDEuMzUgMTIuMy0uMSAyOC41LTEwLjg2IDQzLjUiLz48cGF0aCBkPSJNMzg5LjQ0IDEwMC42NGMxOC41NC0xMS4wNSAzNi41NC0yMi41NyA0Ni45NC00MC43MyAxLjM1IDEyLjMtLjEgMjguNS0xMC44NiA0My41Ii8+PHBhdGggZD0iTTQxMi40OCAxMDAuNjRDNDMxLjAyIDg5LjYgNDQ5IDc4LjA3IDQ1OS40MiA1OS45YzEuMzUgMTIuMy0uMSAyOC40NC0xMC44NiA0My40NiIvPjwvZz48cGF0aCBkPSJNNDA5LjI0IDg3LjA1Yy04MS44NS4yNy0xNTYuNDQgMTA0LjQzLTE4MC40OCAyMTYuNDZhMTk5LjYgMTk5LjYuMCAwIDAgNTEuODMgNzMuMWM3LjktMTU3LjkgNDQuNy0yNjYuOSAxMTIuNS0yMDcuOCAxMC4xIDguOSAxNS4yIDEyLjkgMjAuMSAxMi42IDQuOS4zIDEwLTMuOCAyMC4xLTEyLjYgNjcuNy01OS4xIDEwNC42IDUwIDExMi41IDIwNy44YTE5OS42IDE5OS42LjAgMCAwIDUxLjgtNzIuOWMtMjQtMTEyLTk4LjYtMjE2LjMtMTgwLjUtMjE2LjUtMS4zOC4wLTIuNy4xLTQgLjEtMS4zOC4wLTIuNy0uMS00LS4xeiIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0iIzk1OTU5NSIgZD0iTTEzMS4zIDY5Mi42aDExLjRsLTIwLjkyLTEzOC4zSDEwOS41TDg4LjYgNjkyLjZIMWUybDUuODgtNDUuOGgxOS4zNnptLTI0LjItNTQuOTYgOC40Ni02NC4zIDguNDcgNjQuM3ptODIuMDUtODMuMzRIMTQ4djEwLjczaDE0Ljg3VjY5Mi42aDExLjRWNTY1LjA0aDE0Ljg4eiIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSU7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonRXZlciBBZnRlciwgTm9ybWFsJzt0ZXh0LWFsaWduOnN0YXJ0IiBmb250LWZhbWlseT0iRXZlciBBZnRlciIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCIvPjxwYXRoIGZpbGw9IiM5NTk1OTUiIGQ9Ik0yMjguNjUgNTU0LjNIMTg3LjV2MTAuNzNoMTQuODdWNjkyLjZoMTEuNFY1NjUuMDRoMTQuODh6bTQ0LjkuMHY2MS4zOEgyNDUuMlY1NTQuM2gtMTEuNDJ2MTM4LjNoMTEuNHYtNjYuMzhoMjguMzZ2NjYuNGgxMS4yM1Y1NTQuM3ptMzcuOCAxMzguM2gtMTEuNFY1NTQuM2gxMS40em01Ny42NS4waDExLjRsLTIwLjkyLTEzOC4zSDM0Ny4ybC0yMC45IDEzOC4zaDExLjRsNS44Ny00NS44aDE5LjM2em0tMjQuMjItNTQuOTYgOC40Ny02NC4zIDguNDcgNjQuM3oiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0V2ZXIgQWZ0ZXIsIE5vcm1hbCc7dGV4dC1hbGlnbjpzdGFydCIgZm9udC1mYW1pbHk9IkV2ZXIgQWZ0ZXIiIGxldHRlci1zcGFjaW5nPSIwIiB3b3JkLXNwYWNpbmc9IjAiLz48cGF0aCBkPSJNNTE3LjI2IDU2NS4wM1Y1NTQuM2gtMzEuNjR2MTM4LjNoMzEuNjR2LTEwLjdoLTIwLjIzdi01NS43aDE4Ljg1di0xMC41NGgtMTguODVWNTY1em0xMS4yNC0xMC43M3YxMzguM2gxMS4zNVY1NTQuM0g1MjguNXptMzkuNzYuMHY1MS44N2wtLjEtLjE3djIwLjc1bC4xLjE3djY1LjdoMTEuMjRWNTU0LjNoLTExLjI0em00MC4yNC4waC0xMy44djEzOC4zaDEzLjgzcTIyLjMuMCAyOS41Ny0yMi40NiA0LjE1LTEzLjMyIDQuMTUtNDYuNjh0LTQuMTUtNDYuNjdxLTcuMjYtMjIuNS0yOS41Ni0yMi41em0tMS4yIDEyNy42aC0xLjJWNTY1LjAyaDEuMnExNS43My4wIDIwLjU3IDE4LjUgMy4xIDExLjA2IDMuMSAzOS45My4wIDI4Ljg3LTMuMSAzOS45My00Ljg0IDE4LjUtMjAuNTcgMTguNXptNjAuMjQuMFY1NTQuM2gtMTEuNHYxMzguM2gzMS42MnYtMTAuN3ptNjIuMS0xMTYuODdWNTU0LjNINjk4djEzOC4zaDMxLjYzdi0xMC43SDcwOS40di01NS43aDE4Ljg1di0xMC41NEg3MDkuNFY1NjV6bTYwLjUgMTI3LjU3cS0xNC4xNy0zNy0yMC43NC03Mi4yNSAxNC4xNy0xMC4zNyAxNC4xNy0zMy44OC4wLTMyLjE2LTI3LjQ4LTMyLjE2aC0xNS4zdjEzOC4zaDExLjR2LTY1cTIuMi0uNSA2LjktMiA3IDMzLjQgMTguMyA2Ny4xem0tMzcuODYtNzguNDd2LTQ5LjFoMi42cTEwLjU0LjAgMTQuNyA1Ljg4IDMuMjcgNC43IDMuMjcgMTUuNi4wIDE1LjgtOC4xMiAyMy40LTUuMiA0LjktMTAuMiA0LjktMS4zOC4wLTIuMjUtLjV6IiBzdHlsZT0ibGluZS1oZWlnaHQ6MTI1JTstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidFdmVyIEFmdGVyLCBOb3JtYWwnO3RleHQtYWxpZ246c3RhcnQiIGZvbnQtZmFtaWx5PSJFdmVyIEFmdGVyIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEwIiBkPSJNNTM1LjA2IDU1NS43MmwzOCAxMzUuNTQiLz48cGF0aCBmaWxsPSIjOTU5NTk1IiBkPSJNLjEgNTU0LjZ2MTM4aDExLjM4VjU3NS42NWM2LjYgMTIuNyAxMy43OCAyNS45IDE5LjY3IDM2Ljc4bDUuNyAxMCAuMDItLjAydi4xbDUuNzItMTBjNi41LTEyIDEzLjUtMjUuMiAxOS43LTM2Ljh2MTE2LjloMTEuMnYtMTM4SDYyLjNDNTUgNTY4IDQ3LjUgNTgyIDQwLjggNTk0LjRsLTQgNy40NWMtOS4xLTE3LjA1LTE3LjMtMzIuMDctMjUuNC00Ny4yM3oiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0V2ZXIgQWZ0ZXIsIE5vcm1hbCc7dGV4dC1hbGlnbjpzdGFydCIgZm9udC1zaXplPSIxNzIuNTIiIGZvbnQtZmFtaWx5PSJFdmVyIEFmdGVyIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0iIzk1OTU5NSIgZD0iTTM5OC44NCA2OTEuNjZjLTMuNzItMS4zMy04Ljk2LTUtMTEuNzYtOC4yLTEuNC0xLjYtMi41LTMuMjUtMi41NC0zLjYgNC4yMy02LjA1IDQuNDItNi4zMiA1LjMtNy40NSAzLjMgMy40IDYuNyA2LjggMTAuOSA5LjEgNC45OCAxLjggMTEuMjQgMi4xIDE1LjMyLS4zIDUuNTItMy4zIDguNjItOC44IDkuNjctMTcuMyAxLjQ2LTExLjctMi42NS0yMi41LTEzLjI1LTM0LjgtMi45LTMuNC03LjEzLTguMy05LjM4LTEwLjktNC44Ni01LjYtMTAtMTMuNC0xMS43Ny0xOC41LTQuMy0xMi41LTMuODctMjEuMy0uNjYtMzAuMiAyLjEyLTUuODMgNC45LTkuNiA5LjA4LTEyLjIgOC4yNi01LjE0IDE5LjI4LTQuMjQgMjcuMzYgMi4yNS45LjY4IDEuNyAxLjQ0IDIuNSAyLjU3LS40Ljc3LTMuNyA4Ljc3LTQuMyA4Ljc3LS44LS42Ni0uOC0uNi0xLjYtMS4zLS43LS43LTIuNy0yLjEtNC40LTMuMTQtNC40LTIuMS04LjUtMy4xLTEyLjktLjctNi4xIDMuNDQtOS4yIDExLjctNy45IDIxLjQgMS4xIDguMzQgNC41IDE0IDE3LjkgMjkuNSAxMy4wOCAxNS4yIDE2Ljk1IDIyLjMgMTguOSAzNC42My45IDUuNy45IDEwLjA0LjAgMTYuNi0xLjY1IDEyLjMzLTcuMiAyMC41LTE2LjIgMjMuOTYtMy4zIDEuMy0xNi40NSAxLjMtMjAuMDMuMDR6Ii8+PC9zdmc+></a><p>Backend Engineer at trivago. Likes just-in-time compilers and hot chocolate. <a href=/about>About me.</a><nav><ul><li><a href=/>Home</a><li><a target=_blank rel=noopener href=https://twitter.com/matthiasendler>Twitter</a><li><a target=_blank rel=noopener href=https://feedly.com/i/subscription/feed/https://matthias-endler.de/rss.xml>RSS</a></ul></nav></header><main role=main><div class=published-date><i>Published on 5th of November 2018</i></div><h1>The Unreasonable Effectiveness of Excel Macros</h1><p>I never was a big fan of internships, partially because all the exciting
 companies were far away from my little village in Bavaria and partially because
-I was too shy to apply.</p>
-<p>Only once I applied for an internship in Ireland as part of a school program.
+I was too shy to apply.<p>Only once I applied for an internship in Ireland as part of a school program.
 Our teacher assigned the jobs and so my friend got one at Apple and I ended up
-at a medium-sized IT distributor — let's call them PcGo.</p>
-<p>Judging by the website, the company looked quite impressive, but in reality, it
+at a medium-sized IT distributor — let's call them PcGo.<p>Judging by the website, the company looked quite impressive, but in reality, it
 was just a secluded, grey warehouse in the rainy industrial area of Cork. Upon
 arrival, I was introduced to my colleague Evgeny, who was the main (and only)
 employee responsible for assembling desktop computers. From what I can tell, he
@@ -92,32 +14,23 @@ through the narrow streets of Cork we talked and laughed, but all of a sudden I
 heard a loud bang. I looked through the rear mirror only to find that there was
 no rear mirror anymore. Turns out he bumped into another car, and the thing went
 off. Evgeny didn't mind. In a thick Eastern-European accent he remarked &quot;Lost
-three mirrors before already,&quot; and kept driving.</p>
-<p>In my second week, I had a visit from my boss. Apparently, I was done with the
+three mirrors before already,&quot; and kept driving.<p>In my second week, I had a visit from my boss. Apparently, I was done with the
 workload that they planned for my three-week internship. I was used to
-assembling and installing computers, which explains why.</p>
-<p>To keep me busy, they put together another task. On an old Windows 98 computer
+assembling and installing computers, which explains why.<p>To keep me busy, they put together another task. On an old Windows 98 computer
 in the back, he pointed the browser to silverpages.ie, searched for &quot;computer&quot;
 and after a while we looked at an endless list of addresses of Irish companies
 having &quot;something to do with computers.&quot; Each entry consisted of the expected
 fields: the company name, the address, the phone number, the website (if any)
-and a list of keywords.</p>
-<p>My boss said that they needed an overview of all competing vendors. He carefully
+and a list of keywords.<p>My boss said that they needed an overview of all competing vendors. He carefully
 selected a field from an entry, copied it and pasted it into an Excel sheet. He
 did the same for the remaining fields. &quot;That's it!&quot;, he said with a fake smile.
-We both knew that this would mean two boring weeks for me.</p>
-<p><em>They wanted to keep me busy by letting me manually scrape the entirety of a web database.</em></p>
-<p>I could have taken that as an insult, but instead, I looked at it as a
-challenge.</p>
-<p>I noticed that the page number on silverpages.ie could be controlled by a <code>GET</code>
-parameter.</p>
-<p>&quot;Can I write a program that does the scraping?&quot; My boss was noticeably puzzled.
+We both knew that this would mean two boring weeks for me.<p><em>They wanted to keep me busy by letting me manually scrape the entirety of a web database.</em><p>I could have taken that as an insult, but instead, I looked at it as a
+challenge.<p>I noticed that the page number on silverpages.ie could be controlled by a <code>GET</code>
+parameter.<p>&quot;Can I write a program that does the scraping?&quot; My boss was noticeably puzzled.
 &quot;Uhm... you can do whatever you want, but you're not allowed to install any
-additional software!&quot;. With that, he was off.</p>
-<p>Judging from the installed programs, I wasn't left with many choices: Excel or
+additional software!&quot;. With that, he was off.<p>Judging from the installed programs, I wasn't left with many choices: Excel or
 Minesweeper. I knew that Excel's Visual Basic macros were quite powerful, but I
-wasn't sure if I could scrape a full website with it.</p>
-<p>After a while, I detected a feature to download a website into an Excel sheet
+wasn't sure if I could scrape a full website with it.<p>After a while, I detected a feature to download a website into an Excel sheet
 (what a glorious functionality). This worked perfectly, so all I had to do was
 record a macro to create a temporary sheet for each page, copy all important
 fields into a &quot;master slide&quot; and then get rid of the temporary sheet. I recorded
@@ -126,69 +39,14 @@ to modify the URL in a loop and cleaning up the macro. I pressed the &quot;run m
 button and then I sat there waiting. The computer was running at full speed. My
 biggest fear was that the program would crash or that the computer would run out
 of memory. I refrained from playing minesweeper on it, so I mostly played pool
-or chatted with Evgeny.</p>
-<p>When I came to the office the next morning, my program was done. To my surprise, it scraped the entirety
+or chatted with Evgeny.<p>When I came to the office the next morning, my program was done. To my surprise, it scraped the entirety
 of SilverPages, and there were many thousands of entries in the list. I sent the
-document to my boss via E-Mail and then got back to playing minesweeper.</p>
-<p>An hour later, three guys with suits were standing behind me. I had to show them
+document to my boss via E-Mail and then got back to playing minesweeper.<p>An hour later, three guys with suits were standing behind me. I had to show them
 the list again. They couldn't believe I did that on my own, so I showed them the
-tool to scrape the data. For them, I had some sort of superpower.</p>
-<p>They left without giving me another task; I was free to do whatever I wanted for
+tool to scrape the data. For them, I had some sort of superpower.<p>They left without giving me another task; I was free to do whatever I wanted for
 the remaining two weeks. I went on to write an inventory tool for them, which
 they could also manage via Excel. It was just a glorious Excel form for a
 spreadsheet that they maintained manually. I spent two weeks of my summer
-vacation to finish that tool because they said they would pay me for that, which, of course, they didn't :).</p>
-<h2>Lessons learned</h2>
-<ul>
-<li>Never underestimate the power of Excel macros.</li>
-<li>If you have a boring task at hand, make it a challenge for yourself by adding
-a handicap.</li>
-</ul>
-<ul class="links">
-</ul>
-        </main>
-<footer><form style="border:1px solid #ccc;padding:30px;text-align:center;" action="https://tinyletter.com/mre" method="post" target="popupwindow" 
-onsubmit="window.open('https://tinyletter.com/mre', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-    <p><label for="tlemail">Subscribe to newsletter <i style="color: #aaa">(one mail per month)</i></label></p>
-    <p>
-        <input class="field email" type="email" name="email" id="tlemail" placeholder="E-Mail Address"/>
-        <input type="hidden" value="1" name="embed"/><input class="field submit" type="submit" value="Subscribe" />
-    </p>
-    <p>
-    💡 I also <a target="_blank" rel="noopener" href="https://twitter.com/matthiasendler">tweet</a> new articles and have an <a target="_blank" rel="noopener" href="https://feedly.com/i/subscription/feed/https://matthias-endler.de/rss.xml">RSS feed</a>.
-    </p>
-</form>
-    <h3>Continue reading</h3>
-    <ul>
-        
-        
-            <li><a href="/2018/cargo-inspect">cargo-inspect</a></li>
-        
-        
-        
-        
-        
-            <li><a href="/2018/keyboard">Switching from a German to a US Keyboard Layout - Is It Worth It?</a></li>
-        
-        
-        
-            <li><a href="/2018/fastcat">fastcat - A Faster `cat` Implementation Using Splice</a></li>
-        
-        
-        
-            <li><a href="/2018/github">That Octocat on the Wall</a></li>
-        
-        
-    </ul>
-</footer>
-
-<script type="text/javascript">
-if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
-    window.ga=window.ga||function(){(ga.q = ga.q || []).push(arguments)};ga.l=+new Date;
-    ga('create', 'UA-693428-1', 'auto');
-    ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-  </body>
-</html>
+vacation to finish that tool because they said they would pay me for that, which, of course, they didn't :).<h2>Lessons learned</h2><ul><li>Never underestimate the power of Excel macros.<li>If you have a boring task at hand, make it a challenge for yourself by adding
+a handicap.</ul><ul class=links></ul></main><footer><form style="border:1px solid #ccc;padding:30px;text-align:center" action=https://tinyletter.com/mre method=post target=popupwindow onsubmit="window.open('https://tinyletter.com/mre','popupwindow','scrollbars=yes,width=800,height=600');return true"><p><label for=tlemail>Subscribe to newsletter <i style=color:#aaa>(one mail per month)</i></label><p><input class="field email" type=email name=email id=tlemail placeholder="E-Mail Address">
+<input type=hidden value=1 name=embed><input class="field submit" type=submit value=Subscribe><p>💡 I also <a target=_blank rel=noopener href=https://twitter.com/matthiasendler>tweet</a> new articles and have an <a target=_blank rel=noopener href=https://feedly.com/i/subscription/feed/https://matthias-endler.de/rss.xml>RSS feed</a>.</form><h3>Continue reading</h3><ul><li><a href=/2018/cargo-inspect>cargo-inspect</a><li><a href=/2018/keyboard>Switching from a German to a US Keyboard Layout - Is It Worth It?</a><li><a href=/2018/fastcat>fastcat - A Faster `cat` Implementation Using Splice</a><li><a href=/2018/github>That Octocat on the Wall</a></ul></footer><script>if(location.hostname!=="localhost"&&location.hostname!=="127.0.0.1"){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-693428-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script>

@@ -1,219 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <style>
-    ﻿html,body,div,form,fieldset,legend,label,h1{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}th,td{text-align:left;vertical-align:top}h1,h2,h3,h4,h5,h6,th,td,caption{font-weight:normal}img{border:0;max-width:100%}h1{font-size:1.87em}h2{font-size:1.2em;margin-bottom:10px;margin-top:0}h3{margin-top:50px}body{background-color:#fff;color:rgba(0,0,0,.8);font-family:medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;-moz-font-feature-settings:"liga" on;font-feature-settings:"liga" on;font-size:1.25em;-moz-osx-font-smoothing:grayscale;font-style:normal;font-weight:400;letter-spacing:-0.003em;line-height:1.58;text-rendering:optimizeLegibility}article{margin-top:44px}pre{-moz-font-feature-settings:"liga" off;font-feature-settings:"liga" off;font-size:.92em;-moz-osx-font-smoothing:auto;-webkit-font-smoothing:subpixel-antialiased;padding:20px;overflow:auto}::-moz-selection{background:#000;color:#fff}::selection{background:#000;color:#fff}body{margin-top:8%}header{font-size:.78em;margin:0 auto 2em;max-width:220px;text-align:center}a:link,a:visited,a:hover,a:active{color:#af403c;text-decoration:none}a:hover{text-decoration:underline}nav{text-align:center}nav ul{display:inline-block;text-align:initial;padding-left:0}nav li:not(:first-child):before{content:" · "}nav li{list-style:none;display:inline}.logo{background-size:cover;display:inline-block;height:150px;width:171px}.published-date{color:#888;font-size:.8em}blockquote{border-left:4px solid #ededee;font-style:italic;margin:4px 10px;padding:3px 20px}code{background-color:#f9f9fa;border:1px solid #ededee;border-radius:6px;display:inline-block;font-family:"Courier New","Courier",monospace;-moz-font-feature-settings:"liga" off;font-feature-settings:"liga" off;font-size:16px;-moz-osx-font-smoothing:auto;-webkit-font-smoothing:subpixel-antialiased;max-width:100%;overflow-x:auto;padding:0 5px;vertical-align:middle;word-wrap:normal;box-shadow:0 1px 1px rgba(0,0,0,.125)}.button{background-color:#af403c;border-radius:10px;color:#fff;margin:40px auto;padding:10px;text-align:center}.button:hover{background-color:red}.talk{margin-top:80px}.video-container{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden;margin-bottom:40px}.video-container iframe,.video-container object,.video-container embed{position:absolute;top:0;left:0;width:100%;height:100%}figure{font-size:.9em;font-style:italic;margin:0 0 40px;padding:0;text-align:center;text-indent:0}figcaption{margin-top:10px}.loader{position:relative;overflow:hidden;width:auto}.loader object{position:absolute}.loader img,.loader object{display:block;top:0;left:0;width:100%}object{position:relative;float:left;display:block}object::after{position:absolute;top:0;left:0;display:block;width:1000px;height:1000px;content:"";background:#efefef}.frozen{-webkit-filter:blur(8px);-moz-filter:blur(8px);-o-filter:blur(8px);-ms-filter:blur(8px);filter:blur(8px);transform:scale(1.04);animation:.2s ease-in .4s 1 forwards fade;width:100%}@keyframes fade{0%{opacity:1}100%{opacity:0}}@media(max-width: 520px){body{padding:0 20px}pre{font-size:.85em;padding:5px}h1{font-size:1.6em}}@media(min-width: 520px){body{margin:10% auto 0;margin-top:120px;width:480px}h1{font-size:1.6em}}@media(min-width: 1024px){body{width:850px}header{float:left;width:210px}main,footer{margin-left:260px;margin-bottom:40px}}footer{margin-bottom:40px}.links{list-style:none;display:inline}.field{padding:10px;font-size:.8em}.email{width:300px}.submit{border:none;padding:12px;background-color:#eee}
-
-    </style>
-    <link rel="dns-prefetch" href="//www.google-analytics.com/" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=m2llJQPQq8">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=m2llJQPQq8">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=m2llJQPQq8">
-    <link rel="manifest" href='data:application/manifest+json,
-    { "short_name": "Endler",
-    "icons": [
-        {
-            "src": "/android-chrome-192x192.png?v=m2llJQPQq8",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/android-chrome-512x512.png?v=m2llJQPQq8",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ]
-    }' />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=m2llJQPQq8" color="#5bbad5">
-    <link rel="shortcut icon" href="/favicon.ico?v=m2llJQPQq8">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
-
-
-<meta property="og:title" content="Being a Professional Programmer" />
-<meta property="og:type" content="website" />
-<meta property="og:description" content="When I was around 12, I set myself the goal ..." />
-<meta property="og:url" content="https://matthias-endler.de/2017/professional-programming" />
-<meta property="og:image" content="https://matthias-endler.de/img/social/default.png" />
-
-<meta name="twitter:title" content="Being a Professional Programmer">
-<meta name="twitter:description" content="When I was around 12, I set myself the goal ...">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@matthiasendler">
-<meta name="twitter:creator" content="@matthiasendler">
-<meta name="twitter:image" content="https://matthias-endler.de/img/social/default.png">
-
-    
-      
-        <title>Being a Professional Programmer | Matthias Endler</title>
-      
-
-    <meta name="author" content="Matthias Endler">
-    <meta name="description" content="Personal website of Matthias Endler, a Software Engineer interested in low-level programming and backend development. PHP, Python, Go, Rust."/>
-  </head>
-  <body>
-        <header>
-            <a class="logo" href="/"><img alt="Home" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3OTAuMjMgNjkyLjYxIj48Y2lyY2xlIGN4PSI0MTMuMjQiIGN5PSIyMjcuNyIgcj0iMjE5LjY4IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMTYuMDMiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCIvPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjYTE2MjAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCI+PHBhdGggZmlsbD0iIzMzMWYwMCIgc3Ryb2tlLXdpZHRoPSIxLjk3IiBkPSJNNDgzLjc1IDI2NS43NGwtNjcuMDcgNDAuMTQtNzQuMjMtMzkuNTMgMTQxLjMtLjZ6IiBzdHlsZT0ibGluZS1oZWlnaHQ6MTI1JSIvPjxwYXRoIGZpbGw9IiNlZmJhMDAiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTQ4Ni42NSAyNjUuOTJsLTcwLjIgMzQuMDItNzYuOS0zMy45IDE0Ny4xLS4xMnoiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2OC42NCAyLjkxNCkgc2NhbGUoLjY1Nzk1KSIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIj48ZWxsaXBzZSBjeD0iLTYwOC43NSIgY3k9Ii0xNjMuMTQiIHRyYW5zZm9ybT0ibWF0cml4KDEuMjQ4OTcgLS4xMTM3IC4xMDcgMS4xNzUxNyAxMDk1Ljg3IDQ2Ni43KSIgcng9IjI1LjI1IiByeT0iMjgiLz48ZWxsaXBzZSBjeD0iMzMxLjM2IiBjeT0iMzQ3Ljk5IiBmaWxsPSIjZmZmIiB0cmFuc2Zvcm09Im1hdHJpeCguNTIyMTMgMCAwIC41NDc0NSAxNTguNzU3IDEzNi40MzIpIiByeD0iMTUuMTUiIHJ5PSIxNy4wNCIvPjwvZz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNjguNjQgMi45MTQpIHNjYWxlKC42NTc5NSkiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCI+PGVsbGlwc2UgY3g9Ii02MDguNzUiIGN5PSItMTYzLjE0IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjI0ODk3IC0uMTEzNyAuMTA3IDEuMTc1MTcgMTIwMy4yIDQ2Ny42NDYpIiByeD0iMjUuMjUiIHJ5PSIyOCIvPjxlbGxpcHNlIGN4PSIzMzEuMzYiIGN5PSIzNDcuOTkiIGZpbGw9IiNmZmYiIHRyYW5zZm9ybT0ibWF0cml4KC41MjIxMyAwIDAgLjU0NzQ1IDI2NS4zNTggMTM2Ljk5MykiIHJ4PSIxNS4xNSIgcnk9IjE3LjA0Ii8+PC9nPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjMDAwIj48cGF0aCBkPSJNMzY2LjQgMTAwLjY0YzE4LjU0LTExLjA1IDM2LjU0LTIyLjU3IDQ2Ljk0LTQwLjczIDEuMzUgMTIuMy0uMSAyOC41LTEwLjg2IDQzLjUiLz48cGF0aCBkPSJNMzg5LjQ0IDEwMC42NGMxOC41NC0xMS4wNSAzNi41NC0yMi41NyA0Ni45NC00MC43MyAxLjM1IDEyLjMtLjEgMjguNS0xMC44NiA0My41Ii8+PHBhdGggZD0iTTQxMi40OCAxMDAuNjRDNDMxLjAyIDg5LjYgNDQ5IDc4LjA3IDQ1OS40MiA1OS45YzEuMzUgMTIuMy0uMSAyOC40NC0xMC44NiA0My40NiIvPjwvZz48cGF0aCBkPSJNNDA5LjI0IDg3LjA1Yy04MS44NS4yNy0xNTYuNDQgMTA0LjQzLTE4MC40OCAyMTYuNDZhMTk5LjYgMTk5LjYgMCAwIDAgNTEuODMgNzMuMWM3LjktMTU3LjkgNDQuNy0yNjYuOSAxMTIuNS0yMDcuOCAxMC4xIDguOSAxNS4yIDEyLjkgMjAuMSAxMi42IDQuOS4zIDEwLTMuOCAyMC4xLTEyLjYgNjcuNy01OS4xIDEwNC42IDUwIDExMi41IDIwNy44YTE5OS42IDE5OS42IDAgMCAwIDUxLjgtNzIuOWMtMjQtMTEyLTk4LjYtMjE2LjMtMTgwLjUtMjE2LjUtMS4zOCAwLTIuNy4xLTQgLjEtMS4zOCAwLTIuNy0uMS00LS4xeiIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0iIzk1OTU5NSIgZD0iTTEzMS4zIDY5Mi42aDExLjRsLTIwLjkyLTEzOC4zSDEwOS41TDg4LjYgNjkyLjZIMTAwbDUuODgtNDUuOGgxOS4zNnptLTI0LjItNTQuOTZsOC40Ni02NC4zIDguNDcgNjQuM3ptODIuMDUtODMuMzRIMTQ4djEwLjczaDE0Ljg3VjY5Mi42aDExLjRWNTY1LjA0aDE0Ljg4eiIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSU7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonRXZlciBBZnRlciwgTm9ybWFsJzt0ZXh0LWFsaWduOnN0YXJ0IiBmb250LWZhbWlseT0iRXZlciBBZnRlciIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCIvPjxwYXRoIGZpbGw9IiM5NTk1OTUiIGQ9Ik0yMjguNjUgNTU0LjNIMTg3LjV2MTAuNzNoMTQuODdWNjkyLjZoMTEuNFY1NjUuMDRoMTQuODh6bTQ0LjkgMHY2MS4zOEgyNDUuMlY1NTQuM2gtMTEuNDJ2MTM4LjNoMTEuNHYtNjYuMzhoMjguMzZ2NjYuNGgxMS4yM1Y1NTQuM3ptMzcuOCAxMzguM2gtMTEuNFY1NTQuM2gxMS40em01Ny42NSAwaDExLjRsLTIwLjkyLTEzOC4zSDM0Ny4ybC0yMC45IDEzOC4zaDExLjRsNS44Ny00NS44aDE5LjM2em0tMjQuMjItNTQuOTZsOC40Ny02NC4zIDguNDcgNjQuM3oiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0V2ZXIgQWZ0ZXIsIE5vcm1hbCc7dGV4dC1hbGlnbjpzdGFydCIgZm9udC1mYW1pbHk9IkV2ZXIgQWZ0ZXIiIGxldHRlci1zcGFjaW5nPSIwIiB3b3JkLXNwYWNpbmc9IjAiLz48cGF0aCBkPSJNNTE3LjI2IDU2NS4wM1Y1NTQuM2gtMzEuNjR2MTM4LjNoMzEuNjR2LTEwLjdoLTIwLjIzdi01NS43aDE4Ljg1di0xMC41NGgtMTguODVWNTY1em0xMS4yNC0xMC43M3YxMzguM2gxMS4zNVY1NTQuM0g1MjguNXptMzkuNzYgMHY1MS44N2wtLjEtLjE3djIwLjc1bC4xLjE3djY1LjdoMTEuMjRWNTU0LjNoLTExLjI0em00MC4yNCAwaC0xMy44djEzOC4zaDEzLjgzcTIyLjMgMCAyOS41Ny0yMi40NiA0LjE1LTEzLjMyIDQuMTUtNDYuNjh0LTQuMTUtNDYuNjdxLTcuMjYtMjIuNS0yOS41Ni0yMi41em0tMS4yIDEyNy42aC0xLjJWNTY1LjAyaDEuMnExNS43MyAwIDIwLjU3IDE4LjUgMy4xIDExLjA2IDMuMSAzOS45MyAwIDI4Ljg3LTMuMSAzOS45My00Ljg0IDE4LjUtMjAuNTcgMTguNXptNjAuMjQgMFY1NTQuM2gtMTEuNHYxMzguM2gzMS42MnYtMTAuN3ptNjIuMS0xMTYuODdWNTU0LjNINjk4djEzOC4zaDMxLjYzdi0xMC43SDcwOS40di01NS43aDE4Ljg1di0xMC41NEg3MDkuNFY1NjV6bTYwLjUgMTI3LjU3cS0xNC4xNy0zNy0yMC43NC03Mi4yNSAxNC4xNy0xMC4zNyAxNC4xNy0zMy44OCAwLTMyLjE2LTI3LjQ4LTMyLjE2aC0xNS4zdjEzOC4zaDExLjR2LTY1cTIuMi0uNSA2LjktMiA3IDMzLjQgMTguMyA2Ny4xem0tMzcuODYtNzguNDd2LTQ5LjFoMi42cTEwLjU0IDAgMTQuNyA1Ljg4IDMuMjcgNC43IDMuMjcgMTUuNiAwIDE1LjgtOC4xMiAyMy40LTUuMiA0LjktMTAuMiA0LjktMS4zOCAwLTIuMjUtLjV6IiBzdHlsZT0ibGluZS1oZWlnaHQ6MTI1JTstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidFdmVyIEFmdGVyLCBOb3JtYWwnO3RleHQtYWxpZ246c3RhcnQiIGZvbnQtZmFtaWx5PSJFdmVyIEFmdGVyIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEwIiBkPSJNNTM1LjA2IDU1NS43MmwzOCAxMzUuNTQiLz48cGF0aCBmaWxsPSIjOTU5NTk1IiBkPSJNLjEgNTU0LjZ2MTM4aDExLjM4VjU3NS42NWM2LjYgMTIuNyAxMy43OCAyNS45IDE5LjY3IDM2Ljc4bDUuNyAxMCAuMDItLjAydi4xbDUuNzItMTBjNi41LTEyIDEzLjUtMjUuMiAxOS43LTM2Ljh2MTE2LjloMTEuMnYtMTM4SDYyLjNDNTUgNTY4IDQ3LjUgNTgyIDQwLjggNTk0LjRsLTQgNy40NWMtOS4xLTE3LjA1LTE3LjMtMzIuMDctMjUuNC00Ny4yM3oiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0V2ZXIgQWZ0ZXIsIE5vcm1hbCc7dGV4dC1hbGlnbjpzdGFydCIgZm9udC1zaXplPSIxNzIuNTIiIGZvbnQtZmFtaWx5PSJFdmVyIEFmdGVyIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0iIzk1OTU5NSIgZD0iTTM5OC44NCA2OTEuNjZjLTMuNzItMS4zMy04Ljk2LTUtMTEuNzYtOC4yLTEuNC0xLjYtMi41LTMuMjUtMi41NC0zLjYgNC4yMy02LjA1IDQuNDItNi4zMiA1LjMtNy40NSAzLjMgMy40IDYuNyA2LjggMTAuOSA5LjEgNC45OCAxLjggMTEuMjQgMi4xIDE1LjMyLS4zIDUuNTItMy4zIDguNjItOC44IDkuNjctMTcuMyAxLjQ2LTExLjctMi42NS0yMi41LTEzLjI1LTM0LjgtMi45LTMuNC03LjEzLTguMy05LjM4LTEwLjktNC44Ni01LjYtMTAtMTMuNC0xMS43Ny0xOC41LTQuMy0xMi41LTMuODctMjEuMy0uNjYtMzAuMiAyLjEyLTUuODMgNC45LTkuNiA5LjA4LTEyLjIgOC4yNi01LjE0IDE5LjI4LTQuMjQgMjcuMzYgMi4yNS45LjY4IDEuNyAxLjQ0IDIuNSAyLjU3LS40Ljc3LTMuNyA4Ljc3LTQuMyA4Ljc3LS44LS42Ni0uOC0uNi0xLjYtMS4zLS43LS43LTIuNy0yLjEtNC40LTMuMTQtNC40LTIuMS04LjUtMy4xLTEyLjktLjctNi4xIDMuNDQtOS4yIDExLjctNy45IDIxLjQgMS4xIDguMzQgNC41IDE0IDE3LjkgMjkuNSAxMy4wOCAxNS4yIDE2Ljk1IDIyLjMgMTguOSAzNC42My45IDUuNy45IDEwLjA0IDAgMTYuNi0xLjY1IDEyLjMzLTcuMiAyMC41LTE2LjIgMjMuOTYtMy4zIDEuMy0xNi40NSAxLjMtMjAuMDMuMDR6Ii8+PC9zdmc+" />
-            </a>
-            <p>
-              Backend Engineer at trivago. Likes just-in-time compilers and hot chocolate. <a href="/about">About me.</a>
-            </p>
-            <nav>
-              <ul>
-                <li><a href="/">Home</a></li>
-                <li><a target="_blank" rel="noopener" href="https://twitter.com/matthiasendler">Twitter</a></li>
-                <li><a target="_blank" rel="noopener" href="https://feedly.com/i/subscription/feed/https://matthias-endler.de/rss.xml">RSS</a></li>
-              </ul>
-            </nav>
-        </header>
-        <main role="main">
-            
-              <div class="published-date">
-                <i>Published on 18th of May 2017</i>
-              </div>
-            
-              <h1>Being a Professional Programmer</h1>
-            <p>When I was around 12, I set myself the goal to become a professional programmer.<br />
-I can tell, because at this time I made the conscious decision to use my right hand to control the mouse — even though I'm left-handed.</p>
-<p>My reasoning was, that if I ever had to help out a colleague with a computer problem I sure did not want to move her mouse to the other side before getting started.  That would be awkward.
-(Of course I did not foresee the advent of the wireless mouse... As a matter of fact, I still use the right hand out of habit.)</p>
-<p>One thing I always wanted to know is how a typical workday of a programmer looked like.
+<!doctype html><html lang=en><style>﻿html,body,div,form,fieldset,legend,label,h1{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}th,td{text-align:left;vertical-align:top}h1,h2,h3,h4,h5,h6,th,td,caption{font-weight:400}img{border:0;max-width:100%}h1{font-size:1.87em}h2{font-size:1.2em;margin-bottom:10px;margin-top:0}h3{margin-top:50px}body{background-color:#fff;color:rgba(0,0,0,.8);font-family:medium-content-serif-font,Georgia,Cambria,times new roman,Times,serif;-moz-font-feature-settings:"liga" on;font-feature-settings:"liga" on;font-size:1.25em;-moz-osx-font-smoothing:grayscale;font-style:normal;font-weight:400;letter-spacing:-.003em;line-height:1.58;text-rendering:optimizeLegibility}article{margin-top:44px}pre{-moz-font-feature-settings:"liga" off;font-feature-settings:"liga" off;font-size:.92em;-moz-osx-font-smoothing:auto;-webkit-font-smoothing:subpixel-antialiased;padding:20px;overflow:auto}::-moz-selection{background:#000;color:#fff}::selection{background:#000;color:#fff}body{margin-top:8%}header{font-size:.78em;margin:0 auto 2em;max-width:220px;text-align:center}a:link,a:visited,a:hover,a:active{color:#af403c;text-decoration:none}a:hover{text-decoration:underline}nav{text-align:center}nav ul{display:inline-block;text-align:initial;padding-left:0}nav li:not(:first-child):before{content:" · "}nav li{list-style:none;display:inline}.logo{background-size:cover;display:inline-block;height:150px;width:171px}.published-date{color:#888;font-size:.8em}blockquote{border-left:4px solid #ededee;font-style:italic;margin:4px 10px;padding:3px 20px}code{background-color:#f9f9fa;border:1px solid #ededee;border-radius:6px;display:inline-block;font-family:courier new,courier,monospace;-moz-font-feature-settings:"liga" off;font-feature-settings:"liga" off;font-size:16px;-moz-osx-font-smoothing:auto;-webkit-font-smoothing:subpixel-antialiased;max-width:100%;overflow-x:auto;padding:0 5px;vertical-align:middle;word-wrap:normal;box-shadow:0 1px 1px rgba(0,0,0,.125)}.button{background-color:#af403c;border-radius:10px;color:#fff;margin:40px auto;padding:10px;text-align:center}.button:hover{background-color:red}.talk{margin-top:80px}.video-container{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden;margin-bottom:40px}.video-container iframe,.video-container object,.video-container embed{position:absolute;top:0;left:0;width:100%;height:100%}figure{font-size:.9em;font-style:italic;margin:0 0 40px;padding:0;text-align:center;text-indent:0}figcaption{margin-top:10px}.loader{position:relative;overflow:hidden;width:auto}.loader object{position:absolute}.loader img,.loader object{display:block;top:0;left:0;width:100%}object{position:relative;float:left;display:block}object::after{position:absolute;top:0;left:0;display:block;width:1e3px;height:1e3px;content:"";background:#efefef}.frozen{-webkit-filter:blur(8px);-moz-filter:blur(8px);-o-filter:blur(8px);-ms-filter:blur(8px);filter:blur(8px);transform:scale(1.04);animation:.2s ease-in .4s 1 forwards fade;width:100%}@keyframes fade{0%{opacity:1}100%{opacity:0}}@media(max-width:520px){body{padding:0 20px}pre{font-size:.85em;padding:5px}h1{font-size:1.6em}}@media(min-width:520px){body{margin:10% auto 0;margin-top:120px;width:480px}h1{font-size:1.6em}}@media(min-width:1024px){body{width:850px}header{float:left;width:210px}main,footer{margin-left:260px;margin-bottom:40px}}footer{margin-bottom:40px}.links{list-style:none;display:inline}.field{padding:10px;font-size:.8em}.email{width:300px}.submit{border:0;padding:12px;background-color:#eee}</style><link rel=dns-prefetch href=//www.google-analytics.com/><link rel=apple-touch-icon sizes=180x180 href="/apple-touch-icon.png?v=m2llJQPQq8"><link rel=icon type=image/png sizes=32x32 href="/favicon-32x32.png?v=m2llJQPQq8"><link rel=icon type=image/png sizes=16x16 href="/favicon-16x16.png?v=m2llJQPQq8"><link rel=manifest href="data:application/manifest+json;base64,eyJzaG9ydF9uYW1lIjoiRW5kbGVyIiwiaWNvbnMiOlt7InNyYyI6Ii9hbmRyb2lkLWNocm9tZS0xOTJ4MTkyLnBuZz92PW0ybGxKUVBRcTgiLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmc/dj1tMmxsSlFQUXE4Iiwic2l6ZXMiOiI1MTJ4NTEyIiwidHlwZSI6ImltYWdlL3BuZyJ9XX0="><link rel=mask-icon href="/safari-pinned-tab.svg?v=m2llJQPQq8" color=#5bbad5><link rel="shortcut icon" href="/favicon.ico?v=m2llJQPQq8"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=theme-color content=#ffffff><meta property=og:title content="Being a Professional Programmer"><meta property=og:type content=website><meta property=og:description content="When I was around 12, I set myself the goal ..."><meta property=og:url content=https://matthias-endler.de/2017/professional-programming><meta property=og:image content=https://matthias-endler.de/img/social/default.png><meta name=twitter:title content="Being a Professional Programmer"><meta name=twitter:description content="When I was around 12, I set myself the goal ..."><meta name=twitter:card content=summary_large_image><meta name=twitter:site content=@matthiasendler><meta name=twitter:creator content=@matthiasendler><meta name=twitter:image content=https://matthias-endler.de/img/social/default.png><title>Being a Professional Programmer | Matthias Endler</title><meta name=author content="Matthias Endler"><meta name=description content="Personal website of Matthias Endler, a Software Engineer interested in low-level programming and backend development. PHP, Python, Go, Rust."><header><a class=logo href=/><img alt=Home src=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3OTAuMjMgNjkyLjYxIj48Y2lyY2xlIGN4PSI0MTMuMjQiIGN5PSIyMjcuNyIgcj0iMjE5LjY4IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMTYuMDMiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCIvPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjYTE2MjAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCI+PHBhdGggZmlsbD0iIzMzMWYwMCIgc3Ryb2tlLXdpZHRoPSIxLjk3IiBkPSJNNDgzLjc1IDI2NS43NGwtNjcuMDcgNDAuMTQtNzQuMjMtMzkuNTMgMTQxLjMtLjZ6IiBzdHlsZT0ibGluZS1oZWlnaHQ6MTI1JSIvPjxwYXRoIGZpbGw9IiNlZmJhMDAiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTQ4Ni42NSAyNjUuOTJsLTcwLjIgMzQuMDItNzYuOS0zMy45IDE0Ny4xLS4xMnoiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2OC42NCAyLjkxNCkgc2NhbGUoLjY1Nzk1KSIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIj48ZWxsaXBzZSBjeD0iLTYwOC43NSIgY3k9Ii0xNjMuMTQiIHRyYW5zZm9ybT0ibWF0cml4KDEuMjQ4OTcgLS4xMTM3IC4xMDcgMS4xNzUxNyAxMDk1Ljg3IDQ2Ni43KSIgcng9IjI1LjI1IiByeT0iMjgiLz48ZWxsaXBzZSBjeD0iMzMxLjM2IiBjeT0iMzQ3Ljk5IiBmaWxsPSIjZmZmIiB0cmFuc2Zvcm09Im1hdHJpeCguNTIyMTMgMCAwIC41NDc0NSAxNTguNzU3IDEzNi40MzIpIiByeD0iMTUuMTUiIHJ5PSIxNy4wNCIvPjwvZz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNjguNjQgMi45MTQpIHNjYWxlKC42NTc5NSkiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCI+PGVsbGlwc2UgY3g9Ii02MDguNzUiIGN5PSItMTYzLjE0IiB0cmFuc2Zvcm09Im1hdHJpeCgxLjI0ODk3IC0uMTEzNyAuMTA3IDEuMTc1MTcgMTIwMy4yIDQ2Ny42NDYpIiByeD0iMjUuMjUiIHJ5PSIyOCIvPjxlbGxpcHNlIGN4PSIzMzEuMzYiIGN5PSIzNDcuOTkiIGZpbGw9IiNmZmYiIHRyYW5zZm9ybT0ibWF0cml4KC41MjIxMyAwIDAgLjU0NzQ1IDI2NS4zNTggMTM2Ljk5MykiIHJ4PSIxNS4xNSIgcnk9IjE3LjA0Ii8+PC9nPjxnIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjMDAwIj48cGF0aCBkPSJNMzY2LjQgMTAwLjY0YzE4LjU0LTExLjA1IDM2LjU0LTIyLjU3IDQ2Ljk0LTQwLjczIDEuMzUgMTIuMy0uMSAyOC41LTEwLjg2IDQzLjUiLz48cGF0aCBkPSJNMzg5LjQ0IDEwMC42NGMxOC41NC0xMS4wNSAzNi41NC0yMi41NyA0Ni45NC00MC43MyAxLjM1IDEyLjMtLjEgMjguNS0xMC44NiA0My41Ii8+PHBhdGggZD0iTTQxMi40OCAxMDAuNjRDNDMxLjAyIDg5LjYgNDQ5IDc4LjA3IDQ1OS40MiA1OS45YzEuMzUgMTIuMy0uMSAyOC40NC0xMC44NiA0My40NiIvPjwvZz48cGF0aCBkPSJNNDA5LjI0IDg3LjA1Yy04MS44NS4yNy0xNTYuNDQgMTA0LjQzLTE4MC40OCAyMTYuNDZhMTk5LjYgMTk5LjYuMCAwIDAgNTEuODMgNzMuMWM3LjktMTU3LjkgNDQuNy0yNjYuOSAxMTIuNS0yMDcuOCAxMC4xIDguOSAxNS4yIDEyLjkgMjAuMSAxMi42IDQuOS4zIDEwLTMuOCAyMC4xLTEyLjYgNjcuNy01OS4xIDEwNC42IDUwIDExMi41IDIwNy44YTE5OS42IDE5OS42LjAgMCAwIDUxLjgtNzIuOWMtMjQtMTEyLTk4LjYtMjE2LjMtMTgwLjUtMjE2LjUtMS4zOC4wLTIuNy4xLTQgLjEtMS4zOC4wLTIuNy0uMS00LS4xeiIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0iIzk1OTU5NSIgZD0iTTEzMS4zIDY5Mi42aDExLjRsLTIwLjkyLTEzOC4zSDEwOS41TDg4LjYgNjkyLjZIMWUybDUuODgtNDUuOGgxOS4zNnptLTI0LjItNTQuOTYgOC40Ni02NC4zIDguNDcgNjQuM3ptODIuMDUtODMuMzRIMTQ4djEwLjczaDE0Ljg3VjY5Mi42aDExLjRWNTY1LjA0aDE0Ljg4eiIgc3R5bGU9ImxpbmUtaGVpZ2h0OjEyNSU7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonRXZlciBBZnRlciwgTm9ybWFsJzt0ZXh0LWFsaWduOnN0YXJ0IiBmb250LWZhbWlseT0iRXZlciBBZnRlciIgbGV0dGVyLXNwYWNpbmc9IjAiIHdvcmQtc3BhY2luZz0iMCIvPjxwYXRoIGZpbGw9IiM5NTk1OTUiIGQ9Ik0yMjguNjUgNTU0LjNIMTg3LjV2MTAuNzNoMTQuODdWNjkyLjZoMTEuNFY1NjUuMDRoMTQuODh6bTQ0LjkuMHY2MS4zOEgyNDUuMlY1NTQuM2gtMTEuNDJ2MTM4LjNoMTEuNHYtNjYuMzhoMjguMzZ2NjYuNGgxMS4yM1Y1NTQuM3ptMzcuOCAxMzguM2gtMTEuNFY1NTQuM2gxMS40em01Ny42NS4waDExLjRsLTIwLjkyLTEzOC4zSDM0Ny4ybC0yMC45IDEzOC4zaDExLjRsNS44Ny00NS44aDE5LjM2em0tMjQuMjItNTQuOTYgOC40Ny02NC4zIDguNDcgNjQuM3oiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0V2ZXIgQWZ0ZXIsIE5vcm1hbCc7dGV4dC1hbGlnbjpzdGFydCIgZm9udC1mYW1pbHk9IkV2ZXIgQWZ0ZXIiIGxldHRlci1zcGFjaW5nPSIwIiB3b3JkLXNwYWNpbmc9IjAiLz48cGF0aCBkPSJNNTE3LjI2IDU2NS4wM1Y1NTQuM2gtMzEuNjR2MTM4LjNoMzEuNjR2LTEwLjdoLTIwLjIzdi01NS43aDE4Ljg1di0xMC41NGgtMTguODVWNTY1em0xMS4yNC0xMC43M3YxMzguM2gxMS4zNVY1NTQuM0g1MjguNXptMzkuNzYuMHY1MS44N2wtLjEtLjE3djIwLjc1bC4xLjE3djY1LjdoMTEuMjRWNTU0LjNoLTExLjI0em00MC4yNC4waC0xMy44djEzOC4zaDEzLjgzcTIyLjMuMCAyOS41Ny0yMi40NiA0LjE1LTEzLjMyIDQuMTUtNDYuNjh0LTQuMTUtNDYuNjdxLTcuMjYtMjIuNS0yOS41Ni0yMi41em0tMS4yIDEyNy42aC0xLjJWNTY1LjAyaDEuMnExNS43My4wIDIwLjU3IDE4LjUgMy4xIDExLjA2IDMuMSAzOS45My4wIDI4Ljg3LTMuMSAzOS45My00Ljg0IDE4LjUtMjAuNTcgMTguNXptNjAuMjQuMFY1NTQuM2gtMTEuNHYxMzguM2gzMS42MnYtMTAuN3ptNjIuMS0xMTYuODdWNTU0LjNINjk4djEzOC4zaDMxLjYzdi0xMC43SDcwOS40di01NS43aDE4Ljg1di0xMC41NEg3MDkuNFY1NjV6bTYwLjUgMTI3LjU3cS0xNC4xNy0zNy0yMC43NC03Mi4yNSAxNC4xNy0xMC4zNyAxNC4xNy0zMy44OC4wLTMyLjE2LTI3LjQ4LTMyLjE2aC0xNS4zdjEzOC4zaDExLjR2LTY1cTIuMi0uNSA2LjktMiA3IDMzLjQgMTguMyA2Ny4xem0tMzcuODYtNzguNDd2LTQ5LjFoMi42cTEwLjU0LjAgMTQuNyA1Ljg4IDMuMjcgNC43IDMuMjcgMTUuNi4wIDE1LjgtOC4xMiAyMy40LTUuMiA0LjktMTAuMiA0LjktMS4zOC4wLTIuMjUtLjV6IiBzdHlsZT0ibGluZS1oZWlnaHQ6MTI1JTstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidFdmVyIEFmdGVyLCBOb3JtYWwnO3RleHQtYWxpZ246c3RhcnQiIGZvbnQtZmFtaWx5PSJFdmVyIEFmdGVyIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEwIiBkPSJNNTM1LjA2IDU1NS43MmwzOCAxMzUuNTQiLz48cGF0aCBmaWxsPSIjOTU5NTk1IiBkPSJNLjEgNTU0LjZ2MTM4aDExLjM4VjU3NS42NWM2LjYgMTIuNyAxMy43OCAyNS45IDE5LjY3IDM2Ljc4bDUuNyAxMCAuMDItLjAydi4xbDUuNzItMTBjNi41LTEyIDEzLjUtMjUuMiAxOS43LTM2Ljh2MTE2LjloMTEuMnYtMTM4SDYyLjNDNTUgNTY4IDQ3LjUgNTgyIDQwLjggNTk0LjRsLTQgNy40NWMtOS4xLTE3LjA1LTE3LjMtMzIuMDctMjUuNC00Ny4yM3oiIHN0eWxlPSJsaW5lLWhlaWdodDoxMjUlOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0V2ZXIgQWZ0ZXIsIE5vcm1hbCc7dGV4dC1hbGlnbjpzdGFydCIgZm9udC1zaXplPSIxNzIuNTIiIGZvbnQtZmFtaWx5PSJFdmVyIEFmdGVyIiBsZXR0ZXItc3BhY2luZz0iMCIgd29yZC1zcGFjaW5nPSIwIi8+PHBhdGggZmlsbD0iIzk1OTU5NSIgZD0iTTM5OC44NCA2OTEuNjZjLTMuNzItMS4zMy04Ljk2LTUtMTEuNzYtOC4yLTEuNC0xLjYtMi41LTMuMjUtMi41NC0zLjYgNC4yMy02LjA1IDQuNDItNi4zMiA1LjMtNy40NSAzLjMgMy40IDYuNyA2LjggMTAuOSA5LjEgNC45OCAxLjggMTEuMjQgMi4xIDE1LjMyLS4zIDUuNTItMy4zIDguNjItOC44IDkuNjctMTcuMyAxLjQ2LTExLjctMi42NS0yMi41LTEzLjI1LTM0LjgtMi45LTMuNC03LjEzLTguMy05LjM4LTEwLjktNC44Ni01LjYtMTAtMTMuNC0xMS43Ny0xOC41LTQuMy0xMi41LTMuODctMjEuMy0uNjYtMzAuMiAyLjEyLTUuODMgNC45LTkuNiA5LjA4LTEyLjIgOC4yNi01LjE0IDE5LjI4LTQuMjQgMjcuMzYgMi4yNS45LjY4IDEuNyAxLjQ0IDIuNSAyLjU3LS40Ljc3LTMuNyA4Ljc3LTQuMyA4Ljc3LS44LS42Ni0uOC0uNi0xLjYtMS4zLS43LS43LTIuNy0yLjEtNC40LTMuMTQtNC40LTIuMS04LjUtMy4xLTEyLjktLjctNi4xIDMuNDQtOS4yIDExLjctNy45IDIxLjQgMS4xIDguMzQgNC41IDE0IDE3LjkgMjkuNSAxMy4wOCAxNS4yIDE2Ljk1IDIyLjMgMTguOSAzNC42My45IDUuNy45IDEwLjA0LjAgMTYuNi0xLjY1IDEyLjMzLTcuMiAyMC41LTE2LjIgMjMuOTYtMy4zIDEuMy0xNi40NSAxLjMtMjAuMDMuMDR6Ii8+PC9zdmc+></a><p>Backend Engineer at trivago. Likes just-in-time compilers and hot chocolate. <a href=/about>About me.</a><nav><ul><li><a href=/>Home</a><li><a target=_blank rel=noopener href=https://twitter.com/matthiasendler>Twitter</a><li><a target=_blank rel=noopener href=https://feedly.com/i/subscription/feed/https://matthias-endler.de/rss.xml>RSS</a></ul></nav></header><main role=main><div class=published-date><i>Published on 18th of May 2017</i></div><h1>Being a Professional Programmer</h1><p>When I was around 12, I set myself the goal to become a professional programmer.<br>I can tell, because at this time I made the conscious decision to use my right hand to control the mouse — even though I'm left-handed.<p>My reasoning was, that if I ever had to help out a colleague with a computer problem I sure did not want to move her mouse to the other side before getting started. That would be awkward.
+(Of course I did not foresee the advent of the wireless mouse... As a matter of fact, I still use the right hand out of habit.)<p>One thing I always wanted to know is how a typical workday of a programmer looked like.
 Was I wasting my time by pursuing this career?
 Only later I found the answer — but I had to become a professional programmer myself.
-This article aims to save you from a few years of uncertainty.</p>
-<p>Before you dig into this, be sure to read the first part of this series titled <a href="/2017/why-i-love-programming">&quot;Why I love Programming&quot;</a>.</p>
-<h3>What's the difference between &quot;professional&quot; and &quot;hobby&quot; programming?</h3>
-<p>In one word: <em>accountability</em>.<br />
-You are expected to be responsible.</p>
-<p>Programming in your free time is like throwing a party without having to clean up: pure fun!
+This article aims to save you from a few years of uncertainty.<p>Before you dig into this, be sure to read the first part of this series titled <a href=/2017/why-i-love-programming>&quot;Why I love Programming&quot;</a>.<h3>What's the difference between &quot;professional&quot; and &quot;hobby&quot; programming?</h3><p>In one word: <em>accountability</em>.<br>You are expected to be responsible.<p>Programming in your free time is like throwing a party without having to clean up: pure fun!
 If you get bored you're free to move on.
-Not so in professional programming, where you're expected to get the job done.</p>
-<p>Every application requires constant bug fixing, refactoring and sometimes even monkey patching. Maintaining code is no amusement park; especially if it's not your own.</p>
-<h3>Being a Junior Developer</h3>
-<p>Fresh out of school you might think you're a pretty kick-ass programmer. Let me tell you: you're not.
+Not so in professional programming, where you're expected to get the job done.<p>Every application requires constant bug fixing, refactoring and sometimes even monkey patching. Maintaining code is no amusement park; especially if it's not your own.<h3>Being a Junior Developer</h3><p>Fresh out of school you might think you're a pretty kick-ass programmer. Let me tell you: you're not.
 You wouldn't guess what talented people can do with these blinking machines.
-You'll have tons of things to learn in the first few years.</p>
-<p>Professional software development is a lengthy process. Writing readable, well-tested, well-documented code is a substantial effort. You will need patience, lots of it. Both, with yourself and with others.</p>
-<p>As a junior, you only think in black and white. You look at some code, and it's all wrong. Who in their right mind created this horrible monstrosity?!
-As you become more experienced, you'll see the shades of grey.</p>
-<p>Eventually, you'll understand that those neckbeards were not slower than you, but
+You'll have tons of things to learn in the first few years.<p>Professional software development is a lengthy process. Writing readable, well-tested, well-documented code is a substantial effort. You will need patience, lots of it. Both, with yourself and with others.<p>As a junior, you only think in black and white. You look at some code, and it's all wrong. Who in their right mind created this horrible monstrosity?!
+As you become more experienced, you'll see the shades of grey.<p>Eventually, you'll understand that those neckbeards were not slower than you, but
 more careful. You learn how to test your code, how to document it. You even begin to
-appreciate UML diagrams.</p>
-<h3>Becoming obsolete</h3>
-<p>&quot;The world is moving too fast. What you learned today is obsolete tomorrow. Why bother?&quot;.
+appreciate UML diagrams.<h3>Becoming obsolete</h3><p>&quot;The world is moving too fast. What you learned today is obsolete tomorrow. Why bother?&quot;.
 I've heard that saying countless times throughout my career.
-It's both, popular and wrong.</p>
-<p>If a skill becomes obsolete, it's not a skill.
+It's both, popular and wrong.<p>If a skill becomes obsolete, it's not a skill.
 Throughout your career you don't want to be known as &quot;the Jenkins guy&quot;, you want to be the
 expert in Software Quality. Hint: If you don't know what Jenkins is, that's the
 whole point. You should not narrow down your scope too much.
-The right skills never become obsolete.</p>
-<p>From time to time it happens, that due to some new company policy your beautiful creation will become obsolete.
+The right skills never become obsolete.<p>From time to time it happens, that due to some new company policy your beautiful creation will become obsolete.
 As depressing as it sounds: it's a regular part of the software business.
 You need to adapt.
 One advice I can give you is not to take it too seriously.
 Drop the project, keep the wisdom.
-Embrace change.</p>
-<h3>Writing software in a non-perfect world</h3>
-<p>A professional programmer has to deal with deficiencies all the time. The game is called &quot;balancing constraints&quot;. Deadlines, budgets, and code quality are just a few competing constraints we have to consider.
+Embrace change.<h3>Writing software in a non-perfect world</h3><p>A professional programmer has to deal with deficiencies all the time. The game is called &quot;balancing constraints&quot;. Deadlines, budgets, and code quality are just a few competing constraints we have to consider.
 Elegant designs fade away in the face of reality.
-In the end you want to earn money with your software, so you have to ship it!</p>
-<p>The best developers I know, keep the balance between pragmatism and elegance.
+In the end you want to earn money with your software, so you have to ship it!<p>The best developers I know, keep the balance between pragmatism and elegance.
 They know which parts matter and which don't. Those who don't will be replaced
-when there's a need.</p>
-<p>For me, I was always leaning more towards elegance.
+when there's a need.<p>For me, I was always leaning more towards elegance.
 That's just a nicer way to say I was a perfectionist.
-I needed to learn the pragmatic part through hard work.</p>
-<h3>Mentoring less experienced Programmers</h3>
-<blockquote>
-<p>The better you become at programming, the less you code.</p>
-</blockquote>
-<p>Instead, you will spend more time thinking about Software Architecture,
+I needed to learn the pragmatic part through hard work.<h3>Mentoring less experienced Programmers</h3><blockquote><p>The better you become at programming, the less you code.</blockquote><p>Instead, you will spend more time thinking about Software Architecture,
 high-level designs and splitting up the work into smaller junks for other developers to consume.
 You will start mentoring Junior Developers. Recruiting will require a lot of your
 attention. You will spend your time in Meetings, discussing project goals with
 business people.
-One might say, you take the role of a mediator. Others might call you a manager.</p>
-<p>Once you know the ins and outs of the business, you are an essential asset for
+One might say, you take the role of a mediator. Others might call you a manager.<p>Once you know the ins and outs of the business, you are an essential asset for
 the company. You might get asked to become a manager, or at least managing projects will slowly feel like a natural extension of your responsibilities.
 But beware! This slow and gradual process is dangerous.
 Moving back to being a full-time programmer is not easy.
 During the time you were busy with project management, others were busy improving their
 coding skills.
-You can try to keep up-to-date in your free time but that's hard.</p>
-<p>I've seen excellent developers become great managers. At some point in your career
-it's a decision you need to make for yourself.</p>
-<p>However you decide, it pays off to invest some time into learning how to
+You can try to keep up-to-date in your free time but that's hard.<p>I've seen excellent developers become great managers. At some point in your career
+it's a decision you need to make for yourself.<p>However you decide, it pays off to invest some time into learning how to
 communicate. Empathy plays a prominent role in that.
-Developing software as a team is so complicated that a lot of time is spent on aligning goals and communicating problems. In fact, communication is what you get paid for. This includes documentation, tests and the code itself.</p>
-<p>Talk to others, listen to their problems. Read books about Software Project
+Developing software as a team is so complicated that a lot of time is spent on aligning goals and communicating problems. In fact, communication is what you get paid for. This includes documentation, tests and the code itself.<p>Talk to others, listen to their problems. Read books about Software Project
 Management, even though you don't want to be a manager yourself. It will help
-you understand the role of your boss.</p>
-<h3>A word about money</h3>
-<p>There are many good reasons to work in IT, but money is not one of them.</p>
-<p>While it can be tempting to base your career decisions on prospective salary,
+you understand the role of your boss.<h3>A word about money</h3><p>There are many good reasons to work in IT, but money is not one of them.<p>While it can be tempting to base your career decisions on prospective salary,
 don't do it. You will be very unhappy. You will spend eight hours or more each day sitting in front of a blinking cursor.
-That's a lot of time, and time is much more valuable than money.</p>
-<p>Don't get me wrong. There's plenty of jobs that pay well.
+That's a lot of time, and time is much more valuable than money.<p>Don't get me wrong. There's plenty of jobs that pay well.
 You will most likely not get rich, though. If you want
 to make it big, I can't help you. Maybe look into Real Estate or so...
 The only way to get rich as a developer is to work on something really hard, put in lots of hours and get
 lucky. Startups, basically. Keep in mind: One Bill Gates takes a thousand failed
 attempts.
 Another way is to stop being a programmer and become a manager instead.
-I've already shared my opinion on that in the last section.</p>
-<h3>Final words</h3>
-<p>While you should learn to read (and maybe write) code, working as a professional programmer is not for everyone.
+I've already shared my opinion on that in the last section.<h3>Final words</h3><p>While you should learn to read (and maybe write) code, working as a professional programmer is not for everyone.
 You might ask: &quot;Is it worth it?&quot;.
-For me it was the right decision. Hopefully I could help you to make your own.</p>
-<ul class="links">
-</ul>
-        </main>
-<footer><form style="border:1px solid #ccc;padding:30px;text-align:center;" action="https://tinyletter.com/mre" method="post" target="popupwindow" 
-onsubmit="window.open('https://tinyletter.com/mre', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-    <p><label for="tlemail">Subscribe to newsletter <i style="color: #aaa">(one mail per month)</i></label></p>
-    <p>
-        <input class="field email" type="email" name="email" id="tlemail" placeholder="E-Mail Address"/>
-        <input type="hidden" value="1" name="embed"/><input class="field submit" type="submit" value="Subscribe" />
-    </p>
-    <p>
-    💡 I also <a target="_blank" rel="noopener" href="https://twitter.com/matthiasendler">tweet</a> new articles and have an <a target="_blank" rel="noopener" href="https://feedly.com/i/subscription/feed/https://matthias-endler.de/rss.xml">RSS feed</a>.
-    </p>
-</form>
-    <h3>Continue reading</h3>
-    <ul>
-        
-        
-            <li><a href="/2018/cargo-inspect">cargo-inspect</a></li>
-        
-        
-        
-            <li><a href="/2018/excel">The Unreasonable Effectiveness of Excel Macros</a></li>
-        
-        
-        
-            <li><a href="/2018/keyboard">Switching from a German to a US Keyboard Layout - Is It Worth It?</a></li>
-        
-        
-        
-            <li><a href="/2018/fastcat">fastcat - A Faster `cat` Implementation Using Splice</a></li>
-        
-        
-        
-            <li><a href="/2018/github">That Octocat on the Wall</a></li>
-        
-        
-    </ul>
-</footer>
-
-<script type="text/javascript">
-if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
-    window.ga=window.ga||function(){(ga.q = ga.q || []).push(arguments)};ga.l=+new Date;
-    ga('create', 'UA-693428-1', 'auto');
-    ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-  </body>
-</html>
+For me it was the right decision. Hopefully I could help you to make your own.<ul class=links></ul></main><footer><form style="border:1px solid #ccc;padding:30px;text-align:center" action=https://tinyletter.com/mre method=post target=popupwindow onsubmit="window.open('https://tinyletter.com/mre','popupwindow','scrollbars=yes,width=800,height=600');return true"><p><label for=tlemail>Subscribe to newsletter <i style=color:#aaa>(one mail per month)</i></label><p><input class="field email" type=email name=email id=tlemail placeholder="E-Mail Address">
+<input type=hidden value=1 name=embed><input class="field submit" type=submit value=Subscribe><p>💡 I also <a target=_blank rel=noopener href=https://twitter.com/matthiasendler>tweet</a> new articles and have an <a target=_blank rel=noopener href=https://feedly.com/i/subscription/feed/https://matthias-endler.de/rss.xml>RSS feed</a>.</form><h3>Continue reading</h3><ul><li><a href=/2018/cargo-inspect>cargo-inspect</a><li><a href=/2018/excel>The Unreasonable Effectiveness of Excel Macros</a><li><a href=/2018/keyboard>Switching from a German to a US Keyboard Layout - Is It Worth It?</a><li><a href=/2018/fastcat>fastcat - A Faster `cat` Implementation Using Splice</a><li><a href=/2018/github>That Octocat on the Wall</a></ul></footer><script>if(location.hostname!=="localhost"&&location.hostname!=="127.0.0.1"){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-693428-1','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script>
