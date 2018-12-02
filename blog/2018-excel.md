@@ -25,8 +25,8 @@ from work because I missed my bus. It was a rainy day and while he was driving
 through the narrow streets of Cork we talked and laughed, but all of a sudden I
 heard a loud bang. I looked through the rear mirror only to find that there was
 no rear mirror anymore. Turns out he bumped into another car, and the thing went
-off. Evgeny didn't mind. In a thick Eastern-European accent he replied "Lost
-three mirrors before already," and we drove on.
+off. Evgeny didn't mind. In a thick Eastern-European accent he remarked "Lost
+three mirrors before already," and kept driving.
 
 In my second week, I had a visit from my boss. Apparently, I was done with the
 workload that they planned for my three-week internship. I was used to
@@ -44,8 +44,7 @@ selected a field from an entry, copied it and pasted it into an Excel sheet. He
 did the same for the remaining fields. "That's it!", he said with a fake smile.
 We both knew that this would mean two boring weeks for me.
 
-**They wanted to keep me busy by letting me manually scrape the entirety of a
-web database.**
+*They wanted to keep me busy by letting me manually scrape the entirety of a web database.*
 
 I could have taken that as an insult, but instead, I looked at it as a
 challenge.
@@ -55,11 +54,11 @@ parameter.
 
 "Can I write a program that does the scraping?" My boss was noticeably puzzled.
 "Uhm... you can do whatever you want, but you're not allowed to install any
-additional software!". With that, he left.
+additional software!". With that, he was off.
 
 Judging from the installed programs, I wasn't left with many choices: Excel or
 Minesweeper. I knew that Excel's Visual Basic macros were quite powerful, but I
-wasn't sure if I could scrape a website with it.
+wasn't sure if I could scrape a full website with it.
 
 After a while, I detected a feature to download a website into an Excel sheet
 (what a glorious functionality). This worked perfectly, so all I had to do was
@@ -72,7 +71,7 @@ biggest fear was that the program would crash or that the computer would run out
 of memory. I refrained from playing minesweeper on it, so I mostly played pool
 or chatted with Evgeny.
 
-The next morning, my program was done. To my surprise, it scraped the entirety
+When I came to the office the next morning, my program was done. To my surprise, it scraped the entirety
 of SilverPages, and there were many thousands of entries in the list. I sent the
 document to my boss via E-Mail and then got back to playing minesweeper.
 
@@ -84,8 +83,7 @@ They left without giving me another task; I was free to do whatever I wanted for
 the remaining two weeks. I went on to write an inventory tool for them, which
 they could also manage via Excel. It was just a glorious Excel form for a
 spreadsheet that they maintained manually. I spent two weeks of my summer
-vacation to finish that tool because they said they would pay me for that which,
-of course, they never did.
+vacation to finish that tool because they said they would pay me for that, which, of course, they didn't :).
 
 ## Lessons learned
 
